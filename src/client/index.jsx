@@ -2,18 +2,18 @@ import React from 'react'
 import { hydrate } from 'react-dom'
 import { BrowserRouter } from 'react-router-dom'
 
-import ScrollToTop from './ScrollToTop.jsx'
+import Transition from './Transition.jsx'
 
 import { Nav, Footer } from '../assets/components/layout'
 import { Routes } from '../assets/components/Routes.jsx'
 
 hydrate(
   <BrowserRouter>
-    <ScrollToTop>
+    <Transition>
       <Nav />
       <Routes />
       <Footer />
-    </ScrollToTop>
+    </Transition>
   </BrowserRouter>
   , document.getElementById('main')
 )
