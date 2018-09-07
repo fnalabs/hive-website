@@ -46,4 +46,4 @@ export default app
   .on('error', (err, ctx) => {
     console.log('server error', err, ctx)
   })
-  .listen(Number.parseInt(process.env.PORT) || 3000)
+  .listen(Number.parseInt(process.env.PORT) || 3000, '0.0.0.0')
