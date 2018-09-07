@@ -1,0 +1,3 @@
+#! /usr/bin/env node
+require('../dist/server')
+console.info('app running on port', Number.parseInt(process.env.PORT) || 3000)

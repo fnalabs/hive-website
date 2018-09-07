@@ -1,0 +1,21 @@
+{
+  "plugins": [
+    "transform-class-properties",
+    "add-module-exports",
+    "transform-es2015-modules-commonjs"
+  ],
+  "presets": [
+    "react"
+  ],
+  "env": {
+    "test": {
+      "plugins": [
+        [ "istanbul", {
+          "exclude": [
+            "**/*.spec.js"
+          ]
+        }]
+      ]
+    }
+  }
+}
