@@ -1,9 +1,11 @@
 {
   "common": {
-    "siteName": "Hive^io"
+    "siteName": "Hive^io",
+    "baseUrl": "https://hiveframework.io",
+    "cacheTime": 600000,
+    "lastmodfile": "dist/client/main.js"
   },
   "/": {
-    "title": "Home",
     "description": "Hive^io is a reactive, cloud-native framework meant to foster and support lightweight, atomic RESTful microservices from a project's inception onward.",
     "url": "https://hiveframework.io"
   },

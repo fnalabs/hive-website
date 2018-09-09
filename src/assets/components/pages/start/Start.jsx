@@ -21,7 +21,7 @@ export const Start = () => {
         <title>{title} | {siteName}</title>
         <meta name='description' content={description} />
 
-        <meta property='og:title' content={title} />
+        <meta property='og:title' content={`${title} | ${siteName}`} />
         <meta property='og:description' content={description} />
         <meta property='og:site_name' content={siteName} />
         <meta property='og:url' content={url} />

@@ -8,16 +8,16 @@ import NextPageHero from '../NextPageHero.jsx'
 import meta from '../../../metadata.json'
 
 export const Home = () => {
-  const { title, description, url } = meta['/']
+  const { description, url } = meta['/']
   const siteName = meta.common.siteName
 
   return (
     <Fragment>
       <Helmet>
-        <title>{title} | {siteName}</title>
+        <title>{siteName}</title>
         <meta name='description' content={description} />
 
-        <meta property='og:title' content={title} />
+        <meta property='og:title' content={siteName} />
         <meta property='og:description' content={description} />
         <meta property='og:site_name' content={siteName} />
         <meta property='og:url' content={url} />
