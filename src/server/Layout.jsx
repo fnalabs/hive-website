@@ -31,7 +31,7 @@ export const Layout = () => (
         <Footer />
       </div>
 
-      <script src='./main.js' />
+      <script src='./main.js' async />
     </body>
   </html>
 )
