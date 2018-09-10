@@ -7,22 +7,28 @@ export const Footer = () => (
   <footer className='footer is-dark'>
     <Container>
       <div className='columns'>
+        <div className='column is-narrow content'>
+          <p>Copyright &copy; 2018 <a href='https://fnalabs.com'>FnA Labs</a></p>
+          <p className='is-size-7'>Icons from <a href='https://fontawesome.com/'>Font Awesome</a> (<a href='https://fontawesome.com/license'>License</a>)</p>
+          <p><a href='https://bulma.io'>
+            <img src='https://fnalabs.github.io/fnalabs-assets/assets/made-with-bulma--dark.png' alt='Made with Bulma' width='128' height='24' />
+          </a></p>
+        </div>
+
         <div className='column'>
           <div className='columns'>
-            <div className='column is-6 content'>
-              <p>Copyright &copy; 2018 <a href='https://fnalabs.com'>FnA Labs</a></p>
-              <p className='is-size-7'>Icons from <a href='https://fontawesome.com/'>Font Awesome</a> (<a href='https://fontawesome.com/license'>License</a>)</p>
-              <p><a href='https://bulma.io'>
-                <img src='https://fnalabs.github.io/fnalabs-assets/assets/made-with-bulma--dark.png' alt='Made with Bulma' width='128' height='24' />
-              </a></p>
-            </div>
-
-            <nav className='column is-6 content'>
+            <nav className='column is-6 has-text-right content'>
               <p><strong>Sitemap</strong></p>
               <p><Link to='/'>Home</Link></p>
               <p><Link to='/overview'>Overview</Link></p>
               <p><Link to='/start'>Get Started</Link></p>
               <p><a href='https://fnalabs.github.io/hive-js/'>API</a></p>
+            </nav>
+
+            <nav className='column is-6 content'>
+              <p><strong>Policies</strong></p>
+              <p><Link to='/cookie'>Cookie</Link></p>
+              <p><Link to='/privacy'>Privacy</Link></p>
             </nav>
           </div>
         </div>

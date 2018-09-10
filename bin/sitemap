@@ -18,7 +18,8 @@ for (let key in meta) {
     sitemapContent.urls.push({
       url: key,
       lastmodrealtime: true,
-      lastmodfile: meta.common.lastmodfile
+      lastmodfile: meta.common.lastmodfile,
+      priority: meta[key].priority
     })
   }
 }
