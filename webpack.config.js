@@ -1,6 +1,7 @@
 require('app-module-path').addPath(__dirname)
 const path = require('path')
 
+const Dotenv = require('dotenv-webpack')
 const autoprefixer = require('autoprefixer')
 const cssnano = require('cssnano')
 
@@ -26,6 +27,9 @@ module.exports = [
         }
       ]
     },
+    plugins: [
+      new Dotenv()
+    ],
     resolve: {
       modules: ['src/client', 'node_modules']
     },

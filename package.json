@@ -67,6 +67,7 @@
     "cssnano": "~4.1.0",
     "del-cli": "~1.1.0",
     "dirty-chai": "~2.0.1",
+    "dotenv-webpack": "~1.5.7",
     "enzyme": "~3.6.0",
     "file-loader": "~2.0.0",
     "isomorphic-style-loader": "~4.0.0",
