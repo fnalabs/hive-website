@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { withRouter } from 'react-router'
 import { Link, NavLink } from 'react-router-dom'
 
-import { Container } from '../common'
+import { AnalyticsLink, Container } from '../common'
 
 class Nav extends Component {
   constructor (props) {
@@ -51,7 +51,7 @@ class Nav extends Component {
             <div className='navbar-end'>
               <NavLink to='/overview' activeClassName='is-active' className='navbar-item'>Overview</NavLink>
               <NavLink to='/start' activeClassName='is-active' className='navbar-item'>Get Started</NavLink>
-              <a href='https://fnalabs.github.io/hive-js/' className='navbar-item'>API</a>
+              <AnalyticsLink to='https://fnalabs.github.io/hive-js/' className='navbar-item'>API</AnalyticsLink>
             </div>
           </div>
         </Container>
