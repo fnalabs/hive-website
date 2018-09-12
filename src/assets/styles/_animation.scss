@@ -1,0 +1,161 @@
+.svg-animation-container {
+  height: 160px;
+  max-width: 352px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative
+}
+
+@media screen and (max-width: 400px) {
+  .svg-animation-container {
+    max-width: 292px
+  }
+}
+
+.svg-animation {
+  height: 60px;
+  width: 52px;
+  position: absolute;
+  animation-duration: 4.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite
+}
+
+.svg-animation.is-svg-1 { top: 100px; left: 30px; animation-name: is-svg-1 }
+@keyframes is-svg-1 {
+  0% { opacity: 1.00 }
+  1% { opacity: 0.00 }
+  5% { opacity: 0.67 }
+  7% { opacity: 1.00 }
+  100% { opacity: 1.00 }
+}
+
+.svg-animation.is-svg-2 { top: 50px; left: 0; animation-name: is-svg-2 }
+@keyframes is-svg-2 {
+  0% { opacity: 1.00 }
+  1% { opacity: 0.00 }
+  3% { opacity: 0.00 }
+  7% { opacity: 0.67 }
+  9% { opacity: 1.00 }
+  100% { opacity: 1.00 }
+}
+
+.svg-animation.is-svg-3 { top: 0; left: 30px; animation-name: is-svg-3 }
+@keyframes is-svg-3 {
+  0% { opacity: 1.00 }
+  1% { opacity: 0.00 }
+  5% { opacity: 0.00 }
+  9% { opacity: 0.67 }
+  11% { opacity: 1.00 }
+  100% { opacity: 1.00 }
+}
+
+.svg-animation.is-svg-4 { top: 100px; left: 90px; animation-name: is-svg-4 }
+@keyframes is-svg-4 {
+  0% { opacity: 1.00 }
+  1% { opacity: 0.00 }
+  30% { opacity: 0.00 }
+  34% { opacity: 0.67 }
+  36% { opacity: 1.00 }
+  100% { opacity: 1.00 }
+}
+
+.svg-animation.is-svg-5 { top: 50px; left: 60px; animation-name: is-svg-5 }
+@keyframes is-svg-5 {
+  0% { opacity: 1.00 }
+  1% { opacity: 0.00 }
+  32% { opacity: 0.00 }
+  36% { opacity: 0.67 }
+  38% { opacity: 1.00 }
+  100% { opacity: 1.00 }
+}
+
+.svg-animation.is-svg-6 { top: 50px; left: 120px; animation-name: is-svg-6 }
+@keyframes is-svg-6 {
+  0% { opacity: 1.00 }
+  1% { opacity: 0.00 }
+  34% { opacity: 0.00 }
+  38% { opacity: 0.67 }
+  40% { opacity: 1.00 }
+  100% { opacity: 1.00 }
+}
+
+.svg-animation.is-svg-7 { top: 0; left: 90px; animation-name: is-svg-7 }
+@keyframes is-svg-7 {
+  0% { opacity: 1.00 }
+  1% { opacity: 0.00 }
+  36% { opacity: 0.00 }
+  40% { opacity: 0.67 }
+  42% { opacity: 1.00 }
+  100% { opacity: 1.00 }
+}
+
+.svg-animation.is-svg-8 { top: 50px; left: 300px; animation-name: is-svg-8 }
+@keyframes is-svg-8 {
+  0% { opacity: 1.00 }
+  1% { opacity: 0.00 }
+  60% { opacity: 0.00 }
+  64% { opacity: 0.67 }
+  66% { opacity: 1.00 }
+  100% { opacity: 1.00 }
+}
+
+.svg-animation.is-svg-9 { top: 100px; left: 210px; animation-name: is-svg-9 }
+@keyframes is-svg-9 {
+  0% { opacity: 1.00 }
+  1% { opacity: 0.00 }
+  62% { opacity: 0.00 }
+  66% { opacity: 0.67 }
+  68% { opacity: 1.00 }
+  100% { opacity: 1.00 }
+}
+
+.svg-animation.is-svg-10 { top: 50px; left: 240px; animation-name: is-svg-10 }
+@keyframes is-svg-10 {
+  0% { opacity: 1.00 }
+  1% { opacity: 0.00 }
+  64% { opacity: 0.00 }
+  68% { opacity: 0.67 }
+  70% { opacity: 1.00 }
+  100% { opacity: 1.00 }
+}
+
+.svg-animation.is-svg-11 { top: 50px; left: 180px; animation-name: is-svg-11 }
+@keyframes is-svg-11 {
+  0% { opacity: 1.00 }
+  1% { opacity: 0.00 }
+  66% { opacity: 0.00 }
+  70% { opacity: 0.67 }
+  72% { opacity: 1.00 }
+  100% { opacity: 1.00 }
+}
+
+.svg-animation.is-svg-12 { top: 100px; left: 150px; animation-name: is-svg-12 }
+@keyframes is-svg-12 {
+  0% { opacity: 1.00 }
+  1% { opacity: 0.00 }
+  68% { opacity: 0.00 }
+  72% { opacity: 0.67 }
+  74% { opacity: 1.00 }
+  100% { opacity: 1.00 }
+}
+
+.svg-animation.is-svg-13 { top: 0; left: 210px; animation-name: is-svg-13 }
+@keyframes is-svg-13 {
+  0% { opacity: 1.00 }
+  1% { opacity: 0.00 }
+  70% { opacity: 0.00 }
+  74% { opacity: 0.67 }
+  76% { opacity: 1.00 }
+  100% { opacity: 1.00 }
+}
+
+.svg-animation.is-svg-14 { top: 0; left: 150px; animation-name: is-svg-14 }
+@keyframes is-svg-14 {
+  0% { opacity: 1.00 }
+  1% { opacity: 0.00 }
+  72% { opacity: 0.00 }
+  76% { opacity: 0.67 }
+  78% { opacity: 1.00 }
+  100% { opacity: 1.00 }
+}

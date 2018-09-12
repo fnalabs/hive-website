@@ -1,0 +1,110 @@
+.neon-tiles .tile.is-child {
+  display: flex
+}
+
+@media screen and (max-width: 769px) and (orientation: portrait) {
+  .neon-tiles .tile.is-child {
+    display: block
+  }
+}
+
+@media screen and (max-width: 769px) and (orientation: landscape) {
+  .neon-tiles .tile.is-child {
+    display: block
+  }
+}
+
+.is-reactive {
+  color: rgb(68,93,233);
+  box-shadow: inset 0 0 2px 2px rgba(68,93,233,0.67), 0 0 2px 2px rgba(68,93,233,0.67);
+  filter: drop-shadow(10px 10px 25px rgba(68,93,233,0.33));
+  background: transparent;
+
+  svg {
+    fill: rgba(68,93,233,0.67)
+  }
+
+  &:hover {
+    box-shadow: inset 0 0 2px 2px rgba(68,93,233,1), 0 0 2px 2px rgba(68,93,233,1);
+    filter: drop-shadow(10px 10px 50px rgba(68,93,233,0.5));
+
+    svg {
+      fill: rgba(68,93,233,1)
+    }
+  }
+}
+
+.is-robust {
+  color: rgb(186,11,224);
+  box-shadow: inset 0 0 2px 2px rgba(186,11,224,0.67), 0 0 2px 2px rgba(186,11,224,0.67);
+  filter: drop-shadow(10px 10px 25px rgba(186,11,224,0.33));
+  background: transparent;
+
+  svg {
+    fill: rgba(186,11,224,0.67)
+  }
+
+  &:hover {
+    box-shadow: inset 0 0 2px 2px rgba(186,11,224,1), 0 0 2px 2px rgba(186,11,224,1);
+    filter: drop-shadow(10px 10px 50px rgba(186,11,224,0.5));
+
+    svg {
+      fill: rgba(186,11,224,1)
+    }
+  }
+}
+
+.is-serverless {
+  color: rgb(253,87,80);
+  box-shadow: inset 0 0 2px 2px rgba(253,87,80,0.67), 0 0 2px 2px rgba(253,87,80,0.67);
+  filter: drop-shadow(10px 10px 25px rgba(253,87,80,0.33));
+  background: transparent;
+
+  svg {
+    fill: rgba(253,87,80,0.67)
+  }
+
+  &:hover {
+    box-shadow: inset 0 0 2px 2px rgba(253,87,80,1), 0 0 2px 2px rgba(253,87,80,1);
+    filter: drop-shadow(10px 10px 50px rgba(253,87,80,0.5));
+
+    svg {
+      fill: rgba(253,87,80,1)
+    }
+  }
+}
+
+.is-hive {
+  filter: drop-shadow(10px 10px 25px rgba(218,165,32,0.33));
+  stroke: rgba(218,165,32,0.67);
+
+  &:hover {
+    filter: drop-shadow(10px 10px 25px rgba(218,165,32,0.44));
+    stroke: rgba(218,165,32,1)
+  }
+}
+
+.hero.is-hive,
+.notification.is-hive {
+  background: rgba(218,165,32,1);
+  color: black
+}
+
+.is-reactive,
+.is-robust,
+.is-serverless {
+  border-radius: 6px
+}
+
+.is-reactive .card-image .image,
+.is-robust .card-image .image,
+.is-serverless .card-image .image {
+  margin: 0 auto;
+  padding-top: 1.5rem
+}
+
+.card.is-reactive h3, .is-reactive p,
+.card.is-robust h3, .is-robust p,
+.card.is-serverless h3, .is-serverless p {
+  color: inherit
+}

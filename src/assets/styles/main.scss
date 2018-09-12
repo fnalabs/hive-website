@@ -53,4 +53,8 @@
 @import "node_modules/bulma/sass/layout/footer.sass";
 
 // import custom css
+@import "_overrides.scss";
 @import "_custom.scss";
+@import "_svg.scss";
+@import "_animation.scss";
+@import "_neon.scss";
