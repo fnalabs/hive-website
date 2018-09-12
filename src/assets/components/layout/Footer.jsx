@@ -36,7 +36,7 @@ export const Footer = () => (
         </div>
 
         <div className='column'>
-          <div className='columns'>
+          <div className='columns is-mobile'>
             <nav className='column is-6 has-text-right content'>
               <p><strong>Sitemap</strong></p>
               <p><Link to='/'>Home</Link></p>
@@ -46,7 +46,7 @@ export const Footer = () => (
               </p>
             </nav>
 
-            <nav className='column is-6 content'>
+            <nav className='column is-6 has-text-left content'>
               <p><strong>Policies</strong></p>
               <p><Link to='/cookie'>Cookie</Link></p>
               <p><Link to='/privacy'>Privacy</Link></p>
