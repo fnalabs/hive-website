@@ -29,6 +29,7 @@ export default class Start extends Component {
         <Helmet>
           <title>{title} | {siteName}</title>
           <meta name='description' content={description} />
+          <link rel='canonical' href={url} />
 
           <meta property='og:title' content={`${title} | ${siteName}`} />
           <meta property='og:description' content={description} />

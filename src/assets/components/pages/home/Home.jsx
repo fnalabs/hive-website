@@ -25,6 +25,7 @@ export default class Home extends Component {
         <Helmet>
           <title>{siteName}</title>
           <meta name='description' content={description} />
+          <link rel='canonical' href={url} />
 
           <meta property='og:title' content={siteName} />
           <meta property='og:description' content={description} />

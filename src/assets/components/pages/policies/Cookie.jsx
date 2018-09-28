@@ -14,6 +14,7 @@ export const Cookie = () => {
     <Fragment>
       <Helmet>
         <title>{title} | {siteName}</title>
+        <link rel='canonical' href={url} />
 
         <meta property='og:title' content={`${title} | ${siteName}`} />
         <meta property='og:site_name' content={siteName} />
