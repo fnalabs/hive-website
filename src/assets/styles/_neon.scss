@@ -2,13 +2,7 @@
   display: flex
 }
 
-@media screen and (max-width: 769px) and (orientation: portrait) {
-  .neon-tiles .tile.is-child {
-    display: block
-  }
-}
-
-@media screen and (max-width: 769px) and (orientation: landscape) {
+@media screen and (max-width: 768px) {
   .neon-tiles .tile.is-child {
     display: block
   }
@@ -82,12 +76,12 @@
     filter: drop-shadow(10px 10px 25px rgba(218,165,32,0.44));
     stroke: rgba(218,165,32,1)
   }
-}
 
-.hero.is-hive,
-.notification.is-hive {
-  background: rgba(218,165,32,1);
-  color: black
+  &.hero,
+  &.notification {
+    background: rgba(218,165,32,1);
+    color: black
+  }
 }
 
 .is-reactive,

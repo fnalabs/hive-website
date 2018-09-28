@@ -23,13 +23,13 @@ svg {
   vertical-align: -.125em
 }
 
-@media screen and (max-width: 769px) and (orientation: portrait) {
+@media screen and (max-width: 768px) and (orientation: portrait) {
   .tile.is-child.has-text-centered svg {
     max-width: 50%
   }
 }
 
-@media screen and (max-width: 769px) and (orientation: landscape) {
+@media screen and (max-width: 768px) and (orientation: landscape) {
   .tile.is-child.has-text-centered svg {
     max-width: 20%
   }
