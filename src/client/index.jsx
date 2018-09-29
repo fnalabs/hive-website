@@ -10,8 +10,8 @@ import { Routes } from '../assets/components/Routes.jsx'
 hydrate(
   <BrowserRouter>
     <Transition>
-      <Nav />
-      <Routes />
+      <header><Nav /></header>
+      <main><Routes /></main>
       <Footer />
     </Transition>
   </BrowserRouter>
