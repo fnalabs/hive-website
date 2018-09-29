@@ -1,0 +1,240 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Nav /> should render Get Started page nav correctly 1`] = `
+<nav
+  aria-label="main navigation"
+  className="navbar is-spaced is-transparent is-absolute"
+  role="navigation"
+>
+  <div
+    className="container"
+  >
+    <div
+      className="navbar-brand"
+    >
+      <a
+        className="navbar-item"
+        href="/"
+        onClick={[Function]}
+      >
+        <svg
+          height="36"
+          viewBox="0 0 117.31758 135.46667"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="m 58.658792,6.7627869 52.802038,30.4852731 0,60.970543 L 58.658789,128.70387 5.8567507,98.2186 l 1.7e-6,-60.970543 z"
+            fill="none"
+            stroke="#daa520"
+            strokeWidth="12"
+          />
+        </svg>
+        <span>
+          Hive
+          <sup>
+            io
+          </sup>
+        </span>
+      </a>
+      <div
+        className="navbar-burger"
+        onClick={[Function]}
+      >
+        <span />
+        <span />
+        <span />
+      </div>
+    </div>
+    <div
+      className="navbar-menu"
+    >
+      <div
+        className="navbar-end"
+      >
+        <a
+          aria-current={null}
+          className="navbar-item"
+          href="/overview"
+          onClick={[Function]}
+        >
+          Overview
+        </a>
+        <a
+          aria-current="page"
+          className="navbar-item is-active"
+          href="/start"
+          onClick={[Function]}
+          style={Object {}}
+        >
+          Get Started
+        </a>
+        <a
+          className="navbar-item"
+          href="https://fnalabs.github.io/hive-js/"
+        >
+          API
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>
+`;
+
+exports[`<Nav /> should render Overview page nav correctly 1`] = `
+<nav
+  aria-label="main navigation"
+  className="navbar is-spaced is-transparent is-absolute"
+  role="navigation"
+>
+  <div
+    className="container"
+  >
+    <div
+      className="navbar-brand"
+    >
+      <a
+        className="navbar-item"
+        href="/"
+        onClick={[Function]}
+      >
+        <svg
+          height="36"
+          viewBox="0 0 117.31758 135.46667"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="m 58.658792,6.7627869 52.802038,30.4852731 0,60.970543 L 58.658789,128.70387 5.8567507,98.2186 l 1.7e-6,-60.970543 z"
+            fill="none"
+            stroke="#daa520"
+            strokeWidth="12"
+          />
+        </svg>
+        <span>
+          Hive
+          <sup>
+            io
+          </sup>
+        </span>
+      </a>
+      <div
+        className="navbar-burger"
+        onClick={[Function]}
+      >
+        <span />
+        <span />
+        <span />
+      </div>
+    </div>
+    <div
+      className="navbar-menu"
+    >
+      <div
+        className="navbar-end"
+      >
+        <a
+          aria-current="page"
+          className="navbar-item is-active"
+          href="/overview"
+          onClick={[Function]}
+          style={Object {}}
+        >
+          Overview
+        </a>
+        <a
+          aria-current={null}
+          className="navbar-item"
+          href="/start"
+          onClick={[Function]}
+        >
+          Get Started
+        </a>
+        <a
+          className="navbar-item"
+          href="https://fnalabs.github.io/hive-js/"
+        >
+          API
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>
+`;
+
+exports[`<Nav /> should render homepage nav correctly 1`] = `
+<nav
+  aria-label="main navigation"
+  className="navbar is-spaced is-transparent is-absolute is-home"
+  role="navigation"
+>
+  <div
+    className="container"
+  >
+    <div
+      className="navbar-brand"
+    >
+      <a
+        className="navbar-item"
+        href="/"
+        onClick={[Function]}
+      >
+        <svg
+          height="36"
+          viewBox="0 0 117.31758 135.46667"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="m 58.658792,6.7627869 52.802038,30.4852731 0,60.970543 L 58.658789,128.70387 5.8567507,98.2186 l 1.7e-6,-60.970543 z"
+            fill="none"
+            stroke="#daa520"
+            strokeWidth="12"
+          />
+        </svg>
+        <span>
+          Hive
+          <sup>
+            io
+          </sup>
+        </span>
+      </a>
+      <div
+        className="navbar-burger"
+        onClick={[Function]}
+      >
+        <span />
+        <span />
+        <span />
+      </div>
+    </div>
+    <div
+      className="navbar-menu"
+    >
+      <div
+        className="navbar-end"
+      >
+        <a
+          aria-current={null}
+          className="navbar-item"
+          href="/overview"
+          onClick={[Function]}
+        >
+          Overview
+        </a>
+        <a
+          aria-current={null}
+          className="navbar-item"
+          href="/start"
+          onClick={[Function]}
+        >
+          Get Started
+        </a>
+        <a
+          className="navbar-item"
+          href="https://fnalabs.github.io/hive-js/"
+        >
+          API
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>
+`;

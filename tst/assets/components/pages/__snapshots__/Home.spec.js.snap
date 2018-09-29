@@ -1,0 +1,925 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Home /> should render homepage static content 1`] = `
+Array [
+  <section
+    className="hero is-fullheight is-light is-bold"
+  >
+    <div
+      className="hero-body"
+    >
+      <div
+        className="container"
+      >
+        <div
+          className="tile is-ancestor"
+        >
+          <div
+            className="tile is-parent"
+          >
+            <div
+              className="tile is-child is-6 is-vertical has-text-centered"
+            >
+              <h1
+                className="title"
+              >
+                Hive
+                <sup>
+                  io
+                </sup>
+              </h1>
+              <h2
+                className="subtitle"
+              >
+                A reactive, cloud-native framework for building RESTful microservices.
+              </h2>
+            </div>
+            <div
+              className="tile is-child is-6"
+            >
+              <div
+                className="svg-animation-container"
+              >
+                <div
+                  className="svg-animation is-mongo-svg is-svg-1"
+                />
+                <div
+                  className="svg-animation is-hive-svg is-svg-2"
+                />
+                <div
+                  className="svg-animation is-envoy-svg is-svg-3"
+                />
+                <div
+                  className="svg-animation is-elastic-svg is-svg-4"
+                />
+                <div
+                  className="svg-animation is-hive-svg is-svg-5"
+                />
+                <div
+                  className="svg-animation is-hive-svg is-svg-6"
+                />
+                <div
+                  className="svg-animation is-envoy-svg is-svg-7"
+                />
+                <div
+                  className="svg-animation is-redis-svg is-svg-8"
+                />
+                <div
+                  className="svg-animation is-kafka-svg is-svg-9"
+                />
+                <div
+                  className="svg-animation is-hive-svg is-svg-10"
+                />
+                <div
+                  className="svg-animation is-hive-svg is-svg-11"
+                />
+                <div
+                  className="svg-animation is-hive-svg is-svg-12"
+                />
+                <div
+                  className="svg-animation is-envoy-svg is-svg-13"
+                />
+                <div
+                  className="svg-animation is-envoy-svg is-svg-14"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="hero-footer has-text-centered"
+    >
+      <svg
+        height="24"
+        viewBox="0 0 320 512"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M143 256.3L7 120.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0L313 86.3c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.4 9.5-24.6 9.5-34 .1zm34 192l136-136c9.4-9.4 9.4-24.6 0-33.9l-22.6-22.6c-9.4-9.4-24.6-9.4-33.9 0L160 352.1l-96.4-96.4c-9.4-9.4-24.6-9.4-33.9 0L7 278.3c-9.4 9.4-9.4 24.6 0 33.9l136 136c9.4 9.5 24.6 9.5 34 .1z"
+        />
+      </svg>
+    </div>
+  </section>,
+  <section
+    className="hero is-medium is-dark is-bold neon-tiles"
+  >
+    <div
+      className="hero-body"
+    >
+      <div
+        className="container"
+      >
+        <div
+          className="tile is-ancestor"
+        >
+          <div
+            className="tile is-8"
+          >
+            <div
+              className="tile is-vertical"
+            >
+              <div
+                className="tile is-parent"
+              >
+                <div
+                  className="tile is-child"
+                >
+                  <article
+                    className="card is-reactive"
+                  >
+                    <div
+                      className="card-image"
+                    >
+                      <figure
+                        className="image is-96x96 has-text-centered"
+                      >
+                        <svg
+                          height="96"
+                          viewBox="0 0 320 512"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M295.973 160H180.572L215.19 30.184C219.25 14.956 207.756 0 192 0H56C43.971 0 33.8 8.905 32.211 20.828l-31.996 240C-1.704 275.217 9.504 288 24.004 288h118.701L96.646 482.466C93.05 497.649 104.659 512 119.992 512c8.35 0 16.376-4.374 20.778-11.978l175.973-303.997c9.244-15.967-2.288-36.025-20.77-36.025z"
+                          />
+                        </svg>
+                      </figure>
+                    </div>
+                    <div
+                      className="card-content content"
+                    >
+                      <h3
+                        className="has-text-centered"
+                      >
+                        Responsive
+                      </h3>
+                      <p>
+                        Hive
+                        <sup>
+                          io
+                        </sup>
+                         is able to give lightning fast response times by implementing and supporting microservices with Node.js. You immediately get high performance by leveraging a high volume and low latency non-blocking I/O solution.
+                      </p>
+                    </div>
+                  </article>
+                </div>
+              </div>
+              <div
+                className="tile is-parent"
+              >
+                <div
+                  className="tile is-child"
+                >
+                  <article
+                    className="card is-reactive"
+                  >
+                    <div
+                      className="card-image"
+                    >
+                      <figure
+                        className="image is-96x96 has-text-centered"
+                      >
+                        <svg
+                          height="96"
+                          viewBox="0 0 448 512"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M0 180V56c0-13.3 10.7-24 24-24h124c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12H64v84c0 6.6-5.4 12-12 12H12c-6.6 0-12-5.4-12-12zM288 44v40c0 6.6 5.4 12 12 12h84v84c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12V56c0-13.3-10.7-24-24-24H300c-6.6 0-12 5.4-12 12zm148 276h-40c-6.6 0-12 5.4-12 12v84h-84c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h124c13.3 0 24-10.7 24-24V332c0-6.6-5.4-12-12-12zM160 468v-40c0-6.6-5.4-12-12-12H64v-84c0-6.6-5.4-12-12-12H12c-6.6 0-12 5.4-12 12v124c0 13.3 10.7 24 24 24h124c6.6 0 12-5.4 12-12z"
+                          />
+                        </svg>
+                      </figure>
+                    </div>
+                    <div
+                      className="card-content content"
+                    >
+                      <h3
+                        className="has-text-centered"
+                      >
+                        Resilient
+                      </h3>
+                      <p>
+                        Each microservice container is a stateless, RESTful service with atomic responsibilities that can scale horizontally. You can contain and isolate aggregates in your domain model with these services to ensure that you are still capable of serving traffic, even during a catastrophic event or unexpected high volume.
+                      </p>
+                    </div>
+                  </article>
+                </div>
+              </div>
+            </div>
+            <div
+              className="tile is-vertical"
+            >
+              <div
+                className="tile is-parent"
+              >
+                <div
+                  className="tile is-child"
+                >
+                  <article
+                    className="card is-reactive"
+                  >
+                    <div
+                      className="card-image"
+                    >
+                      <figure
+                        className="image is-96x96 has-text-centered"
+                      >
+                        <svg
+                          height="96"
+                          viewBox="0 0 448 512"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34zm192-34l-136-136c-9.4-9.4-24.6-9.4-33.9 0l-22.6 22.6c-9.4 9.4-9.4 24.6 0 33.9l96.4 96.4-96.4 96.4c-9.4 9.4-9.4 24.6 0 33.9l22.6 22.6c9.4 9.4 24.6 9.4 33.9 0l136-136c9.4-9.2 9.4-24.4 0-33.8z"
+                          />
+                        </svg>
+                      </figure>
+                    </div>
+                    <div
+                      className="card-content content"
+                    >
+                      <h3
+                        className="has-text-centered"
+                      >
+                        Elastic
+                      </h3>
+                      <p>
+                        Hive
+                        <sup>
+                          io
+                        </sup>
+                         provides scalable solutions by allowing immediate deployments during peaks in your system load. Furthermore, you can apply auto scaling solutions to save you not only money but increased uptime when production workloads get unpredictable.
+                      </p>
+                    </div>
+                  </article>
+                </div>
+              </div>
+              <div
+                className="tile is-parent"
+              >
+                <div
+                  className="tile is-child"
+                >
+                  <article
+                    className="card is-reactive"
+                  >
+                    <div
+                      className="card-image"
+                    >
+                      <figure
+                        className="image is-96x96 has-text-centered"
+                      >
+                        <svg
+                          height="96"
+                          viewBox="0 0 512 512"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M448 0H64C28.7 0 0 28.7 0 64v288c0 35.3 28.7 64 64 64h96v84c0 7.1 5.8 12 12 12 2.4 0 4.9-.7 7.1-2.4L304 416h144c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64zm16 352c0 8.8-7.2 16-16 16H288l-12.8 9.6L208 428v-60H64c-8.8 0-16-7.2-16-16V64c0-8.8 7.2-16 16-16h384c8.8 0 16 7.2 16 16v288z"
+                          />
+                        </svg>
+                      </figure>
+                    </div>
+                    <div
+                      className="card-content content"
+                    >
+                      <h3
+                        className="has-text-centered"
+                      >
+                        Message Driven
+                      </h3>
+                      <p>
+                        Hive
+                        <sup>
+                          io
+                        </sup>
+                         provides an asynchronous, message passing framework that ensures loose coupling, isolation, and location transparency with Node.js and Kafka. We chose Node.js for its high performance in non-blocking I/O capabilities. Likewise, Kafka for its storage and messaging capabilities.
+                      </p>
+                    </div>
+                  </article>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="tile is-parent"
+          >
+            <div
+              className="tile is-child"
+            >
+              <article
+                className="card is-serverless"
+              >
+                <div
+                  className="card-image"
+                >
+                  <figure
+                    className="image is-96x96 has-text-centered"
+                  >
+                    <svg
+                      height="96"
+                      viewBox="0 0 640 512"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M537.585 226.56C541.725 215.836 544 204.184 544 192c0-53.019-42.981-96-96-96-19.729 0-38.065 5.954-53.316 16.159C367.042 64.248 315.288 32 256 32c-88.366 0-160 71.634-160 160 0 2.728.07 5.439.204 8.133C40.171 219.845 0 273.227 0 336c0 79.529 64.471 144 144 144h368c70.692 0 128-57.308 128-128 0-61.93-43.983-113.586-102.415-125.44z"
+                      />
+                    </svg>
+                  </figure>
+                </div>
+                <div
+                  className="card-content content"
+                >
+                  <h3
+                    className="has-text-centered"
+                  >
+                    Cloud Native
+                  </h3>
+                  <p>
+                    Hive
+                    <sup>
+                      io
+                    </sup>
+                     provides cloud-native computing through standardized Docker images to wrap your domain logic with a lightweight, RESTful interface. This allows you to skip the boilerplate setup/maintenance and dive straight into adding immediate value to your application.
+                  </p>
+                  <p>
+                    Each base image is highly extensible and configurable right out of the box. They make very few assumptions to support different architectures which allows it to pair well with other cloud native initiatives and patterns.
+                  </p>
+                  <p>
+                    Overall Hive
+                    <sup>
+                      io
+                    </sup>
+                     allows you to make infrastructure decisions to suit your needs with little compromise.
+                  </p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+        <div
+          className="tile is-ancestor"
+        >
+          <div
+            className="tile is-parent is-8"
+          >
+            <div
+              className="tile is-child"
+            >
+              <article
+                className="card is-robust"
+              >
+                <div
+                  className="card-image"
+                >
+                  <figure
+                    className="image is-96x96 has-text-centered"
+                  >
+                    <svg
+                      height="96"
+                      viewBox="0 0 512 512"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M0 168v-16c0-13.255 10.745-24 24-24h360V80c0-21.367 25.899-32.042 40.971-16.971l80 80c9.372 9.373 9.372 24.569 0 33.941l-80 80C409.956 271.982 384 261.456 384 240v-48H24c-13.255 0-24-10.745-24-24zm488 152H128v-48c0-21.314-25.862-32.08-40.971-16.971l-80 80c-9.372 9.373-9.372 24.569 0 33.941l80 80C102.057 463.997 128 453.437 128 432v-48h360c13.255 0 24-10.745 24-24v-16c0-13.255-10.745-24-24-24z"
+                      />
+                    </svg>
+                  </figure>
+                </div>
+                <div
+                  className="card-content content"
+                >
+                  <h3
+                    className="has-text-centered"
+                  >
+                    Flexible & Robust
+                  </h3>
+                  <p>
+                    There is no need to worry about having a certain pattern or architecture available, Hive
+                    <sup>
+                      io
+                    </sup>
+                     is exceedingly flexible and extensible. Just design what solution you think fits best and roll it into the infrastructure. Simply pick the container type that fits your needs and get coding.
+                  </p>
+                  <p>
+                    Hive
+                    <sup>
+                      io
+                    </sup>
+                     uses the JSON Schema and Flux Standard Action specifications to automatically serialize and validate your data Models for network transport. We call it Model JSON Serialization and it allows you to standardize data exchanges directly into fully validated Model instance.
+                  </p>
+                </div>
+              </article>
+            </div>
+          </div>
+          <div
+            className="tile is-parent"
+          >
+            <div
+              className="tile is-child has-text-centered-mobile"
+            >
+              <svg
+                className="is-hive"
+                height="72"
+                viewBox="0 0 117.31758 135.46667"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="m 58.658792,6.7627869 52.802038,30.4852731 0,60.970543 L 58.658789,128.70387 5.8567507,98.2186 l 1.7e-6,-60.970543 z"
+                  fill="none"
+                  strokeWidth="12"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>,
+  <section
+    className="hero is-small is-hive"
+  >
+    <div
+      className="hero-body has-text-centered"
+    >
+      <a
+        href="/overview"
+        onClick={[Function]}
+      >
+        <svg
+          height="48"
+          viewBox="0 0 448 512"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34zm192-34l-136-136c-9.4-9.4-24.6-9.4-33.9 0l-22.6 22.6c-9.4 9.4-9.4 24.6 0 33.9l96.4 96.4-96.4 96.4c-9.4 9.4-9.4 24.6 0 33.9l22.6 22.6c9.4 9.4 24.6 9.4 33.9 0l136-136c9.4-9.2 9.4-24.4 0-33.8z"
+          />
+        </svg>
+      </a>
+    </div>
+  </section>,
+]
+`;
+
+exports[`<Home /> should render homepage static content and report page view 1`] = `
+Array [
+  <section
+    className="hero is-fullheight is-light is-bold"
+  >
+    <div
+      className="hero-body"
+    >
+      <div
+        className="container"
+      >
+        <div
+          className="tile is-ancestor"
+        >
+          <div
+            className="tile is-parent"
+          >
+            <div
+              className="tile is-child is-6 is-vertical has-text-centered"
+            >
+              <h1
+                className="title"
+              >
+                Hive
+                <sup>
+                  io
+                </sup>
+              </h1>
+              <h2
+                className="subtitle"
+              >
+                A reactive, cloud-native framework for building RESTful microservices.
+              </h2>
+            </div>
+            <div
+              className="tile is-child is-6"
+            >
+              <div
+                className="svg-animation-container"
+              >
+                <div
+                  className="svg-animation is-mongo-svg is-svg-1"
+                />
+                <div
+                  className="svg-animation is-hive-svg is-svg-2"
+                />
+                <div
+                  className="svg-animation is-envoy-svg is-svg-3"
+                />
+                <div
+                  className="svg-animation is-elastic-svg is-svg-4"
+                />
+                <div
+                  className="svg-animation is-hive-svg is-svg-5"
+                />
+                <div
+                  className="svg-animation is-hive-svg is-svg-6"
+                />
+                <div
+                  className="svg-animation is-envoy-svg is-svg-7"
+                />
+                <div
+                  className="svg-animation is-redis-svg is-svg-8"
+                />
+                <div
+                  className="svg-animation is-kafka-svg is-svg-9"
+                />
+                <div
+                  className="svg-animation is-hive-svg is-svg-10"
+                />
+                <div
+                  className="svg-animation is-hive-svg is-svg-11"
+                />
+                <div
+                  className="svg-animation is-hive-svg is-svg-12"
+                />
+                <div
+                  className="svg-animation is-envoy-svg is-svg-13"
+                />
+                <div
+                  className="svg-animation is-envoy-svg is-svg-14"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="hero-footer has-text-centered"
+    >
+      <svg
+        height="24"
+        viewBox="0 0 320 512"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M143 256.3L7 120.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0L313 86.3c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.4 9.5-24.6 9.5-34 .1zm34 192l136-136c9.4-9.4 9.4-24.6 0-33.9l-22.6-22.6c-9.4-9.4-24.6-9.4-33.9 0L160 352.1l-96.4-96.4c-9.4-9.4-24.6-9.4-33.9 0L7 278.3c-9.4 9.4-9.4 24.6 0 33.9l136 136c9.4 9.5 24.6 9.5 34 .1z"
+        />
+      </svg>
+    </div>
+  </section>,
+  <section
+    className="hero is-medium is-dark is-bold neon-tiles"
+  >
+    <div
+      className="hero-body"
+    >
+      <div
+        className="container"
+      >
+        <div
+          className="tile is-ancestor"
+        >
+          <div
+            className="tile is-8"
+          >
+            <div
+              className="tile is-vertical"
+            >
+              <div
+                className="tile is-parent"
+              >
+                <div
+                  className="tile is-child"
+                >
+                  <article
+                    className="card is-reactive"
+                  >
+                    <div
+                      className="card-image"
+                    >
+                      <figure
+                        className="image is-96x96 has-text-centered"
+                      >
+                        <svg
+                          height="96"
+                          viewBox="0 0 320 512"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M295.973 160H180.572L215.19 30.184C219.25 14.956 207.756 0 192 0H56C43.971 0 33.8 8.905 32.211 20.828l-31.996 240C-1.704 275.217 9.504 288 24.004 288h118.701L96.646 482.466C93.05 497.649 104.659 512 119.992 512c8.35 0 16.376-4.374 20.778-11.978l175.973-303.997c9.244-15.967-2.288-36.025-20.77-36.025z"
+                          />
+                        </svg>
+                      </figure>
+                    </div>
+                    <div
+                      className="card-content content"
+                    >
+                      <h3
+                        className="has-text-centered"
+                      >
+                        Responsive
+                      </h3>
+                      <p>
+                        Hive
+                        <sup>
+                          io
+                        </sup>
+                         is able to give lightning fast response times by implementing and supporting microservices with Node.js. You immediately get high performance by leveraging a high volume and low latency non-blocking I/O solution.
+                      </p>
+                    </div>
+                  </article>
+                </div>
+              </div>
+              <div
+                className="tile is-parent"
+              >
+                <div
+                  className="tile is-child"
+                >
+                  <article
+                    className="card is-reactive"
+                  >
+                    <div
+                      className="card-image"
+                    >
+                      <figure
+                        className="image is-96x96 has-text-centered"
+                      >
+                        <svg
+                          height="96"
+                          viewBox="0 0 448 512"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M0 180V56c0-13.3 10.7-24 24-24h124c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12H64v84c0 6.6-5.4 12-12 12H12c-6.6 0-12-5.4-12-12zM288 44v40c0 6.6 5.4 12 12 12h84v84c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12V56c0-13.3-10.7-24-24-24H300c-6.6 0-12 5.4-12 12zm148 276h-40c-6.6 0-12 5.4-12 12v84h-84c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h124c13.3 0 24-10.7 24-24V332c0-6.6-5.4-12-12-12zM160 468v-40c0-6.6-5.4-12-12-12H64v-84c0-6.6-5.4-12-12-12H12c-6.6 0-12 5.4-12 12v124c0 13.3 10.7 24 24 24h124c6.6 0 12-5.4 12-12z"
+                          />
+                        </svg>
+                      </figure>
+                    </div>
+                    <div
+                      className="card-content content"
+                    >
+                      <h3
+                        className="has-text-centered"
+                      >
+                        Resilient
+                      </h3>
+                      <p>
+                        Each microservice container is a stateless, RESTful service with atomic responsibilities that can scale horizontally. You can contain and isolate aggregates in your domain model with these services to ensure that you are still capable of serving traffic, even during a catastrophic event or unexpected high volume.
+                      </p>
+                    </div>
+                  </article>
+                </div>
+              </div>
+            </div>
+            <div
+              className="tile is-vertical"
+            >
+              <div
+                className="tile is-parent"
+              >
+                <div
+                  className="tile is-child"
+                >
+                  <article
+                    className="card is-reactive"
+                  >
+                    <div
+                      className="card-image"
+                    >
+                      <figure
+                        className="image is-96x96 has-text-centered"
+                      >
+                        <svg
+                          height="96"
+                          viewBox="0 0 448 512"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34zm192-34l-136-136c-9.4-9.4-24.6-9.4-33.9 0l-22.6 22.6c-9.4 9.4-9.4 24.6 0 33.9l96.4 96.4-96.4 96.4c-9.4 9.4-9.4 24.6 0 33.9l22.6 22.6c9.4 9.4 24.6 9.4 33.9 0l136-136c9.4-9.2 9.4-24.4 0-33.8z"
+                          />
+                        </svg>
+                      </figure>
+                    </div>
+                    <div
+                      className="card-content content"
+                    >
+                      <h3
+                        className="has-text-centered"
+                      >
+                        Elastic
+                      </h3>
+                      <p>
+                        Hive
+                        <sup>
+                          io
+                        </sup>
+                         provides scalable solutions by allowing immediate deployments during peaks in your system load. Furthermore, you can apply auto scaling solutions to save you not only money but increased uptime when production workloads get unpredictable.
+                      </p>
+                    </div>
+                  </article>
+                </div>
+              </div>
+              <div
+                className="tile is-parent"
+              >
+                <div
+                  className="tile is-child"
+                >
+                  <article
+                    className="card is-reactive"
+                  >
+                    <div
+                      className="card-image"
+                    >
+                      <figure
+                        className="image is-96x96 has-text-centered"
+                      >
+                        <svg
+                          height="96"
+                          viewBox="0 0 512 512"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M448 0H64C28.7 0 0 28.7 0 64v288c0 35.3 28.7 64 64 64h96v84c0 7.1 5.8 12 12 12 2.4 0 4.9-.7 7.1-2.4L304 416h144c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64zm16 352c0 8.8-7.2 16-16 16H288l-12.8 9.6L208 428v-60H64c-8.8 0-16-7.2-16-16V64c0-8.8 7.2-16 16-16h384c8.8 0 16 7.2 16 16v288z"
+                          />
+                        </svg>
+                      </figure>
+                    </div>
+                    <div
+                      className="card-content content"
+                    >
+                      <h3
+                        className="has-text-centered"
+                      >
+                        Message Driven
+                      </h3>
+                      <p>
+                        Hive
+                        <sup>
+                          io
+                        </sup>
+                         provides an asynchronous, message passing framework that ensures loose coupling, isolation, and location transparency with Node.js and Kafka. We chose Node.js for its high performance in non-blocking I/O capabilities. Likewise, Kafka for its storage and messaging capabilities.
+                      </p>
+                    </div>
+                  </article>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="tile is-parent"
+          >
+            <div
+              className="tile is-child"
+            >
+              <article
+                className="card is-serverless"
+              >
+                <div
+                  className="card-image"
+                >
+                  <figure
+                    className="image is-96x96 has-text-centered"
+                  >
+                    <svg
+                      height="96"
+                      viewBox="0 0 640 512"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M537.585 226.56C541.725 215.836 544 204.184 544 192c0-53.019-42.981-96-96-96-19.729 0-38.065 5.954-53.316 16.159C367.042 64.248 315.288 32 256 32c-88.366 0-160 71.634-160 160 0 2.728.07 5.439.204 8.133C40.171 219.845 0 273.227 0 336c0 79.529 64.471 144 144 144h368c70.692 0 128-57.308 128-128 0-61.93-43.983-113.586-102.415-125.44z"
+                      />
+                    </svg>
+                  </figure>
+                </div>
+                <div
+                  className="card-content content"
+                >
+                  <h3
+                    className="has-text-centered"
+                  >
+                    Cloud Native
+                  </h3>
+                  <p>
+                    Hive
+                    <sup>
+                      io
+                    </sup>
+                     provides cloud-native computing through standardized Docker images to wrap your domain logic with a lightweight, RESTful interface. This allows you to skip the boilerplate setup/maintenance and dive straight into adding immediate value to your application.
+                  </p>
+                  <p>
+                    Each base image is highly extensible and configurable right out of the box. They make very few assumptions to support different architectures which allows it to pair well with other cloud native initiatives and patterns.
+                  </p>
+                  <p>
+                    Overall Hive
+                    <sup>
+                      io
+                    </sup>
+                     allows you to make infrastructure decisions to suit your needs with little compromise.
+                  </p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+        <div
+          className="tile is-ancestor"
+        >
+          <div
+            className="tile is-parent is-8"
+          >
+            <div
+              className="tile is-child"
+            >
+              <article
+                className="card is-robust"
+              >
+                <div
+                  className="card-image"
+                >
+                  <figure
+                    className="image is-96x96 has-text-centered"
+                  >
+                    <svg
+                      height="96"
+                      viewBox="0 0 512 512"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M0 168v-16c0-13.255 10.745-24 24-24h360V80c0-21.367 25.899-32.042 40.971-16.971l80 80c9.372 9.373 9.372 24.569 0 33.941l-80 80C409.956 271.982 384 261.456 384 240v-48H24c-13.255 0-24-10.745-24-24zm488 152H128v-48c0-21.314-25.862-32.08-40.971-16.971l-80 80c-9.372 9.373-9.372 24.569 0 33.941l80 80C102.057 463.997 128 453.437 128 432v-48h360c13.255 0 24-10.745 24-24v-16c0-13.255-10.745-24-24-24z"
+                      />
+                    </svg>
+                  </figure>
+                </div>
+                <div
+                  className="card-content content"
+                >
+                  <h3
+                    className="has-text-centered"
+                  >
+                    Flexible & Robust
+                  </h3>
+                  <p>
+                    There is no need to worry about having a certain pattern or architecture available, Hive
+                    <sup>
+                      io
+                    </sup>
+                     is exceedingly flexible and extensible. Just design what solution you think fits best and roll it into the infrastructure. Simply pick the container type that fits your needs and get coding.
+                  </p>
+                  <p>
+                    Hive
+                    <sup>
+                      io
+                    </sup>
+                     uses the JSON Schema and Flux Standard Action specifications to automatically serialize and validate your data Models for network transport. We call it Model JSON Serialization and it allows you to standardize data exchanges directly into fully validated Model instance.
+                  </p>
+                </div>
+              </article>
+            </div>
+          </div>
+          <div
+            className="tile is-parent"
+          >
+            <div
+              className="tile is-child has-text-centered-mobile"
+            >
+              <svg
+                className="is-hive"
+                height="72"
+                viewBox="0 0 117.31758 135.46667"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="m 58.658792,6.7627869 52.802038,30.4852731 0,60.970543 L 58.658789,128.70387 5.8567507,98.2186 l 1.7e-6,-60.970543 z"
+                  fill="none"
+                  strokeWidth="12"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>,
+  <section
+    className="hero is-small is-hive"
+  >
+    <div
+      className="hero-body has-text-centered"
+    >
+      <a
+        href="/overview"
+        onClick={[Function]}
+      >
+        <svg
+          height="48"
+          viewBox="0 0 448 512"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34zm192-34l-136-136c-9.4-9.4-24.6-9.4-33.9 0l-22.6 22.6c-9.4 9.4-9.4 24.6 0 33.9l96.4 96.4-96.4 96.4c-9.4 9.4-9.4 24.6 0 33.9l22.6 22.6c9.4 9.4 24.6 9.4 33.9 0l136-136c9.4-9.2 9.4-24.4 0-33.8z"
+          />
+        </svg>
+      </a>
+    </div>
+  </section>,
+]
+`;
