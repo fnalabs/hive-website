@@ -30,7 +30,7 @@ class Transition extends Component {
   }
 
   static getDerivedStateFromProps (props, state) {
-    if (Cookies.get('CookieConsent')) return { isConsent: true }
+    if (!state.isConsent && Cookies.get('CookieConsent')) return { isConsent: true }
     else return null
   }
 
@@ -47,12 +47,13 @@ class Transition extends Component {
 
         {!this.state.isConsent &&
           <CookieConsent disableStyles
+            buttonText='I Accept'
             buttonClasses='button is-pulled-right'
             containerClasses='notification is-hive'
             contentClasses='is-inline-block'
             onAccept={this.onAccept}
           >
-            Hive<sup>io</sup> uses cookies to provide you the best experience. By clicking <strong>I Understand</strong> you are agreeing to our <Link to='/cookie'>Cookie</Link> and <Link to='/privacy'>Privacy</Link> Policies.
+            FnA Labs uses cookies to provide you the best experience. By clicking <strong>I Accept</strong> you are agreeing to our <Link to='/cookie'>Cookie</Link> and <Link to='/privacy'>Privacy</Link> Policies.
           </CookieConsent>
         }
       </Provider>
