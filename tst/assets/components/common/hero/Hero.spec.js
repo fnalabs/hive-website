@@ -2,7 +2,7 @@
 import React from 'react'
 import { shallow } from 'enzyme'
 
-import Hero from '../../../../../src/assets/components/common/hero/Hero.jsx'
+import { Hero } from 'common/hero'
 
 describe('<Hero />', () => {
   test('should render basic', () => {

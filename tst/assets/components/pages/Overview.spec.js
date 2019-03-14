@@ -6,7 +6,7 @@ import { MemoryRouter } from 'react-router'
 import { Cookies } from 'react-cookie-consent'
 import ReactGA from 'react-ga'
 
-import Overview from '../../../../src/assets/components/pages/overview/Overview.jsx'
+import { Overview } from 'pages'
 
 jest.mock('react-ga')
 

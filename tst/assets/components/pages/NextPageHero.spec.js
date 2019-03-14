@@ -2,7 +2,7 @@
 import React from 'react'
 import { shallow } from 'enzyme'
 
-import NextPageHero from '../../../../src/assets/components/pages/NextPageHero.jsx'
+import NextPageHero from 'pages/NextPageHero.jsx'
 
 describe('<NextPageHero />', () => {
   test('should render the next site page hero link', () => {

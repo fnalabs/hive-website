@@ -2,7 +2,7 @@
 import React from 'react'
 import { mount, shallow } from 'enzyme'
 
-import AnalyticsLink from '../../../../src/assets/components/common/AnalyticsLink.jsx'
+import { AnalyticsLink } from 'common'
 
 describe('<AnalyticsLink />', () => {
   test('should render not consented', () => {
@@ -26,10 +26,10 @@ describe('<AnalyticsLink />', () => {
   test('should render consented', () => {
     const analyticsLink = shallow(<AnalyticsLink to='test'>test</AnalyticsLink>)
     const Children = analyticsLink.props().children({ isConsent: true })
-    const link = shallow(Children)
+    const link = mount(Children)
 
-    expect(link.is('a')).toBe(true)
+    expect(link.is('OutboundLink')).toBe(true)
     expect(link.prop('to')).toEqual('test')
-    expect(link.prop('href')).toEqual('test')
+    expect(link.prop('eventLabel')).toEqual('test')
   })
 })

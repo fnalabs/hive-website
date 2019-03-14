@@ -2,7 +2,7 @@
 import React from 'react'
 import { shallow } from 'enzyme'
 
-import Tile from '../../../../src/assets/components/common/Tile.jsx'
+import { Tile } from 'common'
 
 describe('<Tile />', () => {
   test('should render basic', () => {

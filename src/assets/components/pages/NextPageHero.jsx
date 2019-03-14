@@ -2,8 +2,8 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 
-import { AnalyticsLink } from '../common'
-import { Hero, HeroBody } from '../common/hero'
+import { AnalyticsLink } from 'common'
+import { Hero, HeroBody } from 'common/hero'
 
 const toRegex = /^https:\/\//
 

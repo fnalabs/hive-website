@@ -7,7 +7,7 @@ import { TopHero } from './TopHero.jsx'
 import { MidHero } from './MidHero.jsx'
 import NextPageHero from '../NextPageHero.jsx'
 
-import meta from '../../../metadata.json'
+import meta from 'metadata.json'
 
 export default class Home extends Component {
   componentDidMount () {

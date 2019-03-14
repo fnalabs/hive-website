@@ -1,7 +1,7 @@
 import React from 'react'
 
-import { Container, Tile } from '../../common'
-import { Hero, HeroBody, HeroFooter } from '../../common/hero'
+import { Container, Tile } from 'common'
+import { Hero, HeroBody, HeroFooter } from 'common/hero'
 
 export const TopHero = () => (
   <Hero size='fullheight' color='light' bold>

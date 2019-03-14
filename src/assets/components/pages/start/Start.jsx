@@ -3,14 +3,14 @@ import Helmet from 'react-helmet'
 import { Cookies } from 'react-cookie-consent'
 import ReactGA from 'react-ga'
 
-import { Container } from '../../common'
+import { Container } from 'common'
 
 import { Setup } from './Setup.jsx'
 import { ExampleREST } from './ExampleREST.jsx'
 import { ExampleCQRS } from './ExampleCQRS.jsx'
 import NextPageHero from '../NextPageHero.jsx'
 
-import meta from '../../../metadata.json'
+import meta from 'metadata.json'
 
 export default class Start extends Component {
   componentDidMount () {

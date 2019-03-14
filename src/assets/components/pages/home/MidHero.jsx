@@ -1,7 +1,7 @@
 import React from 'react'
 
-import { Container, Tile } from '../../common'
-import { Hero, HeroBody } from '../../common/hero'
+import { Container, Tile } from 'common'
+import { Hero, HeroBody } from 'common/hero'
 
 import {
   CloudNative,

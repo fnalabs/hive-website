@@ -2,7 +2,7 @@
 import React from 'react'
 import { shallow } from 'enzyme'
 
-import Container from '../../../../src/assets/components/common/Container.jsx'
+import { Container } from 'common'
 
 describe('<Container />', () => {
   test('should render empty', () => {

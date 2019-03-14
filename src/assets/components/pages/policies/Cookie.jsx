@@ -2,9 +2,9 @@ import React, { Fragment } from 'react'
 import { Link } from 'react-router-dom'
 import Helmet from 'react-helmet'
 
-import { Container } from '../../common'
+import { Container } from 'common'
 
-import meta from '../../../metadata.json'
+import meta from 'metadata.json'
 
 export const Cookie = () => {
   const { title, url } = meta['/cookie']
