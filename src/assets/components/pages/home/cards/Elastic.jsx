@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Card, CardContent, CardImage } from '../../../common/card'
+import { Card, CardContent, CardImage } from 'common/card'
 
 export const Elastic = () => (
   <Card className='is-reactive'>

@@ -6,7 +6,7 @@ import { MemoryRouter } from 'react-router'
 import { Cookies } from 'react-cookie-consent'
 import ReactGA from 'react-ga'
 
-import Home from '../../../../src/assets/components/pages/home/Home.jsx'
+import { Home } from 'pages'
 
 jest.mock('react-ga')
 

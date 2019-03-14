@@ -6,7 +6,7 @@ import { MemoryRouter } from 'react-router'
 import { Cookies } from 'react-cookie-consent'
 import ReactGA from 'react-ga'
 
-import Start from '../../../../src/assets/components/pages/start/Start.jsx'
+import { Start } from 'pages'
 
 jest.mock('react-ga')
 

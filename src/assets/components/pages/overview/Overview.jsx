@@ -3,7 +3,7 @@ import Helmet from 'react-helmet'
 import { Cookies } from 'react-cookie-consent'
 import ReactGA from 'react-ga'
 
-import { Container } from '../../common'
+import { Container } from 'common'
 
 import { Intro } from './Intro.jsx'
 import { Business } from './Business.jsx'
@@ -11,7 +11,7 @@ import { Model } from './Model.jsx'
 import { Infrastructure } from './Infrastructure.jsx'
 import NextPageHero from '../NextPageHero.jsx'
 
-import meta from '../../../metadata.json'
+import meta from 'metadata.json'
 
 export default class Overview extends Component {
   componentDidMount () {

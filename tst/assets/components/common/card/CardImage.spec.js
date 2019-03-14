@@ -2,7 +2,7 @@
 import React from 'react'
 import { shallow } from 'enzyme'
 
-import { CardImage } from '../../../../../src/assets/components/common/card/CardImage.jsx'
+import { CardImage } from 'common/card'
 
 describe('<CardImage />', () => {
   test('should render w/o content', () => {
