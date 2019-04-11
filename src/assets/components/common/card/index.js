@@ -1,3 +1,3 @@
-export { default as Card } from './Card.jsx'
-export { default as CardContent } from './CardContent.jsx'
-export { CardImage } from './CardImage.jsx'
+export { default as Card } from './Card'
+export { default as CardContent } from './CardContent'
+export { CardImage } from './CardImage'

@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Routes } from 'Routes.jsx'
+import { Routes } from 'Routes'
 import { Nav, Footer } from 'layout'
 
 import styles from 'styles/main.scss'

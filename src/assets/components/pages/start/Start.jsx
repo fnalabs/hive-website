@@ -5,12 +5,12 @@ import ReactGA from 'react-ga'
 
 import { Container } from 'common'
 
-import { Setup } from './Setup.jsx'
-import { ExampleREST } from './ExampleREST.jsx'
-import { ExampleCQRS } from './ExampleCQRS.jsx'
-import NextPageHero from '../NextPageHero.jsx'
+import { Setup } from './Setup'
+import { ExampleREST } from './ExampleREST'
+import { ExampleCQRS } from './ExampleCQRS'
+import NextPageHero from '../NextPageHero'
 
-import meta from 'metadata.json'
+import meta from 'metadata'
 
 export default class Start extends Component {
   componentDidMount () {

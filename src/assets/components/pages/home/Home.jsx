@@ -3,11 +3,11 @@ import Helmet from 'react-helmet'
 import { Cookies } from 'react-cookie-consent'
 import ReactGA from 'react-ga'
 
-import { TopHero } from './TopHero.jsx'
-import { MidHero } from './MidHero.jsx'
-import NextPageHero from '../NextPageHero.jsx'
+import { TopHero } from './TopHero'
+import { MidHero } from './MidHero'
+import NextPageHero from '../NextPageHero'
 
-import meta from 'metadata.json'
+import meta from 'metadata'
 
 export default class Home extends Component {
   componentDidMount () {
