@@ -1,5 +1,7 @@
 import React, { Fragment } from 'react'
 
+import { Info } from 'icons'
+
 export const ExampleCQRS = () => (
   <Fragment>
     <h4>CQRS/ES Example</h4>
@@ -7,9 +9,7 @@ export const ExampleCQRS = () => (
 
     <h5><a href='https://www.npmjs.com/package/hive-io-domain-example' target='_blank'>Business Logic</a> (<a href='https://github.com/fnalabs/hive-js-domain-example' target='_blank'>Source Code</a>)</h5>
     <div className='notification'>
-      <span className='icon'>
-        <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' className='svg-inline'><path fill='#209cee' d='M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z' /></svg>
-      </span>
+      <span className='icon'><Info className='svg-inline' /></span>
       <span>You should consider using a private NPM registry or implementing more creative solutions such as extending base Docker images with <code>ADD</code>|<code>COPY</code> statements for source code and <code>npm link</code> for your business logic.</span>
     </div>
 

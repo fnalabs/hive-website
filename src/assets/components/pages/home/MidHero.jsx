@@ -2,6 +2,7 @@ import React from 'react'
 
 import { Container, Tile } from 'common'
 import { Hero, HeroBody } from 'common/hero'
+import { HiveIO } from 'icons'
 
 import {
   CloudNative,
@@ -63,7 +64,7 @@ export const MidHero = () => (
 
           <Tile type='parent'>
             <Tile type='child' centeredMobile>
-              <svg className='is-hive' height='72' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 117.31758 135.46667'><path d='m 58.658792,6.7627869 52.802038,30.4852731 0,60.970543 L 58.658789,128.70387 5.8567507,98.2186 l 1.7e-6,-60.970543 z' fill='none' strokeWidth='12' /></svg>
+              <HiveIO className='is-hive' height='72' />
             </Tile>
           </Tile>
         </Tile>

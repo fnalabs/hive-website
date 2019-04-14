@@ -3,6 +3,7 @@ import { withRouter } from 'react-router'
 import { Link, NavLink } from 'react-router-dom'
 
 import { AnalyticsLink, Container } from 'common'
+import { HiveIO } from 'icons'
 
 class Nav extends Component {
   constructor (props) {
@@ -36,7 +37,7 @@ class Nav extends Component {
         <Container>
           <div className='navbar-brand'>
             <Link to='/' className='navbar-item'>
-              <svg xmlns='http://www.w3.org/2000/svg' height='36' viewBox='0 0 117.31758 135.46667'><path d='m 58.658792,6.7627869 52.802038,30.4852731 0,60.970543 L 58.658789,128.70387 5.8567507,98.2186 l 1.7e-6,-60.970543 z' fill='none' stroke='#daa520' strokeWidth='12' /></svg>
+              <HiveIO height='36' />
               <span>Hive<sup>io</sup></span>
             </Link>
 
