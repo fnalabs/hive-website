@@ -10,7 +10,7 @@ import { renderToString } from 'react-dom/server'
 import { StaticRouter } from 'react-router'
 import Helmet from 'react-helmet'
 
-import { Layout } from './Layout.jsx'
+import { Layout } from './Layout'
 
 // init app
 const app = new Koa()
