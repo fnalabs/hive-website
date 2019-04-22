@@ -15,13 +15,13 @@ import meta from 'metadata'
 export default class Start extends Component {
   componentDidMount () {
     if (Cookies.get('CookieConsent')) {
-      const title = `${meta['/start'].title} | ${meta.common.siteName}`
+      const title = `${meta['/start/'].title} | ${meta.common.siteName}`
       ReactGA.pageview(this.props.location.pathname, undefined, title)
     }
   }
 
   render () {
-    const { title, description, url } = meta['/start']
+    const { title, description, url } = meta['/start/']
     const siteName = meta.common.siteName
 
     return (

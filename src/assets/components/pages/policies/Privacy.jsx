@@ -7,7 +7,7 @@ import { Container } from 'common'
 import meta from 'metadata'
 
 export const Privacy = () => {
-  const { title, url } = meta['/privacy']
+  const { title, url } = meta['/privacy/']
   const siteName = meta.common.siteName
 
   return (
