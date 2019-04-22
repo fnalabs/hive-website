@@ -378,7 +378,7 @@ Array [
       className="hero-body has-text-centered"
     >
       <a
-        href="/start"
+        href="/start/"
         onClick={[Function]}
       >
         <svg
@@ -774,7 +774,7 @@ Array [
       className="hero-body has-text-centered"
     >
       <a
-        href="/start"
+        href="/start/"
         onClick={[Function]}
       >
         <svg

@@ -16,13 +16,13 @@ import meta from 'metadata'
 export default class Overview extends Component {
   componentDidMount () {
     if (Cookies.get('CookieConsent')) {
-      const title = `${meta['/overview'].title} | ${meta.common.siteName}`
+      const title = `${meta['/overview/'].title} | ${meta.common.siteName}`
       ReactGA.pageview(this.props.location.pathname, undefined, title)
     }
   }
 
   render () {
-    const { title, description, url } = meta['/overview']
+    const { title, description, url } = meta['/overview/']
     const siteName = meta.common.siteName
 
     return (
@@ -48,7 +48,7 @@ export default class Overview extends Component {
           </Container>
         </article>
 
-        <NextPageHero to='/start' />
+        <NextPageHero to='/start/' />
       </Fragment>
     )
   }

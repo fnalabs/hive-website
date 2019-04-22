@@ -10,7 +10,12 @@ import { renderToString } from 'react-dom/server'
 import { StaticRouter } from 'react-router'
 import Helmet from 'react-helmet'
 
-import { Layout } from './Layout'
+import template from './template'
+
+import { Routes } from 'Routes'
+import { Nav, Footer } from 'layout'
+
+import styles from 'styles/main.scss'
 
 // init app
 const app = new Koa()
@@ -20,10 +25,15 @@ async function render (ctx) {
   const context = {}
   const html = renderToString(
     <StaticRouter location={ctx.url} context={context}>
-      <Layout />
+      <style dangerouslySetInnerHTML={{ __html: styles._getCss() }} />
+      <div id='main' role='none'>
+        <header><Nav /></header>
+        <main><Routes /></main>
+        <Footer />
+      </div>
     </StaticRouter>
   )
-  Helmet.renderStatic()
+  const helm = Helmet.renderStatic()
 
   if (context.url) {
     ctx.status = 302
@@ -31,7 +41,7 @@ async function render (ctx) {
   }
 
   ctx.status = context.status || 200
-  ctx.body = html
+  ctx.body = template`${helm.title.toString()}${helm.meta.toString()}${helm.link.toString()}${html}`
   return ctx
 }
 

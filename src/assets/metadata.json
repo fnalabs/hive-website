@@ -2,34 +2,33 @@
   "common": {
     "siteName": "Hive^io",
     "baseUrl": "https://hiveframework.io",
-    "cacheTime": 600000,
-    "lastmodfile": "dist/client/main.js"
+    "cacheTime": 600000
   },
   "/": {
     "description": "Hive^io is a reactive, cloud-native framework meant to foster and support lightweight, atomic RESTful microservices from a project's inception onward.",
-    "url": "https://hiveframework.io",
+    "url": "https://hiveframework.io/",
     "priority": 1.0
   },
-  "/overview": {
+  "/overview/": {
     "title": "Overview",
     "description": "Overview of Hive^io: a reactive, cloud-native framework. The following describes patterns chosen and other information on certain architectures.",
-    "url": "https://hiveframework.io/overview",
+    "url": "https://hiveframework.io/overview/",
     "priority": 1.0
   },
-  "/start": {
+  "/start/": {
     "title": "Get Started",
     "description": "Get started with Hive^io: a reactive, cloud-native framework. Follow along with some infrastructure as code examples and links to example implementations.",
-    "url": "https://hiveframework.io/start",
+    "url": "https://hiveframework.io/start/",
     "priority": 1.0
   },
-  "/cookie": {
+  "/cookie/": {
     "title": "Cookie Policy",
-    "url": "https://hiveframework.io/cookie",
+    "url": "https://hiveframework.io/cookie/",
     "priority": 0.0
   },
-  "/privacy": {
+  "/privacy/": {
     "title": "Privacy Policy",
-    "url": "https://hiveframework.io/privacy",
+    "url": "https://hiveframework.io/privacy/",
     "priority": 0.0
   }
 }

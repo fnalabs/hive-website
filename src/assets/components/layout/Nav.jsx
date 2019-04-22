@@ -50,8 +50,8 @@ class Nav extends Component {
 
           <div className={`navbar-menu${this.state.closed ? '' : ' is-active'}`}>
             <div className='navbar-end'>
-              <NavLink to='/overview' activeClassName='is-active' className='navbar-item'>Overview</NavLink>
-              <NavLink to='/start' activeClassName='is-active' className='navbar-item'>Get Started</NavLink>
+              <NavLink to='/overview/' activeClassName='is-active' className='navbar-item'>Overview</NavLink>
+              <NavLink to='/start/' activeClassName='is-active' className='navbar-item'>Get Started</NavLink>
               <AnalyticsLink to='https://fnalabs.github.io/hive-js/' className='navbar-item'>API</AnalyticsLink>
             </div>
           </div>

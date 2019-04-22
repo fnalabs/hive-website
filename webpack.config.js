@@ -36,7 +36,7 @@ module.exports = [
         path.resolve(__dirname, 'src/assets/components'),
         'node_modules'
       ],
-      extensions: ['.webpack.js', '.jsx', '.js', '.json']
+      extensions: ['.jsx', '.js', '.json']
     },
     devtool: isDev ? 'inline-source-map' : 'nosources-source-map',
     watch: false
@@ -88,7 +88,7 @@ module.exports = [
         path.resolve(__dirname, 'src/assets/components'),
         'node_modules'
       ],
-      extensions: ['.webpack.js', '.jsx', '.js', '.json']
+      extensions: ['.jsx', '.js', '.json']
     },
     watch: false
   }

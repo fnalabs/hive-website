@@ -37,7 +37,7 @@ export default class Home extends Component {
         <TopHero />
         <MidHero />
 
-        <NextPageHero to='/overview' />
+        <NextPageHero to='/overview/' />
       </Fragment>
     )
   }

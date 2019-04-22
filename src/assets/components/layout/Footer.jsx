@@ -21,16 +21,16 @@ export const Footer = () => (
             <nav className='column is-6 has-text-right content'>
               <p><strong>Sitemap</strong></p>
               <p><Link to='/'>Home</Link></p>
-              <p><Link to='/overview'>Overview</Link></p>
-              <p><Link to='/start'>Get Started</Link></p>
+              <p><Link to='/overview/'>Overview</Link></p>
+              <p><Link to='/start/'>Get Started</Link></p>
               <p><AnalyticsLink to='https://fnalabs.github.io/hive-js/'>API</AnalyticsLink>
               </p>
             </nav>
 
             <nav className='column is-6 has-text-left content'>
               <p><strong>Policies</strong></p>
-              <p><Link to='/cookie'>Cookie</Link></p>
-              <p><Link to='/privacy'>Privacy</Link></p>
+              <p><Link to='/cookie/'>Cookie</Link></p>
+              <p><Link to='/privacy/'>Privacy</Link></p>
             </nav>
           </div>
         </div>

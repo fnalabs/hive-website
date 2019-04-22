@@ -7,7 +7,7 @@ import { Container } from 'common'
 import meta from 'metadata'
 
 export const Cookie = () => {
-  const { title, url } = meta['/cookie']
+  const { title, url } = meta['/cookie/']
   const siteName = meta.common.siteName
 
   return (
