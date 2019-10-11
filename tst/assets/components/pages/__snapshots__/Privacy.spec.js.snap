@@ -172,6 +172,8 @@ exports[`<Privacy /> - should render Privacy Policy static content 1`] = `
       <br />
       <a
         href="https://tools.google.com/dlpage/gaoptout"
+        rel="noopener noreferrer"
+        target="_blank"
       >
         Google Analytics Opt-out Browser Add-on
       </a>

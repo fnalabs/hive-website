@@ -54,7 +54,7 @@ exports[`<Nav /> should render Get Started page nav correctly 1`] = `
         <a
           aria-current={null}
           className="navbar-item"
-          href="/overview/"
+          href="/overview"
           onClick={[Function]}
         >
           Overview
@@ -62,7 +62,7 @@ exports[`<Nav /> should render Get Started page nav correctly 1`] = `
         <a
           aria-current="page"
           className="navbar-item is-active"
-          href="/start/"
+          href="/start"
           onClick={[Function]}
           style={Object {}}
         >
@@ -71,6 +71,8 @@ exports[`<Nav /> should render Get Started page nav correctly 1`] = `
         <a
           className="navbar-item"
           href="https://fnalabs.github.io/hive-js/"
+          rel="noopener noreferrer"
+          target="_blank"
         >
           API
         </a>
@@ -134,7 +136,7 @@ exports[`<Nav /> should render Overview page nav correctly 1`] = `
         <a
           aria-current="page"
           className="navbar-item is-active"
-          href="/overview/"
+          href="/overview"
           onClick={[Function]}
           style={Object {}}
         >
@@ -143,7 +145,7 @@ exports[`<Nav /> should render Overview page nav correctly 1`] = `
         <a
           aria-current={null}
           className="navbar-item"
-          href="/start/"
+          href="/start"
           onClick={[Function]}
         >
           Get Started
@@ -151,6 +153,8 @@ exports[`<Nav /> should render Overview page nav correctly 1`] = `
         <a
           className="navbar-item"
           href="https://fnalabs.github.io/hive-js/"
+          rel="noopener noreferrer"
+          target="_blank"
         >
           API
         </a>
@@ -214,7 +218,7 @@ exports[`<Nav /> should render homepage nav correctly 1`] = `
         <a
           aria-current={null}
           className="navbar-item"
-          href="/overview/"
+          href="/overview"
           onClick={[Function]}
         >
           Overview
@@ -222,7 +226,7 @@ exports[`<Nav /> should render homepage nav correctly 1`] = `
         <a
           aria-current={null}
           className="navbar-item"
-          href="/start/"
+          href="/start"
           onClick={[Function]}
         >
           Get Started
@@ -230,6 +234,8 @@ exports[`<Nav /> should render homepage nav correctly 1`] = `
         <a
           className="navbar-item"
           href="https://fnalabs.github.io/hive-js/"
+          rel="noopener noreferrer"
+          target="_blank"
         >
           API
         </a>

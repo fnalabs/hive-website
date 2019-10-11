@@ -19,6 +19,7 @@ Array [
          is a 
         <a
           href="https://www.reactivemanifesto.org/"
+          rel="noopener noreferrer"
           target="_blank"
         >
           reactive
@@ -26,6 +27,7 @@ Array [
         , 
         <a
           href="https://www.cncf.io/blog/2017/05/15/developing-cloud-native-applications/"
+          rel="noopener noreferrer"
           target="_blank"
         >
           cloud-native
@@ -33,6 +35,7 @@ Array [
          framework meant to foster and support lightweight, atomic 
         <a
           href="https://en.wikipedia.org/wiki/Microservices"
+          rel="noopener noreferrer"
           target="_blank"
         >
           microservices
@@ -40,6 +43,7 @@ Array [
          from a project's inception onward. It consists of a small library of classes that provide the basic building blocks to interface with a small collection of containers, from straightforward 
         <a
           href="https://en.wikipedia.org/wiki/Representational_state_transfer"
+          rel="noopener noreferrer"
           target="_blank"
         >
           RESTful
@@ -47,6 +51,7 @@ Array [
          services to specialized 
         <a
           href="https://martinfowler.com/bliki/CQRS.html"
+          rel="noopener noreferrer"
           target="_blank"
         >
           CQRS
@@ -54,6 +59,7 @@ Array [
         /
         <a
           href="https://martinfowler.com/eaaDev/EventSourcing.html"
+          rel="noopener noreferrer"
           target="_blank"
         >
           ES
@@ -113,6 +119,7 @@ Array [
          makes is with the 
         <a
           href="https://en.wikipedia.org/wiki/Actor_model"
+          rel="noopener noreferrer"
           target="_blank"
         >
           Actor Model
@@ -151,6 +158,7 @@ Array [
           Sending messages via an internal (
           <a
             href="https://fnalabs.github.io/hive-js/#system"
+            rel="noopener noreferrer"
             target="_blank"
           >
             Actor System
@@ -158,6 +166,7 @@ Array [
           ) or external (
           <a
             href="https://kafka.apache.org/"
+            rel="noopener noreferrer"
             target="_blank"
           >
             Kafka
@@ -173,6 +182,7 @@ Array [
          Actors are able to achieve highly concurrent operations by leveraging 
         <a
           href="https://nodejs.org/"
+          rel="noopener noreferrer"
           target="_blank"
         >
           Node.js
@@ -205,6 +215,7 @@ Array [
           The 
           <a
             href="http://json-schema.org/"
+            rel="noopener noreferrer"
             target="_blank"
           >
             JSON Schema
@@ -222,6 +233,7 @@ Array [
           The 
           <a
             href="https://github.com/redux-utilities/flux-standard-action"
+            rel="noopener noreferrer"
             target="_blank"
           >
             Flux Standard Action
@@ -243,6 +255,7 @@ Array [
          is designed to manage infrastructure as code through the base 
         <a
           href="https://www.docker.com/"
+          rel="noopener noreferrer"
           target="_blank"
         >
           Docker
@@ -277,6 +290,7 @@ Array [
           This supports the creation of unordered messages in a CQRS/ES implementation. Validation here is only 
           <a
             href="http://danielwhittaker.me/2016/04/20/how-to-validate-commands-in-a-cqrs-application/"
+            rel="noopener noreferrer"
             target="_blank"
           >
             superficial
@@ -304,6 +318,7 @@ Array [
           This supports a variety of needs in a CQRS/ES implementation. 
           <a
             href="http://danielwhittaker.me/2016/04/20/how-to-validate-commands-in-a-cqrs-application/"
+            rel="noopener noreferrer"
             target="_blank"
           >
             Domain validation
@@ -311,6 +326,7 @@ Array [
            can be achieved through the use of the transaction cache dependency (
           <a
             href="https://redis.io/"
+            rel="noopener noreferrer"
             target="_blank"
           >
             Redis
@@ -325,6 +341,7 @@ Array [
         The 
         <a
           href="https://www.confluent.io/blog/event-sourcing-cqrs-stream-processing-apache-kafka-whats-connection/"
+          rel="noopener noreferrer"
           target="_blank"
         >
           unified transaction log
@@ -335,6 +352,7 @@ Array [
         Here is where our last opinions are made with Kafka and Redis as the unified transaction log and cache respectively. The Stream Processor has implemented a solution leveraging the 
         <a
           href="https://en.wikipedia.org/wiki/X/Open_XA"
+          rel="noopener noreferrer"
           target="_blank"
         >
           eXtended Architecture (XA)
@@ -342,6 +360,7 @@ Array [
          distributed transaction model via 
         <a
           href="https://en.wikipedia.org/wiki/Snapshot_isolation"
+          rel="noopener noreferrer"
           target="_blank"
         >
           snapshot isolation
@@ -349,6 +368,7 @@ Array [
          and 
         <a
           href="https://en.wikipedia.org/wiki/Two-phase_commit_protocol"
+          rel="noopener noreferrer"
           target="_blank"
         >
           two-phase commit
@@ -356,6 +376,7 @@ Array [
          techniques to provide domain validation and event order guarantees. The Redis implementation leverages the 
         <a
           href="https://redis.io/topics/distlock"
+          rel="noopener noreferrer"
           target="_blank"
         >
           Redlock algorithm
@@ -363,6 +384,7 @@ Array [
          as the 
         <a
           href="https://en.wikipedia.org/wiki/Distributed_lock_manager"
+          rel="noopener noreferrer"
           target="_blank"
         >
           distributed lock
@@ -378,7 +400,7 @@ Array [
       className="hero-body has-text-centered"
     >
       <a
-        href="/start/"
+        href="/start"
         onClick={[Function]}
       >
         <svg
@@ -415,6 +437,7 @@ Array [
          is a 
         <a
           href="https://www.reactivemanifesto.org/"
+          rel="noopener noreferrer"
           target="_blank"
         >
           reactive
@@ -422,6 +445,7 @@ Array [
         , 
         <a
           href="https://www.cncf.io/blog/2017/05/15/developing-cloud-native-applications/"
+          rel="noopener noreferrer"
           target="_blank"
         >
           cloud-native
@@ -429,6 +453,7 @@ Array [
          framework meant to foster and support lightweight, atomic 
         <a
           href="https://en.wikipedia.org/wiki/Microservices"
+          rel="noopener noreferrer"
           target="_blank"
         >
           microservices
@@ -436,6 +461,7 @@ Array [
          from a project's inception onward. It consists of a small library of classes that provide the basic building blocks to interface with a small collection of containers, from straightforward 
         <a
           href="https://en.wikipedia.org/wiki/Representational_state_transfer"
+          rel="noopener noreferrer"
           target="_blank"
         >
           RESTful
@@ -443,6 +469,7 @@ Array [
          services to specialized 
         <a
           href="https://martinfowler.com/bliki/CQRS.html"
+          rel="noopener noreferrer"
           target="_blank"
         >
           CQRS
@@ -450,6 +477,7 @@ Array [
         /
         <a
           href="https://martinfowler.com/eaaDev/EventSourcing.html"
+          rel="noopener noreferrer"
           target="_blank"
         >
           ES
@@ -509,6 +537,7 @@ Array [
          makes is with the 
         <a
           href="https://en.wikipedia.org/wiki/Actor_model"
+          rel="noopener noreferrer"
           target="_blank"
         >
           Actor Model
@@ -547,6 +576,7 @@ Array [
           Sending messages via an internal (
           <a
             href="https://fnalabs.github.io/hive-js/#system"
+            rel="noopener noreferrer"
             target="_blank"
           >
             Actor System
@@ -554,6 +584,7 @@ Array [
           ) or external (
           <a
             href="https://kafka.apache.org/"
+            rel="noopener noreferrer"
             target="_blank"
           >
             Kafka
@@ -569,6 +600,7 @@ Array [
          Actors are able to achieve highly concurrent operations by leveraging 
         <a
           href="https://nodejs.org/"
+          rel="noopener noreferrer"
           target="_blank"
         >
           Node.js
@@ -601,6 +633,7 @@ Array [
           The 
           <a
             href="http://json-schema.org/"
+            rel="noopener noreferrer"
             target="_blank"
           >
             JSON Schema
@@ -618,6 +651,7 @@ Array [
           The 
           <a
             href="https://github.com/redux-utilities/flux-standard-action"
+            rel="noopener noreferrer"
             target="_blank"
           >
             Flux Standard Action
@@ -639,6 +673,7 @@ Array [
          is designed to manage infrastructure as code through the base 
         <a
           href="https://www.docker.com/"
+          rel="noopener noreferrer"
           target="_blank"
         >
           Docker
@@ -673,6 +708,7 @@ Array [
           This supports the creation of unordered messages in a CQRS/ES implementation. Validation here is only 
           <a
             href="http://danielwhittaker.me/2016/04/20/how-to-validate-commands-in-a-cqrs-application/"
+            rel="noopener noreferrer"
             target="_blank"
           >
             superficial
@@ -700,6 +736,7 @@ Array [
           This supports a variety of needs in a CQRS/ES implementation. 
           <a
             href="http://danielwhittaker.me/2016/04/20/how-to-validate-commands-in-a-cqrs-application/"
+            rel="noopener noreferrer"
             target="_blank"
           >
             Domain validation
@@ -707,6 +744,7 @@ Array [
            can be achieved through the use of the transaction cache dependency (
           <a
             href="https://redis.io/"
+            rel="noopener noreferrer"
             target="_blank"
           >
             Redis
@@ -721,6 +759,7 @@ Array [
         The 
         <a
           href="https://www.confluent.io/blog/event-sourcing-cqrs-stream-processing-apache-kafka-whats-connection/"
+          rel="noopener noreferrer"
           target="_blank"
         >
           unified transaction log
@@ -731,6 +770,7 @@ Array [
         Here is where our last opinions are made with Kafka and Redis as the unified transaction log and cache respectively. The Stream Processor has implemented a solution leveraging the 
         <a
           href="https://en.wikipedia.org/wiki/X/Open_XA"
+          rel="noopener noreferrer"
           target="_blank"
         >
           eXtended Architecture (XA)
@@ -738,6 +778,7 @@ Array [
          distributed transaction model via 
         <a
           href="https://en.wikipedia.org/wiki/Snapshot_isolation"
+          rel="noopener noreferrer"
           target="_blank"
         >
           snapshot isolation
@@ -745,6 +786,7 @@ Array [
          and 
         <a
           href="https://en.wikipedia.org/wiki/Two-phase_commit_protocol"
+          rel="noopener noreferrer"
           target="_blank"
         >
           two-phase commit
@@ -752,6 +794,7 @@ Array [
          techniques to provide domain validation and event order guarantees. The Redis implementation leverages the 
         <a
           href="https://redis.io/topics/distlock"
+          rel="noopener noreferrer"
           target="_blank"
         >
           Redlock algorithm
@@ -759,6 +802,7 @@ Array [
          as the 
         <a
           href="https://en.wikipedia.org/wiki/Distributed_lock_manager"
+          rel="noopener noreferrer"
           target="_blank"
         >
           distributed lock
@@ -774,7 +818,7 @@ Array [
       className="hero-body has-text-centered"
     >
       <a
-        href="/start/"
+        href="/start"
         onClick={[Function]}
       >
         <svg

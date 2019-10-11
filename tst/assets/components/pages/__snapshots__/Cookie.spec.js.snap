@@ -34,6 +34,8 @@ exports[`<Cookie /> - should render Cookie Policy static content 1`] = `
       For more general information on cookies see the Wikipedia article on 
       <a
         href="https://en.wikipedia.org/wiki/HTTP_cookie"
+        rel="noopener noreferrer"
+        target="_blank"
       >
         HTTP Cookies
       </a>
@@ -87,6 +89,8 @@ exports[`<Cookie /> - should render Cookie Policy static content 1`] = `
           For more information on Google Analytics cookies, see the official 
           <a
             href="https://developers.google.com/analytics/devguides/collection/analyticsjs/cookie-usage"
+            rel="noopener noreferrer"
+            target="_blank"
           >
             Google Analytics
           </a>
@@ -108,6 +112,8 @@ exports[`<Cookie /> - should render Cookie Policy static content 1`] = `
       Hopefully that has clarified things for you and as was previously mentioned if there is something that you aren't sure whether you need or not it's usually safer to leave cookies enabled in case it does interact with one of the features you use on our site. This Cookies Policy was created with the help of the 
       <a
         href="https://cookiepolicygenerator.com"
+        rel="noopener noreferrer"
+        target="_blank"
       >
         GDPR Cookies Policy Generator
       </a>

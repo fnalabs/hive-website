@@ -17,6 +17,8 @@ exports[`<Footer /> should render static content correctly 1`] = `
           Copyright © 2018 
           <a
             href="https://fnalabs.com"
+            rel="noopener noreferrer"
+            target="_blank"
           >
             FnA Labs
           </a>
@@ -27,12 +29,16 @@ exports[`<Footer /> should render static content correctly 1`] = `
           Icons from 
           <a
             href="https://fontawesome.com/"
+            rel="noopener noreferrer"
+            target="_blank"
           >
             Font Awesome
           </a>
            (
           <a
             href="https://fontawesome.com/license"
+            rel="noopener noreferrer"
+            target="_blank"
           >
             License
           </a>
@@ -41,6 +47,8 @@ exports[`<Footer /> should render static content correctly 1`] = `
         <p>
           <a
             href="https://bulma.io"
+            rel="noopener noreferrer"
+            target="_blank"
           >
             <img
               alt="Made with Bulma"
@@ -75,7 +83,7 @@ exports[`<Footer /> should render static content correctly 1`] = `
             </p>
             <p>
               <a
-                href="/overview/"
+                href="/overview"
                 onClick={[Function]}
               >
                 Overview
@@ -83,7 +91,7 @@ exports[`<Footer /> should render static content correctly 1`] = `
             </p>
             <p>
               <a
-                href="/start/"
+                href="/start"
                 onClick={[Function]}
               >
                 Get Started
@@ -92,6 +100,8 @@ exports[`<Footer /> should render static content correctly 1`] = `
             <p>
               <a
                 href="https://fnalabs.github.io/hive-js/"
+                rel="noopener noreferrer"
+                target="_blank"
               >
                 API
               </a>
@@ -107,7 +117,7 @@ exports[`<Footer /> should render static content correctly 1`] = `
             </p>
             <p>
               <a
-                href="/cookie/"
+                href="/cookie"
                 onClick={[Function]}
               >
                 Cookie
@@ -115,7 +125,7 @@ exports[`<Footer /> should render static content correctly 1`] = `
             </p>
             <p>
               <a
-                href="/privacy/"
+                href="/privacy"
                 onClick={[Function]}
               >
                 Privacy
@@ -135,6 +145,7 @@ exports[`<Footer /> should render static content correctly 1`] = `
           >
             <a
               href="https://github.com/fnalabs?q=hive"
+              rel="noopener noreferrer"
               target="_blank"
             >
               <span
@@ -157,6 +168,7 @@ exports[`<Footer /> should render static content correctly 1`] = `
           >
             <a
               href="https://www.npmjs.com/package/hive-io"
+              rel="noopener noreferrer"
               target="_blank"
             >
               <span
@@ -179,6 +191,7 @@ exports[`<Footer /> should render static content correctly 1`] = `
           >
             <a
               href="https://twitter.com/FnA_Labs"
+              rel="noopener noreferrer"
               target="_blank"
             >
               <span
@@ -229,6 +242,7 @@ exports[`<Footer /> should render static content correctly 1`] = `
             >
               <a
                 href="https://fnalabs.com"
+                rel="noopener noreferrer"
                 target="_blank"
               >
                 <svg
