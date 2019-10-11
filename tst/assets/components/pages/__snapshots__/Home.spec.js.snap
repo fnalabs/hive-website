@@ -445,7 +445,7 @@ Array [
       className="hero-body has-text-centered"
     >
       <a
-        href="/overview/"
+        href="/overview"
         onClick={[Function]}
       >
         <svg
@@ -908,7 +908,7 @@ Array [
       className="hero-body has-text-centered"
     >
       <a
-        href="/overview/"
+        href="/overview"
         onClick={[Function]}
       >
         <svg

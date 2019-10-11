@@ -21,8 +21,7 @@ export default class NextPageHero extends Component {
         <HeroBody centered>
           {toRegex.test(to)
             ? <AnalyticsLink to={to}><ArrowRight height='48' /></AnalyticsLink>
-            : <Link to={to}><ArrowRight height='48' /></Link>
-          }
+            : <Link to={to}><ArrowRight height='48' /></Link>}
         </HeroBody>
       </Hero>
     )

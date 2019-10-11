@@ -2,18 +2,20 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 import { AnalyticsLink, Container, Tile } from 'common'
-import { Email, FnALabsInverted, Github, NPM, Twitter } from 'icons'
+import { Email, FnALabsInverted, Github, Npm, Twitter } from 'icons'
 
 export const Footer = () => (
   <footer className='footer is-dark'>
     <Container>
       <div className='columns'>
         <div className='column is-narrow content'>
-          <p>Copyright &copy; 2018 <a href='https://fnalabs.com'>FnA Labs</a></p>
-          <p className='is-size-7'>Icons from <a href='https://fontawesome.com/'>Font Awesome</a> (<a href='https://fontawesome.com/license'>License</a>)</p>
-          <p><a href='https://bulma.io'>
-            <img src='https://fnalabs.github.io/fnalabs-assets/assets/made-with-bulma--dark.png' alt='Made with Bulma' width='128' height='24' />
-          </a></p>
+          <p>Copyright &copy; 2018 <a href='https://fnalabs.com' target='_blank' rel='noopener noreferrer'>FnA Labs</a></p>
+          <p className='is-size-7'>Icons from <a href='https://fontawesome.com/' target='_blank' rel='noopener noreferrer'>Font Awesome</a> (<a href='https://fontawesome.com/license' target='_blank' rel='noopener noreferrer'>License</a>)</p>
+          <p>
+            <a href='https://bulma.io' target='_blank' rel='noopener noreferrer'>
+              <img src='https://fnalabs.github.io/fnalabs-assets/assets/made-with-bulma--dark.png' alt='Made with Bulma' width='128' height='24' />
+            </a>
+          </p>
         </div>
 
         <div className='column'>
@@ -21,16 +23,16 @@ export const Footer = () => (
             <nav className='column is-6 has-text-right content'>
               <p><strong>Sitemap</strong></p>
               <p><Link to='/'>Home</Link></p>
-              <p><Link to='/overview/'>Overview</Link></p>
-              <p><Link to='/start/'>Get Started</Link></p>
-              <p><AnalyticsLink to='https://fnalabs.github.io/hive-js/'>API</AnalyticsLink>
+              <p><Link to='/overview'>Overview</Link></p>
+              <p><Link to='/start'>Get Started</Link></p>
+              <p><AnalyticsLink to='https://fnalabs.github.io/hive-js/' target='_blank' rel='noopener noreferrer'>API</AnalyticsLink>
               </p>
             </nav>
 
             <nav className='column is-6 has-text-left content'>
               <p><strong>Policies</strong></p>
-              <p><Link to='/cookie/'>Cookie</Link></p>
-              <p><Link to='/privacy/'>Privacy</Link></p>
+              <p><Link to='/cookie'>Cookie</Link></p>
+              <p><Link to='/privacy'>Privacy</Link></p>
             </nav>
           </div>
         </div>
@@ -38,19 +40,19 @@ export const Footer = () => (
         <div className='column is-narrow'>
           <nav className='level is-mobile'>
             <p className='level-item'>
-              <AnalyticsLink to='https://github.com/fnalabs?q=hive' target='_blank'>
+              <AnalyticsLink to='https://github.com/fnalabs?q=hive' target='_blank' rel='noopener noreferrer'>
                 <span className='icon'><Github className='svg-link' /></span>
               </AnalyticsLink>
             </p>
 
             <p className='level-item'>
-              <AnalyticsLink to='https://www.npmjs.com/package/hive-io' target='_blank'>
-                <span className='icon'><NPM className='svg-link' /></span>
+              <AnalyticsLink to='https://www.npmjs.com/package/hive-io' target='_blank' rel='noopener noreferrer'>
+                <span className='icon'><Npm className='svg-link' /></span>
               </AnalyticsLink>
             </p>
 
             <p className='level-item'>
-              <AnalyticsLink to='https://twitter.com/FnA_Labs' target='_blank'>
+              <AnalyticsLink to='https://twitter.com/FnA_Labs' target='_blank' rel='noopener noreferrer'>
                 <span className='icon'><Twitter className='svg-link' /></span>
               </AnalyticsLink>
             </p>
@@ -65,7 +67,7 @@ export const Footer = () => (
           <Tile type='ancestor'>
             <Tile type='parent' vertical>
               <Tile type='child' centered>
-                <AnalyticsLink to='https://fnalabs.com' target='_blank'>
+                <AnalyticsLink to='https://fnalabs.com' target='_blank' rel='noopener noreferrer'>
                   <FnALabsInverted />
                 </AnalyticsLink>
               </Tile>

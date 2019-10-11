@@ -1,13 +1,13 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 
 import { Info } from 'icons'
 
 export const ExampleCQRS = () => (
-  <Fragment>
+  <>
     <h4>CQRS/ES Example</h4>
     <p>This example evolves the previous REST example into a highly distributed architecture in order to handle different magnitudes of network traffic.</p>
 
-    <h5><a href='https://www.npmjs.com/package/hive-io-domain-example' target='_blank'>Business Logic</a> (<a href='https://github.com/fnalabs/hive-js-domain-example' target='_blank'>Source Code</a>)</h5>
+    <h5><a href='https://www.npmjs.com/package/hive-io-domain-example' target='_blank' rel='noopener noreferrer'>Business Logic</a> (<a href='https://github.com/fnalabs/hive-js-domain-example' target='_blank' rel='noopener noreferrer'>Source Code</a>)</h5>
     <div className='notification'>
       <span className='icon'><Info className='svg-inline' /></span>
       <span>You should consider using a private NPM registry or implementing more creative solutions such as extending base Docker images with <code>ADD</code>|<code>COPY</code> statements for source code and <code>npm link</code> for your business logic.</span>
@@ -17,26 +17,22 @@ export const ExampleCQRS = () => (
     <dl>
       <dt><code>Producer.dockerfile</code></dt>
       <dd>
-        <pre>FROM fnalabs/hive-producer-js:latest<br />
-RUN npm install hive-io-domain-example</pre>
+        <pre>FROM fnalabs/hive-producer-js:latest<br />RUN npm install hive-io-domain-example</pre>
       </dd>
 
       <dt><code>Stream-Processor.dockerfile</code></dt>
       <dd>
-        <pre>FROM fnalabs/hive-stream-processor-js:latest<br />
-RUN npm install hive-io-domain-example</pre>
+        <pre>FROM fnalabs/hive-stream-processor-js:latest<br />RUN npm install hive-io-domain-example</pre>
       </dd>
 
       <dt><code>Consumer.dockerfile</code></dt>
       <dd>
-        <pre>FROM fnalabs/hive-consumer-js:latest<br />
-RUN npm install hive-io-domain-example</pre>
+        <pre>FROM fnalabs/hive-consumer-js:latest<br />RUN npm install hive-io-domain-example</pre>
       </dd>
 
       <dt><code>Rest.dockerfile</code></dt>
       <dd>
-        <pre>FROM fnalabs/hive-rest-js:latest<br />
-RUN npm install hive-io-domain-example</pre>
+        <pre>FROM fnalabs/hive-rest-js:latest<br />RUN npm install hive-io-domain-example</pre>
       </dd>
 
       <dt><code>docker-compose.yml</code></dt>
@@ -174,8 +170,9 @@ services:<br />
 # networking specifics<br />
 networks:<br />
 &nbsp;&nbsp;hive-io:<br />
-&nbsp;&nbsp;&nbsp;&nbsp;driver: bridge</pre>
+&nbsp;&nbsp;&nbsp;&nbsp;driver: bridge
+        </pre>
       </dd>
     </dl>
-  </Fragment>
+  </>
 )

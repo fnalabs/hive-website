@@ -12,9 +12,9 @@ describe('<AnalyticsLink />', () => {
   })
 
   test('should render not consented w/ target', () => {
-    const analyticsLink = mount(<AnalyticsLink to='test' target='_blank'>test</AnalyticsLink>)
+    const analyticsLink = mount(<AnalyticsLink to='test' target='_blank' rel='noopener noreferrer'>test</AnalyticsLink>)
 
-    expect(analyticsLink.contains(<a href='test' target='_blank'>test</a>)).toBe(true)
+    expect(analyticsLink.contains(<a href='test' target='_blank' rel='noopener noreferrer'>test</a>)).toBe(true)
   })
 
   test('should render not consented w/ custom class', () => {

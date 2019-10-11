@@ -15,7 +15,7 @@ class Nav extends Component {
     }
   }
 
-  toggleMenu = () => {
+  handleToggleMenu = () => {
     this.setState({ closed: !this.state.closed })
   }
 
@@ -41,7 +41,7 @@ class Nav extends Component {
               <span>Hive<sup>io</sup></span>
             </Link>
 
-            <div className={`navbar-burger${this.state.closed ? '' : ' is-active'}`} onClick={this.toggleMenu}>
+            <div className={`navbar-burger${this.state.closed ? '' : ' is-active'}`} onClick={this.handleToggleMenu}>
               <span />
               <span />
               <span />
@@ -50,9 +50,9 @@ class Nav extends Component {
 
           <div className={`navbar-menu${this.state.closed ? '' : ' is-active'}`}>
             <div className='navbar-end'>
-              <NavLink to='/overview/' activeClassName='is-active' className='navbar-item'>Overview</NavLink>
-              <NavLink to='/start/' activeClassName='is-active' className='navbar-item'>Get Started</NavLink>
-              <AnalyticsLink to='https://fnalabs.github.io/hive-js/' className='navbar-item'>API</AnalyticsLink>
+              <NavLink to='/overview' activeClassName='is-active' className='navbar-item'>Overview</NavLink>
+              <NavLink to='/start' activeClassName='is-active' className='navbar-item'>Get Started</NavLink>
+              <AnalyticsLink to='https://fnalabs.github.io/hive-js/' target='_blank' rel='noopener noreferrer' className='navbar-item'>API</AnalyticsLink>
             </div>
           </div>
         </Container>

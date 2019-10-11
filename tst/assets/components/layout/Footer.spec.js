@@ -8,7 +8,7 @@ import { Footer } from 'layout'
 describe('<Footer />', () => {
   test('should render static content correctly', () => {
     const tree = renderer
-      .create(<MemoryRouter><Footer /></MemoryRouter>)
+      .create(<MemoryRouter initialEntries={['/']}><Footer /></MemoryRouter>)
       .toJSON()
 
     expect(tree).toMatchSnapshot()
