@@ -54,7 +54,7 @@ class Transition extends Component {
             contentClasses='is-inline-block'
             onAccept={this.handleOnAccept}
           >
-            FnA Labs uses cookies to provide you the best experience. By clicking <strong>I Accept</strong> you are agreeing to our <Link to='/cookie/'>Cookie</Link> and <Link to='/privacy/'>Privacy</Link> Policies.
+            FnA Labs uses cookies to provide you the best experience. By clicking <strong>I Accept</strong> you are agreeing to our <Link to='/cookie'>Cookie</Link> and <Link to='/privacy'>Privacy</Link> Policies.
           </CookieConsent>}
       </Provider>
     )
