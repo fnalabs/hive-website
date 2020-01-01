@@ -8,11 +8,15 @@ a {
   background: transparent
 }
 
-.has-nav-spacing {
-  padding-top: 132px
-}
-
 .cookieConsent.notification {
   position: fixed;
-  width: 100%
+  width: 100%;
+
+  .button:last-child {
+    margin-right: 1rem
+  }
+}
+
+.is-fullheight {
+  min-height: 100vh
 }
