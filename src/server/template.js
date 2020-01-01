@@ -1,29 +1,40 @@
-export default function template (strings, title, meta, link, content) {
+export default function template (_, title, meta, link, style, css, content, js) {
   return `<!DOCTYPE html>
 <html>
 <head>
-<meta charSet='utf-8' />
-<meta httpEquiv='X-UA-Compatible' content='IE=edge' />
-<meta name='viewport' content='width=device-width, initial-scale=1' />
+<meta charSet="utf-8" />
+<meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 
 ${title}
 ${meta}
 ${link}
+<link rel="manifest" href="/manifest.json">
 
-<link rel='apple-touch-icon-precomposed' sizes='152x152' href='https://fnalabs.github.io/fnalabs-assets/assets/hive/favicon.152x152.png' />
-<link rel='apple-touch-icon-precomposed' sizes='144x144' href='https://fnalabs.github.io/fnalabs-assets/assets/hive/favicon.144x144.png' />
-<link rel='apple-touch-icon-precomposed' sizes='120x120' href='https://fnalabs.github.io/fnalabs-assets/assets/hive/favicon.120x120.png' />
-<link rel='apple-touch-icon-precomposed' sizes='114x114' href='https://fnalabs.github.io/fnalabs-assets/assets/hive/favicon.114x114.png' />
-<link rel='apple-touch-icon-precomposed' sizes='72x72' href='https://fnalabs.github.io/fnalabs-assets/assets/hive/favicon.72x72.png' />
-<link rel='apple-touch-icon-precomposed' sizes='57x57' href='https://fnalabs.github.io/fnalabs-assets/assets/hive/favicon.57x57.png' />
-<link rel='icon' type='image/png' sizes='32x32' href='https://fnalabs.github.io/fnalabs-assets/assets/hive/favicon.32x32.png' />
+<style type="text/css">${style}</style>
+<noscript><link rel="stylesheet" type="text/css" href="/${css}"></noscript>
+
+<link rel="apple-touch-icon" type="image/png" sizes="512x512" href="/icon_512x512.png" />
+<link rel="apple-touch-icon" type="image/png" sizes="192x192" href="/icon_192x192.png" />
+<link rel="apple-touch-icon" type="image/png" sizes="144x144" href="/icon_144x144.png" />
+<link rel="apple-touch-icon" type="image/png" sizes="114x114" href="/icon_114x114.png" />
+<link rel="apple-touch-icon" type="image/png" sizes="72x72" href="/icon_72x72.png" />
+<link rel="apple-touch-icon" type="image/png" sizes="57x57" href="/icon_57x57.png" />
+<link rel="shortcut icon" type="image/png" sizes="32x32" href="/icon_32x32.png" />
 
 </head>
 <body>
 
 ${content}
 
-<script src='/main.js' async></script>
+<script type="text/javascript">
+// TODO: Replace with link preload solution when support exceeds 90%. https://caniuse.com/#feat=link-rel-preload
+document.getElementsByTagName("head")[0].insertAdjacentHTML("beforeend", '<link rel="stylesheet" type="text/css" href="/${css}">')
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => navigator.serviceWorker.register("/sw.js"))
+}
+</script>
+<script type="application/javascript" src="/${js}" async></script>
 
 </body>
 </html>`
