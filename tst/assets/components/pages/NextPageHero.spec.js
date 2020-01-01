@@ -5,7 +5,7 @@ import { shallow } from 'enzyme'
 import NextPageHero from 'pages/NextPageHero'
 
 describe('<NextPageHero />', () => {
-  test('should render the next site page hero link', () => {
+  it('should render the next site page hero link', () => {
     const nextPageHero = shallow(<NextPageHero to='/' />)
 
     expect(nextPageHero.instance()).toBeInstanceOf(NextPageHero)

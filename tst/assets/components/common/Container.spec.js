@@ -5,7 +5,7 @@ import { shallow } from 'enzyme'
 import { Container } from 'common'
 
 describe('<Container />', () => {
-  test('should render empty', () => {
+  it('should render empty', () => {
     const container = shallow(<Container />)
 
     expect(container.instance()).toBeInstanceOf(Container)
@@ -14,14 +14,14 @@ describe('<Container />', () => {
     expect(container.hasClass('content')).toBe(false)
   })
 
-  test('should render w/ content prop', () => {
+  it('should render w/ content prop', () => {
     const container = shallow(<Container content />)
 
     expect(container.hasClass('container')).toBe(true)
     expect(container.hasClass('content')).toBe(true)
   })
 
-  test('should render w/ children', () => {
+  it('should render w/ children', () => {
     const container = shallow(<Container><div>test</div></Container>)
 
     expect(container.contains(<div>test</div>)).toBe(true)

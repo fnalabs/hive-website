@@ -1,0 +1,200 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Basic /> should render Basic page static content 1`] = `
+Array [
+  <article
+    className="section is-fullheight is-medium"
+  >
+    <div
+      className="container content"
+    >
+      <h1>
+        Example: Basic
+      </h1>
+      <p>
+        Let's start off with a straight forward example. The following 
+        <a
+          href="https://fnalabs.github.io/hive-js/Actor.html"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          Actor
+        </a>
+         and its associated 
+        <a
+          href="http://json-schema.org/"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          JSON Schema
+        </a>
+         are performing superficial validation against the schema and returning an instance of the Model.
+      </p>
+      <dl>
+        <dt>
+          <code>
+            ExampleSchema.json
+          </code>
+        </dt>
+        <dd>
+          <pre>
+            &lbrace;
+            <br />
+              "title": "Model",
+            <br />
+              "description": "Example Schema for a Model",
+            <br />
+              "$id": "https://example.com/example/url/for/schema/hosting",
+            <br />
+              "type": "object",
+            <br />
+              "properties": &lbrace;
+            <br />
+                "data": &lbrace;
+            <br />
+                  "type": "string"
+            <br />
+                &rbrace;
+            <br />
+              &rbrace;,
+            <br />
+              "required": ["data"],
+            <br />
+              "additionalProperties": false
+            <br />
+            &rbrace;
+          </pre>
+        </dd>
+        <dt>
+          <code>
+            ExampleActor.js
+          </code>
+        </dt>
+        <dd>
+          <pre>
+            import &lbrace; Actor, Schema &rbrace; from 'hive-io'
+            <br />
+            import ExampleSchema from './ExampleSchema.json'
+            <br />
+            <br />
+            class ExampleActor extends Actor &lbrace;
+            <br />
+              async perform (_model, data) &lbrace;
+            <br />
+                data.type = 'Model' // set data type
+            <br />
+                const model = await super.perform(_model, data) // assuming \`_model\` is undefined, create a new model with data
+            <br />
+            <br />
+                return &lbrace; model &rbrace;
+            <br />
+              &rbrace;
+            <br />
+            &rbrace;
+            <br />
+            <br />
+            export default new Proxy(ExampleActor, &lbrace; // we use Proxy here since
+            <br />
+              construct: async function (ExampleActor) &lbrace; // JSON Schemas can be fetched
+            <br />
+                const exampleSchema = await new Schema(ExampleSchema) // from a network location
+            <br />
+                return new ExampleActor(exampleSchema) // once constructed, this Actor will take any data in the shape of the JSON Schema above
+            <br />
+              &rbrace; &rbrace;)
+          </pre>
+        </dd>
+      </dl>
+      <p>
+        Now that we've taken a quick look at some straight forward domain logic with JSON Schemas and Actors, let's add to this with a fully functional REST service example.
+      </p>
+    </div>
+  </article>,
+  <section
+    className="hero is-small is-hive"
+  >
+    <div
+      className="hero-body has-text-centered"
+    >
+      <a
+        href="/setup"
+        onClick={[Function]}
+      >
+        <svg
+          height="48"
+          viewBox="0 0 448 512"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M223.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L319.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L393.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34zm-192 34l136 136c9.4 9.4 24.6 9.4 33.9 0l22.6-22.6c9.4-9.4 9.4-24.6 0-33.9L127.9 256l96.4-96.4c9.4-9.4 9.4-24.6 0-33.9L201.7 103c-9.4-9.4-24.6-9.4-33.9 0l-136 136c-9.5 9.4-9.5 24.6-.1 34z"
+          />
+        </svg>
+      </a>
+      <nav
+        aria-label="breadcrumbs"
+        className="breadcrumb has-bullet-separator is-hidden-touch"
+      >
+        <ul>
+          <li>
+            <a
+              href="/start"
+              onClick={[Function]}
+            >
+              Get Started
+            </a>
+          </li>
+          <li>
+            <a
+              href="/setup"
+              onClick={[Function]}
+            >
+              Setup
+            </a>
+          </li>
+          <li
+            className="is-active"
+          >
+            <a
+              aria-current="page"
+              href="/basic"
+              onClick={[Function]}
+            >
+              Basic
+            </a>
+          </li>
+          <li>
+            <a
+              href="/rest"
+              onClick={[Function]}
+            >
+              REST
+            </a>
+          </li>
+          <li>
+            <a
+              href="/cqrs-es"
+              onClick={[Function]}
+            >
+              CQRS/ES
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <a
+        href="/rest"
+        onClick={[Function]}
+      >
+        <svg
+          height="48"
+          viewBox="0 0 448 512"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34zm192-34l-136-136c-9.4-9.4-24.6-9.4-33.9 0l-22.6 22.6c-9.4 9.4-9.4 24.6 0 33.9l96.4 96.4-96.4 96.4c-9.4 9.4-9.4 24.6 0 33.9l22.6 22.6c9.4 9.4 24.6 9.4 33.9 0l136-136c9.4-9.2 9.4-24.4 0-33.8z"
+          />
+        </svg>
+      </a>
+    </div>
+  </section>,
+]
+`;

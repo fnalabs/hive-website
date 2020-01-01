@@ -70,7 +70,7 @@ exports[`<Footer /> should render static content correctly 1`] = `
           >
             <p>
               <strong>
-                Sitemap
+                Pages
               </strong>
             </p>
             <p>
@@ -99,11 +99,10 @@ exports[`<Footer /> should render static content correctly 1`] = `
             </p>
             <p>
               <a
-                href="https://fnalabs.github.io/hive-js/"
-                rel="noopener noreferrer"
-                target="_blank"
+                href="/documentation"
+                onClick={[Function]}
               >
-                API
+                Documentation
               </a>
             </p>
           </nav>
@@ -246,7 +245,7 @@ exports[`<Footer /> should render static content correctly 1`] = `
                 target="_blank"
               >
                 <svg
-                  viewBox="0 0 283.747 180"
+                  viewBox="0 0 290 180"
                   width="144"
                   xmlns="http://www.w3.org/2000/svg"
                 >

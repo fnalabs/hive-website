@@ -1,0 +1,177 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Domain /> should render Domain page static content 1`] = `
+Array [
+  <article
+    className="section is-fullheight is-medium"
+  >
+    <div
+      className="container content"
+    >
+      <h1>
+        Domain Logic
+      </h1>
+      <p>
+        Domain needs vary greatly for a variety of concerns such as storage, security, monitoring, and more. There are a plethora of options available in each of those categories and the list continues to grow. Hive
+        <sup>
+          io
+        </sup>
+         is the glue that binds them. Regardless of the desired patterns, the same atomic operations can be applied. The first opinion Hive
+        <sup>
+          io
+        </sup>
+         makes is with the 
+        <a
+          href="https://en.wikipedia.org/wiki/Actor_model"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          Actor Model
+        </a>
+        .
+      </p>
+      <h2>
+        Actor Model
+      </h2>
+      <p>
+        The Actor Model consists of 'actors' as universal primitives of concurrent computation. Hive
+        <sup>
+          io
+        </sup>
+         Actors perform actions on command by making local decisions, calling on other actors to perform various actions, or sending messages to other actors through various means. This is a relatively plain but powerful concept that provides the basic building blocks for your application logic. Most development time is spent within this construct. Actors have various channels with which they communicate:
+      </p>
+      <dl>
+        <dt>
+          <em>
+            <strong>
+              Immediate
+            </strong>
+          </em>
+        </dt>
+        <dd>
+          Asynchronously making local decisions or calling on another actor to perform.
+        </dd>
+        <dt>
+          <em>
+            <strong>
+              Eventual
+            </strong>
+          </em>
+        </dt>
+        <dd>
+          Sending messages via an internal (
+          <a
+            href="https://fnalabs.github.io/hive-js/#system"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Actor System
+          </a>
+          ) or external (
+          <a
+            href="https://kafka.apache.org/"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Kafka
+          </a>
+          ) message bus.
+        </dd>
+      </dl>
+      <p>
+        Hive
+        <sup>
+          io
+        </sup>
+         Actors are able to achieve highly concurrent operations by leveraging 
+        <a
+          href="https://nodejs.org/"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          Node.js
+        </a>
+        ' non-blocking, asynchronous I/O. These actors can be arranged to perform tasks for a variety of architectures. Everything is asynchronous from the ground up, even validation via transport schemas.
+      </p>
+    </div>
+  </article>,
+  <section
+    className="hero is-small is-hive"
+  >
+    <div
+      className="hero-body has-text-centered"
+    >
+      <a
+        href="/model"
+        onClick={[Function]}
+      >
+        <svg
+          height="48"
+          viewBox="0 0 448 512"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M223.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L319.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L393.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34zm-192 34l136 136c9.4 9.4 24.6 9.4 33.9 0l22.6-22.6c9.4-9.4 9.4-24.6 0-33.9L127.9 256l96.4-96.4c9.4-9.4 9.4-24.6 0-33.9L201.7 103c-9.4-9.4-24.6-9.4-33.9 0l-136 136c-9.5 9.4-9.5 24.6-.1 34z"
+          />
+        </svg>
+      </a>
+      <nav
+        aria-label="breadcrumbs"
+        className="breadcrumb has-bullet-separator is-hidden-touch"
+      >
+        <ul>
+          <li>
+            <a
+              href="/overview"
+              onClick={[Function]}
+            >
+              Overview
+            </a>
+          </li>
+          <li>
+            <a
+              href="/model"
+              onClick={[Function]}
+            >
+              Data Model
+            </a>
+          </li>
+          <li
+            className="is-active"
+          >
+            <a
+              aria-current="page"
+              href="/domain"
+              onClick={[Function]}
+            >
+              Domain Logic
+            </a>
+          </li>
+          <li>
+            <a
+              href="/infrastructure"
+              onClick={[Function]}
+            >
+              Infrastructure
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <a
+        href="/infrastructure"
+        onClick={[Function]}
+      >
+        <svg
+          height="48"
+          viewBox="0 0 448 512"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34zm192-34l-136-136c-9.4-9.4-24.6-9.4-33.9 0l-22.6 22.6c-9.4 9.4-9.4 24.6 0 33.9l96.4 96.4-96.4 96.4c-9.4 9.4-9.4 24.6 0 33.9l22.6 22.6c9.4 9.4 24.6 9.4 33.9 0l136-136c9.4-9.2 9.4-24.4 0-33.8z"
+          />
+        </svg>
+      </a>
+    </div>
+  </section>,
+]
+`;

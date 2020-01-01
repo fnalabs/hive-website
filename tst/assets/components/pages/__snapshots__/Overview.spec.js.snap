@@ -3,7 +3,7 @@
 exports[`<Overview /> should render Overview page static content 1`] = `
 Array [
   <article
-    className="section has-nav-spacing"
+    className="section is-fullheight is-medium"
   >
     <div
       className="container content"
@@ -74,7 +74,7 @@ Array [
           Provide a universal JavaScript library for standardized data exchanges.
         </li>
         <li>
-          Define a clear separation between business logic and infrastructure.
+          Define a clear separation between domain logic and infrastructure.
         </li>
         <li>
           Minimize opinions in the framework to support a variety of needs.
@@ -92,304 +92,17 @@ Array [
         <strong>
           rapid development
         </strong>
-         with a focus on business logic. Each part has clearly defined responsibilities and interfaces with respect to their counterparts.
+         with a focus on domain logic. Each part has clearly defined responsibilities and interfaces with respect to their counterparts.
       </p>
-      <h3>
+      <h2>
         Background
-      </h3>
+      </h2>
       <p>
         This project is the culmination of my past experiences to improve upon existing technologies and techniques for enterprise architecture. The thought first came to me when I was exposed to distributed architecture in a production environment. The timing of this exposure was perfectly aligned with the release of Docker. While migrating my knowledge from VMs to containers, I started to deep dive into other technologies and techniques to bring the idea to life. Over the course of this journey, I've been able to implement a fully functional solution in this space. Once the concept was proven in v1, I immediately started planning for the version you see today. We are proud to present to you Hive
         <sup>
           io
         </sup>
         .
-      </p>
-      <h3>
-        Business Logic
-      </h3>
-      <p>
-        Business needs vary greatly for a variety of concerns such as storage, security, monitoring, and more. There are a plethora of options available in each of those categories and the list continues to grow. Hive
-        <sup>
-          io
-        </sup>
-         is the glue that binds them. Regardless of the desired patterns, the same atomic operations can be applied. The first opinion Hive
-        <sup>
-          io
-        </sup>
-         makes is with the 
-        <a
-          href="https://en.wikipedia.org/wiki/Actor_model"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          Actor Model
-        </a>
-        .
-      </p>
-      <h5>
-        Actor Model
-      </h5>
-      <p>
-        The Actor Model consists of 'actors' as universal primitives of concurrent computation. Hive
-        <sup>
-          io
-        </sup>
-         Actors perform actions on command by making local decisions, calling on other actors to perform various actions, or sending messages to other actors through various means. This is a relatively plain but powerful concept that provides the basic building blocks for your application logic. Most development time is spent within this construct. Actors have various channels with which they communicate:
-      </p>
-      <dl>
-        <dt>
-          <em>
-            <strong>
-              Immediate
-            </strong>
-          </em>
-        </dt>
-        <dd>
-          Asynchronously making local decisions or calling on another actor to perform.
-        </dd>
-        <dt>
-          <em>
-            <strong>
-              Eventual
-            </strong>
-          </em>
-        </dt>
-        <dd>
-          Sending messages via an internal (
-          <a
-            href="https://fnalabs.github.io/hive-js/#system"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            Actor System
-          </a>
-          ) or external (
-          <a
-            href="https://kafka.apache.org/"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            Kafka
-          </a>
-          ) message bus.
-        </dd>
-      </dl>
-      <p>
-        Hive
-        <sup>
-          io
-        </sup>
-         Actors are able to achieve highly concurrent operations by leveraging 
-        <a
-          href="https://nodejs.org/"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          Node.js
-        </a>
-        ' non-blocking, asynchronous I/O. These actors can be arranged to perform tasks for a variety of architectures. Everything is asynchronous from the ground up, even validation via transport schemas.
-      </p>
-      <h3>
-        Model JSON Serialization
-      </h3>
-      <p>
-        Hive
-        <sup>
-          io
-        </sup>
-         uses the JSON Schema and Flux Standard Action specifications to automatically serialize and validate your data Models for network transport. Combined they become the standard format to transfer data to nearly any device or system. Complete with versioning and a schema registry, Hive
-        <sup>
-          io
-        </sup>
-         provides a universal application framework that can seamlessly run in a variety of clients and server environments.
-      </p>
-      <dl>
-        <dt>
-          <em>
-            <strong>
-              JSON Schema
-            </strong>
-          </em>
-        </dt>
-        <dd>
-          The 
-          <a
-            href="http://json-schema.org/"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            JSON Schema
-          </a>
-           specification allows us to define a transport schema to validate incoming data. This can also be used to document your API with a definition that can be operated against. The specification defines that schemas can be hosted, giving you the ability to serve schemas through a static web server schema registry. You can use this to version your transport schemas and host them internally, externally, or both if you prefer.
-        </dd>
-        <dt>
-          <em>
-            <strong>
-              Flux Standard Action
-            </strong>
-          </em>
-        </dt>
-        <dd>
-          The 
-          <a
-            href="https://github.com/redux-utilities/flux-standard-action"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            Flux Standard Action
-          </a>
-           specification allows us to define a lightweight, network data payload used to build your services. Minimally, this provides our network payload structure with explicit support for typed data definintions. Payload objects are defined and validated by their associated JSON Schemas.
-        </dd>
-      </dl>
-      <p>
-        These Actors and Models would then be packaged up and built into your client side business logic or in the growing list of Docker images below.
-      </p>
-      <h3>
-        Infrastructure
-      </h3>
-      <p>
-        Here are the execution environments for the business logic described previously. Hive
-        <sup>
-          io
-        </sup>
-         is designed to manage infrastructure as code through the base 
-        <a
-          href="https://www.docker.com/"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          Docker
-        </a>
-         images defined. These images are meant to be extended to include your business logic and additional code dependencies. Depending on the type of container, there are a few opinions made here too.
-      </p>
-      <h5>
-        Specialized Containers
-      </h5>
-      <p>
-        Base images for specific service types have been defined to provide the basic boilerplate service definition for your application. It also ensures a common interface is maintained between the service and actor. For CQRS/ES architectures, some opinions on storage solutions have been made.
-      </p>
-      <dl>
-        <dt>
-          <em>
-            <strong>
-              RESTful
-            </strong>
-          </em>
-        </dt>
-        <dd>
-          The least opinionated of them all. This wraps your actor(s) to provide a straightforward, RESTful interface and standardizes the network payload before calling your actor to perform.
-        </dd>
-        <dt>
-          <em>
-            <strong>
-              Producer
-            </strong>
-          </em>
-        </dt>
-        <dd>
-          This supports the creation of unordered messages in a CQRS/ES implementation. Validation here is only 
-          <a
-            href="http://danielwhittaker.me/2016/04/20/how-to-validate-commands-in-a-cqrs-application/"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            superficial
-          </a>
-           and defaults to using queues to batch messages for increased performance.
-        </dd>
-        <dt>
-          <em>
-            <strong>
-              Consumer
-            </strong>
-          </em>
-        </dt>
-        <dd>
-          Message consumption is defined in this image for a CQRS/ES implementation. It is highly recommended that these services be isolated to only message consumption but can support queries against the data as well.
-        </dd>
-        <dt>
-          <em>
-            <strong>
-              Stream Processor
-            </strong>
-          </em>
-        </dt>
-        <dd>
-          This supports a variety of needs in a CQRS/ES implementation. 
-          <a
-            href="http://danielwhittaker.me/2016/04/20/how-to-validate-commands-in-a-cqrs-application/"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            Domain validation
-          </a>
-           can be achieved through the use of the transaction cache dependency (
-          <a
-            href="https://redis.io/"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            Redis
-          </a>
-          ). CQRS/ES Process Managers and Sagas can be implemented here too.
-        </dd>
-      </dl>
-      <h5>
-        Unified Transaction Log
-      </h5>
-      <p>
-        The 
-        <a
-          href="https://www.confluent.io/blog/event-sourcing-cqrs-stream-processing-apache-kafka-whats-connection/"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          unified transaction log
-        </a>
-         is the centralized storage solution that is the foundation of the CQRS/ES pattern. Think of it as the backbone in your central nervous system. All of your body parts and organs that connect to this backbone are made up of the different microservice types described above. The transaction log's job is to handle multiple inputs/outputs to each of these microservice types while providing the persistence layer. Events are stored here once they have been validated by their producers and are read from here by their consumers.
-      </p>
-      <p>
-        Here is where our last opinions are made with Kafka and Redis as the unified transaction log and cache respectively. The Stream Processor has implemented a solution leveraging the 
-        <a
-          href="https://en.wikipedia.org/wiki/X/Open_XA"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          eXtended Architecture (XA)
-        </a>
-         distributed transaction model via 
-        <a
-          href="https://en.wikipedia.org/wiki/Snapshot_isolation"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          snapshot isolation
-        </a>
-         and 
-        <a
-          href="https://en.wikipedia.org/wiki/Two-phase_commit_protocol"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          two-phase commit
-        </a>
-         techniques to provide domain validation and event order guarantees. The Redis implementation leverages the 
-        <a
-          href="https://redis.io/topics/distlock"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          Redlock algorithm
-        </a>
-         as the 
-        <a
-          href="https://en.wikipedia.org/wiki/Distributed_lock_manager"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          distributed lock
-        </a>
-        ing mechanism to support these techniques.
       </p>
     </div>
   </article>,
@@ -400,7 +113,7 @@ Array [
       className="hero-body has-text-centered"
     >
       <a
-        href="/start"
+        href="/"
         onClick={[Function]}
       >
         <svg
@@ -409,416 +122,54 @@ Array [
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
-            d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34zm192-34l-136-136c-9.4-9.4-24.6-9.4-33.9 0l-22.6 22.6c-9.4 9.4-9.4 24.6 0 33.9l96.4 96.4-96.4 96.4c-9.4 9.4-9.4 24.6 0 33.9l22.6 22.6c9.4 9.4 24.6 9.4 33.9 0l136-136c9.4-9.2 9.4-24.4 0-33.8z"
+            d="M223.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L319.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L393.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34zm-192 34l136 136c9.4 9.4 24.6 9.4 33.9 0l22.6-22.6c9.4-9.4 9.4-24.6 0-33.9L127.9 256l96.4-96.4c9.4-9.4 9.4-24.6 0-33.9L201.7 103c-9.4-9.4-24.6-9.4-33.9 0l-136 136c-9.5 9.4-9.5 24.6-.1 34z"
           />
         </svg>
       </a>
-    </div>
-  </section>,
-]
-`;
-
-exports[`<Overview /> should render Overview page static content and report page view 1`] = `
-Array [
-  <article
-    className="section has-nav-spacing"
-  >
-    <div
-      className="container content"
-    >
-      <h1>
-        Overview
-      </h1>
-      <p>
-        Hive
-        <sup>
-          io
-        </sup>
-         is a 
-        <a
-          href="https://www.reactivemanifesto.org/"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          reactive
-        </a>
-        , 
-        <a
-          href="https://www.cncf.io/blog/2017/05/15/developing-cloud-native-applications/"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          cloud-native
-        </a>
-         framework meant to foster and support lightweight, atomic 
-        <a
-          href="https://en.wikipedia.org/wiki/Microservices"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          microservices
-        </a>
-         from a project's inception onward. It consists of a small library of classes that provide the basic building blocks to interface with a small collection of containers, from straightforward 
-        <a
-          href="https://en.wikipedia.org/wiki/Representational_state_transfer"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          RESTful
-        </a>
-         services to specialized 
-        <a
-          href="https://martinfowler.com/bliki/CQRS.html"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          CQRS
-        </a>
-        /
-        <a
-          href="https://martinfowler.com/eaaDev/EventSourcing.html"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          ES
-        </a>
-         services. The core tenets of this project are:
-      </p>
-      <ul>
-        <li>
-          Provide a framework of standard patterns to foster the creation and evolution of a project.
-        </li>
-        <li>
-          Provide a universal JavaScript library for standardized data exchanges.
-        </li>
-        <li>
-          Define a clear separation between business logic and infrastructure.
-        </li>
-        <li>
-          Minimize opinions in the framework to support a variety of needs.
-        </li>
-        <li>
-          Integrate with other cloud-native initiatives.
-        </li>
-      </ul>
-      <p>
-        Hive
-        <sup>
-          io
-        </sup>
-         provides flexibility and simplicity to promote 
-        <strong>
-          rapid development
-        </strong>
-         with a focus on business logic. Each part has clearly defined responsibilities and interfaces with respect to their counterparts.
-      </p>
-      <h3>
-        Background
-      </h3>
-      <p>
-        This project is the culmination of my past experiences to improve upon existing technologies and techniques for enterprise architecture. The thought first came to me when I was exposed to distributed architecture in a production environment. The timing of this exposure was perfectly aligned with the release of Docker. While migrating my knowledge from VMs to containers, I started to deep dive into other technologies and techniques to bring the idea to life. Over the course of this journey, I've been able to implement a fully functional solution in this space. Once the concept was proven in v1, I immediately started planning for the version you see today. We are proud to present to you Hive
-        <sup>
-          io
-        </sup>
-        .
-      </p>
-      <h3>
-        Business Logic
-      </h3>
-      <p>
-        Business needs vary greatly for a variety of concerns such as storage, security, monitoring, and more. There are a plethora of options available in each of those categories and the list continues to grow. Hive
-        <sup>
-          io
-        </sup>
-         is the glue that binds them. Regardless of the desired patterns, the same atomic operations can be applied. The first opinion Hive
-        <sup>
-          io
-        </sup>
-         makes is with the 
-        <a
-          href="https://en.wikipedia.org/wiki/Actor_model"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          Actor Model
-        </a>
-        .
-      </p>
-      <h5>
-        Actor Model
-      </h5>
-      <p>
-        The Actor Model consists of 'actors' as universal primitives of concurrent computation. Hive
-        <sup>
-          io
-        </sup>
-         Actors perform actions on command by making local decisions, calling on other actors to perform various actions, or sending messages to other actors through various means. This is a relatively plain but powerful concept that provides the basic building blocks for your application logic. Most development time is spent within this construct. Actors have various channels with which they communicate:
-      </p>
-      <dl>
-        <dt>
-          <em>
-            <strong>
-              Immediate
-            </strong>
-          </em>
-        </dt>
-        <dd>
-          Asynchronously making local decisions or calling on another actor to perform.
-        </dd>
-        <dt>
-          <em>
-            <strong>
-              Eventual
-            </strong>
-          </em>
-        </dt>
-        <dd>
-          Sending messages via an internal (
-          <a
-            href="https://fnalabs.github.io/hive-js/#system"
-            rel="noopener noreferrer"
-            target="_blank"
+      <nav
+        aria-label="breadcrumbs"
+        className="breadcrumb has-bullet-separator is-hidden-touch"
+      >
+        <ul>
+          <li
+            className="is-active"
           >
-            Actor System
-          </a>
-          ) or external (
-          <a
-            href="https://kafka.apache.org/"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            Kafka
-          </a>
-          ) message bus.
-        </dd>
-      </dl>
-      <p>
-        Hive
-        <sup>
-          io
-        </sup>
-         Actors are able to achieve highly concurrent operations by leveraging 
-        <a
-          href="https://nodejs.org/"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          Node.js
-        </a>
-        ' non-blocking, asynchronous I/O. These actors can be arranged to perform tasks for a variety of architectures. Everything is asynchronous from the ground up, even validation via transport schemas.
-      </p>
-      <h3>
-        Model JSON Serialization
-      </h3>
-      <p>
-        Hive
-        <sup>
-          io
-        </sup>
-         uses the JSON Schema and Flux Standard Action specifications to automatically serialize and validate your data Models for network transport. Combined they become the standard format to transfer data to nearly any device or system. Complete with versioning and a schema registry, Hive
-        <sup>
-          io
-        </sup>
-         provides a universal application framework that can seamlessly run in a variety of clients and server environments.
-      </p>
-      <dl>
-        <dt>
-          <em>
-            <strong>
-              JSON Schema
-            </strong>
-          </em>
-        </dt>
-        <dd>
-          The 
-          <a
-            href="http://json-schema.org/"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            JSON Schema
-          </a>
-           specification allows us to define a transport schema to validate incoming data. This can also be used to document your API with a definition that can be operated against. The specification defines that schemas can be hosted, giving you the ability to serve schemas through a static web server schema registry. You can use this to version your transport schemas and host them internally, externally, or both if you prefer.
-        </dd>
-        <dt>
-          <em>
-            <strong>
-              Flux Standard Action
-            </strong>
-          </em>
-        </dt>
-        <dd>
-          The 
-          <a
-            href="https://github.com/redux-utilities/flux-standard-action"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            Flux Standard Action
-          </a>
-           specification allows us to define a lightweight, network data payload used to build your services. Minimally, this provides our network payload structure with explicit support for typed data definintions. Payload objects are defined and validated by their associated JSON Schemas.
-        </dd>
-      </dl>
-      <p>
-        These Actors and Models would then be packaged up and built into your client side business logic or in the growing list of Docker images below.
-      </p>
-      <h3>
-        Infrastructure
-      </h3>
-      <p>
-        Here are the execution environments for the business logic described previously. Hive
-        <sup>
-          io
-        </sup>
-         is designed to manage infrastructure as code through the base 
-        <a
-          href="https://www.docker.com/"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          Docker
-        </a>
-         images defined. These images are meant to be extended to include your business logic and additional code dependencies. Depending on the type of container, there are a few opinions made here too.
-      </p>
-      <h5>
-        Specialized Containers
-      </h5>
-      <p>
-        Base images for specific service types have been defined to provide the basic boilerplate service definition for your application. It also ensures a common interface is maintained between the service and actor. For CQRS/ES architectures, some opinions on storage solutions have been made.
-      </p>
-      <dl>
-        <dt>
-          <em>
-            <strong>
-              RESTful
-            </strong>
-          </em>
-        </dt>
-        <dd>
-          The least opinionated of them all. This wraps your actor(s) to provide a straightforward, RESTful interface and standardizes the network payload before calling your actor to perform.
-        </dd>
-        <dt>
-          <em>
-            <strong>
-              Producer
-            </strong>
-          </em>
-        </dt>
-        <dd>
-          This supports the creation of unordered messages in a CQRS/ES implementation. Validation here is only 
-          <a
-            href="http://danielwhittaker.me/2016/04/20/how-to-validate-commands-in-a-cqrs-application/"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            superficial
-          </a>
-           and defaults to using queues to batch messages for increased performance.
-        </dd>
-        <dt>
-          <em>
-            <strong>
-              Consumer
-            </strong>
-          </em>
-        </dt>
-        <dd>
-          Message consumption is defined in this image for a CQRS/ES implementation. It is highly recommended that these services be isolated to only message consumption but can support queries against the data as well.
-        </dd>
-        <dt>
-          <em>
-            <strong>
-              Stream Processor
-            </strong>
-          </em>
-        </dt>
-        <dd>
-          This supports a variety of needs in a CQRS/ES implementation. 
-          <a
-            href="http://danielwhittaker.me/2016/04/20/how-to-validate-commands-in-a-cqrs-application/"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            Domain validation
-          </a>
-           can be achieved through the use of the transaction cache dependency (
-          <a
-            href="https://redis.io/"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            Redis
-          </a>
-          ). CQRS/ES Process Managers and Sagas can be implemented here too.
-        </dd>
-      </dl>
-      <h5>
-        Unified Transaction Log
-      </h5>
-      <p>
-        The 
-        <a
-          href="https://www.confluent.io/blog/event-sourcing-cqrs-stream-processing-apache-kafka-whats-connection/"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          unified transaction log
-        </a>
-         is the centralized storage solution that is the foundation of the CQRS/ES pattern. Think of it as the backbone in your central nervous system. All of your body parts and organs that connect to this backbone are made up of the different microservice types described above. The transaction log's job is to handle multiple inputs/outputs to each of these microservice types while providing the persistence layer. Events are stored here once they have been validated by their producers and are read from here by their consumers.
-      </p>
-      <p>
-        Here is where our last opinions are made with Kafka and Redis as the unified transaction log and cache respectively. The Stream Processor has implemented a solution leveraging the 
-        <a
-          href="https://en.wikipedia.org/wiki/X/Open_XA"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          eXtended Architecture (XA)
-        </a>
-         distributed transaction model via 
-        <a
-          href="https://en.wikipedia.org/wiki/Snapshot_isolation"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          snapshot isolation
-        </a>
-         and 
-        <a
-          href="https://en.wikipedia.org/wiki/Two-phase_commit_protocol"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          two-phase commit
-        </a>
-         techniques to provide domain validation and event order guarantees. The Redis implementation leverages the 
-        <a
-          href="https://redis.io/topics/distlock"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          Redlock algorithm
-        </a>
-         as the 
-        <a
-          href="https://en.wikipedia.org/wiki/Distributed_lock_manager"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          distributed lock
-        </a>
-        ing mechanism to support these techniques.
-      </p>
-    </div>
-  </article>,
-  <section
-    className="hero is-small is-hive"
-  >
-    <div
-      className="hero-body has-text-centered"
-    >
+            <a
+              aria-current="page"
+              href="/overview"
+              onClick={[Function]}
+            >
+              Overview
+            </a>
+          </li>
+          <li>
+            <a
+              href="/model"
+              onClick={[Function]}
+            >
+              Data Model
+            </a>
+          </li>
+          <li>
+            <a
+              href="/domain"
+              onClick={[Function]}
+            >
+              Domain Logic
+            </a>
+          </li>
+          <li>
+            <a
+              href="/infrastructure"
+              onClick={[Function]}
+            >
+              Infrastructure
+            </a>
+          </li>
+        </ul>
+      </nav>
       <a
-        href="/start"
+        href="/model"
         onClick={[Function]}
       >
         <svg

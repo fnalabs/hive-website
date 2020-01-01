@@ -5,7 +5,7 @@ import { shallow } from 'enzyme'
 import { Hero } from 'common/hero'
 
 describe('<Hero />', () => {
-  test('should render basic', () => {
+  it('should render basic', () => {
     const hero = shallow(<Hero />)
 
     expect(hero.instance()).toBeInstanceOf(Hero)
@@ -17,13 +17,13 @@ describe('<Hero />', () => {
     expect(hero.hasClass('is-bold')).toBe(false)
   })
 
-  test('should render basic w/ content', () => {
+  it('should render basic w/ content', () => {
     const hero = shallow(<Hero><div>test</div></Hero>)
 
     expect(hero.contains(<div>test</div>)).toBe(true)
   })
 
-  test('should render w/ size', () => {
+  it('should render w/ size', () => {
     const hero = shallow(<Hero size='medium' />)
 
     expect(hero.hasClass('hero')).toBe(true)
@@ -32,7 +32,7 @@ describe('<Hero />', () => {
     expect(hero.hasClass('is-bold')).toBe(false)
   })
 
-  test('should render w/ size and color', () => {
+  it('should render w/ size and color', () => {
     const hero = shallow(<Hero size='medium' color='light' />)
 
     expect(hero.hasClass('hero')).toBe(true)
@@ -41,7 +41,7 @@ describe('<Hero />', () => {
     expect(hero.hasClass('is-bold')).toBe(false)
   })
 
-  test('should render w/ size, color, and bold', () => {
+  it('should render w/ size, color, and bold', () => {
     const hero = shallow(<Hero size='medium' color='light' bold />)
 
     expect(hero.hasClass('hero')).toBe(true)
@@ -50,7 +50,7 @@ describe('<Hero />', () => {
     expect(hero.hasClass('is-bold')).toBe(true)
   })
 
-  test('should render w/ custom class', () => {
+  it('should render w/ custom class', () => {
     const hero = shallow(<Hero className='custom' />)
 
     expect(hero.hasClass('hero')).toBe(true)

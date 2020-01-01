@@ -1,0 +1,256 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Rest /> should render Rest page static content 1`] = `
+Array [
+  <article
+    className="section is-fullheight is-medium"
+  >
+    <div
+      className="container content"
+    >
+      <h1>
+        Example: REST
+      </h1>
+      <p>
+        Let's expand on the Basic example with a REST service. The code below describes a minimal implementation of the domain logic and infrastructure as code to implement a REST service.
+      </p>
+      <h2>
+        <a
+          href="https://www.npmjs.com/package/hive-io-rest-example"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          Domain Logic
+        </a>
+         (
+        <a
+          href="https://github.com/fnalabs/hive-js-rest-example"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          Source Code
+        </a>
+        )
+      </h2>
+      <div
+        className="notification"
+      >
+        <span
+          className="icon"
+        >
+          <svg
+            className="svg-inline"
+            viewBox="0 0 512 512"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z"
+              fill="#209cee"
+            />
+          </svg>
+        </span>
+        <span>
+          You should consider using a private NPM registry or implementing more creative solutions such as extending base Docker images with 
+          <code>
+            ADD
+          </code>
+          |
+          <code>
+            COPY
+          </code>
+           statements for source code or 
+          <code>
+            npm link
+          </code>
+           for your domain logic.
+        </span>
+      </div>
+      <h2>
+        Infrastructure
+      </h2>
+      <dl>
+        <dt>
+          <code>
+            Dockerfile
+          </code>
+        </dt>
+        <dd>
+          <pre>
+            FROM fnalabs/hive-base-js:latest
+            <br />
+            RUN npm install hive-io-rest-example
+          </pre>
+        </dd>
+        <dt>
+          <code>
+            docker-compose.yml
+          </code>
+        </dt>
+        <dd>
+          <pre>
+            version: '3.5'
+            <br />
+            services:
+            <br />
+              hive-base-js:
+            <br />
+                build: .
+            <br />
+                image: hive-base-js
+            <br />
+                environment:
+            <br />
+                  ACTOR: PostActor
+            <br />
+                  ACTOR_LIB: hive-io-rest-example
+            <br />
+                  CLUSTER_SIZE: 1
+            <br />
+                  HTTP_VERSION: 1
+            <br />
+                  SECURE: "false"
+            <br />
+                  MONGO_URL: 'mongodb://mongo:27017/post'
+            <br />
+                  FLUENTD_HOST: fluentd
+            <br />
+                  FLUENTD_PORT: 24224
+            <br />
+                  FLUENTD_TIMEOUT: 3.0
+            <br />
+                  FLUENTD_RECONNECT: 600000
+            <br />
+                depends_on:
+            <br />
+                  - mongo
+            <br />
+                  - fluentd
+            <br />
+                ports:
+            <br />
+                  - 80:3000
+            <br />
+                networks:
+            <br />
+                  - hive-io
+            <br />
+              fluentd:
+            <br />
+                image: fluent/fluentd:v1.7.4-1.0
+            <br />
+                networks:
+            <br />
+                  - hive-io
+            <br />
+                restart: on-failure
+            <br />
+              mongo:
+            <br />
+                image: mongo:4.2.1
+            <br />
+                networks:
+            <br />
+                  - hive-io
+            <br />
+                restart: on-failure
+            <br />
+            # networking specifics
+            <br />
+            networks:
+            <br />
+              hive-io:
+            <br />
+                driver: bridge
+          </pre>
+        </dd>
+      </dl>
+    </div>
+  </article>,
+  <section
+    className="hero is-small is-hive"
+  >
+    <div
+      className="hero-body has-text-centered"
+    >
+      <a
+        href="/basic"
+        onClick={[Function]}
+      >
+        <svg
+          height="48"
+          viewBox="0 0 448 512"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M223.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L319.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L393.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34zm-192 34l136 136c9.4 9.4 24.6 9.4 33.9 0l22.6-22.6c9.4-9.4 9.4-24.6 0-33.9L127.9 256l96.4-96.4c9.4-9.4 9.4-24.6 0-33.9L201.7 103c-9.4-9.4-24.6-9.4-33.9 0l-136 136c-9.5 9.4-9.5 24.6-.1 34z"
+          />
+        </svg>
+      </a>
+      <nav
+        aria-label="breadcrumbs"
+        className="breadcrumb has-bullet-separator is-hidden-touch"
+      >
+        <ul>
+          <li>
+            <a
+              href="/start"
+              onClick={[Function]}
+            >
+              Get Started
+            </a>
+          </li>
+          <li>
+            <a
+              href="/setup"
+              onClick={[Function]}
+            >
+              Setup
+            </a>
+          </li>
+          <li>
+            <a
+              href="/basic"
+              onClick={[Function]}
+            >
+              Basic
+            </a>
+          </li>
+          <li
+            className="is-active"
+          >
+            <a
+              aria-current="page"
+              href="/rest"
+              onClick={[Function]}
+            >
+              REST
+            </a>
+          </li>
+          <li>
+            <a
+              href="/cqrs-es"
+              onClick={[Function]}
+            >
+              CQRS/ES
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <a
+        href="/cqrs-es"
+        onClick={[Function]}
+      >
+        <svg
+          height="48"
+          viewBox="0 0 448 512"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34zm192-34l-136-136c-9.4-9.4-24.6-9.4-33.9 0l-22.6 22.6c-9.4 9.4-9.4 24.6 0 33.9l96.4 96.4-96.4 96.4c-9.4 9.4-9.4 24.6 0 33.9l22.6 22.6c9.4 9.4 24.6 9.4 33.9 0l136-136c9.4-9.2 9.4-24.4 0-33.8z"
+          />
+        </svg>
+      </a>
+    </div>
+  </section>,
+]
+`;

@@ -5,7 +5,7 @@ import { shallow } from 'enzyme'
 import { CardImage } from 'common/card'
 
 describe('<CardImage />', () => {
-  test('should render w/o content', () => {
+  it('should render w/o content', () => {
     const cardContent = shallow(<CardImage />)
 
     expect(cardContent.instance()).toBeNull()
@@ -14,7 +14,7 @@ describe('<CardImage />', () => {
     expect(cardContent.contains(<figure className='image is-96x96 has-text-centered' />)).toBe(true)
   })
 
-  test('should render w/ content', () => {
+  it('should render w/ content', () => {
     const cardContent = shallow(<CardImage><div>test</div></CardImage>)
 
     expect(cardContent.contains(<figure className='image is-96x96 has-text-centered'><div>test</div></figure>)).toBe(true)
