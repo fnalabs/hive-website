@@ -1,0 +1,102 @@
+{
+  "common": {
+    "siteName": "Hive^io",
+    "baseUrl": "https://hiveframework.io",
+    "cacheTime": 600000
+  },
+  "/": {
+    "name": "home",
+    "description": "Hive^io is a reactive, cloud-native framework for building microservices.",
+    "url": "https://hiveframework.io/",
+    "priority": 1.0
+  },
+  "/overview": {
+    "name": "overview",
+    "title": "Overview",
+    "description": "Overview of Hive^io: a reactive, cloud-native framework. The following describes project tenets and background.",
+    "url": "https://hiveframework.io/overview",
+    "priority": 1.0
+  },
+  "/model": {
+    "name": "model",
+    "title": "Data Model",
+    "description": "Data Modeling in Hive^io: a reactive, cloud-native framework. The following describes Data Model JSON Serialization to optimize network transport of domain data.",
+    "url": "https://hiveframework.io/model",
+    "priority": 1.0
+  },
+  "/domain": {
+    "name": "domain",
+    "title": "Domain Logic",
+    "description": "Domain Logic in Hive^io: a reactive, cloud-native framework. The following describes Domain Logic with the use of the Actor Model for universal primitives of concurrent computation.",
+    "url": "https://hiveframework.io/domain",
+    "priority": 1.0
+  },
+  "/infrastructure": {
+    "name": "infrastructure",
+    "title": "Infrastructure",
+    "description": "Infrastructure in Hive^io: a reactive, cloud-native framework. The following describes patterns chosen and other information on certain architectures with infrastructure as code.",
+    "url": "https://hiveframework.io/infrastructure",
+    "priority": 1.0
+  },
+  "/start": {
+    "name": "start",
+    "title": "Get Started",
+    "description": "Get started with Hive^io: a reactive, cloud-native framework. Follow along with the setup instructions and multiple examples to get you up and running quickly.",
+    "url": "https://hiveframework.io/start",
+    "priority": 1.0
+  },
+  "/setup": {
+    "name": "setup",
+    "title": "Setup",
+    "description": "Setup Hive^io: a reactive, cloud-native framework. Follow the setup process for domain logic modules and infrastructure as code.",
+    "url": "https://hiveframework.io/setup",
+    "priority": 1.0
+  },
+  "/basic": {
+    "name": "basic",
+    "title": "Example: Basic",
+    "description": "Straight forward example implementation with Hive^io: a reactive, cloud-native framework.",
+    "url": "https://hiveframework.io/basic",
+    "priority": 1.0
+  },
+  "/rest": {
+    "name": "rest",
+    "title": "Example: REST",
+    "description": "REST example implementation with Hive^io: a reactive, cloud-native framework.",
+    "url": "https://hiveframework.io/rest",
+    "priority": 1.0
+  },
+  "/cqrs-es": {
+    "name": "cqrs-es",
+    "title": "Example: CQRS/ES",
+    "description": "CQRS/ES example implementation with Hive^io: a reactive, cloud-native framework.",
+    "url": "https://hiveframework.io/cqrs-es",
+    "priority": 1.0
+  },
+  "/documentation": {
+    "name": "documentation",
+    "title": "Documentation",
+    "description": "Reference documentation for Hive^io: a reactive, cloud-native framework. Reference documentation for environment variables for each microservice image and the API for the domain logic library.",
+    "url": "https://hiveframework.io/documentation",
+    "priority": 1.0
+  },
+  "/environments": {
+    "name": "environments",
+    "title": "Environments",
+    "description": "Reference environment configurations for each microservice image in Hive^io: a reactive, cloud-native framework.",
+    "url": "https://hiveframework.io/environments",
+    "priority": 1.0
+  },
+  "/cookie": {
+    "name": "cookie",
+    "title": "Cookie Policy",
+    "url": "https://hiveframework.io/cookie",
+    "priority": 0.0
+  },
+  "/privacy": {
+    "name": "privacy",
+    "title": "Privacy Policy",
+    "url": "https://hiveframework.io/privacy",
+    "priority": 0.0
+  }
+}
