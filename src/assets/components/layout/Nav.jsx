@@ -50,9 +50,36 @@ class Nav extends Component {
 
           <div className={`navbar-menu${this.state.closed ? '' : ' is-active'}`}>
             <div className='navbar-end'>
-              <NavLink to='/overview' activeClassName='is-active' className='navbar-item'>Overview</NavLink>
-              <NavLink to='/start' activeClassName='is-active' className='navbar-item'>Get Started</NavLink>
-              <AnalyticsLink to='https://fnalabs.github.io/hive-js/' target='_blank' rel='noopener noreferrer' className='navbar-item'>API</AnalyticsLink>
+              <div className='navbar-item has-dropdown is-hoverable'>
+                <NavLink to='/overview' activeClassName='is-active' className='navbar-link'>Overview</NavLink>
+                <div className='navbar-dropdown is-boxed'>
+                  <NavLink to='/model' activeClassName='is-active' className='navbar-item'>Data Model</NavLink>
+                  <NavLink to='/domain' activeClassName='is-active' className='navbar-item'>Domain Logic</NavLink>
+                  <NavLink to='/infrastructure' activeClassName='is-active' className='navbar-item'>Infrastructure</NavLink>
+                </div>
+              </div>
+
+              <div className='navbar-item has-dropdown is-hoverable'>
+                <NavLink to='/start' activeClassName='is-active' className='navbar-link'>Get Started</NavLink>
+                <div className='navbar-dropdown is-boxed'>
+                  <NavLink to='/setup' activeClassName='is-active' className='navbar-item'>Setup</NavLink>
+                  <hr className='navbar-divider' />
+                  <span className='navbar-item'>Examples</span>
+                  <NavLink to='/basic' activeClassName='is-active' className='navbar-item'>Basic</NavLink>
+                  <NavLink to='/rest' activeClassName='is-active' className='navbar-item'>Rest</NavLink>
+                  <NavLink to='/cqrs-es' activeClassName='is-active' className='navbar-item'>CQRS/ES</NavLink>
+                </div>
+              </div>
+
+              <div className='navbar-item has-dropdown is-hoverable'>
+                <NavLink to='/documentation' activeClassName='is-active' className='navbar-link'>Documentation</NavLink>
+                <div className='navbar-dropdown is-boxed'>
+                  <NavLink to='/environments' activeClassName='is-active' className='navbar-item'>Environments</NavLink>
+                  <AnalyticsLink to='https://fnalabs.github.io/hive-js/' target='_blank' rel='noopener noreferrer' className='navbar-item'>API</AnalyticsLink>
+                  <hr className='navbar-divider' />
+                  <span className='navbar-item'>v2.0.0-rc.3</span>
+                </div>
+              </div>
             </div>
           </div>
         </Container>

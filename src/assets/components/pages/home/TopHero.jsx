@@ -12,7 +12,7 @@ export const TopHero = () => (
           <Tile type='parent'>
             <Tile type='child' size={6} vertical centered>
               <h1 className='title'>Hive<sup>io</sup></h1>
-              <h2 className='subtitle'>A reactive, cloud-native framework for building RESTful microservices.</h2>
+              <h2 className='subtitle'>A reactive, cloud-native framework for building microservices.</h2>
             </Tile>
 
             <Tile type='child' size={6}>

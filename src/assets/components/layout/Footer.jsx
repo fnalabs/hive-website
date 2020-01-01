@@ -11,22 +11,17 @@ export const Footer = () => (
         <div className='column is-narrow content'>
           <p>Copyright &copy; 2018 <a href='https://fnalabs.com' target='_blank' rel='noopener noreferrer'>FnA Labs</a></p>
           <p className='is-size-7'>Icons from <a href='https://fontawesome.com/' target='_blank' rel='noopener noreferrer'>Font Awesome</a> (<a href='https://fontawesome.com/license' target='_blank' rel='noopener noreferrer'>License</a>)</p>
-          <p>
-            <a href='https://bulma.io' target='_blank' rel='noopener noreferrer'>
-              <img src='https://fnalabs.github.io/fnalabs-assets/assets/made-with-bulma--dark.png' alt='Made with Bulma' width='128' height='24' />
-            </a>
-          </p>
+          <p><a href='https://bulma.io' target='_blank' rel='noopener noreferrer'><img src='https://fnalabs.github.io/fnalabs-assets/assets/made-with-bulma--dark.png' alt='Made with Bulma' width='128' height='24' /></a></p>
         </div>
 
         <div className='column'>
           <div className='columns is-mobile'>
             <nav className='column is-6 has-text-right content'>
-              <p><strong>Sitemap</strong></p>
+              <p><strong>Pages</strong></p>
               <p><Link to='/'>Home</Link></p>
               <p><Link to='/overview'>Overview</Link></p>
               <p><Link to='/start'>Get Started</Link></p>
-              <p><AnalyticsLink to='https://fnalabs.github.io/hive-js/' target='_blank' rel='noopener noreferrer'>API</AnalyticsLink>
-              </p>
+              <p><Link to='/documentation'>Documentation</Link></p>
             </nav>
 
             <nav className='column is-6 has-text-left content'>

@@ -1,44 +1,90 @@
-import React from 'react'
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
+import { Link } from 'react-router-dom'
+import Helmet from 'react-helmet'
+import ReactGA from 'react-ga'
 
-import { Info } from 'icons'
+import Consent from 'contexts/Consent'
 
-export const Setup = () => (
-  <>
-    <div className='notification'>
-      <span className='icon'><Info className='svg-inline' /></span>
-      <span>The Development process for business logic only requires a Text Editor or IDE that supports JavaScript and Node.js/Docker. The rest of the instructions outlined here provide infrastructure details for installation and deployment.</span>
-    </div>
+import { Container } from 'common'
 
-    <h3>Prerequisites</h3>
-    <p>The prerequisites vary depending on the architecture. All implementations require Docker of some form. Whether it is just pure Docker, Docker Swarm, or Kubernetes is up to you. It is also strongly recommended you use a load balancer of some sort since the whole purpose of the framework is horizontal scalability.</p>
+import NextPageHero from '../NextPageHero'
 
-    <h5>Cloud Platforms</h5>
-    <dl>
-      <dt><em><strong>Required</strong></em></dt>
-      <dd><a href='https://www.docker.com/' target='_blank' rel='noopener noreferrer'>Docker</a></dd>
+import meta from 'metadata'
 
-      <dt><em><strong>Recommended</strong></em></dt>
-      <dd><a href='https://docs.docker.com/engine/swarm/' target='_blank' rel='noopener noreferrer'>Swarm</a>, <a href='https://kubernetes.io/' target='_blank' rel='noopener noreferrer'>Kubernetes</a>, or a <a href='https://en.wikipedia.org/wiki/Category:Cloud_computing_providers' target='_blank' rel='noopener noreferrer'>cloud service provider</a></dd>
-    </dl>
+export default class Setup extends Component {
+  static contextType = Consent
+  static contextTypes = {
+    isConsent: PropTypes.bool
+  }
 
-    <h5>More</h5>
-    <p>Once you decide on your cloud platform, you're ready to start building and deploying your application services and dependencies. Hive<sup>io</sup> will integrate well with many of the <a href='https://www.cncf.io/projects/' target='_blank' rel='noopener noreferrer'>cloud-native projects</a> and <a href='https://hub.docker.com/' target='_blank' rel='noopener noreferrer'>other containerized services</a>.</p>
+  componentDidMount () {
+    if (this.context.isConsent) {
+      const title = `${meta.common.siteName} | ${meta['/setup'].title}`
+      ReactGA.pageview(this.props.location.pathname, undefined, title)
+    }
+  }
 
-    <h3>Installing</h3>
-    <p>Hive<sup>io</sup> has minimal requirements for installation, allowing you to choose the solutions that suits your needs regarding storage, security, monitoring, and more. Once you have your cloud platform decided, you can start to code your business logic that will eventually be deployed with one of the container types below.</p>
-    <dl>
-      <dt><a href='https://hub.docker.com/r/fnalabs/hive-rest-js/' target='_blank' rel='noopener noreferrer'><em><strong>RESTful</strong></em></a></dt>
-      <dd><pre>$ docker pull fnalabs/hive-rest-js:&lt;[release]|latest&gt;</pre></dd>
+  renderBreadcrumbs () {
+    return (
+      <>
+        <li><Link to='/start'>Get Started</Link></li>
+        <li className='is-active'><Link to='/setup' aria-current='page'>Setup</Link></li>
+        <li><Link to='/basic'>Basic</Link></li>
+        <li><Link to='/rest'>REST</Link></li>
+        <li><Link to='/cqrs-es'>CQRS/ES</Link></li>
+      </>
+    )
+  }
 
-      <dt><a href='https://hub.docker.com/r/fnalabs/hive-producer-js/' target='_blank' rel='noopener noreferrer'><em><strong>CQRS/ES Producer</strong></em></a></dt>
-      <dd><pre>$ docker pull fnalabs/hive-producer-js:&lt;[release]|latest&gt;</pre></dd>
+  render () {
+    const { title, description, url } = meta['/setup']
+    const siteName = meta.common.siteName
 
-      <dt><a href='https://hub.docker.com/r/fnalabs/hive-consumer-js/' target='_blank' rel='noopener noreferrer'><em><strong>CQRS/ES Consumer</strong></em></a></dt>
-      <dd><pre>$ docker pull fnalabs/hive-consumer-js:&lt;[release]|latest&gt;</pre></dd>
+    return (
+      <>
+        <Helmet>
+          <title>{siteName} | {title}</title>
+          <meta name='description' content={description} />
+          <link rel='canonical' href={url} />
 
-      <dt><a href='https://hub.docker.com/r/fnalabs/hive-stream-processor-js/' target='_blank' rel='noopener noreferrer'><em><strong>CQRS/ES Stream Processor</strong></em></a></dt>
-      <dd><pre>$ docker pull fnalabs/hive-stream-processor-js:&lt;[release]|latest&gt;</pre></dd>
-    </dl>
-    <p>So far, the list above defines some common types of microservices you may need. Future versions of the framework will add more types to the above and add support for multiple languages.</p>
-  </>
-)
+          <meta property='og:title' content={`${siteName} | ${title}`} />
+          <meta property='og:description' content={description} />
+          <meta property='og:site_name' content={siteName} />
+          <meta property='og:url' content={url} />
+          <meta property='og:type' content='website' />
+        </Helmet>
+
+        <article className='section is-fullheight is-medium'>
+          <Container content>
+            <h1>Setup</h1>
+            <p>Hive<sup>io</sup> has minimal requirements for installation, allowing you to choose the solutions that suits your needs regarding storage, security, monitoring, and more. Once you have your cloud platform decided, you can start to code your domain logic that will eventually be deployed with one of the container types.</p>
+
+            <h2>Domain Logic</h2>
+            <p>To get started with implementing your domain logic, install the following NPM package to your domain module. Other dependencies of your domain logic for your microservices will need to be installed separately.</p>
+            <p><pre>$ npm install --save hive-io</pre></p>
+
+            <h2>Infrastructure</h2>
+            <p>There are currently 4 infrastructure as code images available to cover anything from basic to complex microservice needs.</p>
+            <dl>
+              <dt><a href='https://hub.docker.com/r/fnalabs/hive-base-js/' target='_blank' rel='noopener noreferrer'><em><strong>Base</strong></em></a></dt>
+              <dd><pre>$ docker pull fnalabs/hive-base-js:&lt;[release]|latest&gt;</pre></dd>
+
+              <dt><a href='https://hub.docker.com/r/fnalabs/hive-producer-js/' target='_blank' rel='noopener noreferrer'><em><strong>CQRS/ES Producer</strong></em></a></dt>
+              <dd><pre>$ docker pull fnalabs/hive-producer-js:&lt;[release]|latest&gt;</pre></dd>
+
+              <dt><a href='https://hub.docker.com/r/fnalabs/hive-consumer-js/' target='_blank' rel='noopener noreferrer'><em><strong>CQRS/ES Consumer</strong></em></a></dt>
+              <dd><pre>$ docker pull fnalabs/hive-consumer-js:&lt;[release]|latest&gt;</pre></dd>
+
+              <dt><a href='https://hub.docker.com/r/fnalabs/hive-stream-processor-js/' target='_blank' rel='noopener noreferrer'><em><strong>CQRS/ES Stream Processor</strong></em></a></dt>
+              <dd><pre>$ docker pull fnalabs/hive-stream-processor-js:&lt;[release]|latest&gt;</pre></dd>
+            </dl>
+            <p>So far, the list above defines some common types of microservices you may need. Future versions of the framework will add more types to the above and add support for multiple languages.</p>
+          </Container>
+        </article>
+
+        <NextPageHero breadcrumbs={this.renderBreadcrumbs} toLeft='/start' toRight='/basic' />
+      </>
+    )
+  }
+}
