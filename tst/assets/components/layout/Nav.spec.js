@@ -7,7 +7,7 @@ import { mount } from 'enzyme'
 import { Nav } from 'layout'
 
 describe('<Nav />', () => {
-  test('should toggle mobile menu correctly', () => {
+  it('should toggle mobile menu correctly', () => {
     const nav = mount(<MemoryRouter><Nav /></MemoryRouter>)
 
     expect(nav.find('.navbar-menu').hasClass('is-active')).toBe(false)
@@ -17,7 +17,7 @@ describe('<Nav />', () => {
     expect(nav.find('.navbar-menu').hasClass('is-active')).toBe(false)
   })
 
-  test('should render homepage nav correctly', () => {
+  it('should render homepage nav correctly', () => {
     const tree = renderer
       .create(<MemoryRouter initialEntries={['/']}><Nav /></MemoryRouter>)
       .toJSON()
@@ -25,7 +25,7 @@ describe('<Nav />', () => {
     expect(tree).toMatchSnapshot()
   })
 
-  test('should render Overview page nav correctly', () => {
+  it('should render Overview page nav correctly', () => {
     const tree = renderer
       .create(<MemoryRouter initialEntries={['/overview']}><Nav /></MemoryRouter>)
       .toJSON()
@@ -33,7 +33,7 @@ describe('<Nav />', () => {
     expect(tree).toMatchSnapshot()
   })
 
-  test('should render Get Started page nav correctly', () => {
+  it('should render Get Started page nav correctly', () => {
     const tree = renderer
       .create(<MemoryRouter initialEntries={['/start']}><Nav /></MemoryRouter>)
       .toJSON()

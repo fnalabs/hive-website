@@ -1,0 +1,321 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Setup /> should render Setup page static content 1`] = `
+Array [
+  <article
+    className="section is-medium"
+  >
+    <div
+      className="container"
+    >
+      <div
+        className="columns"
+      >
+        <header
+          className="column is-narrow is-hidden-touch is-aside"
+        >
+          <aside
+            className="menu"
+          >
+            <p
+              className="menu-label has-text-weight-bold"
+            >
+              v2.0.0-rc.3
+            </p>
+            <ul
+              className="menu-list"
+            >
+              <li>
+                <a
+                  aria-current={null}
+                  href="/overview"
+                  onClick={[Function]}
+                >
+                  Overview
+                </a>
+                <ul>
+                  <li>
+                    <a
+                      aria-current={null}
+                      href="/model"
+                      onClick={[Function]}
+                    >
+                      Data Model
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      aria-current={null}
+                      href="/domain"
+                      onClick={[Function]}
+                    >
+                      Domain Logic
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      aria-current={null}
+                      href="/infrastructure"
+                      onClick={[Function]}
+                    >
+                      Infrastructure
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a
+                  aria-current={null}
+                  href="/start"
+                  onClick={[Function]}
+                >
+                  Get Started
+                </a>
+                <ul>
+                  <li>
+                    <a
+                      aria-current={null}
+                      href="/setup"
+                      onClick={[Function]}
+                    >
+                      Setup
+                    </a>
+                  </li>
+                  <li
+                    className="menu-label has-text-weight-bold"
+                  >
+                    Examples:
+                  </li>
+                  <li>
+                    <a
+                      aria-current={null}
+                      href="/basic"
+                      onClick={[Function]}
+                    >
+                      Basic
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      aria-current={null}
+                      href="/rest"
+                      onClick={[Function]}
+                    >
+                      Rest
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      aria-current={null}
+                      href="/cqrs-es"
+                      onClick={[Function]}
+                    >
+                      CQRS/ES
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a
+                  aria-current={null}
+                  href="/documentation"
+                  onClick={[Function]}
+                >
+                  Documentation
+                </a>
+                <ul>
+                  <li>
+                    <a
+                      aria-current={null}
+                      href="/environments"
+                      onClick={[Function]}
+                    >
+                      Environments
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://fnalabs.github.io/hive-js/"
+                      rel="noopener noreferrer"
+                      target="_blank"
+                    >
+                      API
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </aside>
+        </header>
+        <section
+          className="column content"
+          role="document"
+        >
+          <h1>
+            Setup
+          </h1>
+          <p>
+            Hive
+            <sup>
+              io
+            </sup>
+             has minimal requirements for installation, allowing you to choose the solutions that suits your needs regarding storage, security, monitoring, and more. Once you have your cloud platform decided, you can start to code your domain logic that will eventually be deployed with one of the container types.
+          </p>
+          <h2>
+            Domain Logic
+          </h2>
+          <p>
+            To get started with implementing your domain logic, install the following NPM package to your domain module(s). Other dependencies of your domain logic for your microservices will need to be installed separately.
+          </p>
+          <p>
+            <pre>
+              $ npm install --save hive-io
+            </pre>
+          </p>
+          <h2>
+            Infrastructure
+          </h2>
+          <p>
+            There are currently 4 infrastructure images available to cover anything from basic to complex microservice needs.
+          </p>
+          <dl>
+            <dt>
+              <a
+                href="https://hub.docker.com/r/fnalabs/hive-base-js/"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <em>
+                  <strong>
+                    Base
+                  </strong>
+                </em>
+              </a>
+            </dt>
+            <dd>
+              <pre>
+                $ docker pull fnalabs/hive-base-js:&lt;[release]|latest&gt;
+              </pre>
+            </dd>
+            <dt>
+              <a
+                href="https://hub.docker.com/r/fnalabs/hive-producer-js/"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <em>
+                  <strong>
+                    CQRS/ES Producer
+                  </strong>
+                </em>
+              </a>
+            </dt>
+            <dd>
+              <pre>
+                $ docker pull fnalabs/hive-producer-js:&lt;[release]|latest&gt;
+              </pre>
+            </dd>
+            <dt>
+              <a
+                href="https://hub.docker.com/r/fnalabs/hive-consumer-js/"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <em>
+                  <strong>
+                    CQRS/ES Consumer
+                  </strong>
+                </em>
+              </a>
+            </dt>
+            <dd>
+              <pre>
+                $ docker pull fnalabs/hive-consumer-js:&lt;[release]|latest&gt;
+              </pre>
+            </dd>
+            <dt>
+              <a
+                href="https://hub.docker.com/r/fnalabs/hive-stream-processor-js/"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <em>
+                  <strong>
+                    CQRS/ES Stream Processor
+                  </strong>
+                </em>
+              </a>
+            </dt>
+            <dd>
+              <pre>
+                $ docker pull fnalabs/hive-stream-processor-js:&lt;[release]|latest&gt;
+              </pre>
+            </dd>
+          </dl>
+          <p>
+            So far, the list above defines some common types of microservices you may need. Future versions of the framework will add more types to the above and add support for multiple languages.
+          </p>
+        </section>
+      </div>
+    </div>
+  </article>,
+  <section
+    className="hero is-small is-hive"
+  >
+    <div
+      className="hero-body"
+    >
+      <nav
+        className="level is-mobile"
+      >
+        <div
+          className="level-item has-text-centered"
+        >
+          <a
+            aria-label="previous page"
+            href="/start"
+            onClick={[Function]}
+          >
+            <span
+              className="icon is-large"
+            >
+              <svg
+                height="48"
+                viewBox="0 0 448 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M223.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L319.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L393.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34zm-192 34l136 136c9.4 9.4 24.6 9.4 33.9 0l22.6-22.6c9.4-9.4 9.4-24.6 0-33.9L127.9 256l96.4-96.4c9.4-9.4 9.4-24.6 0-33.9L201.7 103c-9.4-9.4-24.6-9.4-33.9 0l-136 136c-9.5 9.4-9.5 24.6-.1 34z"
+                />
+              </svg>
+            </span>
+          </a>
+        </div>
+        <div
+          className="level-item has-text-centered"
+        >
+          <a
+            aria-label="next page"
+            href="/basic"
+            onClick={[Function]}
+          >
+            <span
+              className="icon is-large"
+            >
+              <svg
+                height="48"
+                viewBox="0 0 448 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34zm192-34l-136-136c-9.4-9.4-24.6-9.4-33.9 0l-22.6 22.6c-9.4 9.4-9.4 24.6 0 33.9l96.4 96.4-96.4 96.4c-9.4 9.4-9.4 24.6 0 33.9l22.6 22.6c9.4 9.4 24.6 9.4 33.9 0l136-136c9.4-9.2 9.4-24.4 0-33.8z"
+                />
+              </svg>
+            </span>
+          </a>
+        </div>
+      </nav>
+    </div>
+  </section>,
+]
+`;

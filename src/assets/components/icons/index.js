@@ -1,4 +1,5 @@
 export { ArrowDown } from './ArrowDown'
+export { ArrowLeft } from './ArrowLeft'
 export { ArrowRight } from './ArrowRight'
 export { Box } from './Box'
 export { Cloud } from './Cloud'

@@ -5,7 +5,7 @@ import { shallow } from 'enzyme'
 import { HeroBody } from 'common/hero'
 
 describe('<HeroBody />', () => {
-  test('should render basic', () => {
+  it('should render basic', () => {
     const heroBody = shallow(<HeroBody />)
 
     expect(heroBody.instance()).toBeInstanceOf(HeroBody)
@@ -14,7 +14,7 @@ describe('<HeroBody />', () => {
     expect(heroBody.hasClass('has-text-centered')).toBe(false)
   })
 
-  test('should render w/ centered content', () => {
+  it('should render w/ centered content', () => {
     const heroBody = shallow(<HeroBody centered><div>test</div></HeroBody>)
 
     expect(heroBody.hasClass('hero-body')).toBe(true)

@@ -1,9 +1,9 @@
 /* eslint-env jest */
 import React from 'react'
 import renderer from 'react-test-renderer'
+import { shallow } from 'enzyme'
 
 import { MemoryRouter } from 'react-router'
-import { Cookies } from 'react-cookie-consent'
 import ReactGA from 'react-ga'
 
 import { Start } from 'pages'
@@ -11,21 +11,18 @@ import { Start } from 'pages'
 jest.mock('react-ga')
 
 describe('<Start />', () => {
-  test('should render Start page static content', () => {
-    Cookies.get = jest.fn().mockReturnValue(false)
-
+  it('should render Start page static content', () => {
     const tree = renderer.create(<MemoryRouter><Start location={{ pathname: '/start' }} /></MemoryRouter>).toJSON()
 
     expect(tree).toMatchSnapshot()
     expect(ReactGA.pageview).not.toBeCalled()
   })
 
-  test('should render Start page static content and report page view', () => {
-    Cookies.get = jest.fn().mockReturnValue(true)
+  it('should render Start page static content and report page view', () => {
+    shallow(<Start location={{ pathname: '/start' }} />, {
+      context: { isConsent: true }
+    })
 
-    const tree = renderer.create(<MemoryRouter><Start location={{ pathname: '/start' }} /></MemoryRouter>).toJSON()
-
-    expect(tree).toMatchSnapshot()
     expect(ReactGA.pageview).toBeCalledTimes(1)
   })
 })

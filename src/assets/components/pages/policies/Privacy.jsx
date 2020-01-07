@@ -13,10 +13,10 @@ export const Privacy = () => {
   return (
     <>
       <Helmet>
-        <title>{title} | {siteName}</title>
+        <title>{siteName} | {title}</title>
         <link rel='canonical' href={url} />
 
-        <meta property='og:title' content={`${title} | ${siteName}`} />
+        <meta property='og:title' content={`${siteName} | ${title}`} />
         <meta property='og:site_name' content={siteName} />
         <meta property='og:url' content={url} />
         <meta property='og:type' content='website' />

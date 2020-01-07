@@ -1,0 +1,352 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Basic /> should render Basic page static content 1`] = `
+Array [
+  <article
+    className="section is-medium"
+  >
+    <div
+      className="container"
+    >
+      <div
+        className="columns"
+      >
+        <header
+          className="column is-narrow is-hidden-touch is-aside"
+        >
+          <aside
+            className="menu"
+          >
+            <p
+              className="menu-label has-text-weight-bold"
+            >
+              v2.0.0-rc.3
+            </p>
+            <ul
+              className="menu-list"
+            >
+              <li>
+                <a
+                  aria-current={null}
+                  href="/overview"
+                  onClick={[Function]}
+                >
+                  Overview
+                </a>
+                <ul>
+                  <li>
+                    <a
+                      aria-current={null}
+                      href="/model"
+                      onClick={[Function]}
+                    >
+                      Data Model
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      aria-current={null}
+                      href="/domain"
+                      onClick={[Function]}
+                    >
+                      Domain Logic
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      aria-current={null}
+                      href="/infrastructure"
+                      onClick={[Function]}
+                    >
+                      Infrastructure
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a
+                  aria-current={null}
+                  href="/start"
+                  onClick={[Function]}
+                >
+                  Get Started
+                </a>
+                <ul>
+                  <li>
+                    <a
+                      aria-current={null}
+                      href="/setup"
+                      onClick={[Function]}
+                    >
+                      Setup
+                    </a>
+                  </li>
+                  <li
+                    className="menu-label has-text-weight-bold"
+                  >
+                    Examples:
+                  </li>
+                  <li>
+                    <a
+                      aria-current={null}
+                      href="/basic"
+                      onClick={[Function]}
+                    >
+                      Basic
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      aria-current={null}
+                      href="/rest"
+                      onClick={[Function]}
+                    >
+                      Rest
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      aria-current={null}
+                      href="/cqrs-es"
+                      onClick={[Function]}
+                    >
+                      CQRS/ES
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a
+                  aria-current={null}
+                  href="/documentation"
+                  onClick={[Function]}
+                >
+                  Documentation
+                </a>
+                <ul>
+                  <li>
+                    <a
+                      aria-current={null}
+                      href="/environments"
+                      onClick={[Function]}
+                    >
+                      Environments
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://fnalabs.github.io/hive-js/"
+                      rel="noopener noreferrer"
+                      target="_blank"
+                    >
+                      API
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </aside>
+        </header>
+        <section
+          className="column content"
+          role="document"
+        >
+          <h1>
+            Example: Basic
+          </h1>
+          <p>
+            Let's start off with a straightforward example. The following 
+            <a
+              href="https://fnalabs.github.io/hive-js/Actor.html"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              Actor
+            </a>
+             and its associated 
+            <a
+              href="http://json-schema.org/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              JSON Schema
+            </a>
+             are performing superficial validation against the schema and returning an instance of the Model.
+          </p>
+          <dl>
+            <dt>
+              <code>
+                ExampleSchema.json
+              </code>
+            </dt>
+            <dd>
+              <pre>
+                {
+                <br />
+                  "title": "Model",
+                <br />
+                  "description": "Example Schema for a Model",
+                <br />
+                  "$id": "https://example.com/example/url/for/schema/hosting",
+                <br />
+                  "type": "object",
+                <br />
+                  "properties": {
+                <br />
+                    "data": {
+                <br />
+                      "type": "string"
+                <br />
+                    }
+                <br />
+                  },
+                <br />
+                  "required": ["data"],
+                <br />
+                  "additionalProperties": false
+                <br />
+                }
+              </pre>
+            </dd>
+            <dt>
+              <code>
+                ExampleActor.js
+              </code>
+            </dt>
+            <dd>
+              <pre>
+                import { Actor, Schema } from 'hive-io'
+                <br />
+                import ExampleSchema from './ExampleSchema.json'
+                <br />
+                <br />
+                class ExampleActor extends Actor {
+                <br />
+                  async perform (_model, data) {
+                <br />
+                    data.type = 'Model' // set data type
+                <br />
+                    const model = await super.perform(_model, data)
+                <br />
+                <br />
+                    return { model }
+                <br />
+                  }
+                <br />
+                }
+                <br />
+                <br />
+                export default new Proxy(ExampleActor, {
+                <br />
+                  construct: async function (ExampleActor) {
+                <br />
+                    const exampleSchema = await new Schema(ExampleSchema)
+                <br />
+                    return new ExampleActor(exampleSchema)
+                <br />
+                  }
+                <br />
+                })
+              </pre>
+            </dd>
+          </dl>
+          <div
+            className="notification"
+          >
+            <span
+              className="icon"
+            >
+              <svg
+                className="svg-inline"
+                viewBox="0 0 512 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z"
+                  fill="#209cee"
+                />
+              </svg>
+            </span>
+            <span>
+              Please note the use of 
+              <code>
+                Proxy
+              </code>
+               in the 
+              <code>
+                ExampleActor
+              </code>
+               definition above. Due to the asynchronous requirement of Schemas, specifically that they can be hosted in a Schema Registry, 
+              <code>
+                Proxy
+              </code>
+               is used to give us the ability to define asynchronous constructors to satisfy that requirement.
+            </span>
+          </div>
+          <p>
+            Now that we've taken a quick look at some straightforward domain logic with JSON Schemas and Actors, let's add to this with a fully functional REST service example.
+          </p>
+        </section>
+      </div>
+    </div>
+  </article>,
+  <section
+    className="hero is-small is-hive"
+  >
+    <div
+      className="hero-body"
+    >
+      <nav
+        className="level is-mobile"
+      >
+        <div
+          className="level-item has-text-centered"
+        >
+          <a
+            aria-label="previous page"
+            href="/setup"
+            onClick={[Function]}
+          >
+            <span
+              className="icon is-large"
+            >
+              <svg
+                height="48"
+                viewBox="0 0 448 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M223.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L319.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L393.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34zm-192 34l136 136c9.4 9.4 24.6 9.4 33.9 0l22.6-22.6c9.4-9.4 9.4-24.6 0-33.9L127.9 256l96.4-96.4c9.4-9.4 9.4-24.6 0-33.9L201.7 103c-9.4-9.4-24.6-9.4-33.9 0l-136 136c-9.5 9.4-9.5 24.6-.1 34z"
+                />
+              </svg>
+            </span>
+          </a>
+        </div>
+        <div
+          className="level-item has-text-centered"
+        >
+          <a
+            aria-label="next page"
+            href="/rest"
+            onClick={[Function]}
+          >
+            <span
+              className="icon is-large"
+            >
+              <svg
+                height="48"
+                viewBox="0 0 448 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34zm192-34l-136-136c-9.4-9.4-24.6-9.4-33.9 0l-22.6 22.6c-9.4 9.4-9.4 24.6 0 33.9l96.4 96.4-96.4 96.4c-9.4 9.4-9.4 24.6 0 33.9l22.6 22.6c9.4 9.4 24.6 9.4 33.9 0l136-136c9.4-9.2 9.4-24.4 0-33.8z"
+                />
+              </svg>
+            </span>
+          </a>
+        </div>
+      </nav>
+    </div>
+  </section>,
+]
+`;

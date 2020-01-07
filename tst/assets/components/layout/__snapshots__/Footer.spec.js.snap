@@ -2,7 +2,7 @@
 
 exports[`<Footer /> should render static content correctly 1`] = `
 <footer
-  className="footer is-dark"
+  className="footer"
 >
   <div
     className="container"
@@ -14,7 +14,7 @@ exports[`<Footer /> should render static content correctly 1`] = `
         className="column is-narrow content"
       >
         <p>
-          Copyright © 2018 
+          Copyright © 2020 
           <a
             href="https://fnalabs.com"
             rel="noopener noreferrer"
@@ -62,15 +62,15 @@ exports[`<Footer /> should render static content correctly 1`] = `
       <div
         className="column"
       >
-        <div
+        <nav
           className="columns is-mobile"
         >
-          <nav
+          <div
             className="column is-6 has-text-right content"
           >
             <p>
               <strong>
-                Sitemap
+                Pages
               </strong>
             </p>
             <p>
@@ -99,15 +99,14 @@ exports[`<Footer /> should render static content correctly 1`] = `
             </p>
             <p>
               <a
-                href="https://fnalabs.github.io/hive-js/"
-                rel="noopener noreferrer"
-                target="_blank"
+                href="/documentation"
+                onClick={[Function]}
               >
-                API
+                Documentation
               </a>
             </p>
-          </nav>
-          <nav
+          </div>
+          <div
             className="column is-6 has-text-left content"
           >
             <p>
@@ -131,8 +130,8 @@ exports[`<Footer /> should render static content correctly 1`] = `
                 Privacy
               </a>
             </p>
-          </nav>
-        </div>
+          </div>
+        </nav>
       </div>
       <div
         className="column is-narrow"
@@ -144,6 +143,7 @@ exports[`<Footer /> should render static content correctly 1`] = `
             className="level-item"
           >
             <a
+              aria-label="github"
               href="https://github.com/fnalabs?q=hive"
               rel="noopener noreferrer"
               target="_blank"
@@ -167,6 +167,7 @@ exports[`<Footer /> should render static content correctly 1`] = `
             className="level-item"
           >
             <a
+              aria-label="NPM"
               href="https://www.npmjs.com/package/hive-io"
               rel="noopener noreferrer"
               target="_blank"
@@ -190,6 +191,7 @@ exports[`<Footer /> should render static content correctly 1`] = `
             className="level-item"
           >
             <a
+              aria-label="twitter"
               href="https://twitter.com/FnA_Labs"
               rel="noopener noreferrer"
               target="_blank"
@@ -213,6 +215,7 @@ exports[`<Footer /> should render static content correctly 1`] = `
             className="level-item"
           >
             <a
+              aria-label="email"
               href="mailto:contact@fnalabs.com"
             >
               <span
@@ -241,12 +244,13 @@ exports[`<Footer /> should render static content correctly 1`] = `
               className="tile is-child has-text-centered"
             >
               <a
+                aria-label="FNA labs"
                 href="https://fnalabs.com"
                 rel="noopener noreferrer"
                 target="_blank"
               >
                 <svg
-                  viewBox="0 0 283.747 180"
+                  viewBox="0 0 290 180"
                   width="144"
                   xmlns="http://www.w3.org/2000/svg"
                 >

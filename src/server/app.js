@@ -1,4 +1,6 @@
 // imports
+import fs from 'fs'
+
 import Koa from 'koa'
 import compress from 'koa-compress'
 import helmet from 'koa-helmet'
@@ -10,12 +12,27 @@ import { renderToString } from 'react-dom/server'
 import { StaticRouter } from 'react-router'
 import Helmet from 'react-helmet'
 
-import template from './template'
+import meta from 'metadata'
+import template from 'server/template'
 
 import { Routes } from 'Routes'
 import { Nav, Footer } from 'layout'
 
-import styles from 'styles/main.scss'
+// define critical css per page
+const pathRegExp = /^\//
+const styles = {}
+for (const url in meta) {
+  if (pathRegExp.test(url) && fs.existsSync(`./dist/server/css/${meta[url].name}.css`)) {
+    styles[url] = Buffer.from(fs.readFileSync(`./dist/server/css/${meta[url].name}.css`)).toString('utf8')
+  }
+}
+
+// define client side css and js
+const webpackManifest = fs.existsSync('./dist/server/manifest.json')
+  ? JSON.parse(fs.readFileSync('./dist/server/manifest.json'))
+  : {}
+const css = webpackManifest['main.css']
+const js = webpackManifest['main.js']
 
 // init app
 const app = new Koa()
@@ -24,8 +41,7 @@ const app = new Koa()
 async function render (ctx) {
   const context = {}
   const html = renderToString(
-    <StaticRouter location={ctx.url} context={context}>
-      <style dangerouslySetInnerHTML={{ __html: styles._getCss() }} />
+    <StaticRouter location={ctx.path} context={context}>
       <div id='main' role='none'>
         <header><Nav /></header>
         <main><Routes /></main>
@@ -33,7 +49,7 @@ async function render (ctx) {
       </div>
     </StaticRouter>
   )
-  const helm = Helmet.renderStatic()
+  const helmet = Helmet.renderStatic()
 
   if (context.url) {
     ctx.status = 302
@@ -41,7 +57,7 @@ async function render (ctx) {
   }
 
   ctx.status = context.status || 200
-  ctx.body = template`${helm.title.toString()}${helm.meta.toString()}${helm.link.toString()}${html}`
+  ctx.body = template`${helmet.title.toString()}${helmet.meta.toString()}${helmet.link.toString()}${styles[ctx.path]}${css}${html}${js}`
   return ctx
 }
 
@@ -51,7 +67,7 @@ export default app
   .use(helmet())
   .use(helmet.referrerPolicy())
   .use(logger())
-  .use(serve('dist/client'))
+  .use(serve('./dist/client'))
   .use(render)
   .on('error', (err, ctx) => {
     console.log('server error', err, ctx)

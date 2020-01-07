@@ -1,0 +1,938 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Environments /> should render Environments page static content 1`] = `
+Array [
+  <article
+    className="section is-medium"
+  >
+    <div
+      className="container"
+    >
+      <div
+        className="columns"
+      >
+        <header
+          className="column is-narrow is-hidden-touch is-aside"
+        >
+          <aside
+            className="menu"
+          >
+            <p
+              className="menu-label has-text-weight-bold"
+            >
+              v2.0.0-rc.3
+            </p>
+            <ul
+              className="menu-list"
+            >
+              <li>
+                <a
+                  aria-current={null}
+                  href="/overview"
+                  onClick={[Function]}
+                >
+                  Overview
+                </a>
+                <ul>
+                  <li>
+                    <a
+                      aria-current={null}
+                      href="/model"
+                      onClick={[Function]}
+                    >
+                      Data Model
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      aria-current={null}
+                      href="/domain"
+                      onClick={[Function]}
+                    >
+                      Domain Logic
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      aria-current={null}
+                      href="/infrastructure"
+                      onClick={[Function]}
+                    >
+                      Infrastructure
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a
+                  aria-current={null}
+                  href="/start"
+                  onClick={[Function]}
+                >
+                  Get Started
+                </a>
+                <ul>
+                  <li>
+                    <a
+                      aria-current={null}
+                      href="/setup"
+                      onClick={[Function]}
+                    >
+                      Setup
+                    </a>
+                  </li>
+                  <li
+                    className="menu-label has-text-weight-bold"
+                  >
+                    Examples:
+                  </li>
+                  <li>
+                    <a
+                      aria-current={null}
+                      href="/basic"
+                      onClick={[Function]}
+                    >
+                      Basic
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      aria-current={null}
+                      href="/rest"
+                      onClick={[Function]}
+                    >
+                      Rest
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      aria-current={null}
+                      href="/cqrs-es"
+                      onClick={[Function]}
+                    >
+                      CQRS/ES
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a
+                  aria-current={null}
+                  href="/documentation"
+                  onClick={[Function]}
+                >
+                  Documentation
+                </a>
+                <ul>
+                  <li>
+                    <a
+                      aria-current={null}
+                      href="/environments"
+                      onClick={[Function]}
+                    >
+                      Environments
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://fnalabs.github.io/hive-js/"
+                      rel="noopener noreferrer"
+                      target="_blank"
+                    >
+                      API
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </aside>
+        </header>
+        <section
+          className="column content"
+          role="document"
+        >
+          <h1>
+            Environments
+          </h1>
+          <p>
+            The tables below contain all of the environment variables used to configure each microservice container. Default values are defined where applicable as well as descriptions for each.
+          </p>
+          <h2
+            id="shared"
+          >
+            Shared
+          </h2>
+          <p>
+            The following envrionment variables are shared across all microservice images:
+          </p>
+          <div
+            className="table-container"
+          >
+            <table
+              className="table is-striped is-hoverable"
+            >
+              <thead>
+                <tr>
+                  <th>
+                    Name
+                  </th>
+                  <th>
+                    Type
+                  </th>
+                  <th>
+                    Default
+                  </th>
+                  <th>
+                    Description
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    NODE_ENV
+                  </td>
+                  <td>
+                    String
+                  </td>
+                  <td>
+                    'production'
+                  </td>
+                  <td>
+                    microservice runtime environment
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    PORT
+                  </td>
+                  <td>
+                    Number
+                  </td>
+                  <td>
+                    3000
+                  </td>
+                  <td>
+                    microservice port to listen on
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    HTTP_VERSION
+                  </td>
+                  <td>
+                    Number
+                  </td>
+                  <td>
+                    2
+                  </td>
+                  <td>
+                    HTTP version for backward compatibility
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    SECURE
+                  </td>
+                  <td>
+                    String
+                  </td>
+                  <td>
+                    'false'
+                  </td>
+                  <td>
+                    whether to run microservice secure or not. defaults to 'false' since we cannot provide certifications
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    CLUSTER_SIZE
+                  </td>
+                  <td>
+                    Number
+                  </td>
+                  <td>
+                    [total CPUs available]
+                  </td>
+                  <td>
+                    defaults to the total available CPUs allocated to the container or to the size you specify here
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    PING_URL
+                  </td>
+                  <td>
+                    String
+                  </td>
+                  <td>
+                    '/ping'
+                  </td>
+                  <td>
+                    URL to use for shallow health checks for the microservice
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    ACTOR
+                  </td>
+                  <td>
+                    String
+                  </td>
+                  <td />
+                  <td>
+                    Actor (Model) the microservice is responsible for
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    ACTOR_LIB
+                  </td>
+                  <td>
+                    String
+                  </td>
+                  <td />
+                  <td>
+                    module where the ACTOR resides
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <h2>
+            Base
+          </h2>
+          <p>
+            All of the environment variables in 
+            <a
+              href="#shared"
+            >
+              Shared
+            </a>
+             and the following:
+          </p>
+          <div
+            className="table-container"
+          >
+            <table
+              className="table is-striped is-hoverable"
+            >
+              <thead>
+                <tr>
+                  <th>
+                    Name
+                  </th>
+                  <th>
+                    Type
+                  </th>
+                  <th>
+                    Default
+                  </th>
+                  <th>
+                    Description
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    CONTENT_TYPE
+                  </td>
+                  <td>
+                    String
+                  </td>
+                  <td>
+                    'application/json'
+                  </td>
+                  <td>
+                    HTTP Content-Type header to check
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <h2>
+            Producer
+          </h2>
+          <p>
+            All of the environment variables in 
+            <a
+              href="#shared"
+            >
+              Shared
+            </a>
+             and the following:
+          </p>
+          <div
+            className="table-container"
+          >
+            <table
+              className="table is-striped is-hoverable"
+            >
+              <thead>
+                <tr>
+                  <th>
+                    Name
+                  </th>
+                  <th>
+                    Type
+                  </th>
+                  <th>
+                    Default
+                  </th>
+                  <th>
+                    Description
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    CONTENT_TYPE
+                  </td>
+                  <td>
+                    String
+                  </td>
+                  <td>
+                    'application/json'
+                  </td>
+                  <td>
+                    HTTP Content-Type header to check
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    EVENT_STORE_TOPIC
+                  </td>
+                  <td>
+                    String
+                  </td>
+                  <td />
+                  <td>
+                    Kafka topic the events will be stored under
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    EVENT_STORE_ID
+                  </td>
+                  <td>
+                    String
+                  </td>
+                  <td />
+                  <td>
+                    unique identifier for Kafka client connection
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    EVENT_STORE_BROKERS
+                  </td>
+                  <td>
+                    String
+                  </td>
+                  <td />
+                  <td>
+                    comma separated URLs where Kafka is hosted
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    EVENT_STORE_BUFFER
+                  </td>
+                  <td>
+                    Number
+                  </td>
+                  <td>
+                    100
+                  </td>
+                  <td>
+                    maximum number of incoming messages to batch
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    EVENT_STORE_TIMEOUT
+                  </td>
+                  <td>
+                    Number
+                  </td>
+                  <td>
+                    2000
+                  </td>
+                  <td>
+                    time (in \`ms\`) to poll Kafka for delivery reports
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <h2>
+            Consumer
+          </h2>
+          <p>
+            All of the environment variables in 
+            <a
+              href="#shared"
+            >
+              Shared
+            </a>
+             and the following:
+          </p>
+          <div
+            className="table-container"
+          >
+            <table
+              className="table is-striped is-hoverable"
+            >
+              <thead>
+                <tr>
+                  <th>
+                    Name
+                  </th>
+                  <th>
+                    Type
+                  </th>
+                  <th>
+                    Default
+                  </th>
+                  <th>
+                    Description
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    EVENT_STORE_TOPIC
+                  </td>
+                  <td>
+                    String
+                  </td>
+                  <td />
+                  <td>
+                    Kafka topic the events will be consumed from
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    EVENT_STORE_ID
+                  </td>
+                  <td>
+                    String
+                  </td>
+                  <td />
+                  <td>
+                    unique identifier for Kafka client connection
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    EVENT_STORE_GROUP_ID
+                  </td>
+                  <td>
+                    String
+                  </td>
+                  <td />
+                  <td>
+                    defines Kafka Consumer group id
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    EVENT_STORE_BROKERS
+                  </td>
+                  <td>
+                    String
+                  </td>
+                  <td />
+                  <td>
+                    comma separated URLs where Kafka is hosted
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    EVENT_STORE_FROM_START
+                  </td>
+                  <td>
+                    String
+                  </td>
+                  <td>
+                    'false'
+                  </td>
+                  <td>
+                    tells Consumer whether or not to start at the beginning of the topic
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    EVENT_STORE_PARTITIONS
+                  </td>
+                  <td>
+                    Number
+                  </td>
+                  <td>
+                    1
+                  </td>
+                  <td>
+                    tells Consumer how many partitions to consume
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    EVENT_STORE_BUFFER
+                  </td>
+                  <td>
+                    Number
+                  </td>
+                  <td>
+                    null
+                  </td>
+                  <td>
+                    maximum number of incoming messages to batch
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    EVENT_STORE_TIMEOUT
+                  </td>
+                  <td>
+                    Number
+                  </td>
+                  <td>
+                    null
+                  </td>
+                  <td>
+                    time (in \`ms\`) to poll Kafka for delivery reports
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <h2>
+            Stream Processor
+          </h2>
+          <p>
+            All of the environment variables in 
+            <a
+              href="#shared"
+            >
+              Shared
+            </a>
+             and the following:
+          </p>
+          <div
+            className="table-container"
+          >
+            <table
+              className="table is-striped is-hoverable"
+            >
+              <thead>
+                <tr>
+                  <th>
+                    Name
+                  </th>
+                  <th>
+                    Type
+                  </th>
+                  <th>
+                    Default
+                  </th>
+                  <th>
+                    Description
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    CONTENT_TYPE
+                  </td>
+                  <td>
+                    String
+                  </td>
+                  <td>
+                    'application/json'
+                  </td>
+                  <td>
+                    HTTP Content-Type header to check
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    PROCESSOR_TYPE
+                  </td>
+                  <td>
+                    String
+                  </td>
+                  <td>
+                    'producer'
+                  </td>
+                  <td>
+                    type of Stream Processor microservice you wish to run (can also be 'consumer' or 'stream_processor')
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    EVENT_STORE_PRODUCER_TOPIC
+                  </td>
+                  <td>
+                    String
+                  </td>
+                  <td />
+                  <td>
+                    Kafka topic the events will be stored under
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    EVENT_STORE_CONSUMER_TOPIC
+                  </td>
+                  <td>
+                    String
+                  </td>
+                  <td />
+                  <td>
+                    Kafka topic the events will be consumed from
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    EVENT_STORE_ID
+                  </td>
+                  <td>
+                    String
+                  </td>
+                  <td />
+                  <td>
+                    unique identifier for Kafka client connection
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    EVENT_STORE_GROUP_ID
+                  </td>
+                  <td>
+                    String
+                  </td>
+                  <td />
+                  <td>
+                    defines Kafka Consumer group id
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    EVENT_STORE_BROKERS
+                  </td>
+                  <td>
+                    String
+                  </td>
+                  <td />
+                  <td>
+                    comma separated URLs where Kafka is hosted
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    EVENT_STORE_FROM_START
+                  </td>
+                  <td>
+                    String
+                  </td>
+                  <td>
+                    'false'
+                  </td>
+                  <td>
+                    tells Consumer whether or not to start at the beginning of the topic
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    EVENT_STORE_PARTITIONS
+                  </td>
+                  <td>
+                    Number
+                  </td>
+                  <td>
+                    1
+                  </td>
+                  <td>
+                    tells Consumer how many partitions to consume
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    EVENT_STORE_BUFFER
+                  </td>
+                  <td>
+                    Number
+                  </td>
+                  <td>
+                    100
+                  </td>
+                  <td>
+                    maximum number of incoming messages to batch
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    EVENT_STORE_TIMEOUT
+                  </td>
+                  <td>
+                    Number
+                  </td>
+                  <td>
+                    2000
+                  </td>
+                  <td>
+                    time (in \`ms\`) to poll Kafka for delivery reports
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    CACHE_URL
+                  </td>
+                  <td>
+                    String
+                  </td>
+                  <td />
+                  <td>
+                    URL where Redis is hosted
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    LOCK_TTL
+                  </td>
+                  <td>
+                    Number
+                  </td>
+                  <td>
+                    2000
+                  </td>
+                  <td>
+                    Redlock time to live before lock is released
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    LOCK_DRIFT_FACTOR
+                  </td>
+                  <td>
+                    Number
+                  </td>
+                  <td>
+                    0.01
+                  </td>
+                  <td>
+                    Redlock drift factor setting
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    LOCK_RETRY_COUNT
+                  </td>
+                  <td>
+                    Number
+                  </td>
+                  <td>
+                    0
+                  </td>
+                  <td>
+                    Redlock retry count setting, should be set to zero for concurrency
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    LOCK_RETRY_DELAY
+                  </td>
+                  <td>
+                    Number
+                  </td>
+                  <td>
+                    400
+                  </td>
+                  <td>
+                    Redlock retry delay in milliseconds
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    LOCK_RETRY_JITTER
+                  </td>
+                  <td>
+                    Number
+                  </td>
+                  <td>
+                    400
+                  </td>
+                  <td>
+                    Redlock random retry jitter in milliseconds to randomize retries
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </div>
+    </div>
+  </article>,
+  <section
+    className="hero is-small is-hive"
+  >
+    <div
+      className="hero-body"
+    >
+      <nav
+        className="level is-mobile"
+      >
+        <div
+          className="level-item has-text-centered"
+        >
+          <a
+            aria-label="previous page"
+            href="/documentation"
+            onClick={[Function]}
+          >
+            <span
+              className="icon is-large"
+            >
+              <svg
+                height="48"
+                viewBox="0 0 448 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M223.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L319.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L393.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34zm-192 34l136 136c9.4 9.4 24.6 9.4 33.9 0l22.6-22.6c9.4-9.4 9.4-24.6 0-33.9L127.9 256l96.4-96.4c9.4-9.4 9.4-24.6 0-33.9L201.7 103c-9.4-9.4-24.6-9.4-33.9 0l-136 136c-9.5 9.4-9.5 24.6-.1 34z"
+                />
+              </svg>
+            </span>
+          </a>
+        </div>
+        <div
+          className="level-item has-text-centered"
+        >
+          <a
+            aria-label="next page"
+            href="https://fnalabs.github.io/hive-js/"
+          >
+            <span
+              className="icon is-large"
+            >
+              <svg
+                height="48"
+                viewBox="0 0 448 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34zm192-34l-136-136c-9.4-9.4-24.6-9.4-33.9 0l-22.6 22.6c-9.4 9.4-9.4 24.6 0 33.9l96.4 96.4-96.4 96.4c-9.4 9.4-9.4 24.6 0 33.9l22.6 22.6c9.4 9.4 24.6 9.4 33.9 0l136-136c9.4-9.2 9.4-24.4 0-33.8z"
+                />
+              </svg>
+            </span>
+          </a>
+        </div>
+      </nav>
+    </div>
+  </section>,
+]
+`;

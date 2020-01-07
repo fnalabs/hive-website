@@ -18,13 +18,13 @@ export default class AnalyticsLink extends Component {
     const attrs = target ? { target } : {}
     if (className) attrs.className = className
     if (rel) attrs.rel = rel
+    if (this.props['aria-label']) attrs['aria-label'] = this.props['aria-label']
 
     return (
       <Consumer>
-        {({ isConsent }) => (
-          isConsent
-            ? <OutboundLink eventLabel={to} to={to} {...attrs}>{children}</OutboundLink>
-            : <a href={to} {...attrs}>{children}</a>
+        {({ isConsent }) => (isConsent
+          ? <OutboundLink eventLabel={to} to={to} {...attrs}>{children}</OutboundLink>
+          : <a href={to} {...attrs}>{children}</a>
         )}
       </Consumer>
     )

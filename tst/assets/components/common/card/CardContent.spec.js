@@ -5,7 +5,7 @@ import { shallow } from 'enzyme'
 import { CardContent } from 'common/card'
 
 describe('<CardContent />', () => {
-  test('should render w/o content', () => {
+  it('should render w/o content', () => {
     const cardContent = shallow(<CardContent title='test' />)
 
     expect(cardContent.instance()).toBeInstanceOf(CardContent)
@@ -14,7 +14,7 @@ describe('<CardContent />', () => {
     expect(cardContent.contains(<h3 className='has-text-centered'>test</h3>)).toBe(true)
   })
 
-  test('should render w/ content', () => {
+  it('should render w/ content', () => {
     const cardContent = shallow(<CardContent title='test'><div>test</div></CardContent>)
 
     expect(cardContent.contains(<h3 className='has-text-centered'>test</h3>)).toBe(true)

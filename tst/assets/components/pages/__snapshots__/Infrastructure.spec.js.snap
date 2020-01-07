@@ -1,0 +1,364 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Infrastructure /> should render Infrastructure page static content 1`] = `
+Array [
+  <article
+    className="section is-medium"
+  >
+    <div
+      className="container"
+    >
+      <div
+        className="columns"
+      >
+        <header
+          className="column is-narrow is-hidden-touch is-aside"
+        >
+          <aside
+            className="menu"
+          >
+            <p
+              className="menu-label has-text-weight-bold"
+            >
+              v2.0.0-rc.3
+            </p>
+            <ul
+              className="menu-list"
+            >
+              <li>
+                <a
+                  aria-current={null}
+                  href="/overview"
+                  onClick={[Function]}
+                >
+                  Overview
+                </a>
+                <ul>
+                  <li>
+                    <a
+                      aria-current={null}
+                      href="/model"
+                      onClick={[Function]}
+                    >
+                      Data Model
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      aria-current={null}
+                      href="/domain"
+                      onClick={[Function]}
+                    >
+                      Domain Logic
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      aria-current={null}
+                      href="/infrastructure"
+                      onClick={[Function]}
+                    >
+                      Infrastructure
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a
+                  aria-current={null}
+                  href="/start"
+                  onClick={[Function]}
+                >
+                  Get Started
+                </a>
+                <ul>
+                  <li>
+                    <a
+                      aria-current={null}
+                      href="/setup"
+                      onClick={[Function]}
+                    >
+                      Setup
+                    </a>
+                  </li>
+                  <li
+                    className="menu-label has-text-weight-bold"
+                  >
+                    Examples:
+                  </li>
+                  <li>
+                    <a
+                      aria-current={null}
+                      href="/basic"
+                      onClick={[Function]}
+                    >
+                      Basic
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      aria-current={null}
+                      href="/rest"
+                      onClick={[Function]}
+                    >
+                      Rest
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      aria-current={null}
+                      href="/cqrs-es"
+                      onClick={[Function]}
+                    >
+                      CQRS/ES
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a
+                  aria-current={null}
+                  href="/documentation"
+                  onClick={[Function]}
+                >
+                  Documentation
+                </a>
+                <ul>
+                  <li>
+                    <a
+                      aria-current={null}
+                      href="/environments"
+                      onClick={[Function]}
+                    >
+                      Environments
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://fnalabs.github.io/hive-js/"
+                      rel="noopener noreferrer"
+                      target="_blank"
+                    >
+                      API
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </aside>
+        </header>
+        <section
+          className="column content"
+          role="document"
+        >
+          <h1>
+            Infrastructure
+          </h1>
+          <p>
+            Here are the execution environments for the domain logic described previously. Hive
+            <sup>
+              io
+            </sup>
+             is designed to manage infrastructure as code through the base 
+            <a
+              href="https://www.docker.com/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              Docker
+            </a>
+             images defined. These images are meant to be extended to include your domain logic and additional code dependencies. Depending on the type of container, there are a few opinions made here too.
+          </p>
+          <h2>
+            Specialized Containers
+          </h2>
+          <p>
+            Base images for specific service types have been defined to provide the basic boilerplate service definition for your application. It also ensures a common interface is maintained between the service and actor. For CQRS/ES architectures, some opinions on storage solutions have been made.
+          </p>
+          <dl>
+            <dt>
+              <em>
+                <strong>
+                  Base
+                </strong>
+              </em>
+            </dt>
+            <dd>
+              The least opinionated of them all. This wraps your actor(s) to provide a straightforward interface and standardizes the network payload before calling your actor to perform.
+            </dd>
+            <dt>
+              <em>
+                <strong>
+                  Producer
+                </strong>
+              </em>
+            </dt>
+            <dd>
+              This supports the creation of unordered messages in a CQRS/ES implementation. Validation here is only 
+              <a
+                href="http://danielwhittaker.me/2016/04/20/how-to-validate-commands-in-a-cqrs-application/"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                superficial
+              </a>
+               and defaults to using queues to batch messages for increased performance.
+            </dd>
+            <dt>
+              <em>
+                <strong>
+                  Consumer
+                </strong>
+              </em>
+            </dt>
+            <dd>
+              Message consumption is defined in this image for a CQRS/ES implementation. It is highly recommended that these services be isolated to only message consumption but can support queries against the data as well.
+            </dd>
+            <dt>
+              <em>
+                <strong>
+                  Stream Processor
+                </strong>
+              </em>
+            </dt>
+            <dd>
+              This supports a variety of needs in a CQRS/ES implementation. 
+              <a
+                href="http://danielwhittaker.me/2016/04/20/how-to-validate-commands-in-a-cqrs-application/"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                Domain validation
+              </a>
+               can be achieved through the use of the transaction cache dependency (
+              <a
+                href="https://redis.io/"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                Redis
+              </a>
+              ). CQRS/ES Process Managers and Sagas can be implemented here too.
+            </dd>
+          </dl>
+          <h2>
+            Unified Transaction Log
+          </h2>
+          <p>
+            The 
+            <a
+              href="https://www.confluent.io/blog/event-sourcing-cqrs-stream-processing-apache-kafka-whats-connection/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              unified transaction log
+            </a>
+             is the centralized storage solution that is the foundation of the CQRS/ES pattern. Think of it as the backbone in your central nervous system. All of your body parts and organs that connect to this backbone are made up of the different microservice types described above. The transaction log's job is to handle multiple inputs/outputs to each of these microservice types while providing the persistence layer. Events are stored here once they have been validated by their producers and are read from here by their consumers.
+          </p>
+          <p>
+            Here is where our last opinions are made with Kafka and Redis as the unified transaction log and cache respectively. The Stream Processor has implemented a solution leveraging the 
+            <a
+              href="https://en.wikipedia.org/wiki/X/Open_XA"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              eXtended Architecture (XA)
+            </a>
+             distributed transaction model via 
+            <a
+              href="https://en.wikipedia.org/wiki/Snapshot_isolation"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              snapshot isolation
+            </a>
+             and 
+            <a
+              href="https://en.wikipedia.org/wiki/Two-phase_commit_protocol"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              two-phase commit
+            </a>
+             techniques to provide domain validation and event order guarantees. The Redis implementation leverages the 
+            <a
+              href="https://redis.io/topics/distlock"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              Redlock algorithm
+            </a>
+             as the 
+            <a
+              href="https://en.wikipedia.org/wiki/Distributed_lock_manager"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              distributed lock
+            </a>
+            ing mechanism to support these techniques.
+          </p>
+        </section>
+      </div>
+    </div>
+  </article>,
+  <section
+    className="hero is-small is-hive"
+  >
+    <div
+      className="hero-body"
+    >
+      <nav
+        className="level is-mobile"
+      >
+        <div
+          className="level-item has-text-centered"
+        >
+          <a
+            aria-label="previous page"
+            href="/domain"
+            onClick={[Function]}
+          >
+            <span
+              className="icon is-large"
+            >
+              <svg
+                height="48"
+                viewBox="0 0 448 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M223.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L319.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L393.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34zm-192 34l136 136c9.4 9.4 24.6 9.4 33.9 0l22.6-22.6c9.4-9.4 9.4-24.6 0-33.9L127.9 256l96.4-96.4c9.4-9.4 9.4-24.6 0-33.9L201.7 103c-9.4-9.4-24.6-9.4-33.9 0l-136 136c-9.5 9.4-9.5 24.6-.1 34z"
+                />
+              </svg>
+            </span>
+          </a>
+        </div>
+        <div
+          className="level-item has-text-centered"
+        >
+          <a
+            aria-label="next page"
+            href="/start"
+            onClick={[Function]}
+          >
+            <span
+              className="icon is-large"
+            >
+              <svg
+                height="48"
+                viewBox="0 0 448 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34zm192-34l-136-136c-9.4-9.4-24.6-9.4-33.9 0l-22.6 22.6c-9.4 9.4-9.4 24.6 0 33.9l96.4 96.4-96.4 96.4c-9.4 9.4-9.4 24.6 0 33.9l22.6 22.6c9.4 9.4 24.6 9.4 33.9 0l136-136c9.4-9.2 9.4-24.4 0-33.8z"
+                />
+              </svg>
+            </span>
+          </a>
+        </div>
+      </nav>
+    </div>
+  </section>,
+]
+`;

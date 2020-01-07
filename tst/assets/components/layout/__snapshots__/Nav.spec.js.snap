@@ -13,6 +13,7 @@ exports[`<Nav /> should render Get Started page nav correctly 1`] = `
       className="navbar-brand"
     >
       <a
+        aria-label="home page"
         className="navbar-item"
         href="/"
         onClick={[Function]}
@@ -29,6 +30,7 @@ exports[`<Nav /> should render Get Started page nav correctly 1`] = `
             strokeWidth="12"
           />
         </svg>
+         
         <span>
           Hive
           <sup>
@@ -51,31 +53,143 @@ exports[`<Nav /> should render Get Started page nav correctly 1`] = `
       <div
         className="navbar-end"
       >
-        <a
-          aria-current={null}
-          className="navbar-item"
-          href="/overview"
-          onClick={[Function]}
+        <div
+          className="navbar-item has-dropdown is-hoverable"
         >
-          Overview
-        </a>
-        <a
-          aria-current="page"
-          className="navbar-item is-active"
-          href="/start"
-          onClick={[Function]}
-          style={Object {}}
+          <a
+            aria-current={null}
+            className="navbar-link"
+            href="/overview"
+            onClick={[Function]}
+          >
+            Overview
+          </a>
+          <div
+            className="navbar-dropdown is-boxed"
+          >
+            <a
+              aria-current={null}
+              className="navbar-item"
+              href="/model"
+              onClick={[Function]}
+            >
+              Data Model
+            </a>
+            <a
+              aria-current={null}
+              className="navbar-item"
+              href="/domain"
+              onClick={[Function]}
+            >
+              Domain Logic
+            </a>
+            <a
+              aria-current={null}
+              className="navbar-item"
+              href="/infrastructure"
+              onClick={[Function]}
+            >
+              Infrastructure
+            </a>
+          </div>
+        </div>
+        <div
+          className="navbar-item has-dropdown is-hoverable"
         >
-          Get Started
-        </a>
-        <a
-          className="navbar-item"
-          href="https://fnalabs.github.io/hive-js/"
-          rel="noopener noreferrer"
-          target="_blank"
+          <a
+            aria-current="page"
+            className="navbar-link is-active"
+            href="/start"
+            onClick={[Function]}
+            style={Object {}}
+          >
+            Get Started
+          </a>
+          <div
+            className="navbar-dropdown is-boxed"
+          >
+            <a
+              aria-current={null}
+              className="navbar-item"
+              href="/setup"
+              onClick={[Function]}
+            >
+              Setup
+            </a>
+            <hr
+              className="navbar-divider"
+            />
+            <span
+              className="navbar-item has-text-weight-bold"
+            >
+              Examples:
+            </span>
+            <a
+              aria-current={null}
+              className="navbar-item"
+              href="/basic"
+              onClick={[Function]}
+            >
+              Basic
+            </a>
+            <a
+              aria-current={null}
+              className="navbar-item"
+              href="/rest"
+              onClick={[Function]}
+            >
+              Rest
+            </a>
+            <a
+              aria-current={null}
+              className="navbar-item"
+              href="/cqrs-es"
+              onClick={[Function]}
+            >
+              CQRS/ES
+            </a>
+          </div>
+        </div>
+        <div
+          className="navbar-item has-dropdown is-hoverable"
         >
-          API
-        </a>
+          <a
+            aria-current={null}
+            className="navbar-link"
+            href="/documentation"
+            onClick={[Function]}
+          >
+            Documentation
+          </a>
+          <div
+            className="navbar-dropdown is-boxed"
+          >
+            <a
+              aria-current={null}
+              className="navbar-item"
+              href="/environments"
+              onClick={[Function]}
+            >
+              Environments
+            </a>
+            <a
+              className="navbar-item"
+              href="https://fnalabs.github.io/hive-js/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              API
+            </a>
+            <hr
+              className="navbar-divider"
+            />
+            <span
+              className="navbar-item has-text-weight-bold"
+            >
+              v2.0.0-rc.3
+            </span>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -95,6 +209,7 @@ exports[`<Nav /> should render Overview page nav correctly 1`] = `
       className="navbar-brand"
     >
       <a
+        aria-label="home page"
         className="navbar-item"
         href="/"
         onClick={[Function]}
@@ -111,6 +226,7 @@ exports[`<Nav /> should render Overview page nav correctly 1`] = `
             strokeWidth="12"
           />
         </svg>
+         
         <span>
           Hive
           <sup>
@@ -133,31 +249,143 @@ exports[`<Nav /> should render Overview page nav correctly 1`] = `
       <div
         className="navbar-end"
       >
-        <a
-          aria-current="page"
-          className="navbar-item is-active"
-          href="/overview"
-          onClick={[Function]}
-          style={Object {}}
+        <div
+          className="navbar-item has-dropdown is-hoverable"
         >
-          Overview
-        </a>
-        <a
-          aria-current={null}
-          className="navbar-item"
-          href="/start"
-          onClick={[Function]}
+          <a
+            aria-current="page"
+            className="navbar-link is-active"
+            href="/overview"
+            onClick={[Function]}
+            style={Object {}}
+          >
+            Overview
+          </a>
+          <div
+            className="navbar-dropdown is-boxed"
+          >
+            <a
+              aria-current={null}
+              className="navbar-item"
+              href="/model"
+              onClick={[Function]}
+            >
+              Data Model
+            </a>
+            <a
+              aria-current={null}
+              className="navbar-item"
+              href="/domain"
+              onClick={[Function]}
+            >
+              Domain Logic
+            </a>
+            <a
+              aria-current={null}
+              className="navbar-item"
+              href="/infrastructure"
+              onClick={[Function]}
+            >
+              Infrastructure
+            </a>
+          </div>
+        </div>
+        <div
+          className="navbar-item has-dropdown is-hoverable"
         >
-          Get Started
-        </a>
-        <a
-          className="navbar-item"
-          href="https://fnalabs.github.io/hive-js/"
-          rel="noopener noreferrer"
-          target="_blank"
+          <a
+            aria-current={null}
+            className="navbar-link"
+            href="/start"
+            onClick={[Function]}
+          >
+            Get Started
+          </a>
+          <div
+            className="navbar-dropdown is-boxed"
+          >
+            <a
+              aria-current={null}
+              className="navbar-item"
+              href="/setup"
+              onClick={[Function]}
+            >
+              Setup
+            </a>
+            <hr
+              className="navbar-divider"
+            />
+            <span
+              className="navbar-item has-text-weight-bold"
+            >
+              Examples:
+            </span>
+            <a
+              aria-current={null}
+              className="navbar-item"
+              href="/basic"
+              onClick={[Function]}
+            >
+              Basic
+            </a>
+            <a
+              aria-current={null}
+              className="navbar-item"
+              href="/rest"
+              onClick={[Function]}
+            >
+              Rest
+            </a>
+            <a
+              aria-current={null}
+              className="navbar-item"
+              href="/cqrs-es"
+              onClick={[Function]}
+            >
+              CQRS/ES
+            </a>
+          </div>
+        </div>
+        <div
+          className="navbar-item has-dropdown is-hoverable"
         >
-          API
-        </a>
+          <a
+            aria-current={null}
+            className="navbar-link"
+            href="/documentation"
+            onClick={[Function]}
+          >
+            Documentation
+          </a>
+          <div
+            className="navbar-dropdown is-boxed"
+          >
+            <a
+              aria-current={null}
+              className="navbar-item"
+              href="/environments"
+              onClick={[Function]}
+            >
+              Environments
+            </a>
+            <a
+              className="navbar-item"
+              href="https://fnalabs.github.io/hive-js/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              API
+            </a>
+            <hr
+              className="navbar-divider"
+            />
+            <span
+              className="navbar-item has-text-weight-bold"
+            >
+              v2.0.0-rc.3
+            </span>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -177,6 +405,7 @@ exports[`<Nav /> should render homepage nav correctly 1`] = `
       className="navbar-brand"
     >
       <a
+        aria-label="home page"
         className="navbar-item"
         href="/"
         onClick={[Function]}
@@ -193,6 +422,7 @@ exports[`<Nav /> should render homepage nav correctly 1`] = `
             strokeWidth="12"
           />
         </svg>
+         
         <span>
           Hive
           <sup>
@@ -215,30 +445,142 @@ exports[`<Nav /> should render homepage nav correctly 1`] = `
       <div
         className="navbar-end"
       >
-        <a
-          aria-current={null}
-          className="navbar-item"
-          href="/overview"
-          onClick={[Function]}
+        <div
+          className="navbar-item has-dropdown is-hoverable"
         >
-          Overview
-        </a>
-        <a
-          aria-current={null}
-          className="navbar-item"
-          href="/start"
-          onClick={[Function]}
+          <a
+            aria-current={null}
+            className="navbar-link"
+            href="/overview"
+            onClick={[Function]}
+          >
+            Overview
+          </a>
+          <div
+            className="navbar-dropdown is-boxed"
+          >
+            <a
+              aria-current={null}
+              className="navbar-item"
+              href="/model"
+              onClick={[Function]}
+            >
+              Data Model
+            </a>
+            <a
+              aria-current={null}
+              className="navbar-item"
+              href="/domain"
+              onClick={[Function]}
+            >
+              Domain Logic
+            </a>
+            <a
+              aria-current={null}
+              className="navbar-item"
+              href="/infrastructure"
+              onClick={[Function]}
+            >
+              Infrastructure
+            </a>
+          </div>
+        </div>
+        <div
+          className="navbar-item has-dropdown is-hoverable"
         >
-          Get Started
-        </a>
-        <a
-          className="navbar-item"
-          href="https://fnalabs.github.io/hive-js/"
-          rel="noopener noreferrer"
-          target="_blank"
+          <a
+            aria-current={null}
+            className="navbar-link"
+            href="/start"
+            onClick={[Function]}
+          >
+            Get Started
+          </a>
+          <div
+            className="navbar-dropdown is-boxed"
+          >
+            <a
+              aria-current={null}
+              className="navbar-item"
+              href="/setup"
+              onClick={[Function]}
+            >
+              Setup
+            </a>
+            <hr
+              className="navbar-divider"
+            />
+            <span
+              className="navbar-item has-text-weight-bold"
+            >
+              Examples:
+            </span>
+            <a
+              aria-current={null}
+              className="navbar-item"
+              href="/basic"
+              onClick={[Function]}
+            >
+              Basic
+            </a>
+            <a
+              aria-current={null}
+              className="navbar-item"
+              href="/rest"
+              onClick={[Function]}
+            >
+              Rest
+            </a>
+            <a
+              aria-current={null}
+              className="navbar-item"
+              href="/cqrs-es"
+              onClick={[Function]}
+            >
+              CQRS/ES
+            </a>
+          </div>
+        </div>
+        <div
+          className="navbar-item has-dropdown is-hoverable"
         >
-          API
-        </a>
+          <a
+            aria-current={null}
+            className="navbar-link"
+            href="/documentation"
+            onClick={[Function]}
+          >
+            Documentation
+          </a>
+          <div
+            className="navbar-dropdown is-boxed"
+          >
+            <a
+              aria-current={null}
+              className="navbar-item"
+              href="/environments"
+              onClick={[Function]}
+            >
+              Environments
+            </a>
+            <a
+              className="navbar-item"
+              href="https://fnalabs.github.io/hive-js/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              API
+            </a>
+            <hr
+              className="navbar-divider"
+            />
+            <span
+              className="navbar-item has-text-weight-bold"
+            >
+              v2.0.0-rc.3
+            </span>
+          </div>
+        </div>
       </div>
     </div>
   </div>
