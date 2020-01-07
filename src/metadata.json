@@ -55,7 +55,7 @@
   "/basic": {
     "name": "basic",
     "title": "Example: Basic",
-    "description": "Straight forward example implementation with Hive^io: a reactive, cloud-native framework.",
+    "description": "Straightforward example implementation of Actors and Models with Hive^io: a reactive, cloud-native framework.",
     "url": "https://hiveframework.io/basic",
     "priority": 1.0
   },
