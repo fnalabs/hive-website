@@ -8,15 +8,18 @@ a {
   background: transparent
 }
 
+.is-aside {
+  border-right: 1px solid #363636
+}
+
 .cookieConsent.notification {
+  border-top: 1px solid #363636;
+  background-color: #daa520;
+  color: #363636;
   position: fixed;
   width: 100%;
 
   .button:last-child {
     margin-right: 1rem
   }
-}
-
-.is-fullheight {
-  min-height: 100vh
 }

@@ -18,6 +18,7 @@ export default class AnalyticsLink extends Component {
     const attrs = target ? { target } : {}
     if (className) attrs.className = className
     if (rel) attrs.rel = rel
+    if (this.props['aria-label']) attrs['aria-label'] = this.props['aria-label']
 
     return (
       <Consumer>

@@ -9,6 +9,12 @@
 @import "node_modules/bulma/sass/utilities/mixins.sass";
 @import "node_modules/bulma/sass/utilities/controls.sass";
 
+// custom overrides
+$footer-background-color: $dark;
+$footer-color: $white;
+$menu-label-color: $text;
+$navbar-dropdown-arrow: $dark;
+
 // @import "node_modules/bulma/sass/base/_all";
 @import "node_modules/bulma/sass/base/minireset.sass";
 @import "node_modules/bulma/sass/base/generic.sass";

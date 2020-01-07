@@ -65,8 +65,7 @@ class Transition extends Component {
             declineButtonText='Decline'
             buttonClasses='button is-small is-pulled-right is-dark'
             declineButtonClasses='button is-small is-pulled-right is-light'
-            containerClasses='notification'
-            contentClasses='is-inline-block'
+            containerClasses='notification is-radiusless'
             onAccept={this.handleOnAccept}
             onDecline={this.handleOnDecline}
           >
