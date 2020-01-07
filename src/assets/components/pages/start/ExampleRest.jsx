@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import { Link } from 'react-router-dom'
 import Helmet from 'react-helmet'
 import ReactGA from 'react-ga'
 
@@ -9,6 +8,7 @@ import Consent from 'contexts/Consent'
 import { Container } from 'common'
 import { Info } from 'icons'
 
+import AsideMenu from '../AsideMenu'
 import NextPageHero from '../NextPageHero'
 
 import meta from 'metadata'
@@ -24,18 +24,6 @@ export default class Rest extends Component {
       const title = `${meta.common.siteName} | ${meta['/rest'].title}`
       ReactGA.pageview(this.props.location.pathname, undefined, title)
     }
-  }
-
-  renderBreadcrumbs () {
-    return (
-      <>
-        <li><Link to='/start'>Get Started</Link></li>
-        <li><Link to='/setup'>Setup</Link></li>
-        <li><Link to='/basic'>Basic</Link></li>
-        <li className='is-active'><Link to='/rest' aria-current='page'>REST</Link></li>
-        <li><Link to='/cqrs-es'>CQRS/ES</Link></li>
-      </>
-    )
   }
 
   render () {
@@ -56,31 +44,35 @@ export default class Rest extends Component {
           <meta property='og:type' content='website' />
         </Helmet>
 
-        <article className='section is-fullheight is-medium'>
-          <Container content>
-            <h1>Example: REST</h1>
-            <p>Let's expand on the Basic example with a REST service. The code below describes a minimal implementation of the domain logic and infrastructure as code to implement a REST service.</p>
+        <article className='section is-medium'>
+          <Container>
+            <div className='columns'>
+              <header className='column is-narrow is-hidden-touch is-aside'>
+                <AsideMenu />
+              </header>
+              <section className='column content' role='document'>
+                <h1>Example: REST</h1>
+                <p>Let's expand on the Basic example with a REST service. The code below describes a minimal implementation of the domain logic and infrastructure as code to implement a REST service.</p>
 
-            <h2><a href='https://www.npmjs.com/package/hive-io-rest-example' target='_blank' rel='noopener noreferrer'>Domain Logic</a> (<a href='https://github.com/fnalabs/hive-js-rest-example' target='_blank' rel='noopener noreferrer'>Source Code</a>)</h2>
-            <div className='notification'>
-              <span className='icon'><Info className='svg-inline' /></span>
-              <span>You should consider using a private NPM registry or implementing more creative solutions such as extending base Docker images with <code>ADD</code>|<code>COPY</code> statements for source code or <code>npm link</code> for your domain logic.</span>
-            </div>
+                <h2><a href='https://www.npmjs.com/package/hive-io-rest-example' target='_blank' rel='noopener noreferrer'>Domain Logic</a> (<a href='https://github.com/fnalabs/hive-js-rest-example' target='_blank' rel='noopener noreferrer'>Source Code</a>)</h2>
+                <div className='notification'>
+                  <span className='icon'><Info className='svg-inline' /></span>
+                  <span>You should consider using a private NPM registry or implementing more creative solutions such as extending base Docker images with <code>ADD</code>|<code>COPY</code> statements for source code or <code>npm link</code> for your domain logic.</span>
+                </div>
 
-            <h2>Infrastructure</h2>
-            <dl>
-              <dt><code>Dockerfile</code></dt>
-              <dd>
-                <pre>FROM fnalabs/hive-base-js:latest<br />RUN npm install hive-io-rest-example</pre>
-              </dd>
+                <h2>Infrastructure</h2>
+                <dl>
+                  <dt><code>Dockerfile</code></dt>
+                  <dd>
+                    <pre>FROM fnalabs/hive-base-js:latest<br />RUN npm install hive-io-rest-example</pre>
+                  </dd>
 
-              <dt><code>docker-compose.yml</code></dt>
-              <dd>
-                <pre>version: '3.5'<br />
+                  <dt><code>docker-compose.yml</code></dt>
+                  <dd>
+                    <pre>version: '3.5'<br />
 services:<br />
 &nbsp;&nbsp;hive-base-js:<br />
 &nbsp;&nbsp;&nbsp;&nbsp;build: .<br />
-&nbsp;&nbsp;&nbsp;&nbsp;image: hive-base-js<br />
 &nbsp;&nbsp;&nbsp;&nbsp;environment:<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ACTOR: PostActor<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ACTOR_LIB: hive-io-rest-example<br />
@@ -113,12 +105,14 @@ services:<br />
 networks:<br />
 &nbsp;&nbsp;hive-io:<br />
 &nbsp;&nbsp;&nbsp;&nbsp;driver: bridge</pre>{/* eslint-disable-line react/jsx-closing-tag-location */}
-              </dd>
-            </dl>
+                  </dd>
+                </dl>
+              </section>
+            </div>
           </Container>
         </article>
 
-        <NextPageHero breadcrumbs={this.renderBreadcrumbs} toLeft='/basic' toRight='/cqrs-es' />
+        <NextPageHero toLeft='/basic' toRight='/cqrs-es' />
       </>
     )
   }

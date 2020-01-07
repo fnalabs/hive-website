@@ -40,6 +40,6 @@ export const TopHero = () => (
       </Container>
     </HeroBody>
 
-    <HeroFooter centered><ArrowDown height='24' /></HeroFooter>
+    <HeroFooter centered><span className='icon is-medium'><ArrowDown height='32' /></span></HeroFooter>
   </Hero>
 )

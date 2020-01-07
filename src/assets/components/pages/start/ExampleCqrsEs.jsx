@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import { Link } from 'react-router-dom'
 import Helmet from 'react-helmet'
 import ReactGA from 'react-ga'
 
@@ -9,6 +8,7 @@ import Consent from 'contexts/Consent'
 import { Container } from 'common'
 import { Info } from 'icons'
 
+import AsideMenu from '../AsideMenu'
 import NextPageHero from '../NextPageHero'
 
 import meta from 'metadata'
@@ -24,18 +24,6 @@ export default class CqrsEs extends Component {
       const title = `${meta.common.siteName} | ${meta['/cqrs-es'].title}`
       ReactGA.pageview(this.props.location.pathname, undefined, title)
     }
-  }
-
-  renderBreadcrumbs () {
-    return (
-      <>
-        <li><Link to='/start'>Get Started</Link></li>
-        <li><Link to='/setup'>Setup</Link></li>
-        <li><Link to='/basic'>Basic</Link></li>
-        <li><Link to='/rest'>REST</Link></li>
-        <li className='is-active'><Link to='/cqrs-es' aria-current='page'>CQRS/ES</Link></li>
-      </>
-    )
   }
 
   render () {
@@ -56,42 +44,47 @@ export default class CqrsEs extends Component {
           <meta property='og:type' content='website' />
         </Helmet>
 
-        <article className='section is-fullheight is-medium'>
-          <Container content>
-            <h1>Example: CQRS/ES</h1>
-            <p>This example evolves the previous REST example into a highly distributed architecture in order to handle different magnitudes of network traffic.</p>
+        <article className='section is-medium'>
+          <Container>
+            <div className='columns'>
+              <header className='column is-narrow is-hidden-touch is-aside'>
+                <AsideMenu />
+              </header>
+              <section className='column content' role='document'>
+                <h1>Example: CQRS/ES</h1>
+                <p>This example evolves the previous REST example into a highly distributed architecture in order to handle different magnitudes of network traffic.</p>
 
-            <h2><a href='https://www.npmjs.com/package/hive-io-domain-example' target='_blank' rel='noopener noreferrer'>Domain Logic</a> (<a href='https://github.com/fnalabs/hive-js-domain-example' target='_blank' rel='noopener noreferrer'>Source Code</a>)</h2>
-            <div className='notification'>
-              <span className='icon'><Info className='svg-inline' /></span>
-              <span>You should consider using a private NPM registry or implementing more creative solutions such as extending base Docker images with <code>ADD</code>|<code>COPY</code> statements for source code or <code>npm link</code> for your domain logic.</span>
-            </div>
+                <h2><a href='https://www.npmjs.com/package/hive-io-domain-example' target='_blank' rel='noopener noreferrer'>Domain Logic</a> (<a href='https://github.com/fnalabs/hive-js-domain-example' target='_blank' rel='noopener noreferrer'>Source Code</a>)</h2>
+                <div className='notification'>
+                  <span className='icon'><Info className='svg-inline' /></span>
+                  <span>You should consider using a private NPM registry or implementing more creative solutions such as extending base Docker images with <code>ADD</code>|<code>COPY</code> statements for source code or <code>npm link</code> for your domain logic.</span>
+                </div>
 
-            <h2>Infrastructure</h2>
-            <dl>
-              <dt><code>Producer.dockerfile</code></dt>
-              <dd>
-                <pre>FROM fnalabs/hive-producer-js:latest<br />RUN npm install hive-io-domain-example</pre>
-              </dd>
+                <h2>Infrastructure</h2>
+                <dl>
+                  <dt><code>Producer.dockerfile</code></dt>
+                  <dd>
+                    <pre>FROM fnalabs/hive-producer-js:latest<br />RUN npm install hive-io-domain-example</pre>
+                  </dd>
 
-              <dt><code>Stream-Processor.dockerfile</code></dt>
-              <dd>
-                <pre>FROM fnalabs/hive-stream-processor-js:latest<br />RUN npm install hive-io-domain-example</pre>
-              </dd>
+                  <dt><code>Stream-Processor.dockerfile</code></dt>
+                  <dd>
+                    <pre>FROM fnalabs/hive-stream-processor-js:latest<br />RUN npm install hive-io-domain-example</pre>
+                  </dd>
 
-              <dt><code>Consumer.dockerfile</code></dt>
-              <dd>
-                <pre>FROM fnalabs/hive-consumer-js:latest<br />RUN npm install hive-io-domain-example</pre>
-              </dd>
+                  <dt><code>Consumer.dockerfile</code></dt>
+                  <dd>
+                    <pre>FROM fnalabs/hive-consumer-js:latest<br />RUN npm install hive-io-domain-example</pre>
+                  </dd>
 
-              <dt><code>Rest.dockerfile</code></dt>
-              <dd>
-                <pre>FROM fnalabs/hive-base-js:latest<br />RUN npm install hive-io-domain-example</pre>
-              </dd>
+                  <dt><code>Rest.dockerfile</code></dt>
+                  <dd>
+                    <pre>FROM fnalabs/hive-base-js:latest<br />RUN npm install hive-io-domain-example</pre>
+                  </dd>
 
-              <dt><code>docker-compose.yml</code></dt>
-              <dd>
-                <pre>version: '3.5'<br />
+                  <dt><code>docker-compose.yml</code></dt>
+                  <dd>
+                    <pre>version: '3.5'<br />
 services:<br />
 &nbsp;&nbsp;# proxy for layer 7 routing<br />
 &nbsp;&nbsp;# NOTE: this is an example, you will need to define your own<br />
@@ -117,7 +110,6 @@ services:<br />
 &nbsp;&nbsp;&nbsp;&nbsp;build:<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;context: .<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dockerfile: Producer.dockerfile<br />
-&nbsp;&nbsp;&nbsp;&nbsp;image: hive-producer-js<br />
 &nbsp;&nbsp;&nbsp;&nbsp;environment:<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ACTOR: ViewContentActor<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ACTOR_LIB: hive-io-domain-example<br />
@@ -141,7 +133,6 @@ services:<br />
 &nbsp;&nbsp;&nbsp;&nbsp;build:<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;context: .<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dockerfile: Stream-Processor.dockerfile<br />
-&nbsp;&nbsp;&nbsp;&nbsp;image: hive-stream-processor-js<br />
 &nbsp;&nbsp;&nbsp;&nbsp;environment:<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ACTOR: PostCommandActor<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ACTOR_LIB: hive-io-domain-example<br />
@@ -192,7 +183,6 @@ services:<br />
 &nbsp;&nbsp;&nbsp;&nbsp;build:<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;context: .<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dockerfile: Consumer.dockerfile<br />
-&nbsp;&nbsp;&nbsp;&nbsp;image: hive-consumer-js<br />
 &nbsp;&nbsp;&nbsp;&nbsp;environment:<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ACTOR: PostEventActor<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ACTOR_LIB: hive-io-domain-example<br />
@@ -225,7 +215,6 @@ services:<br />
 &nbsp;&nbsp;&nbsp;&nbsp;build:<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;context: .<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dockerfile: Rest.dockerfile<br />
-&nbsp;&nbsp;&nbsp;&nbsp;image: hive-base-js<br />
 &nbsp;&nbsp;&nbsp;&nbsp;environment:<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ACTOR: PostQueryActor<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ACTOR_LIB: hive-io-domain-example<br />
@@ -246,12 +235,14 @@ services:<br />
 networks:<br />
 &nbsp;&nbsp;hive-io:<br />
 &nbsp;&nbsp;&nbsp;&nbsp;driver: bridge</pre>{/* eslint-disable-line react/jsx-closing-tag-location */}
-              </dd>
-            </dl>
+                  </dd>
+                </dl>
+              </section>
+            </div>
           </Container>
         </article>
 
-        <NextPageHero breadcrumbs={this.renderBreadcrumbs} toLeft='/rest' toRight='/documentation' />
+        <NextPageHero toLeft='/rest' toRight='/documentation' />
       </>
     )
   }

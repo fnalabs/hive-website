@@ -6,13 +6,13 @@ import { AnalyticsLink, Container } from 'common'
 import { HiveIO } from 'icons'
 
 class Nav extends Component {
-  constructor (props) {
-    super(props)
+  state = {
+    closed: true,
+    location: ''
+  }
 
-    this.state = {
-      closed: true,
-      location: ''
-    }
+  handleClickBlur = event => {
+    event.currentTarget.blur()
   }
 
   handleToggleMenu = () => {
@@ -36,9 +36,9 @@ class Nav extends Component {
       <nav className={navClasses} role='navigation' aria-label='main navigation'>
         <Container>
           <div className='navbar-brand'>
-            <Link to='/' className='navbar-item'>
+            <Link to='/' className='navbar-item' aria-label='home page' onClick={this.handleClickBlur}>
               <HiveIO height='36' />
-              <span>Hive<sup>io</sup></span>
+              &nbsp;<span>Hive<sup>io</sup></span>
             </Link>
 
             <div className={`navbar-burger${this.state.closed ? '' : ' is-active'}`} onClick={this.handleToggleMenu}>
@@ -51,33 +51,33 @@ class Nav extends Component {
           <div className={`navbar-menu${this.state.closed ? '' : ' is-active'}`}>
             <div className='navbar-end'>
               <div className='navbar-item has-dropdown is-hoverable'>
-                <NavLink to='/overview' activeClassName='is-active' className='navbar-link'>Overview</NavLink>
+                <NavLink to='/overview' activeClassName='is-active' className='navbar-link' onClick={this.handleClickBlur}>Overview</NavLink>
                 <div className='navbar-dropdown is-boxed'>
-                  <NavLink to='/model' activeClassName='is-active' className='navbar-item'>Data Model</NavLink>
-                  <NavLink to='/domain' activeClassName='is-active' className='navbar-item'>Domain Logic</NavLink>
-                  <NavLink to='/infrastructure' activeClassName='is-active' className='navbar-item'>Infrastructure</NavLink>
+                  <NavLink to='/model' activeClassName='is-active' className='navbar-item' onClick={this.handleClickBlur}>Data Model</NavLink>
+                  <NavLink to='/domain' activeClassName='is-active' className='navbar-item' onClick={this.handleClickBlur}>Domain Logic</NavLink>
+                  <NavLink to='/infrastructure' activeClassName='is-active' className='navbar-item' onClick={this.handleClickBlur}>Infrastructure</NavLink>
                 </div>
               </div>
 
               <div className='navbar-item has-dropdown is-hoverable'>
-                <NavLink to='/start' activeClassName='is-active' className='navbar-link'>Get Started</NavLink>
+                <NavLink to='/start' activeClassName='is-active' className='navbar-link' onClick={this.handleClickBlur}>Get Started</NavLink>
                 <div className='navbar-dropdown is-boxed'>
-                  <NavLink to='/setup' activeClassName='is-active' className='navbar-item'>Setup</NavLink>
+                  <NavLink to='/setup' activeClassName='is-active' className='navbar-item' onClick={this.handleClickBlur}>Setup</NavLink>
                   <hr className='navbar-divider' />
-                  <span className='navbar-item'>Examples</span>
-                  <NavLink to='/basic' activeClassName='is-active' className='navbar-item'>Basic</NavLink>
-                  <NavLink to='/rest' activeClassName='is-active' className='navbar-item'>Rest</NavLink>
-                  <NavLink to='/cqrs-es' activeClassName='is-active' className='navbar-item'>CQRS/ES</NavLink>
+                  <span className='navbar-item has-text-weight-bold'>Examples:</span>
+                  <NavLink to='/basic' activeClassName='is-active' className='navbar-item' onClick={this.handleClickBlur}>Basic</NavLink>
+                  <NavLink to='/rest' activeClassName='is-active' className='navbar-item' onClick={this.handleClickBlur}>Rest</NavLink>
+                  <NavLink to='/cqrs-es' activeClassName='is-active' className='navbar-item' onClick={this.handleClickBlur}>CQRS/ES</NavLink>
                 </div>
               </div>
 
               <div className='navbar-item has-dropdown is-hoverable'>
-                <NavLink to='/documentation' activeClassName='is-active' className='navbar-link'>Documentation</NavLink>
+                <NavLink to='/documentation' activeClassName='is-active' className='navbar-link' onClick={this.handleClickBlur}>Documentation</NavLink>
                 <div className='navbar-dropdown is-boxed'>
-                  <NavLink to='/environments' activeClassName='is-active' className='navbar-item'>Environments</NavLink>
-                  <AnalyticsLink to='https://fnalabs.github.io/hive-js/' target='_blank' rel='noopener noreferrer' className='navbar-item'>API</AnalyticsLink>
+                  <NavLink to='/environments' activeClassName='is-active' className='navbar-item' onClick={this.handleClickBlur}>Environments</NavLink>
+                  <AnalyticsLink to='https://fnalabs.github.io/hive-js/' target='_blank' rel='noopener noreferrer' className='navbar-item' onClick={this.handleClickBlur}>API</AnalyticsLink>
                   <hr className='navbar-divider' />
-                  <span className='navbar-item'>v2.0.0-rc.3</span>
+                  <span className='navbar-item has-text-weight-bold'>v2.0.0-rc.3</span>
                 </div>
               </div>
             </div>
