@@ -1,0 +1,47 @@
+{
+  "icons": [
+    {
+      "src": "icon_512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "icon_192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icon_144x144.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "icon_114x114.png",
+      "sizes": "114x114",
+      "type": "image/png"
+    },
+    {
+      "src": "icon_72x72.png",
+      "sizes": "72x72",
+      "type": "image/png"
+    },
+    {
+      "src": "icon_57x57.png",
+      "sizes": "57x57",
+      "type": "image/png"
+    },
+    {
+      "src": "icon_32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    }
+  ],
+  "name": "Hive^io Framework",
+  "short_name": "Hive^io",
+  "orientation": "any",
+  "display": "standalone",
+  "start_url": ".",
+  "description": "A reactive, cloud-native framework for building microservices.",
+  "background_color": "#f5f5f5",
+  "theme_color": "#f5f5f5"
+}
