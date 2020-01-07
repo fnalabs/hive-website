@@ -3,185 +3,310 @@
 exports[`<Overview /> should render Overview page static content 1`] = `
 Array [
   <article
-    className="section is-fullheight is-medium"
+    className="section is-medium"
   >
     <div
-      className="container content"
+      className="container"
     >
-      <h1>
-        Overview
-      </h1>
-      <p>
-        Hive
-        <sup>
-          io
-        </sup>
-         is a 
-        <a
-          href="https://www.reactivemanifesto.org/"
-          rel="noopener noreferrer"
-          target="_blank"
+      <div
+        className="columns"
+      >
+        <header
+          className="column is-narrow is-hidden-touch is-aside"
         >
-          reactive
-        </a>
-        , 
-        <a
-          href="https://www.cncf.io/blog/2017/05/15/developing-cloud-native-applications/"
-          rel="noopener noreferrer"
-          target="_blank"
+          <aside
+            className="menu"
+          >
+            <p
+              className="menu-label has-text-weight-bold"
+            >
+              v2.0.0-rc.3
+            </p>
+            <ul
+              className="menu-list"
+            >
+              <li>
+                <a
+                  aria-current={null}
+                  href="/overview"
+                  onClick={[Function]}
+                >
+                  Overview
+                </a>
+                <ul>
+                  <li>
+                    <a
+                      aria-current={null}
+                      href="/model"
+                      onClick={[Function]}
+                    >
+                      Data Model
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      aria-current={null}
+                      href="/domain"
+                      onClick={[Function]}
+                    >
+                      Domain Logic
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      aria-current={null}
+                      href="/infrastructure"
+                      onClick={[Function]}
+                    >
+                      Infrastructure
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a
+                  aria-current={null}
+                  href="/start"
+                  onClick={[Function]}
+                >
+                  Get Started
+                </a>
+                <ul>
+                  <li>
+                    <a
+                      aria-current={null}
+                      href="/setup"
+                      onClick={[Function]}
+                    >
+                      Setup
+                    </a>
+                  </li>
+                  <li
+                    className="menu-label has-text-weight-bold"
+                  >
+                    Examples:
+                  </li>
+                  <li>
+                    <a
+                      aria-current={null}
+                      href="/basic"
+                      onClick={[Function]}
+                    >
+                      Basic
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      aria-current={null}
+                      href="/rest"
+                      onClick={[Function]}
+                    >
+                      Rest
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      aria-current={null}
+                      href="/cqrs-es"
+                      onClick={[Function]}
+                    >
+                      CQRS/ES
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a
+                  aria-current={null}
+                  href="/documentation"
+                  onClick={[Function]}
+                >
+                  Documentation
+                </a>
+                <ul>
+                  <li>
+                    <a
+                      aria-current={null}
+                      href="/environments"
+                      onClick={[Function]}
+                    >
+                      Environments
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://fnalabs.github.io/hive-js/"
+                      rel="noopener noreferrer"
+                      target="_blank"
+                    >
+                      API
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </aside>
+        </header>
+        <section
+          className="column content"
+          role="document"
         >
-          cloud-native
-        </a>
-         framework meant to foster and support lightweight, atomic 
-        <a
-          href="https://en.wikipedia.org/wiki/Microservices"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          microservices
-        </a>
-         from a project's inception onward. It consists of a small library of classes that provide the basic building blocks to interface with a small collection of containers, from straightforward 
-        <a
-          href="https://en.wikipedia.org/wiki/Representational_state_transfer"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          RESTful
-        </a>
-         services to specialized 
-        <a
-          href="https://martinfowler.com/bliki/CQRS.html"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          CQRS
-        </a>
-        /
-        <a
-          href="https://martinfowler.com/eaaDev/EventSourcing.html"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          ES
-        </a>
-         services. The core tenets of this project are:
-      </p>
-      <ul>
-        <li>
-          Provide a framework of standard patterns to foster the creation and evolution of a project.
-        </li>
-        <li>
-          Provide a universal JavaScript library for standardized data exchanges.
-        </li>
-        <li>
-          Define a clear separation between domain logic and infrastructure.
-        </li>
-        <li>
-          Minimize opinions in the framework to support a variety of needs.
-        </li>
-        <li>
-          Integrate with other cloud-native initiatives.
-        </li>
-      </ul>
-      <p>
-        Hive
-        <sup>
-          io
-        </sup>
-         provides flexibility and simplicity to promote 
-        <strong>
-          rapid development
-        </strong>
-         with a focus on domain logic. Each part has clearly defined responsibilities and interfaces with respect to their counterparts.
-      </p>
-      <h2>
-        Background
-      </h2>
-      <p>
-        This project is the culmination of my past experiences to improve upon existing technologies and techniques for enterprise architecture. The thought first came to me when I was exposed to distributed architecture in a production environment. The timing of this exposure was perfectly aligned with the release of Docker. While migrating my knowledge from VMs to containers, I started to deep dive into other technologies and techniques to bring the idea to life. Over the course of this journey, I've been able to implement a fully functional solution in this space. Once the concept was proven in v1, I immediately started planning for the version you see today. We are proud to present to you Hive
-        <sup>
-          io
-        </sup>
-        .
-      </p>
+          <h1>
+            Overview
+          </h1>
+          <p>
+            Hive
+            <sup>
+              io
+            </sup>
+             is a 
+            <a
+              href="https://www.reactivemanifesto.org/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              reactive
+            </a>
+            , 
+            <a
+              href="https://www.cncf.io/blog/2017/05/15/developing-cloud-native-applications/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              cloud-native
+            </a>
+             framework meant to foster and support lightweight, atomic 
+            <a
+              href="https://en.wikipedia.org/wiki/Microservices"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              microservices
+            </a>
+             from a project's inception onward. It consists of a small library of classes that provide the basic building blocks to interface with a small collection of containers, from straightforward 
+            <a
+              href="https://en.wikipedia.org/wiki/Representational_state_transfer"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              RESTful
+            </a>
+             services to specialized 
+            <a
+              href="https://martinfowler.com/bliki/CQRS.html"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              CQRS
+            </a>
+            /
+            <a
+              href="https://martinfowler.com/eaaDev/EventSourcing.html"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              ES
+            </a>
+             services. The core tenets of this project are:
+          </p>
+          <ul>
+            <li>
+              Provide a framework of standard patterns to foster the creation and evolution of a project.
+            </li>
+            <li>
+              Provide a universal JavaScript library for standardized data exchanges.
+            </li>
+            <li>
+              Define a clear separation between domain logic and infrastructure.
+            </li>
+            <li>
+              Minimize opinions in the framework to support a variety of needs.
+            </li>
+            <li>
+              Integrate with other cloud-native initiatives.
+            </li>
+          </ul>
+          <p>
+            Hive
+            <sup>
+              io
+            </sup>
+             provides flexibility and simplicity to promote 
+            <strong>
+              rapid development
+            </strong>
+             with a focus on domain logic. Each part has clearly defined responsibilities and interfaces with respect to their counterparts.
+          </p>
+          <h2>
+            Background
+          </h2>
+          <p>
+            This project is the culmination of my past experiences to improve upon existing technologies and techniques for enterprise architecture. The thought first came to me when I was exposed to distributed architecture in a production environment. The timing of this exposure was perfectly aligned with the release of Docker. While migrating my knowledge from VMs to containers, I started to deep dive into other technologies and techniques to bring the idea to life. Over the course of this journey, I've been able to implement a fully functional solution in this space. Once the concept was proven in v1, I immediately started planning for the version you see today. We are proud to present to you Hive
+            <sup>
+              io
+            </sup>
+            .
+          </p>
+        </section>
+      </div>
     </div>
   </article>,
   <section
     className="hero is-small is-hive"
   >
     <div
-      className="hero-body has-text-centered"
+      className="hero-body"
     >
-      <a
-        href="/"
-        onClick={[Function]}
-      >
-        <svg
-          height="48"
-          viewBox="0 0 448 512"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M223.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L319.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L393.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34zm-192 34l136 136c9.4 9.4 24.6 9.4 33.9 0l22.6-22.6c9.4-9.4 9.4-24.6 0-33.9L127.9 256l96.4-96.4c9.4-9.4 9.4-24.6 0-33.9L201.7 103c-9.4-9.4-24.6-9.4-33.9 0l-136 136c-9.5 9.4-9.5 24.6-.1 34z"
-          />
-        </svg>
-      </a>
       <nav
-        aria-label="breadcrumbs"
-        className="breadcrumb has-bullet-separator is-hidden-touch"
+        className="level is-mobile"
       >
-        <ul>
-          <li
-            className="is-active"
-          >
-            <a
-              aria-current="page"
-              href="/overview"
-              onClick={[Function]}
-            >
-              Overview
-            </a>
-          </li>
-          <li>
-            <a
-              href="/model"
-              onClick={[Function]}
-            >
-              Data Model
-            </a>
-          </li>
-          <li>
-            <a
-              href="/domain"
-              onClick={[Function]}
-            >
-              Domain Logic
-            </a>
-          </li>
-          <li>
-            <a
-              href="/infrastructure"
-              onClick={[Function]}
-            >
-              Infrastructure
-            </a>
-          </li>
-        </ul>
-      </nav>
-      <a
-        href="/model"
-        onClick={[Function]}
-      >
-        <svg
-          height="48"
-          viewBox="0 0 448 512"
-          xmlns="http://www.w3.org/2000/svg"
+        <div
+          className="level-item has-text-centered"
         >
-          <path
-            d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34zm192-34l-136-136c-9.4-9.4-24.6-9.4-33.9 0l-22.6 22.6c-9.4 9.4-9.4 24.6 0 33.9l96.4 96.4-96.4 96.4c-9.4 9.4-9.4 24.6 0 33.9l22.6 22.6c9.4 9.4 24.6 9.4 33.9 0l136-136c9.4-9.2 9.4-24.4 0-33.8z"
-          />
-        </svg>
-      </a>
+          <a
+            aria-label="previous page"
+            href="/"
+            onClick={[Function]}
+          >
+            <span
+              className="icon is-large"
+            >
+              <svg
+                height="48"
+                viewBox="0 0 448 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M223.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L319.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L393.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34zm-192 34l136 136c9.4 9.4 24.6 9.4 33.9 0l22.6-22.6c9.4-9.4 9.4-24.6 0-33.9L127.9 256l96.4-96.4c9.4-9.4 9.4-24.6 0-33.9L201.7 103c-9.4-9.4-24.6-9.4-33.9 0l-136 136c-9.5 9.4-9.5 24.6-.1 34z"
+                />
+              </svg>
+            </span>
+          </a>
+        </div>
+        <div
+          className="level-item has-text-centered"
+        >
+          <a
+            aria-label="next page"
+            href="/model"
+            onClick={[Function]}
+          >
+            <span
+              className="icon is-large"
+            >
+              <svg
+                height="48"
+                viewBox="0 0 448 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34zm192-34l-136-136c-9.4-9.4-24.6-9.4-33.9 0l-22.6 22.6c-9.4 9.4-9.4 24.6 0 33.9l96.4 96.4-96.4 96.4c-9.4 9.4-9.4 24.6 0 33.9l22.6 22.6c9.4 9.4 24.6 9.4 33.9 0l136-136c9.4-9.2 9.4-24.4 0-33.8z"
+                />
+              </svg>
+            </span>
+          </a>
+        </div>
+      </nav>
     </div>
   </section>,
 ]

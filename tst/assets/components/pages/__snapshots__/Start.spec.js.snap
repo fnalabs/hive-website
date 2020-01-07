@@ -3,213 +3,330 @@
 exports[`<Start /> should render Start page static content 1`] = `
 Array [
   <article
-    className="section is-fullheight is-medium"
+    className="section is-medium"
   >
     <div
-      className="container content"
+      className="container"
     >
-      <h1>
-        Get Started
-      </h1>
-      <p>
-        The next page contains prerequisites and installation instructions to get you started with Hive
-        <sup>
-          io
-        </sup>
-        . The examples provided cover the basics of RESTful and CQRS/ES architectures. Descriptions are also provided on how to extend the concepts to future iterations to express the evolution of a project.
-      </p>
       <div
-        className="notification"
+        className="columns"
       >
-        <span
-          className="icon"
+        <header
+          className="column is-narrow is-hidden-touch is-aside"
         >
-          <svg
-            className="svg-inline"
-            viewBox="0 0 512 512"
-            xmlns="http://www.w3.org/2000/svg"
+          <aside
+            className="menu"
           >
-            <path
-              d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z"
-              fill="#209cee"
-            />
-          </svg>
-        </span>
-        <span>
-          The Development process for domain logic only requires a Text Editor or IDE that supports JavaScript and Node.js/Docker. The rest of the instructions outlined here provide infrastructure details for installation and deployment.
-        </span>
+            <p
+              className="menu-label has-text-weight-bold"
+            >
+              v2.0.0-rc.3
+            </p>
+            <ul
+              className="menu-list"
+            >
+              <li>
+                <a
+                  aria-current={null}
+                  href="/overview"
+                  onClick={[Function]}
+                >
+                  Overview
+                </a>
+                <ul>
+                  <li>
+                    <a
+                      aria-current={null}
+                      href="/model"
+                      onClick={[Function]}
+                    >
+                      Data Model
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      aria-current={null}
+                      href="/domain"
+                      onClick={[Function]}
+                    >
+                      Domain Logic
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      aria-current={null}
+                      href="/infrastructure"
+                      onClick={[Function]}
+                    >
+                      Infrastructure
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a
+                  aria-current={null}
+                  href="/start"
+                  onClick={[Function]}
+                >
+                  Get Started
+                </a>
+                <ul>
+                  <li>
+                    <a
+                      aria-current={null}
+                      href="/setup"
+                      onClick={[Function]}
+                    >
+                      Setup
+                    </a>
+                  </li>
+                  <li
+                    className="menu-label has-text-weight-bold"
+                  >
+                    Examples:
+                  </li>
+                  <li>
+                    <a
+                      aria-current={null}
+                      href="/basic"
+                      onClick={[Function]}
+                    >
+                      Basic
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      aria-current={null}
+                      href="/rest"
+                      onClick={[Function]}
+                    >
+                      Rest
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      aria-current={null}
+                      href="/cqrs-es"
+                      onClick={[Function]}
+                    >
+                      CQRS/ES
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a
+                  aria-current={null}
+                  href="/documentation"
+                  onClick={[Function]}
+                >
+                  Documentation
+                </a>
+                <ul>
+                  <li>
+                    <a
+                      aria-current={null}
+                      href="/environments"
+                      onClick={[Function]}
+                    >
+                      Environments
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://fnalabs.github.io/hive-js/"
+                      rel="noopener noreferrer"
+                      target="_blank"
+                    >
+                      API
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </aside>
+        </header>
+        <section
+          className="column content"
+          role="document"
+        >
+          <h1>
+            Get Started
+          </h1>
+          <p>
+            The next page contains prerequisites and installation instructions to get you started with Hive
+            <sup>
+              io
+            </sup>
+            . The examples provided cover the basics of RESTful and CQRS/ES architectures. Descriptions are also provided on how to extend the concepts to future iterations to express the evolution of a project.
+          </p>
+          <div
+            className="notification"
+          >
+            <span
+              className="icon"
+            >
+              <svg
+                className="svg-inline"
+                viewBox="0 0 512 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z"
+                  fill="#209cee"
+                />
+              </svg>
+            </span>
+            <span>
+              The Development process for domain logic only requires a Text Editor or IDE that supports JavaScript and Node.js/Docker. The rest of the instructions outlined here provide infrastructure details for installation and deployment.
+            </span>
+          </div>
+          <h2>
+            Prerequisites
+          </h2>
+          <p>
+            The prerequisites vary depending on the architecture. All implementations require Docker of some form. Whether it is just pure Docker, Docker Swarm, or Kubernetes is up to you. It is also strongly recommended you use a load balancer of some sort since the whole purpose of the framework is horizontal scalability.
+          </p>
+          <h3>
+            Cloud Platforms
+          </h3>
+          <dl>
+            <dt>
+              <em>
+                <strong>
+                  Required
+                </strong>
+              </em>
+            </dt>
+            <dd>
+              <a
+                href="https://www.docker.com/"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                Docker
+              </a>
+            </dd>
+            <dt>
+              <em>
+                <strong>
+                  Recommended
+                </strong>
+              </em>
+            </dt>
+            <dd>
+              <a
+                href="https://kubernetes.io/"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                Kubernetes
+              </a>
+              , 
+              <a
+                href="https://docs.docker.com/engine/swarm/"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                Swarm
+              </a>
+              , or a 
+              <a
+                href="https://en.wikipedia.org/wiki/Category:Cloud_computing_providers"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                cloud service provider
+              </a>
+            </dd>
+          </dl>
+          <h3>
+            More
+          </h3>
+          <p>
+            Once you decide on your cloud platform, you're ready to start building and deploying your application services and dependencies. Hive
+            <sup>
+              io
+            </sup>
+             will integrate well with many of the 
+            <a
+              href="https://www.cncf.io/projects/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              cloud-native projects
+            </a>
+             and 
+            <a
+              href="https://hub.docker.com/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              other containerized services
+            </a>
+            .
+          </p>
+        </section>
       </div>
-      <h2>
-        Prerequisites
-      </h2>
-      <p>
-        The prerequisites vary depending on the architecture. All implementations require Docker of some form. Whether it is just pure Docker, Docker Swarm, or Kubernetes is up to you. It is also strongly recommended you use a load balancer of some sort since the whole purpose of the framework is horizontal scalability.
-      </p>
-      <h3>
-        Cloud Platforms
-      </h3>
-      <dl>
-        <dt>
-          <em>
-            <strong>
-              Required
-            </strong>
-          </em>
-        </dt>
-        <dd>
-          <a
-            href="https://www.docker.com/"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            Docker
-          </a>
-        </dd>
-        <dt>
-          <em>
-            <strong>
-              Recommended
-            </strong>
-          </em>
-        </dt>
-        <dd>
-          <a
-            href="https://kubernetes.io/"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            Kubernetes
-          </a>
-          , 
-          <a
-            href="https://docs.docker.com/engine/swarm/"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            Swarm
-          </a>
-          , or a 
-          <a
-            href="https://en.wikipedia.org/wiki/Category:Cloud_computing_providers"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            cloud service provider
-          </a>
-        </dd>
-      </dl>
-      <h3>
-        More
-      </h3>
-      <p>
-        Once you decide on your cloud platform, you're ready to start building and deploying your application services and dependencies. Hive
-        <sup>
-          io
-        </sup>
-         will integrate well with many of the 
-        <a
-          href="https://www.cncf.io/projects/"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          cloud-native projects
-        </a>
-         and 
-        <a
-          href="https://hub.docker.com/"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          other containerized services
-        </a>
-        .
-      </p>
     </div>
   </article>,
   <section
     className="hero is-small is-hive"
   >
     <div
-      className="hero-body has-text-centered"
+      className="hero-body"
     >
-      <a
-        href="/infrastructure"
-        onClick={[Function]}
-      >
-        <svg
-          height="48"
-          viewBox="0 0 448 512"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M223.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L319.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L393.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34zm-192 34l136 136c9.4 9.4 24.6 9.4 33.9 0l22.6-22.6c9.4-9.4 9.4-24.6 0-33.9L127.9 256l96.4-96.4c9.4-9.4 9.4-24.6 0-33.9L201.7 103c-9.4-9.4-24.6-9.4-33.9 0l-136 136c-9.5 9.4-9.5 24.6-.1 34z"
-          />
-        </svg>
-      </a>
       <nav
-        aria-label="breadcrumbs"
-        className="breadcrumb has-bullet-separator is-hidden-touch"
+        className="level is-mobile"
       >
-        <ul>
-          <li
-            className="is-active"
-          >
-            <a
-              aria-current="page"
-              href="/start"
-              onClick={[Function]}
-            >
-              Get Started
-            </a>
-          </li>
-          <li>
-            <a
-              href="/setup"
-              onClick={[Function]}
-            >
-              Setup
-            </a>
-          </li>
-          <li>
-            <a
-              href="/basic"
-              onClick={[Function]}
-            >
-              Basic
-            </a>
-          </li>
-          <li>
-            <a
-              href="/rest"
-              onClick={[Function]}
-            >
-              REST
-            </a>
-          </li>
-          <li>
-            <a
-              href="/cqrs-es"
-              onClick={[Function]}
-            >
-              CQRS/ES
-            </a>
-          </li>
-        </ul>
-      </nav>
-      <a
-        href="/setup"
-        onClick={[Function]}
-      >
-        <svg
-          height="48"
-          viewBox="0 0 448 512"
-          xmlns="http://www.w3.org/2000/svg"
+        <div
+          className="level-item has-text-centered"
         >
-          <path
-            d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34zm192-34l-136-136c-9.4-9.4-24.6-9.4-33.9 0l-22.6 22.6c-9.4 9.4-9.4 24.6 0 33.9l96.4 96.4-96.4 96.4c-9.4 9.4-9.4 24.6 0 33.9l22.6 22.6c9.4 9.4 24.6 9.4 33.9 0l136-136c9.4-9.2 9.4-24.4 0-33.8z"
-          />
-        </svg>
-      </a>
+          <a
+            aria-label="previous page"
+            href="/infrastructure"
+            onClick={[Function]}
+          >
+            <span
+              className="icon is-large"
+            >
+              <svg
+                height="48"
+                viewBox="0 0 448 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M223.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L319.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L393.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34zm-192 34l136 136c9.4 9.4 24.6 9.4 33.9 0l22.6-22.6c9.4-9.4 9.4-24.6 0-33.9L127.9 256l96.4-96.4c9.4-9.4 9.4-24.6 0-33.9L201.7 103c-9.4-9.4-24.6-9.4-33.9 0l-136 136c-9.5 9.4-9.5 24.6-.1 34z"
+                />
+              </svg>
+            </span>
+          </a>
+        </div>
+        <div
+          className="level-item has-text-centered"
+        >
+          <a
+            aria-label="next page"
+            href="/setup"
+            onClick={[Function]}
+          >
+            <span
+              className="icon is-large"
+            >
+              <svg
+                height="48"
+                viewBox="0 0 448 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34zm192-34l-136-136c-9.4-9.4-24.6-9.4-33.9 0l-22.6 22.6c-9.4 9.4-9.4 24.6 0 33.9l96.4 96.4-96.4 96.4c-9.4 9.4-9.4 24.6 0 33.9l22.6 22.6c9.4 9.4 24.6 9.4 33.9 0l136-136c9.4-9.2 9.4-24.4 0-33.8z"
+                />
+              </svg>
+            </span>
+          </a>
+        </div>
+      </nav>
     </div>
   </section>,
 ]

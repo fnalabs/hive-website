@@ -3,531 +3,640 @@
 exports[`<CqrsEs /> should render CqrsEs page static content 1`] = `
 Array [
   <article
-    className="section is-fullheight is-medium"
+    className="section is-medium"
   >
     <div
-      className="container content"
+      className="container"
     >
-      <h1>
-        Example: CQRS/ES
-      </h1>
-      <p>
-        This example evolves the previous REST example into a highly distributed architecture in order to handle different magnitudes of network traffic.
-      </p>
-      <h2>
-        <a
-          href="https://www.npmjs.com/package/hive-io-domain-example"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          Domain Logic
-        </a>
-         (
-        <a
-          href="https://github.com/fnalabs/hive-js-domain-example"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          Source Code
-        </a>
-        )
-      </h2>
       <div
-        className="notification"
+        className="columns"
       >
-        <span
-          className="icon"
+        <header
+          className="column is-narrow is-hidden-touch is-aside"
         >
-          <svg
-            className="svg-inline"
-            viewBox="0 0 512 512"
-            xmlns="http://www.w3.org/2000/svg"
+          <aside
+            className="menu"
           >
-            <path
-              d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z"
-              fill="#209cee"
-            />
-          </svg>
-        </span>
-        <span>
-          You should consider using a private NPM registry or implementing more creative solutions such as extending base Docker images with 
-          <code>
-            ADD
-          </code>
-          |
-          <code>
-            COPY
-          </code>
-           statements for source code or 
-          <code>
-            npm link
-          </code>
-           for your domain logic.
-        </span>
+            <p
+              className="menu-label has-text-weight-bold"
+            >
+              v2.0.0-rc.3
+            </p>
+            <ul
+              className="menu-list"
+            >
+              <li>
+                <a
+                  aria-current={null}
+                  href="/overview"
+                  onClick={[Function]}
+                >
+                  Overview
+                </a>
+                <ul>
+                  <li>
+                    <a
+                      aria-current={null}
+                      href="/model"
+                      onClick={[Function]}
+                    >
+                      Data Model
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      aria-current={null}
+                      href="/domain"
+                      onClick={[Function]}
+                    >
+                      Domain Logic
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      aria-current={null}
+                      href="/infrastructure"
+                      onClick={[Function]}
+                    >
+                      Infrastructure
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a
+                  aria-current={null}
+                  href="/start"
+                  onClick={[Function]}
+                >
+                  Get Started
+                </a>
+                <ul>
+                  <li>
+                    <a
+                      aria-current={null}
+                      href="/setup"
+                      onClick={[Function]}
+                    >
+                      Setup
+                    </a>
+                  </li>
+                  <li
+                    className="menu-label has-text-weight-bold"
+                  >
+                    Examples:
+                  </li>
+                  <li>
+                    <a
+                      aria-current={null}
+                      href="/basic"
+                      onClick={[Function]}
+                    >
+                      Basic
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      aria-current={null}
+                      href="/rest"
+                      onClick={[Function]}
+                    >
+                      Rest
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      aria-current={null}
+                      href="/cqrs-es"
+                      onClick={[Function]}
+                    >
+                      CQRS/ES
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a
+                  aria-current={null}
+                  href="/documentation"
+                  onClick={[Function]}
+                >
+                  Documentation
+                </a>
+                <ul>
+                  <li>
+                    <a
+                      aria-current={null}
+                      href="/environments"
+                      onClick={[Function]}
+                    >
+                      Environments
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://fnalabs.github.io/hive-js/"
+                      rel="noopener noreferrer"
+                      target="_blank"
+                    >
+                      API
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </aside>
+        </header>
+        <section
+          className="column content"
+          role="document"
+        >
+          <h1>
+            Example: CQRS/ES
+          </h1>
+          <p>
+            This example evolves the previous REST example into a highly distributed architecture in order to handle different magnitudes of network traffic.
+          </p>
+          <h2>
+            <a
+              href="https://www.npmjs.com/package/hive-io-domain-example"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              Domain Logic
+            </a>
+             (
+            <a
+              href="https://github.com/fnalabs/hive-js-domain-example"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              Source Code
+            </a>
+            )
+          </h2>
+          <div
+            className="notification"
+          >
+            <span
+              className="icon"
+            >
+              <svg
+                className="svg-inline"
+                viewBox="0 0 512 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z"
+                  fill="#209cee"
+                />
+              </svg>
+            </span>
+            <span>
+              You should consider using a private NPM registry or implementing more creative solutions such as extending base Docker images with 
+              <code>
+                ADD
+              </code>
+              |
+              <code>
+                COPY
+              </code>
+               statements for source code or 
+              <code>
+                npm link
+              </code>
+               for your domain logic.
+            </span>
+          </div>
+          <h2>
+            Infrastructure
+          </h2>
+          <dl>
+            <dt>
+              <code>
+                Producer.dockerfile
+              </code>
+            </dt>
+            <dd>
+              <pre>
+                FROM fnalabs/hive-producer-js:latest
+                <br />
+                RUN npm install hive-io-domain-example
+              </pre>
+            </dd>
+            <dt>
+              <code>
+                Stream-Processor.dockerfile
+              </code>
+            </dt>
+            <dd>
+              <pre>
+                FROM fnalabs/hive-stream-processor-js:latest
+                <br />
+                RUN npm install hive-io-domain-example
+              </pre>
+            </dd>
+            <dt>
+              <code>
+                Consumer.dockerfile
+              </code>
+            </dt>
+            <dd>
+              <pre>
+                FROM fnalabs/hive-consumer-js:latest
+                <br />
+                RUN npm install hive-io-domain-example
+              </pre>
+            </dd>
+            <dt>
+              <code>
+                Rest.dockerfile
+              </code>
+            </dt>
+            <dd>
+              <pre>
+                FROM fnalabs/hive-base-js:latest
+                <br />
+                RUN npm install hive-io-domain-example
+              </pre>
+            </dd>
+            <dt>
+              <code>
+                docker-compose.yml
+              </code>
+            </dt>
+            <dd>
+              <pre>
+                version: '3.5'
+                <br />
+                services:
+                <br />
+                  # proxy for layer 7 routing
+                <br />
+                  # NOTE: this is an example, you will need to define your own
+                <br />
+                  #      &nbspex. https://github.com/fnalabs/hive-io-proxy
+                <br />
+                  proxy:
+                <br />
+                    image: haproxy:1.8.23-alpine
+                <br />
+                    depends_on:
+                <br />
+                      - hive-producer-js
+                <br />
+                      - hive-base-js
+                <br />
+                      - hive-stream-processor-js
+                <br />
+                    ports:
+                <br />
+                      - 80:80
+                <br />
+                    networks:
+                <br />
+                      - hive-io
+                <br />
+                    restart: on-failure
+                <br />
+                  fluentd:
+                <br />
+                    image: fluent/fluentd:v1.7.4-1.0
+                <br />
+                    networks:
+                <br />
+                      - hive-io
+                <br />
+                    restart: on-failure
+                <br />
+                <br />
+                  # producers
+                <br />
+                  hive-producer-js:
+                <br />
+                    build:
+                <br />
+                      context: .
+                <br />
+                      dockerfile: Producer.dockerfile
+                <br />
+                    environment:
+                <br />
+                      ACTOR: ViewContentActor
+                <br />
+                      ACTOR_LIB: hive-io-domain-example
+                <br />
+                      CLUSTER_SIZE: 1
+                <br />
+                      HTTP_VERSION: 1
+                <br />
+                      SECURE: "false"
+                <br />
+                      EVENT_STORE_TOPIC: view
+                <br />
+                      EVENT_STORE_BROKERS: "kafka:29092"
+                <br />
+                      EVENT_STORE_ID: producer-client
+                <br />
+                      FLUENTD_HOST: fluentd
+                <br />
+                      FLUENTD_PORT: 24224
+                <br />
+                      FLUENTD_TIMEOUT: 3.0
+                <br />
+                      FLUENTD_RECONNECT: 600000
+                <br />
+                    depends_on:
+                <br />
+                      - kafka
+                <br />
+                      - fluentd
+                <br />
+                    networks:
+                <br />
+                      - hive-io
+                <br />
+                <br />
+                  # stream processors
+                <br />
+                  hive-stream-processor-js:
+                <br />
+                    build:
+                <br />
+                      context: .
+                <br />
+                      dockerfile: Stream-Processor.dockerfile
+                <br />
+                    environment:
+                <br />
+                      ACTOR: PostCommandActor
+                <br />
+                      ACTOR_LIB: hive-io-domain-example
+                <br />
+                      CLUSTER_SIZE: 1
+                <br />
+                      HTTP_VERSION: 1
+                <br />
+                      SECURE: "false"
+                <br />
+                      CACHE_URL: "redis://redis:6379"
+                <br />
+                      EVENT_STORE_PRODUCER_TOPIC: content
+                <br />
+                      EVENT_STORE_BROKERS: "kafka:29092"
+                <br />
+                      EVENT_STORE_ID: stream-processor-client
+                <br />
+                      FLUENTD_HOST: fluentd
+                <br />
+                      FLUENTD_PORT: 24224
+                <br />
+                      FLUENTD_TIMEOUT: 3.0
+                <br />
+                      FLUENTD_RECONNECT: 600000
+                <br />
+                    depends_on:
+                <br />
+                      - redis
+                <br />
+                      - kafka
+                <br />
+                      - fluentd
+                <br />
+                    networks:
+                <br />
+                      - hive-io
+                <br />
+                  redis:
+                <br />
+                    image: redis:5.0.7-alpine
+                <br />
+                    networks:
+                <br />
+                      - hive-io
+                <br />
+                    restart: on-failure
+                <br />
+                <br />
+                  # log stream containers
+                <br />
+                  kafka:
+                <br />
+                    image: confluentinc/cp-kafka:5.3.1
+                <br />
+                    depends_on:
+                <br />
+                      - zookeeper
+                <br />
+                    environment:
+                <br />
+                      KAFKA_ZOOKEEPER_CONNECT: "zookeeper:32181"
+                <br />
+                      KAFKA_ADVERTISED_LISTENERS: "PLAINTEXT://kafka:29092"
+                <br />
+                      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+                <br />
+                      KAFKA_COMPRESSION_TYPE: gzip
+                <br />
+                    networks:
+                <br />
+                      - hive-io
+                <br />
+                    restart: on-failure
+                <br />
+                  zookeeper:
+                <br />
+                    image: confluentinc/cp-zookeeper:5.3.1
+                <br />
+                    environment:
+                <br />
+                      ZOOKEEPER_CLIENT_PORT: 32181
+                <br />
+                    networks:
+                <br />
+                      - hive-io
+                <br />
+                    restart: on-failure
+                <br />
+                <br />
+                  # consumers
+                <br />
+                  hive-consumer-js:
+                <br />
+                    build:
+                <br />
+                      context: .
+                <br />
+                      dockerfile: Consumer.dockerfile
+                <br />
+                    environment:
+                <br />
+                      ACTOR: PostEventActor
+                <br />
+                      ACTOR_LIB: hive-io-domain-example
+                <br />
+                      CLUSTER_SIZE: 1
+                <br />
+                      HTTP_VERSION: 1
+                <br />
+                      SECURE: "false"
+                <br />
+                      EVENT_STORE_TOPIC: "content|view"
+                <br />
+                      EVENT_STORE_BROKERS: "kafka:29092"
+                <br />
+                      EVENT_STORE_ID: consumer-client
+                <br />
+                      EVENT_STORE_GROUP_ID: consumer-group
+                <br />
+                      EVENT_STORE_FROM_START: "true"
+                <br />
+                      MONGO_URL: "mongodb://mongo:27017/post"
+                <br />
+                      FLUENTD_HOST: fluentd
+                <br />
+                      FLUENTD_PORT: 24224
+                <br />
+                      FLUENTD_TIMEOUT: 3.0
+                <br />
+                      FLUENTD_RECONNECT: 600000
+                <br />
+                    depends_on:
+                <br />
+                      - mongo
+                <br />
+                      - kafka
+                <br />
+                      - fluentd
+                <br />
+                    networks:
+                <br />
+                      - hive-io
+                <br />
+                  mongo:
+                <br />
+                    image: mongo:4.2.1
+                <br />
+                    networks:
+                <br />
+                      - hive-io
+                <br />
+                    restart: on-failure
+                <br />
+                <br />
+                  # rest services
+                <br />
+                  hive-base-js:
+                <br />
+                    build:
+                <br />
+                      context: .
+                <br />
+                      dockerfile: Rest.dockerfile
+                <br />
+                    environment:
+                <br />
+                      ACTOR: PostQueryActor
+                <br />
+                      ACTOR_LIB: hive-io-domain-example
+                <br />
+                      CLUSTER_SIZE: 1
+                <br />
+                      HTTP_VERSION: 1
+                <br />
+                      SECURE: "false"
+                <br />
+                      MONGO_URL: "mongodb://mongo:27017/post"
+                <br />
+                      FLUENTD_HOST: fluentd
+                <br />
+                      FLUENTD_PORT: 24224
+                <br />
+                      FLUENTD_TIMEOUT: 3.0
+                <br />
+                      FLUENTD_RECONNECT: 600000
+                <br />
+                    depends_on:
+                <br />
+                      - mongo
+                <br />
+                      - fluentd
+                <br />
+                    networks:
+                <br />
+                      - hive-io
+                <br />
+                <br />
+                # networking specifics
+                <br />
+                networks:
+                <br />
+                  hive-io:
+                <br />
+                    driver: bridge
+              </pre>
+            </dd>
+          </dl>
+        </section>
       </div>
-      <h2>
-        Infrastructure
-      </h2>
-      <dl>
-        <dt>
-          <code>
-            Producer.dockerfile
-          </code>
-        </dt>
-        <dd>
-          <pre>
-            FROM fnalabs/hive-producer-js:latest
-            <br />
-            RUN npm install hive-io-domain-example
-          </pre>
-        </dd>
-        <dt>
-          <code>
-            Stream-Processor.dockerfile
-          </code>
-        </dt>
-        <dd>
-          <pre>
-            FROM fnalabs/hive-stream-processor-js:latest
-            <br />
-            RUN npm install hive-io-domain-example
-          </pre>
-        </dd>
-        <dt>
-          <code>
-            Consumer.dockerfile
-          </code>
-        </dt>
-        <dd>
-          <pre>
-            FROM fnalabs/hive-consumer-js:latest
-            <br />
-            RUN npm install hive-io-domain-example
-          </pre>
-        </dd>
-        <dt>
-          <code>
-            Rest.dockerfile
-          </code>
-        </dt>
-        <dd>
-          <pre>
-            FROM fnalabs/hive-base-js:latest
-            <br />
-            RUN npm install hive-io-domain-example
-          </pre>
-        </dd>
-        <dt>
-          <code>
-            docker-compose.yml
-          </code>
-        </dt>
-        <dd>
-          <pre>
-            version: '3.5'
-            <br />
-            services:
-            <br />
-              # proxy for layer 7 routing
-            <br />
-              # NOTE: this is an example, you will need to define your own
-            <br />
-              #      &nbspex. https://github.com/fnalabs/hive-io-proxy
-            <br />
-              proxy:
-            <br />
-                image: haproxy:1.8.23-alpine
-            <br />
-                depends_on:
-            <br />
-                  - hive-producer-js
-            <br />
-                  - hive-base-js
-            <br />
-                  - hive-stream-processor-js
-            <br />
-                ports:
-            <br />
-                  - 80:80
-            <br />
-                networks:
-            <br />
-                  - hive-io
-            <br />
-                restart: on-failure
-            <br />
-              fluentd:
-            <br />
-                image: fluent/fluentd:v1.7.4-1.0
-            <br />
-                networks:
-            <br />
-                  - hive-io
-            <br />
-                restart: on-failure
-            <br />
-            <br />
-              # producers
-            <br />
-              hive-producer-js:
-            <br />
-                build:
-            <br />
-                  context: .
-            <br />
-                  dockerfile: Producer.dockerfile
-            <br />
-                image: hive-producer-js
-            <br />
-                environment:
-            <br />
-                  ACTOR: ViewContentActor
-            <br />
-                  ACTOR_LIB: hive-io-domain-example
-            <br />
-                  CLUSTER_SIZE: 1
-            <br />
-                  HTTP_VERSION: 1
-            <br />
-                  SECURE: "false"
-            <br />
-                  EVENT_STORE_TOPIC: view
-            <br />
-                  EVENT_STORE_BROKERS: "kafka:29092"
-            <br />
-                  EVENT_STORE_ID: producer-client
-            <br />
-                  FLUENTD_HOST: fluentd
-            <br />
-                  FLUENTD_PORT: 24224
-            <br />
-                  FLUENTD_TIMEOUT: 3.0
-            <br />
-                  FLUENTD_RECONNECT: 600000
-            <br />
-                depends_on:
-            <br />
-                  - kafka
-            <br />
-                  - fluentd
-            <br />
-                networks:
-            <br />
-                  - hive-io
-            <br />
-            <br />
-              # stream processors
-            <br />
-              hive-stream-processor-js:
-            <br />
-                build:
-            <br />
-                  context: .
-            <br />
-                  dockerfile: Stream-Processor.dockerfile
-            <br />
-                image: hive-stream-processor-js
-            <br />
-                environment:
-            <br />
-                  ACTOR: PostCommandActor
-            <br />
-                  ACTOR_LIB: hive-io-domain-example
-            <br />
-                  CLUSTER_SIZE: 1
-            <br />
-                  HTTP_VERSION: 1
-            <br />
-                  SECURE: "false"
-            <br />
-                  CACHE_URL: "redis://redis:6379"
-            <br />
-                  EVENT_STORE_PRODUCER_TOPIC: content
-            <br />
-                  EVENT_STORE_BROKERS: "kafka:29092"
-            <br />
-                  EVENT_STORE_ID: stream-processor-client
-            <br />
-                  FLUENTD_HOST: fluentd
-            <br />
-                  FLUENTD_PORT: 24224
-            <br />
-                  FLUENTD_TIMEOUT: 3.0
-            <br />
-                  FLUENTD_RECONNECT: 600000
-            <br />
-                depends_on:
-            <br />
-                  - redis
-            <br />
-                  - kafka
-            <br />
-                  - fluentd
-            <br />
-                networks:
-            <br />
-                  - hive-io
-            <br />
-              redis:
-            <br />
-                image: redis:5.0.7-alpine
-            <br />
-                networks:
-            <br />
-                  - hive-io
-            <br />
-                restart: on-failure
-            <br />
-            <br />
-              # log stream containers
-            <br />
-              kafka:
-            <br />
-                image: confluentinc/cp-kafka:5.3.1
-            <br />
-                depends_on:
-            <br />
-                  - zookeeper
-            <br />
-                environment:
-            <br />
-                  KAFKA_ZOOKEEPER_CONNECT: "zookeeper:32181"
-            <br />
-                  KAFKA_ADVERTISED_LISTENERS: "PLAINTEXT://kafka:29092"
-            <br />
-                  KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
-            <br />
-                  KAFKA_COMPRESSION_TYPE: gzip
-            <br />
-                networks:
-            <br />
-                  - hive-io
-            <br />
-                restart: on-failure
-            <br />
-              zookeeper:
-            <br />
-                image: confluentinc/cp-zookeeper:5.3.1
-            <br />
-                environment:
-            <br />
-                  ZOOKEEPER_CLIENT_PORT: 32181
-            <br />
-                networks:
-            <br />
-                  - hive-io
-            <br />
-                restart: on-failure
-            <br />
-            <br />
-              # consumers
-            <br />
-              hive-consumer-js:
-            <br />
-                build:
-            <br />
-                  context: .
-            <br />
-                  dockerfile: Consumer.dockerfile
-            <br />
-                image: hive-consumer-js
-            <br />
-                environment:
-            <br />
-                  ACTOR: PostEventActor
-            <br />
-                  ACTOR_LIB: hive-io-domain-example
-            <br />
-                  CLUSTER_SIZE: 1
-            <br />
-                  HTTP_VERSION: 1
-            <br />
-                  SECURE: "false"
-            <br />
-                  EVENT_STORE_TOPIC: "content|view"
-            <br />
-                  EVENT_STORE_BROKERS: "kafka:29092"
-            <br />
-                  EVENT_STORE_ID: consumer-client
-            <br />
-                  EVENT_STORE_GROUP_ID: consumer-group
-            <br />
-                  EVENT_STORE_FROM_START: "true"
-            <br />
-                  MONGO_URL: "mongodb://mongo:27017/post"
-            <br />
-                  FLUENTD_HOST: fluentd
-            <br />
-                  FLUENTD_PORT: 24224
-            <br />
-                  FLUENTD_TIMEOUT: 3.0
-            <br />
-                  FLUENTD_RECONNECT: 600000
-            <br />
-                depends_on:
-            <br />
-                  - mongo
-            <br />
-                  - kafka
-            <br />
-                  - fluentd
-            <br />
-                networks:
-            <br />
-                  - hive-io
-            <br />
-              mongo:
-            <br />
-                image: mongo:4.2.1
-            <br />
-                networks:
-            <br />
-                  - hive-io
-            <br />
-                restart: on-failure
-            <br />
-            <br />
-              # rest services
-            <br />
-              hive-base-js:
-            <br />
-                build:
-            <br />
-                  context: .
-            <br />
-                  dockerfile: Rest.dockerfile
-            <br />
-                image: hive-base-js
-            <br />
-                environment:
-            <br />
-                  ACTOR: PostQueryActor
-            <br />
-                  ACTOR_LIB: hive-io-domain-example
-            <br />
-                  CLUSTER_SIZE: 1
-            <br />
-                  HTTP_VERSION: 1
-            <br />
-                  SECURE: "false"
-            <br />
-                  MONGO_URL: "mongodb://mongo:27017/post"
-            <br />
-                  FLUENTD_HOST: fluentd
-            <br />
-                  FLUENTD_PORT: 24224
-            <br />
-                  FLUENTD_TIMEOUT: 3.0
-            <br />
-                  FLUENTD_RECONNECT: 600000
-            <br />
-                depends_on:
-            <br />
-                  - mongo
-            <br />
-                  - fluentd
-            <br />
-                networks:
-            <br />
-                  - hive-io
-            <br />
-            <br />
-            # networking specifics
-            <br />
-            networks:
-            <br />
-              hive-io:
-            <br />
-                driver: bridge
-          </pre>
-        </dd>
-      </dl>
     </div>
   </article>,
   <section
     className="hero is-small is-hive"
   >
     <div
-      className="hero-body has-text-centered"
+      className="hero-body"
     >
-      <a
-        href="/rest"
-        onClick={[Function]}
-      >
-        <svg
-          height="48"
-          viewBox="0 0 448 512"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M223.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L319.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L393.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34zm-192 34l136 136c9.4 9.4 24.6 9.4 33.9 0l22.6-22.6c9.4-9.4 9.4-24.6 0-33.9L127.9 256l96.4-96.4c9.4-9.4 9.4-24.6 0-33.9L201.7 103c-9.4-9.4-24.6-9.4-33.9 0l-136 136c-9.5 9.4-9.5 24.6-.1 34z"
-          />
-        </svg>
-      </a>
       <nav
-        aria-label="breadcrumbs"
-        className="breadcrumb has-bullet-separator is-hidden-touch"
+        className="level is-mobile"
       >
-        <ul>
-          <li>
-            <a
-              href="/start"
-              onClick={[Function]}
-            >
-              Get Started
-            </a>
-          </li>
-          <li>
-            <a
-              href="/setup"
-              onClick={[Function]}
-            >
-              Setup
-            </a>
-          </li>
-          <li>
-            <a
-              href="/basic"
-              onClick={[Function]}
-            >
-              Basic
-            </a>
-          </li>
-          <li>
-            <a
-              href="/rest"
-              onClick={[Function]}
-            >
-              REST
-            </a>
-          </li>
-          <li
-            className="is-active"
-          >
-            <a
-              aria-current="page"
-              href="/cqrs-es"
-              onClick={[Function]}
-            >
-              CQRS/ES
-            </a>
-          </li>
-        </ul>
-      </nav>
-      <a
-        href="/documentation"
-        onClick={[Function]}
-      >
-        <svg
-          height="48"
-          viewBox="0 0 448 512"
-          xmlns="http://www.w3.org/2000/svg"
+        <div
+          className="level-item has-text-centered"
         >
-          <path
-            d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34zm192-34l-136-136c-9.4-9.4-24.6-9.4-33.9 0l-22.6 22.6c-9.4 9.4-9.4 24.6 0 33.9l96.4 96.4-96.4 96.4c-9.4 9.4-9.4 24.6 0 33.9l22.6 22.6c9.4 9.4 24.6 9.4 33.9 0l136-136c9.4-9.2 9.4-24.4 0-33.8z"
-          />
-        </svg>
-      </a>
+          <a
+            aria-label="previous page"
+            href="/rest"
+            onClick={[Function]}
+          >
+            <span
+              className="icon is-large"
+            >
+              <svg
+                height="48"
+                viewBox="0 0 448 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M223.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L319.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L393.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34zm-192 34l136 136c9.4 9.4 24.6 9.4 33.9 0l22.6-22.6c9.4-9.4 9.4-24.6 0-33.9L127.9 256l96.4-96.4c9.4-9.4 9.4-24.6 0-33.9L201.7 103c-9.4-9.4-24.6-9.4-33.9 0l-136 136c-9.5 9.4-9.5 24.6-.1 34z"
+                />
+              </svg>
+            </span>
+          </a>
+        </div>
+        <div
+          className="level-item has-text-centered"
+        >
+          <a
+            aria-label="next page"
+            href="/documentation"
+            onClick={[Function]}
+          >
+            <span
+              className="icon is-large"
+            >
+              <svg
+                height="48"
+                viewBox="0 0 448 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34zm192-34l-136-136c-9.4-9.4-24.6-9.4-33.9 0l-22.6 22.6c-9.4 9.4-9.4 24.6 0 33.9l96.4 96.4-96.4 96.4c-9.4 9.4-9.4 24.6 0 33.9l22.6 22.6c9.4 9.4 24.6 9.4 33.9 0l136-136c9.4-9.2 9.4-24.4 0-33.8z"
+                />
+              </svg>
+            </span>
+          </a>
+        </div>
+      </nav>
     </div>
   </section>,
 ]

@@ -13,6 +13,7 @@ exports[`<Nav /> should render Get Started page nav correctly 1`] = `
       className="navbar-brand"
     >
       <a
+        aria-label="home page"
         className="navbar-item"
         href="/"
         onClick={[Function]}
@@ -29,6 +30,7 @@ exports[`<Nav /> should render Get Started page nav correctly 1`] = `
             strokeWidth="12"
           />
         </svg>
+         
         <span>
           Hive
           <sup>
@@ -118,9 +120,9 @@ exports[`<Nav /> should render Get Started page nav correctly 1`] = `
               className="navbar-divider"
             />
             <span
-              className="navbar-item"
+              className="navbar-item has-text-weight-bold"
             >
-              Examples
+              Examples:
             </span>
             <a
               aria-current={null}
@@ -182,7 +184,7 @@ exports[`<Nav /> should render Get Started page nav correctly 1`] = `
               className="navbar-divider"
             />
             <span
-              className="navbar-item"
+              className="navbar-item has-text-weight-bold"
             >
               v2.0.0-rc.3
             </span>
@@ -207,6 +209,7 @@ exports[`<Nav /> should render Overview page nav correctly 1`] = `
       className="navbar-brand"
     >
       <a
+        aria-label="home page"
         className="navbar-item"
         href="/"
         onClick={[Function]}
@@ -223,6 +226,7 @@ exports[`<Nav /> should render Overview page nav correctly 1`] = `
             strokeWidth="12"
           />
         </svg>
+         
         <span>
           Hive
           <sup>
@@ -312,9 +316,9 @@ exports[`<Nav /> should render Overview page nav correctly 1`] = `
               className="navbar-divider"
             />
             <span
-              className="navbar-item"
+              className="navbar-item has-text-weight-bold"
             >
-              Examples
+              Examples:
             </span>
             <a
               aria-current={null}
@@ -376,7 +380,7 @@ exports[`<Nav /> should render Overview page nav correctly 1`] = `
               className="navbar-divider"
             />
             <span
-              className="navbar-item"
+              className="navbar-item has-text-weight-bold"
             >
               v2.0.0-rc.3
             </span>
@@ -401,6 +405,7 @@ exports[`<Nav /> should render homepage nav correctly 1`] = `
       className="navbar-brand"
     >
       <a
+        aria-label="home page"
         className="navbar-item"
         href="/"
         onClick={[Function]}
@@ -417,6 +422,7 @@ exports[`<Nav /> should render homepage nav correctly 1`] = `
             strokeWidth="12"
           />
         </svg>
+         
         <span>
           Hive
           <sup>
@@ -505,9 +511,9 @@ exports[`<Nav /> should render homepage nav correctly 1`] = `
               className="navbar-divider"
             />
             <span
-              className="navbar-item"
+              className="navbar-item has-text-weight-bold"
             >
-              Examples
+              Examples:
             </span>
             <a
               aria-current={null}
@@ -569,7 +575,7 @@ exports[`<Nav /> should render homepage nav correctly 1`] = `
               className="navbar-divider"
             />
             <span
-              className="navbar-item"
+              className="navbar-item has-text-weight-bold"
             >
               v2.0.0-rc.3
             </span>

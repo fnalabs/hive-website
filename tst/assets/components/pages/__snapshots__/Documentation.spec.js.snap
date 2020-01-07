@@ -3,176 +3,478 @@
 exports[`<Documentation /> should render Documentation page static content 1`] = `
 Array [
   <article
-    className="section is-fullheight is-medium"
+    className="section is-medium"
   >
     <div
-      className="container content"
+      className="container"
     >
-      <h1>
-        Documentation
-      </h1>
-      <p>
-        Below you will find a sitemap for API documenatation of the Hive
-        <sup>
-          io
-        </sup>
-         library. Also included is all of the environment variables for each microservice image on the next page.
-      </p>
-      <h2>
-        API
-      </h2>
-      <p>
-        <strong>
-          <em>
-            NOTE:
-          </em>
-        </strong>
-         These pages are currently available online only.
-      </p>
-      <nav
-        className="menu"
+      <div
+        className="columns"
       >
-        <ul
-          className="menu-list"
+        <header
+          className="column is-narrow is-hidden-touch is-aside"
         >
-          <li>
-            <a
-              href="https://fnalabs.github.io/hive-js/"
-              rel="noopener noreferrer"
-              target="_blank"
+          <aside
+            className="menu"
+          >
+            <p
+              className="menu-label has-text-weight-bold"
             >
-              Home
-            </a>
+              v2.0.0-rc.3
+            </p>
+            <ul
+              className="menu-list"
+            >
+              <li>
+                <a
+                  aria-current={null}
+                  href="/overview"
+                  onClick={[Function]}
+                >
+                  Overview
+                </a>
+                <ul>
+                  <li>
+                    <a
+                      aria-current={null}
+                      href="/model"
+                      onClick={[Function]}
+                    >
+                      Data Model
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      aria-current={null}
+                      href="/domain"
+                      onClick={[Function]}
+                    >
+                      Domain Logic
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      aria-current={null}
+                      href="/infrastructure"
+                      onClick={[Function]}
+                    >
+                      Infrastructure
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a
+                  aria-current={null}
+                  href="/start"
+                  onClick={[Function]}
+                >
+                  Get Started
+                </a>
+                <ul>
+                  <li>
+                    <a
+                      aria-current={null}
+                      href="/setup"
+                      onClick={[Function]}
+                    >
+                      Setup
+                    </a>
+                  </li>
+                  <li
+                    className="menu-label has-text-weight-bold"
+                  >
+                    Examples:
+                  </li>
+                  <li>
+                    <a
+                      aria-current={null}
+                      href="/basic"
+                      onClick={[Function]}
+                    >
+                      Basic
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      aria-current={null}
+                      href="/rest"
+                      onClick={[Function]}
+                    >
+                      Rest
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      aria-current={null}
+                      href="/cqrs-es"
+                      onClick={[Function]}
+                    >
+                      CQRS/ES
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a
+                  aria-current={null}
+                  href="/documentation"
+                  onClick={[Function]}
+                >
+                  Documentation
+                </a>
+                <ul>
+                  <li>
+                    <a
+                      aria-current={null}
+                      href="/environments"
+                      onClick={[Function]}
+                    >
+                      Environments
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://fnalabs.github.io/hive-js/"
+                      rel="noopener noreferrer"
+                      target="_blank"
+                    >
+                      API
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </aside>
+        </header>
+        <section
+          className="column content"
+          role="document"
+        >
+          <h1>
+            Documentation
+          </h1>
+          <p>
+            Below you will find a sitemap for API documentation of the Hive
+            <sup>
+              io
+            </sup>
+             library. There are links to each of the Classes and links to their methods. Also, included on the next page is all of the environment variables for each microservice image.
+          </p>
+          <h2>
+            API
+          </h2>
+          <p>
+            <em>
+              <strong>
+                NOTE:
+              </strong>
+            </em>
+             These pages are currently available online only.
+          </p>
+          <nav>
             <ul>
               <li>
                 <a
-                  href="https://fnalabs.github.io/hive-js/Actor.html"
+                  href="https://fnalabs.github.io/hive-js/"
                   rel="noopener noreferrer"
                   target="_blank"
                 >
-                  Actor
+                  Home
                 </a>
-              </li>
-              <li>
-                <a
-                  href="https://fnalabs.github.io/hive-js/MessageActor.html"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  MessageActor
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://fnalabs.github.io/hive-js/Model.html"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  Model
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://fnalabs.github.io/hive-js/Schema.html"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  Schema
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://fnalabs.github.io/hive-js/System.html"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  System
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://fnalabs.github.io/hive-js/global.html"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  Globals
-                </a>
+                <ul>
+                  <li>
+                    <a
+                      href="https://fnalabs.github.io/hive-js/Actor.html"
+                      rel="noopener noreferrer"
+                      target="_blank"
+                    >
+                      Actor
+                    </a>
+                    <ul>
+                      <li>
+                        <a
+                          href="https://fnalabs.github.io/hive-js/Actor.html#assign"
+                          rel="noopener noreferrer"
+                          target="_blank"
+                        >
+                          assign
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="https://fnalabs.github.io/hive-js/Actor.html#parse"
+                          rel="noopener noreferrer"
+                          target="_blank"
+                        >
+                          parse
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="https://fnalabs.github.io/hive-js/Actor.html#perform"
+                          rel="noopener noreferrer"
+                          target="_blank"
+                        >
+                          perform
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="https://fnalabs.github.io/hive-js/Actor.html#replay"
+                          rel="noopener noreferrer"
+                          target="_blank"
+                        >
+                          replay
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a
+                      href="https://fnalabs.github.io/hive-js/MessageActor.html"
+                      rel="noopener noreferrer"
+                      target="_blank"
+                    >
+                      MessageActor
+                    </a>
+                    <ul>
+                      <li>
+                        <a
+                          href="https://fnalabs.github.io/hive-js/MessageActor.html#assign"
+                          rel="noopener noreferrer"
+                          target="_blank"
+                        >
+                          assign
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="https://fnalabs.github.io/hive-js/Actor.html#parse"
+                          rel="noopener noreferrer"
+                          target="_blank"
+                        >
+                          parse
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="https://fnalabs.github.io/hive-js/MessageActor.html#perform"
+                          rel="noopener noreferrer"
+                          target="_blank"
+                        >
+                          perform
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="https://fnalabs.github.io/hive-js/Actor.html#replay"
+                          rel="noopener noreferrer"
+                          target="_blank"
+                        >
+                          replay
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a
+                      href="https://fnalabs.github.io/hive-js/Model.html"
+                      rel="noopener noreferrer"
+                      target="_blank"
+                    >
+                      Model
+                    </a>
+                    <ul>
+                      <li>
+                        <a
+                          href="https://fnalabs.github.io/hive-js/Model.html#.errors"
+                          rel="noopener noreferrer"
+                          target="_blank"
+                        >
+                          errors
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="https://fnalabs.github.io/hive-js/Model.html#.schema"
+                          rel="noopener noreferrer"
+                          target="_blank"
+                        >
+                          schema
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="https://fnalabs.github.io/hive-js/Model.html#.validate"
+                          rel="noopener noreferrer"
+                          target="_blank"
+                        >
+                          validate
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="https://fnalabs.github.io/hive-js/Model.html#.version"
+                          rel="noopener noreferrer"
+                          target="_blank"
+                        >
+                          version
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="https://fnalabs.github.io/hive-js/Model.html#toJSON"
+                          rel="noopener noreferrer"
+                          target="_blank"
+                        >
+                          toJSON
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a
+                      href="https://fnalabs.github.io/hive-js/Schema.html"
+                      rel="noopener noreferrer"
+                      target="_blank"
+                    >
+                      Schema
+                    </a>
+                    <ul>
+                      <li>
+                        <a
+                          href="https://fnalabs.github.io/hive-js/Schema.html#assign"
+                          rel="noopener noreferrer"
+                          target="_blank"
+                        >
+                          assign
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="https://fnalabs.github.io/hive-js/Schema.html#validate"
+                          rel="noopener noreferrer"
+                          target="_blank"
+                        >
+                          validate
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a
+                      href="https://fnalabs.github.io/hive-js/System.html"
+                      rel="noopener noreferrer"
+                      target="_blank"
+                    >
+                      System
+                    </a>
+                    <ul>
+                      <li>
+                        <a
+                          href="https://fnalabs.github.io/hive-js/System.html#emit"
+                          rel="noopener noreferrer"
+                          target="_blank"
+                        >
+                          emit
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="https://fnalabs.github.io/hive-js/System.html#on"
+                          rel="noopener noreferrer"
+                          target="_blank"
+                        >
+                          on
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a
+                      href="https://fnalabs.github.io/hive-js/global.html"
+                      rel="noopener noreferrer"
+                      target="_blank"
+                    >
+                      Globals
+                    </a>
+                    <ul>
+                      <li>
+                        <a
+                          href="https://fnalabs.github.io/hive-js/global.html#parse"
+                          rel="noopener noreferrer"
+                          target="_blank"
+                        >
+                          parse
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
               </li>
             </ul>
-          </li>
-        </ul>
-      </nav>
+          </nav>
+        </section>
+      </div>
     </div>
   </article>,
   <section
     className="hero is-small is-hive"
   >
     <div
-      className="hero-body has-text-centered"
+      className="hero-body"
     >
-      <a
-        href="/cqrs-es"
-        onClick={[Function]}
-      >
-        <svg
-          height="48"
-          viewBox="0 0 448 512"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M223.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L319.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L393.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34zm-192 34l136 136c9.4 9.4 24.6 9.4 33.9 0l22.6-22.6c9.4-9.4 9.4-24.6 0-33.9L127.9 256l96.4-96.4c9.4-9.4 9.4-24.6 0-33.9L201.7 103c-9.4-9.4-24.6-9.4-33.9 0l-136 136c-9.5 9.4-9.5 24.6-.1 34z"
-          />
-        </svg>
-      </a>
       <nav
-        aria-label="breadcrumbs"
-        className="breadcrumb has-bullet-separator is-hidden-touch"
+        className="level is-mobile"
       >
-        <ul>
-          <li
-            className="is-active"
-          >
-            <a
-              aria-current="page"
-              href="/documentation"
-              onClick={[Function]}
-            >
-              Documentation
-            </a>
-          </li>
-          <li>
-            <a
-              href="/environments"
-              onClick={[Function]}
-            >
-              Environments
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://fnalabs.github.io/hive-js/"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              API
-            </a>
-          </li>
-        </ul>
-      </nav>
-      <a
-        href="/environments"
-        onClick={[Function]}
-      >
-        <svg
-          height="48"
-          viewBox="0 0 448 512"
-          xmlns="http://www.w3.org/2000/svg"
+        <div
+          className="level-item has-text-centered"
         >
-          <path
-            d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34zm192-34l-136-136c-9.4-9.4-24.6-9.4-33.9 0l-22.6 22.6c-9.4 9.4-9.4 24.6 0 33.9l96.4 96.4-96.4 96.4c-9.4 9.4-9.4 24.6 0 33.9l22.6 22.6c9.4 9.4 24.6 9.4 33.9 0l136-136c9.4-9.2 9.4-24.4 0-33.8z"
-          />
-        </svg>
-      </a>
+          <a
+            aria-label="previous page"
+            href="/cqrs-es"
+            onClick={[Function]}
+          >
+            <span
+              className="icon is-large"
+            >
+              <svg
+                height="48"
+                viewBox="0 0 448 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M223.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L319.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L393.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34zm-192 34l136 136c9.4 9.4 24.6 9.4 33.9 0l22.6-22.6c9.4-9.4 9.4-24.6 0-33.9L127.9 256l96.4-96.4c9.4-9.4 9.4-24.6 0-33.9L201.7 103c-9.4-9.4-24.6-9.4-33.9 0l-136 136c-9.5 9.4-9.5 24.6-.1 34z"
+                />
+              </svg>
+            </span>
+          </a>
+        </div>
+        <div
+          className="level-item has-text-centered"
+        >
+          <a
+            aria-label="next page"
+            href="/environments"
+            onClick={[Function]}
+          >
+            <span
+              className="icon is-large"
+            >
+              <svg
+                height="48"
+                viewBox="0 0 448 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34zm192-34l-136-136c-9.4-9.4-24.6-9.4-33.9 0l-22.6 22.6c-9.4 9.4-9.4 24.6 0 33.9l96.4 96.4-96.4 96.4c-9.4 9.4-9.4 24.6 0 33.9l22.6 22.6c9.4 9.4 24.6 9.4 33.9 0l136-136c9.4-9.2 9.4-24.4 0-33.8z"
+                />
+              </svg>
+            </span>
+          </a>
+        </div>
+      </nav>
     </div>
   </section>,
 ]
