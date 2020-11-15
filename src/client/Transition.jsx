@@ -64,8 +64,9 @@ class Transition extends Component {
             buttonText='Accept'
             declineButtonText='Decline'
             buttonClasses='button is-small is-pulled-right is-dark'
+            buttonWrapperClasses='has-text-right'
             declineButtonClasses='button is-small is-pulled-right is-light'
-            containerClasses='notification is-radiusless'
+            containerClasses='cookieConsent notification is-radiusless'
             onAccept={this.handleOnAccept}
             onDecline={this.handleOnDecline}
           >
