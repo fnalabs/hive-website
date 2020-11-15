@@ -1,81 +1,62 @@
 /* eslint-env serviceworker */
-/* global workbox */
-
-// constants
-const urls = [
-  { url: '.' },
-  { url: '/overview' },
-  { url: '/model' },
-  { url: '/domain' },
-  { url: '/infrastructure' },
-  { url: '/start' },
-  { url: '/setup' },
-  { url: '/basic' },
-  { url: '/rest' },
-  { url: '/cqrs-es' },
-  { url: '/documentation' },
-  { url: '/environments' },
-  { url: '/cookie' },
-  { url: '/privacy' }
-]
-const precacheManifest = !self.__precacheManifest
-  ? urls
-  : self.__precacheManifest.reduce((ret, val) => {
-    if (val.revision) for (const url of urls) url.revision = val.revision
-    ret.push(val)
-    return ret
-  }, urls)
+import { setCacheNameDetails } from 'workbox-core'
+import * as googleAnalytics from 'workbox-google-analytics'
+import { cleanupOutdatedCaches, precacheAndRoute } from 'workbox-precaching'
+import { registerRoute } from 'workbox-routing'
+import { CacheFirst } from 'workbox-strategies'
+import { CacheableResponsePlugin } from 'workbox-cacheable-response'
+import { ExpirationPlugin } from 'workbox-expiration'
 
 // event handlers
 self.addEventListener('install', (event) => self.skipWaiting())
 
 // config
-workbox.core.setCacheNameDetails({
+setCacheNameDetails({
   prefix: 'hive'
 })
-workbox.googleAnalytics.initialize({
+googleAnalytics.initialize({
   parameterOverrides: {
     cd1: 'offline'
   }
 })
 
 // precache and routing
-workbox.precaching.precacheAndRoute(precacheManifest)
-workbox.precaching.cleanupOutdatedCaches()
+precacheAndRoute(self.__WB_MANIFEST)
+cleanupOutdatedCaches()
 
-workbox.routing.registerRoute(
+registerRoute(
   /.*google-analytics\.com/,
-  new workbox.strategies.CacheFirst({
+  new CacheFirst({
     cacheName: 'hive-analytics',
     plugins: [
-      new workbox.expiration.Plugin({
+      new ExpirationPlugin({
         maxEntries: 60,
         maxAgeSeconds: 2592000 // 30 Days
       })
     ]
   })
 )
-workbox.routing.registerRoute(
+registerRoute(
   /\.(?:png|jpg|jpeg|svg|gif)$/,
-  new workbox.strategies.CacheFirst({
+  new CacheFirst({
     cacheName: 'hive-images',
     plugins: [
-      new workbox.expiration.Plugin({
+      new ExpirationPlugin({
         maxEntries: 60,
         maxAgeSeconds: 2592000 // 30 Days
       })
     ]
   })
 )
-workbox.routing.registerRoute(
-  new RegExp('^https://fnalabs\\.github\\.io/fnalabs-assets/assets/'),
-  new workbox.strategies.CacheFirst({
+registerRoute(
+  /^https:\/\/fnalabs\.github\.io\/fnalabs-assets\/assets\//,
+  new CacheFirst({
     cacheName: 'hive-images',
     plugins: [
-      new workbox.cacheableResponse.Plugin({
+      new CacheableResponsePlugin({
         statuses: [0, 200]
       }),
-      new workbox.expiration.Plugin({
+      new ExpirationPlugin({
         maxEntries: 60,
         maxAgeSeconds: 2592000 // 30 Days
       })
