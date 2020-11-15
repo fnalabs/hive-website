@@ -2,7 +2,7 @@ import React from 'react'
 
 import { Container, Tile } from 'common'
 import { Hero, HeroBody, HeroFooter } from 'common/hero'
-import { ArrowDown } from 'icons'
+import { ArrowDown, HiveIO } from 'icons'
 
 export const TopHero = () => (
   <Hero size='fullheight' color='light' bold>
@@ -11,7 +11,7 @@ export const TopHero = () => (
         <Tile type='ancestor'>
           <Tile type='parent'>
             <Tile type='child' size={6} vertical centered>
-              <h1 className='title'>Hive<sup>io</sup></h1>
+              <h1 className='title'><HiveIO className='svg-inline' height='72' />Hive<sup>io</sup></h1>
               <h2 className='subtitle'>A reactive, cloud-native framework for building microservices.</h2>
             </Tile>
 
