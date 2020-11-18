@@ -75,9 +75,9 @@ class Nav extends Component {
                 <NavLink to='/documentation' activeClassName='is-active' className='navbar-link' onClick={this.handleClickBlur}>Documentation</NavLink>
                 <div className='navbar-dropdown is-boxed'>
                   <NavLink to='/environments' activeClassName='is-active' className='navbar-item' onClick={this.handleClickBlur}>Environments</NavLink>
-                  <AnalyticsLink to='https://fnalabs.github.io/hive-js/' target='_blank' rel='noopener noreferrer' className='navbar-item' onClick={this.handleClickBlur}>API</AnalyticsLink>
+                  <AnalyticsLink to='https://fnalabs.github.io/hive-io/' target='_blank' rel='noopener noreferrer' className='navbar-item' onClick={this.handleClickBlur}>API</AnalyticsLink>
                   <hr className='navbar-divider' />
-                  <span className='navbar-item has-text-weight-bold'>v2.0.0-rc.3</span>
+                  <span className='navbar-item has-text-weight-bold'>v2.0.0</span>
                 </div>
               </div>
             </div>
