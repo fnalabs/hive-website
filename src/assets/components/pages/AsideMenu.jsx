@@ -5,7 +5,7 @@ import { AnalyticsLink } from 'common'
 
 const AsideMenu = () => (
   <aside className='menu'>
-    <p className='menu-label has-text-weight-bold'>v2.0.0-rc.3</p>
+    <p className='menu-label has-text-weight-bold'>v2.0.0</p>
     <ul className='menu-list'>
       <li><NavLink to='/overview' activeClassName='is-active'>Overview</NavLink>
         <ul>
@@ -28,7 +28,7 @@ const AsideMenu = () => (
       <li><NavLink to='/documentation' activeClassName='is-active'>Documentation</NavLink>
         <ul>
           <li><NavLink to='/environments' activeClassName='is-active'>Environments</NavLink></li>
-          <li><AnalyticsLink to='https://fnalabs.github.io/hive-js/' target='_blank' rel='noopener noreferrer'>API</AnalyticsLink></li>
+          <li><AnalyticsLink to='https://fnalabs.github.io/hive-io/' target='_blank' rel='noopener noreferrer'>API</AnalyticsLink></li>
         </ul>
       </li>
     </ul>
