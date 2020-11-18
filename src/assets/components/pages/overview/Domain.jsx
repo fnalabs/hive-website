@@ -46,7 +46,7 @@ export default class Domain extends Component {
         <article className='section is-medium'>
           <Container>
             <div className='columns'>
-              <header className='column is-narrow is-hidden-touch is-aside'>
+              <header className='column is-narrow is-hidden-touch'>
                 <AsideMenu />
               </header>
               <section className='column content' role='document'>
@@ -60,18 +60,18 @@ export default class Domain extends Component {
                   <dd>Asynchronously making local decisions or calling on another actor to perform.</dd>
 
                   <dt><em><strong>Eventual</strong></em></dt>
-                  <dd>Sending messages via an internal (<a href='https://fnalabs.github.io/hive-js/System.html' target='_blank' rel='noopener noreferrer'>Actor System</a>) or external (<a href='https://kafka.apache.org/' target='_blank' rel='noopener noreferrer'>Kafka</a>) message bus.</dd>
+                  <dd>Sending messages via an internal (<a href='https://fnalabs.github.io/hive-io/System.html' target='_blank' rel='noopener noreferrer'>Actor System</a>) or external (<a href='https://kafka.apache.org/' target='_blank' rel='noopener noreferrer'>Kafka</a>) message bus.</dd>
                 </dl>
                 <p>Hive<sup>io</sup> Actors are able to achieve highly concurrent operations by leveraging <a href='https://nodejs.org/' target='_blank' rel='noopener noreferrer'>Node.js</a>' non-blocking, asynchronous I/O. These actors can be arranged to perform tasks for a variety of architectures. Everything is asynchronous from the ground up, even validation via transport schemas.</p>
 
                 <h2>Types of Actors</h2>
-                <p>There are 2 different types of Actors defined in the Hive<sup>io</sup> Framework. They are:</p>
+                <p>There are 2 different types of Actors defined in the Hive<sup>io</sup> framework. They are:</p>
                 <dl>
-                  <dt><a href='https://fnalabs.github.io/hive-js/Actor.html' target='_blank' rel='noopener noreferrer'><strong>Actor</strong></a></dt>
-                  <dd>This is the base Actor for the Hive<sup>io</sup> Framework. It is similar to a combination of a Controller and Model classes in the MVC pattern. It can be defined to parse paths from URLs, associated with Models and their Schemas, or both.</dd>
+                  <dt><a href='https://fnalabs.github.io/hive-io/Actor.html' target='_blank' rel='noopener noreferrer'><strong>Actor</strong></a></dt>
+                  <dd>This is the base Actor for the Hive<sup>io</sup> framework. It is similar to a combination of a Controller and Model classes in the MVC pattern. It can be defined to parse paths from URLs, associated with Models and their Schemas, or both.</dd>
 
-                  <dt><a href='https://fnalabs.github.io/hive-js/MessageActor.html' target='_blank' rel='noopener noreferrer'><strong>MessageActor</strong></a></dt>
-                  <dd>This extends the base Actor for the Hive<sup>io</sup> Framework. It is meant to handle more specific use cases for Domain Commands|Events to act upon the Model. It can be defined to support only Event Models and their Schemas but also Commands Models and Data Models. It can also be defined to parse paths from URLs along with the previously mentioned Models and their Schemas.</dd>
+                  <dt><a href='https://fnalabs.github.io/hive-io/MessageActor.html' target='_blank' rel='noopener noreferrer'><strong>MessageActor</strong></a></dt>
+                  <dd>This extends the base Actor for the Hive<sup>io</sup> framework. It is meant to handle more specific use cases for Domain Commands|Events to act upon the Model. It can be defined to support only Event Models and their Schemas but also Commands Models and Data Models. It can also be defined to parse paths from URLs along with the previously mentioned Models and their Schemas.</dd>
                 </dl>
               </section>
             </div>

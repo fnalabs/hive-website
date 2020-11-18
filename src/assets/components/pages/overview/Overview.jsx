@@ -46,14 +46,14 @@ export default class Overview extends Component {
         <article className='section is-medium'>
           <Container>
             <div className='columns'>
-              <header className='column is-narrow is-hidden-touch is-aside'>
+              <header className='column is-narrow is-hidden-touch'>
                 <AsideMenu />
               </header>
               <section className='column content' role='document'>
                 <h1>Overview</h1>
                 <p>Hive<sup>io</sup> is a <a href='https://www.reactivemanifesto.org/' target='_blank' rel='noopener noreferrer'>reactive</a>, <a href='https://www.cncf.io/blog/2017/05/15/developing-cloud-native-applications/' target='_blank' rel='noopener noreferrer'>cloud-native</a> framework meant to foster and support lightweight, atomic <a href='https://en.wikipedia.org/wiki/Microservices' target='_blank' rel='noopener noreferrer'>microservices</a> from a project's inception onward. It consists of a small library of classes that provide the basic building blocks to interface with a small collection of containers, from straightforward <a href='https://en.wikipedia.org/wiki/Representational_state_transfer' target='_blank' rel='noopener noreferrer'>RESTful</a> services to specialized <a href='https://martinfowler.com/bliki/CQRS.html' target='_blank' rel='noopener noreferrer'>CQRS</a>/<a href='https://martinfowler.com/eaaDev/EventSourcing.html' target='_blank' rel='noopener noreferrer'>ES</a> services. The core tenets of this project are:</p>
                 <ul>
-                  <li>Provide a framework of standard patterns to foster the creation and evolution of a project.</li>
+                  <li>Provide a framework of standard patterns to foster the creation and evolution of a cloud application.</li>
                   <li>Provide a universal JavaScript library for standardized data exchanges.</li>
                   <li>Define a clear separation between domain logic and infrastructure.</li>
                   <li>Minimize opinions in the framework to support a variety of needs.</li>

@@ -12,7 +12,7 @@ Array [
         className="columns"
       >
         <header
-          className="column is-narrow is-hidden-touch is-aside"
+          className="column is-narrow is-hidden-touch"
         >
           <aside
             className="menu"
@@ -20,7 +20,7 @@ Array [
             <p
               className="menu-label has-text-weight-bold"
             >
-              v2.0.0-rc.3
+              v2.0.0
             </p>
             <ul
               className="menu-list"
@@ -135,7 +135,7 @@ Array [
                   </li>
                   <li>
                     <a
-                      href="https://fnalabs.github.io/hive-js/"
+                      href="https://fnalabs.github.io/hive-io/"
                       rel="noopener noreferrer"
                       target="_blank"
                     >
@@ -167,7 +167,7 @@ Array [
             </a>
              (
             <a
-              href="https://github.com/fnalabs/hive-js-domain-example"
+              href="https://github.com/fnalabs/hive-io/tree/master/packages/hive-js-domain-example"
               rel="noopener noreferrer"
               target="_blank"
             >
@@ -209,7 +209,13 @@ Array [
             </span>
           </div>
           <h2>
-            Infrastructure
+            <a
+              href="https://github.com/fnalabs/hive-io/tree/master/dev/docker/domain/production"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              Infrastructure
+            </a>
           </h2>
           <dl>
             <dt>
@@ -275,15 +281,17 @@ Array [
                 <br />
                   # NOTE: this is an example, you will need to define your own
                 <br />
-                  #      &nbspex. https://github.com/fnalabs/hive-io-proxy
+                  #       ex. https://github.com/fnalabs/hive-io/blob/master/dev/proxy
                 <br />
                   proxy:
                 <br />
-                    image: haproxy:1.8.23-alpine
+                    build: ../../../proxy
+                <br />
+                    image: hive-proxy:production
+                <br />
+                    container_name: proxy
                 <br />
                     depends_on:
-                <br />
-                      - hive-producer-js
                 <br />
                       - hive-base-js
                 <br />
@@ -291,7 +299,11 @@ Array [
                 <br />
                     ports:
                 <br />
-                      - 80:80
+                      - 443:443
+                <br />
+                    volumes:
+                <br />
+                      - ../../../proxy:/usr/local/etc/haproxy:rw
                 <br />
                     networks:
                 <br />
@@ -301,7 +313,9 @@ Array [
                 <br />
                   fluentd:
                 <br />
-                    image: fluent/fluentd:v1.7.4-1.0
+                    image: fluent/fluentd:v1.11.4-2.0
+                <br />
+                    container_name: fluentd
                 <br />
                     networks:
                 <br />
@@ -320,17 +334,21 @@ Array [
                 <br />
                       dockerfile: Producer.dockerfile
                 <br />
+                    image: hive-producer-js:production
+                <br />
+                    container_name: hive-producer-js
+                <br />
                     environment:
                 <br />
                       ACTOR: ViewContentActor
                 <br />
                       ACTOR_LIB: hive-io-domain-example
                 <br />
+                      ACTOR_URLS: "/posts/:id"
+                <br />
                       CLUSTER_SIZE: 1
                 <br />
-                      HTTP_VERSION: 1
-                <br />
-                      SECURE: "false"
+                      SECURE: "true"
                 <br />
                       EVENT_STORE_TOPIC: view
                 <br />
@@ -348,9 +366,13 @@ Array [
                 <br />
                     depends_on:
                 <br />
+                      - fluentd
+                <br />
                       - kafka
                 <br />
-                      - fluentd
+                    volumes:
+                <br />
+                      - ../../../proxy:/opt/app/cert:rw
                 <br />
                     networks:
                 <br />
@@ -367,17 +389,21 @@ Array [
                 <br />
                       dockerfile: Stream-Processor.dockerfile
                 <br />
+                    image: hive-stream-processor-js:production
+                <br />
+                    container_name: hive-stream-processor-js
+                <br />
                     environment:
                 <br />
                       ACTOR: PostCommandActor
                 <br />
                       ACTOR_LIB: hive-io-domain-example
                 <br />
+                      ACTOR_URLS: "/posts,/posts/:id"
+                <br />
                       CLUSTER_SIZE: 1
                 <br />
-                      HTTP_VERSION: 1
-                <br />
-                      SECURE: "false"
+                      SECURE: "true"
                 <br />
                       CACHE_URL: "redis://redis:6379"
                 <br />
@@ -397,11 +423,15 @@ Array [
                 <br />
                     depends_on:
                 <br />
-                      - redis
+                      - fluentd
                 <br />
                       - kafka
                 <br />
-                      - fluentd
+                      - redis
+                <br />
+                    volumes:
+                <br />
+                      - ../../../proxy:/opt/app/cert:rw
                 <br />
                     networks:
                 <br />
@@ -409,7 +439,9 @@ Array [
                 <br />
                   redis:
                 <br />
-                    image: redis:5.0.7-alpine
+                    image: redis:6.0.9-alpine
+                <br />
+                    container_name: redis
                 <br />
                     networks:
                 <br />
@@ -422,7 +454,9 @@ Array [
                 <br />
                   kafka:
                 <br />
-                    image: confluentinc/cp-kafka:5.3.1
+                    image: confluentinc/cp-kafka:5.4.3
+                <br />
+                    container_name: kafka
                 <br />
                     depends_on:
                 <br />
@@ -438,6 +472,10 @@ Array [
                 <br />
                       KAFKA_COMPRESSION_TYPE: gzip
                 <br />
+                    expose:
+                <br />
+                      - 29092
+                <br />
                     networks:
                 <br />
                       - hive-io
@@ -446,11 +484,17 @@ Array [
                 <br />
                   zookeeper:
                 <br />
-                    image: confluentinc/cp-zookeeper:5.3.1
+                    image: confluentinc/cp-zookeeper:5.4.3
+                <br />
+                    container_name: zookeeper
                 <br />
                     environment:
                 <br />
                       ZOOKEEPER_CLIENT_PORT: 32181
+                <br />
+                    expose:
+                <br />
+                      - 32181
                 <br />
                     networks:
                 <br />
@@ -469,6 +513,10 @@ Array [
                 <br />
                       dockerfile: Consumer.dockerfile
                 <br />
+                    image: hive-consumer-js:production
+                <br />
+                    container_name: hive-consumer-js
+                <br />
                     environment:
                 <br />
                       ACTOR: PostEventActor
@@ -477,9 +525,7 @@ Array [
                 <br />
                       CLUSTER_SIZE: 1
                 <br />
-                      HTTP_VERSION: 1
-                <br />
-                      SECURE: "false"
+                      SECURE: "true"
                 <br />
                       EVENT_STORE_TOPIC: "content|view"
                 <br />
@@ -503,11 +549,15 @@ Array [
                 <br />
                     depends_on:
                 <br />
-                      - mongo
+                      - fluentd
                 <br />
                       - kafka
                 <br />
-                      - fluentd
+                      - mongo
+                <br />
+                    volumes:
+                <br />
+                      - ../../../proxy:/opt/app/cert:rw
                 <br />
                     networks:
                 <br />
@@ -515,7 +565,9 @@ Array [
                 <br />
                   mongo:
                 <br />
-                    image: mongo:4.2.1
+                    image: mongo:4.4.1
+                <br />
+                    container_name: mongo
                 <br />
                     networks:
                 <br />
@@ -534,17 +586,21 @@ Array [
                 <br />
                       dockerfile: Rest.dockerfile
                 <br />
+                    image: hive-base-js:production
+                <br />
+                    container_name: hive-base-js
+                <br />
                     environment:
                 <br />
                       ACTOR: PostQueryActor
                 <br />
                       ACTOR_LIB: hive-io-domain-example
                 <br />
+                      ACTOR_URLS: "/posts,/posts/:id"
+                <br />
                       CLUSTER_SIZE: 1
                 <br />
-                      HTTP_VERSION: 1
-                <br />
-                      SECURE: "false"
+                      SECURE: "true"
                 <br />
                       MONGO_URL: "mongodb://mongo:27017/post"
                 <br />
@@ -558,9 +614,15 @@ Array [
                 <br />
                     depends_on:
                 <br />
+                      - fluentd
+                <br />
+                      - hive-producer-js
+                <br />
                       - mongo
                 <br />
-                      - fluentd
+                    volumes:
+                <br />
+                      - ../../../proxy:/opt/app/cert:rw
                 <br />
                     networks:
                 <br />

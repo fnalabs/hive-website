@@ -46,7 +46,7 @@ export default class Model extends Component {
         <article className='section is-medium'>
           <Container>
             <div className='columns'>
-              <header className='column is-narrow is-hidden-touch is-aside'>
+              <header className='column is-narrow is-hidden-touch'>
                 <AsideMenu />
               </header>
               <section className='column content' role='document'>
@@ -62,10 +62,11 @@ export default class Model extends Component {
                   <dt><em><strong>Flux Standard Action</strong></em></dt>
                   <dd>The <a href='https://github.com/redux-utilities/flux-standard-action' target='_blank' rel='noopener noreferrer'>Flux Standard Action</a> specification allows us to define a lightweight, network data payload used to build your services. Minimally, this provides our network payload structure with explicit support for typed data definintions. Payload objects are defined and validated by their associated JSON Schemas.</dd>
                 </dl>
-                <p>These Models would then be packaged up and built into your client side domain logic or in the growing list of Docker images supporting the infrastructure layer of the Hive<sup>io</sup> Framework.</p>
+                <p>These Models would then be packaged up and built into your client side domain logic or in the growing list of Docker images supporting the infrastructure layer of the Hive<sup>io</sup> framework.</p>
 
                 <h2>Schema Registry</h2>
-                <p>A schema registry can easily be achieved by combining concepts in the JSON Schema specification and adding a static file server to serve the JSON schemas. Using the <a href='https://json-schema.org/learn/getting-started-step-by-step.html#starting-the-schema' target='_blank' rel='noopener noreferrer'><code>$id</code> keyword</a>, you can specify a URI for the schema for hosting. You could use Node.js to host the files or even Nginx or Apache Web Server to serve the static JSON schemas. We have not decided to build and maintain a solution specific to the Hive<sup>io</sup> Framework at this time due to time constraints but either hosting solution should be straightforward. Furthermore, hosting Schemas may not be necessary for your solution depending on the size of the domain and/or team(s) involved in building and maintaining your solutions.</p>
+                <p>A <a href='https://docs.confluent.io/current/schema-registry/index.html' target='_blank' rel='noopener noreferrer'>schema registry</a> can easily be achieved by combining concepts in the JSON Schema specification and adding a static file server to serve the JSON schemas. Using the <a href='https://json-schema.org/learn/getting-started-step-by-step.html#starting-the-schema' target='_blank' rel='noopener noreferrer'><code>$id</code> keyword</a>, you can specify a URI for the schema for hosting. You could use Node.js to host the files or even Nginx or Apache Web Server to serve the static JSON schemas.</p>
+                <p>We have not decided to build and maintain a solution specific to the Hive<sup>io</sup> framework at this time due to time constraints but either hosting solution should be straightforward. Furthermore, hosting Schemas may not be necessary for your solution depending on the complexity of the domain and/or team(s) involved in building and maintaining your solutions.</p>
               </section>
             </div>
           </Container>

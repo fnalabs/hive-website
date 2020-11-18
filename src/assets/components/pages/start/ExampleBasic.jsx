@@ -48,12 +48,12 @@ export default class Basic extends Component {
         <article className='section is-medium'>
           <Container>
             <div className='columns'>
-              <header className='column is-narrow is-hidden-touch is-aside'>
+              <header className='column is-narrow is-hidden-touch'>
                 <AsideMenu />
               </header>
               <section className='column content' role='document'>
                 <h1>Example: Basic</h1>
-                <p>Let's start off with a straightforward example. The following <a href='https://fnalabs.github.io/hive-js/Actor.html' target='_blank' rel='noopener noreferrer'>Actor</a> and its associated <a href='http://json-schema.org/' target='_blank' rel='noopener noreferrer'>JSON Schema</a> are performing superficial validation against the schema and returning an instance of the Model.</p>
+                <p>Let's start off with a straightforward example. The following <a href='https://fnalabs.github.io/hive-io/Actor.html' target='_blank' rel='noopener noreferrer'>Actor</a> and its associated <a href='http://json-schema.org/' target='_blank' rel='noopener noreferrer'>JSON Schema</a> are performing superficial validation against the schema and returning an instance of the Model.</p>
                 <dl>
                   <dt><code>ExampleSchema.json</code></dt>
                   <dd>

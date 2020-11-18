@@ -174,7 +174,7 @@ exports[`<Nav /> should render Get Started page nav correctly 1`] = `
             </a>
             <a
               className="navbar-item"
-              href="https://fnalabs.github.io/hive-js/"
+              href="https://fnalabs.github.io/hive-io/"
               rel="noopener noreferrer"
               target="_blank"
             >
@@ -186,7 +186,7 @@ exports[`<Nav /> should render Get Started page nav correctly 1`] = `
             <span
               className="navbar-item has-text-weight-bold"
             >
-              v2.0.0-rc.3
+              v2.0.0
             </span>
           </div>
         </div>
@@ -370,7 +370,7 @@ exports[`<Nav /> should render Overview page nav correctly 1`] = `
             </a>
             <a
               className="navbar-item"
-              href="https://fnalabs.github.io/hive-js/"
+              href="https://fnalabs.github.io/hive-io/"
               rel="noopener noreferrer"
               target="_blank"
             >
@@ -382,7 +382,7 @@ exports[`<Nav /> should render Overview page nav correctly 1`] = `
             <span
               className="navbar-item has-text-weight-bold"
             >
-              v2.0.0-rc.3
+              v2.0.0
             </span>
           </div>
         </div>
@@ -565,7 +565,7 @@ exports[`<Nav /> should render homepage nav correctly 1`] = `
             </a>
             <a
               className="navbar-item"
-              href="https://fnalabs.github.io/hive-js/"
+              href="https://fnalabs.github.io/hive-io/"
               rel="noopener noreferrer"
               target="_blank"
             >
@@ -577,7 +577,7 @@ exports[`<Nav /> should render homepage nav correctly 1`] = `
             <span
               className="navbar-item has-text-weight-bold"
             >
-              v2.0.0-rc.3
+              v2.0.0
             </span>
           </div>
         </div>

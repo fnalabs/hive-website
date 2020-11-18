@@ -12,7 +12,7 @@ Array [
         className="columns"
       >
         <header
-          className="column is-narrow is-hidden-touch is-aside"
+          className="column is-narrow is-hidden-touch"
         >
           <aside
             className="menu"
@@ -20,7 +20,7 @@ Array [
             <p
               className="menu-label has-text-weight-bold"
             >
-              v2.0.0-rc.3
+              v2.0.0
             </p>
             <ul
               className="menu-list"
@@ -135,7 +135,7 @@ Array [
                   </li>
                   <li>
                     <a
-                      href="https://fnalabs.github.io/hive-js/"
+                      href="https://fnalabs.github.io/hive-io/"
                       rel="noopener noreferrer"
                       target="_blank"
                     >
@@ -176,7 +176,7 @@ Array [
             <ul>
               <li>
                 <a
-                  href="https://fnalabs.github.io/hive-js/"
+                  href="https://fnalabs.github.io/hive-io/"
                   rel="noopener noreferrer"
                   target="_blank"
                 >
@@ -185,7 +185,7 @@ Array [
                 <ul>
                   <li>
                     <a
-                      href="https://fnalabs.github.io/hive-js/Actor.html"
+                      href="https://fnalabs.github.io/hive-io/Actor.html"
                       rel="noopener noreferrer"
                       target="_blank"
                     >
@@ -194,7 +194,7 @@ Array [
                     <ul>
                       <li>
                         <a
-                          href="https://fnalabs.github.io/hive-js/Actor.html#assign"
+                          href="https://fnalabs.github.io/hive-io/Actor.html#assign"
                           rel="noopener noreferrer"
                           target="_blank"
                         >
@@ -203,16 +203,7 @@ Array [
                       </li>
                       <li>
                         <a
-                          href="https://fnalabs.github.io/hive-js/Actor.html#parse"
-                          rel="noopener noreferrer"
-                          target="_blank"
-                        >
-                          parse
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="https://fnalabs.github.io/hive-js/Actor.html#perform"
+                          href="https://fnalabs.github.io/hive-io/Actor.html#perform"
                           rel="noopener noreferrer"
                           target="_blank"
                         >
@@ -221,7 +212,7 @@ Array [
                       </li>
                       <li>
                         <a
-                          href="https://fnalabs.github.io/hive-js/Actor.html#replay"
+                          href="https://fnalabs.github.io/hive-io/Actor.html#replay"
                           rel="noopener noreferrer"
                           target="_blank"
                         >
@@ -232,7 +223,7 @@ Array [
                   </li>
                   <li>
                     <a
-                      href="https://fnalabs.github.io/hive-js/MessageActor.html"
+                      href="https://fnalabs.github.io/hive-io/MessageActor.html"
                       rel="noopener noreferrer"
                       target="_blank"
                     >
@@ -241,7 +232,7 @@ Array [
                     <ul>
                       <li>
                         <a
-                          href="https://fnalabs.github.io/hive-js/MessageActor.html#assign"
+                          href="https://fnalabs.github.io/hive-io/MessageActor.html#assign"
                           rel="noopener noreferrer"
                           target="_blank"
                         >
@@ -250,16 +241,7 @@ Array [
                       </li>
                       <li>
                         <a
-                          href="https://fnalabs.github.io/hive-js/Actor.html#parse"
-                          rel="noopener noreferrer"
-                          target="_blank"
-                        >
-                          parse
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="https://fnalabs.github.io/hive-js/MessageActor.html#perform"
+                          href="https://fnalabs.github.io/hive-io/MessageActor.html#perform"
                           rel="noopener noreferrer"
                           target="_blank"
                         >
@@ -268,7 +250,7 @@ Array [
                       </li>
                       <li>
                         <a
-                          href="https://fnalabs.github.io/hive-js/Actor.html#replay"
+                          href="https://fnalabs.github.io/hive-io/Actor.html#replay"
                           rel="noopener noreferrer"
                           target="_blank"
                         >
@@ -279,7 +261,7 @@ Array [
                   </li>
                   <li>
                     <a
-                      href="https://fnalabs.github.io/hive-js/Model.html"
+                      href="https://fnalabs.github.io/hive-io/Model.html"
                       rel="noopener noreferrer"
                       target="_blank"
                     >
@@ -288,7 +270,7 @@ Array [
                     <ul>
                       <li>
                         <a
-                          href="https://fnalabs.github.io/hive-js/Model.html#.errors"
+                          href="https://fnalabs.github.io/hive-io/Model.html#.errors"
                           rel="noopener noreferrer"
                           target="_blank"
                         >
@@ -297,7 +279,7 @@ Array [
                       </li>
                       <li>
                         <a
-                          href="https://fnalabs.github.io/hive-js/Model.html#.schema"
+                          href="https://fnalabs.github.io/hive-io/Model.html#.schema"
                           rel="noopener noreferrer"
                           target="_blank"
                         >
@@ -306,7 +288,7 @@ Array [
                       </li>
                       <li>
                         <a
-                          href="https://fnalabs.github.io/hive-js/Model.html#.validate"
+                          href="https://fnalabs.github.io/hive-io/Model.html#.validate"
                           rel="noopener noreferrer"
                           target="_blank"
                         >
@@ -315,7 +297,7 @@ Array [
                       </li>
                       <li>
                         <a
-                          href="https://fnalabs.github.io/hive-js/Model.html#.version"
+                          href="https://fnalabs.github.io/hive-io/Model.html#.version"
                           rel="noopener noreferrer"
                           target="_blank"
                         >
@@ -324,7 +306,7 @@ Array [
                       </li>
                       <li>
                         <a
-                          href="https://fnalabs.github.io/hive-js/Model.html#toJSON"
+                          href="https://fnalabs.github.io/hive-io/Model.html#toJSON"
                           rel="noopener noreferrer"
                           target="_blank"
                         >
@@ -335,7 +317,7 @@ Array [
                   </li>
                   <li>
                     <a
-                      href="https://fnalabs.github.io/hive-js/Schema.html"
+                      href="https://fnalabs.github.io/hive-io/Schema.html"
                       rel="noopener noreferrer"
                       target="_blank"
                     >
@@ -344,7 +326,7 @@ Array [
                     <ul>
                       <li>
                         <a
-                          href="https://fnalabs.github.io/hive-js/Schema.html#assign"
+                          href="https://fnalabs.github.io/hive-io/Schema.html#assign"
                           rel="noopener noreferrer"
                           target="_blank"
                         >
@@ -353,7 +335,7 @@ Array [
                       </li>
                       <li>
                         <a
-                          href="https://fnalabs.github.io/hive-js/Schema.html#validate"
+                          href="https://fnalabs.github.io/hive-io/Schema.html#validate"
                           rel="noopener noreferrer"
                           target="_blank"
                         >
@@ -364,7 +346,7 @@ Array [
                   </li>
                   <li>
                     <a
-                      href="https://fnalabs.github.io/hive-js/System.html"
+                      href="https://fnalabs.github.io/hive-io/System.html"
                       rel="noopener noreferrer"
                       target="_blank"
                     >
@@ -373,7 +355,7 @@ Array [
                     <ul>
                       <li>
                         <a
-                          href="https://fnalabs.github.io/hive-js/System.html#emit"
+                          href="https://fnalabs.github.io/hive-io/System.html#emit"
                           rel="noopener noreferrer"
                           target="_blank"
                         >
@@ -382,31 +364,11 @@ Array [
                       </li>
                       <li>
                         <a
-                          href="https://fnalabs.github.io/hive-js/System.html#on"
+                          href="https://fnalabs.github.io/hive-io/System.html#on"
                           rel="noopener noreferrer"
                           target="_blank"
                         >
                           on
-                        </a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li>
-                    <a
-                      href="https://fnalabs.github.io/hive-js/global.html"
-                      rel="noopener noreferrer"
-                      target="_blank"
-                    >
-                      Globals
-                    </a>
-                    <ul>
-                      <li>
-                        <a
-                          href="https://fnalabs.github.io/hive-js/global.html#parse"
-                          rel="noopener noreferrer"
-                          target="_blank"
-                        >
-                          parse
                         </a>
                       </li>
                     </ul>

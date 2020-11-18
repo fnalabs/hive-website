@@ -144,7 +144,7 @@ Array [
                   className="tile is-child"
                 >
                   <article
-                    className="card is-reactive"
+                    className="card m-6 is-reactive"
                   >
                     <div
                       className="card-image"
@@ -176,7 +176,7 @@ Array [
                         <sup>
                           io
                         </sup>
-                         is able to give lightning fast response times by implementing and supporting microservices with Node.js. You immediately get high performance by leveraging a high volume and low latency non-blocking I/O solution.
+                         is able to give lightning fast response times by implementing and supporting microservices with Node.js and Fastify.
                       </p>
                     </div>
                   </article>
@@ -189,7 +189,7 @@ Array [
                   className="tile is-child"
                 >
                   <article
-                    className="card is-reactive"
+                    className="card m-6 is-reactive"
                   >
                     <div
                       className="card-image"
@@ -217,7 +217,7 @@ Array [
                         Resilient
                       </h3>
                       <p>
-                        Each microservice container is a stateless, RESTful service with atomic responsibilities that can scale horizontally. You can contain and isolate aggregates in your domain model with these services to ensure that you are still capable of serving traffic, even during a catastrophic event or unexpected high volume.
+                        Each microservice contains and isolates aggregates in your domain model to ensure that you are still capable of serving traffic, even during a catastrophic event or unexpected high volume.
                       </p>
                     </div>
                   </article>
@@ -234,7 +234,7 @@ Array [
                   className="tile is-child"
                 >
                   <article
-                    className="card is-reactive"
+                    className="card m-6 is-reactive"
                   >
                     <div
                       className="card-image"
@@ -266,7 +266,7 @@ Array [
                         <sup>
                           io
                         </sup>
-                         provides scalable solutions by allowing immediate deployments during peaks in your system load. Furthermore, you can apply auto scaling solutions to save you not only money but increased uptime when production workloads get unpredictable.
+                         enables auto scaling solutions to save you not only money but increased uptime when production workloads get unpredictable.
                       </p>
                     </div>
                   </article>
@@ -279,7 +279,7 @@ Array [
                   className="tile is-child"
                 >
                   <article
-                    className="card is-reactive"
+                    className="card m-6 is-reactive"
                   >
                     <div
                       className="card-image"
@@ -311,7 +311,7 @@ Array [
                         <sup>
                           io
                         </sup>
-                         provides an asynchronous, message passing framework that ensures loose coupling, isolation, and location transparency with Node.js and Kafka. We chose Node.js for its high performance in non-blocking I/O capabilities. Likewise, Kafka for its storage and messaging capabilities.
+                         provides an asynchronous, message passing framework that ensures loose coupling, isolation, and location transparency with Node.js and Kafka.
                       </p>
                     </div>
                   </article>
@@ -326,7 +326,7 @@ Array [
               className="tile is-child"
             >
               <article
-                className="card is-serverless"
+                className="card m-6 is-serverless"
               >
                 <div
                   className="card-image"
@@ -358,17 +358,10 @@ Array [
                     <sup>
                       io
                     </sup>
-                     provides cloud-native computing through standardized Docker images to wrap your domain logic with a lightweight, RESTful interface. This allows you to skip the boilerplate setup/maintenance and dive straight into adding immediate value to your application.
+                     is implemented with standardized Docker images to wrap your domain logic with a lightweight, RESTful interface. This allows you to skip the boilerplate setup/maintenance and dive straight into adding immediate value to your application.
                   </p>
                   <p>
                     Each base image is highly extensible and configurable right out of the box. They make very few assumptions to support different architectures which allows it to pair well with other cloud native initiatives and patterns.
-                  </p>
-                  <p>
-                    Overall Hive
-                    <sup>
-                      io
-                    </sup>
-                     allows you to make infrastructure decisions to suit your needs with little compromise.
                   </p>
                 </div>
               </article>
@@ -385,7 +378,7 @@ Array [
               className="tile is-child"
             >
               <article
-                className="card is-robust"
+                className="card m-6 is-robust"
               >
                 <div
                   className="card-image"
@@ -413,13 +406,6 @@ Array [
                     Flexible & Robust
                   </h3>
                   <p>
-                    There is no need to worry about having a certain pattern or architecture available, Hive
-                    <sup>
-                      io
-                    </sup>
-                     is exceedingly flexible and extensible. Just design what solution you think fits best and roll it into the infrastructure. Simply pick the container type that fits your needs and get coding.
-                  </p>
-                  <p>
                     Hive
                     <sup>
                       io
@@ -437,7 +423,7 @@ Array [
               className="tile is-child has-text-centered-mobile"
             >
               <svg
-                className="is-hive"
+                className="m-6 is-hive"
                 height="72"
                 viewBox="0 0 117.31758 135.46667"
                 xmlns="http://www.w3.org/2000/svg"
