@@ -46,7 +46,7 @@ export default class Basic extends Component {
         <article className='section is-medium'>
           <Container>
             <div className='columns'>
-              <header className='column is-narrow is-hidden-touch is-aside'>
+              <header className='column is-narrow is-hidden-touch'>
                 <AsideMenu />
               </header>
               <section className='column content' role='document'>
@@ -97,6 +97,18 @@ export default class Basic extends Component {
                         <td>defaults to the total available CPUs allocated to the container or to the size you specify here</td>
                       </tr>
                       <tr>
+                        <td>SSL_CERT</td>
+                        <td>String</td>
+                        <td />
+                        <td>default path for SSL certificate file or the full certificate</td>
+                      </tr>
+                      <tr>
+                        <td>SSL_KEY</td>
+                        <td>String</td>
+                        <td />
+                        <td>default path for SSL key file or the full key</td>
+                      </tr>
+                      <tr>
                         <td>PING_URL</td>
                         <td>String</td>
                         <td>'/ping'</td>
@@ -114,32 +126,18 @@ export default class Basic extends Component {
                         <td />
                         <td>module where the ACTOR resides</td>
                       </tr>
+                      <tr>
+                        <td>ACTOR_URLS</td>
+                        <td>String</td>
+                        <td />
+                        <td>comma-separated URLs associated with the Actor</td>
+                      </tr>
                     </tbody>
                   </table>
                 </div>
 
                 <h2>Base</h2>
-                <p>All of the environment variables in <a href='#shared'>Shared</a> and the following:</p>
-                <div className='table-container'>
-                  <table className='table is-striped is-hoverable'>
-                    <thead>
-                      <tr>
-                        <th>Name</th>
-                        <th>Type</th>
-                        <th>Default</th>
-                        <th>Description</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>CONTENT_TYPE</td>
-                        <td>String</td>
-                        <td>'application/json'</td>
-                        <td>HTTP Content-Type header to check</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
+                <p>All of the environment variables in <a href='#shared'>Shared</a>.</p>
 
                 <h2>Producer</h2>
                 <p>All of the environment variables in <a href='#shared'>Shared</a> and the following:</p>
@@ -154,12 +152,6 @@ export default class Basic extends Component {
                       </tr>
                     </thead>
                     <tbody>
-                      <tr>
-                        <td>CONTENT_TYPE</td>
-                        <td>String</td>
-                        <td>'application/json'</td>
-                        <td>HTTP Content-Type header to check</td>
-                      </tr>
                       <tr>
                         <td>EVENT_STORE_TOPIC</td>
                         <td>String</td>
@@ -273,12 +265,6 @@ export default class Basic extends Component {
                     </thead>
                     <tbody>
                       <tr>
-                        <td>CONTENT_TYPE</td>
-                        <td>String</td>
-                        <td>'application/json'</td>
-                        <td>HTTP Content-Type header to check</td>
-                      </tr>
-                      <tr>
                         <td>PROCESSOR_TYPE</td>
                         <td>String</td>
                         <td>'producer'</td>
@@ -382,7 +368,7 @@ export default class Basic extends Component {
           </Container>
         </article>
 
-        <NextPageHero toLeft='/documentation' toRight='https://fnalabs.github.io/hive-js/' />
+        <NextPageHero toLeft='/documentation' toRight='https://fnalabs.github.io/hive-io/' />
       </>
     )
   }

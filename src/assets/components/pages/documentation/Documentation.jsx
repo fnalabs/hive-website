@@ -46,7 +46,7 @@ export default class Basic extends Component {
         <article className='section is-medium'>
           <Container>
             <div className='columns'>
-              <header className='column is-narrow is-hidden-touch is-aside'>
+              <header className='column is-narrow is-hidden-touch'>
                 <AsideMenu />
               </header>
               <section className='column content' role='document'>
@@ -57,53 +57,45 @@ export default class Basic extends Component {
                 <p><em><strong>NOTE:</strong></em> These pages are currently available online only.</p>
                 <nav>
                   <ul>
-                    <li><AnalyticsLink to='https://fnalabs.github.io/hive-js/' target='_blank' rel='noopener noreferrer'>Home</AnalyticsLink>
+                    <li><AnalyticsLink to='https://fnalabs.github.io/hive-io/' target='_blank' rel='noopener noreferrer'>Home</AnalyticsLink>
                       <ul>
-                        <li><AnalyticsLink to='https://fnalabs.github.io/hive-js/Actor.html' target='_blank' rel='noopener noreferrer'>Actor</AnalyticsLink>
+                        <li><AnalyticsLink to='https://fnalabs.github.io/hive-io/Actor.html' target='_blank' rel='noopener noreferrer'>Actor</AnalyticsLink>
                           <ul>
-                            <li><AnalyticsLink to='https://fnalabs.github.io/hive-js/Actor.html#assign' target='_blank' rel='noopener noreferrer'>assign</AnalyticsLink></li>
-                            <li><AnalyticsLink to='https://fnalabs.github.io/hive-js/Actor.html#parse' target='_blank' rel='noopener noreferrer'>parse</AnalyticsLink></li>
-                            <li><AnalyticsLink to='https://fnalabs.github.io/hive-js/Actor.html#perform' target='_blank' rel='noopener noreferrer'>perform</AnalyticsLink></li>
-                            <li><AnalyticsLink to='https://fnalabs.github.io/hive-js/Actor.html#replay' target='_blank' rel='noopener noreferrer'>replay</AnalyticsLink></li>
+                            <li><AnalyticsLink to='https://fnalabs.github.io/hive-io/Actor.html#assign' target='_blank' rel='noopener noreferrer'>assign</AnalyticsLink></li>
+                            <li><AnalyticsLink to='https://fnalabs.github.io/hive-io/Actor.html#perform' target='_blank' rel='noopener noreferrer'>perform</AnalyticsLink></li>
+                            <li><AnalyticsLink to='https://fnalabs.github.io/hive-io/Actor.html#replay' target='_blank' rel='noopener noreferrer'>replay</AnalyticsLink></li>
                           </ul>
                         </li>
 
-                        <li><AnalyticsLink to='https://fnalabs.github.io/hive-js/MessageActor.html' target='_blank' rel='noopener noreferrer'>MessageActor</AnalyticsLink>
+                        <li><AnalyticsLink to='https://fnalabs.github.io/hive-io/MessageActor.html' target='_blank' rel='noopener noreferrer'>MessageActor</AnalyticsLink>
                           <ul>
-                            <li><AnalyticsLink to='https://fnalabs.github.io/hive-js/MessageActor.html#assign' target='_blank' rel='noopener noreferrer'>assign</AnalyticsLink></li>
-                            <li><AnalyticsLink to='https://fnalabs.github.io/hive-js/Actor.html#parse' target='_blank' rel='noopener noreferrer'>parse</AnalyticsLink></li>
-                            <li><AnalyticsLink to='https://fnalabs.github.io/hive-js/MessageActor.html#perform' target='_blank' rel='noopener noreferrer'>perform</AnalyticsLink></li>
-                            <li><AnalyticsLink to='https://fnalabs.github.io/hive-js/Actor.html#replay' target='_blank' rel='noopener noreferrer'>replay</AnalyticsLink></li>
+                            <li><AnalyticsLink to='https://fnalabs.github.io/hive-io/MessageActor.html#assign' target='_blank' rel='noopener noreferrer'>assign</AnalyticsLink></li>
+                            <li><AnalyticsLink to='https://fnalabs.github.io/hive-io/MessageActor.html#perform' target='_blank' rel='noopener noreferrer'>perform</AnalyticsLink></li>
+                            <li><AnalyticsLink to='https://fnalabs.github.io/hive-io/Actor.html#replay' target='_blank' rel='noopener noreferrer'>replay</AnalyticsLink></li>
                           </ul>
                         </li>
 
-                        <li><AnalyticsLink to='https://fnalabs.github.io/hive-js/Model.html' target='_blank' rel='noopener noreferrer'>Model</AnalyticsLink>
+                        <li><AnalyticsLink to='https://fnalabs.github.io/hive-io/Model.html' target='_blank' rel='noopener noreferrer'>Model</AnalyticsLink>
                           <ul>
-                            <li><AnalyticsLink to='https://fnalabs.github.io/hive-js/Model.html#.errors' target='_blank' rel='noopener noreferrer'>errors</AnalyticsLink></li>
-                            <li><AnalyticsLink to='https://fnalabs.github.io/hive-js/Model.html#.schema' target='_blank' rel='noopener noreferrer'>schema</AnalyticsLink></li>
-                            <li><AnalyticsLink to='https://fnalabs.github.io/hive-js/Model.html#.validate' target='_blank' rel='noopener noreferrer'>validate</AnalyticsLink></li>
-                            <li><AnalyticsLink to='https://fnalabs.github.io/hive-js/Model.html#.version' target='_blank' rel='noopener noreferrer'>version</AnalyticsLink></li>
-                            <li><AnalyticsLink to='https://fnalabs.github.io/hive-js/Model.html#toJSON' target='_blank' rel='noopener noreferrer'>toJSON</AnalyticsLink></li>
+                            <li><AnalyticsLink to='https://fnalabs.github.io/hive-io/Model.html#.errors' target='_blank' rel='noopener noreferrer'>errors</AnalyticsLink></li>
+                            <li><AnalyticsLink to='https://fnalabs.github.io/hive-io/Model.html#.schema' target='_blank' rel='noopener noreferrer'>schema</AnalyticsLink></li>
+                            <li><AnalyticsLink to='https://fnalabs.github.io/hive-io/Model.html#.validate' target='_blank' rel='noopener noreferrer'>validate</AnalyticsLink></li>
+                            <li><AnalyticsLink to='https://fnalabs.github.io/hive-io/Model.html#.version' target='_blank' rel='noopener noreferrer'>version</AnalyticsLink></li>
+                            <li><AnalyticsLink to='https://fnalabs.github.io/hive-io/Model.html#toJSON' target='_blank' rel='noopener noreferrer'>toJSON</AnalyticsLink></li>
                           </ul>
                         </li>
 
-                        <li><AnalyticsLink to='https://fnalabs.github.io/hive-js/Schema.html' target='_blank' rel='noopener noreferrer'>Schema</AnalyticsLink>
+                        <li><AnalyticsLink to='https://fnalabs.github.io/hive-io/Schema.html' target='_blank' rel='noopener noreferrer'>Schema</AnalyticsLink>
                           <ul>
-                            <li><AnalyticsLink to='https://fnalabs.github.io/hive-js/Schema.html#assign' target='_blank' rel='noopener noreferrer'>assign</AnalyticsLink></li>
-                            <li><AnalyticsLink to='https://fnalabs.github.io/hive-js/Schema.html#validate' target='_blank' rel='noopener noreferrer'>validate</AnalyticsLink></li>
+                            <li><AnalyticsLink to='https://fnalabs.github.io/hive-io/Schema.html#assign' target='_blank' rel='noopener noreferrer'>assign</AnalyticsLink></li>
+                            <li><AnalyticsLink to='https://fnalabs.github.io/hive-io/Schema.html#validate' target='_blank' rel='noopener noreferrer'>validate</AnalyticsLink></li>
                           </ul>
                         </li>
 
-                        <li><AnalyticsLink to='https://fnalabs.github.io/hive-js/System.html' target='_blank' rel='noopener noreferrer'>System</AnalyticsLink>
+                        <li><AnalyticsLink to='https://fnalabs.github.io/hive-io/System.html' target='_blank' rel='noopener noreferrer'>System</AnalyticsLink>
                           <ul>
-                            <li><AnalyticsLink to='https://fnalabs.github.io/hive-js/System.html#emit' target='_blank' rel='noopener noreferrer'>emit</AnalyticsLink></li>
-                            <li><AnalyticsLink to='https://fnalabs.github.io/hive-js/System.html#on' target='_blank' rel='noopener noreferrer'>on</AnalyticsLink></li>
-                          </ul>
-                        </li>
-
-                        <li><AnalyticsLink to='https://fnalabs.github.io/hive-js/global.html' target='_blank' rel='noopener noreferrer'>Globals</AnalyticsLink>
-                          <ul>
-                            <li><AnalyticsLink to='https://fnalabs.github.io/hive-js/global.html#parse' target='_blank' rel='noopener noreferrer'>parse</AnalyticsLink></li>
+                            <li><AnalyticsLink to='https://fnalabs.github.io/hive-io/System.html#emit' target='_blank' rel='noopener noreferrer'>emit</AnalyticsLink></li>
+                            <li><AnalyticsLink to='https://fnalabs.github.io/hive-io/System.html#on' target='_blank' rel='noopener noreferrer'>on</AnalyticsLink></li>
                           </ul>
                         </li>
                       </ul>

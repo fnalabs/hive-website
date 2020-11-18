@@ -48,20 +48,20 @@ export default class Rest extends Component {
         <article className='section is-medium'>
           <Container>
             <div className='columns'>
-              <header className='column is-narrow is-hidden-touch is-aside'>
+              <header className='column is-narrow is-hidden-touch'>
                 <AsideMenu />
               </header>
               <section className='column content' role='document'>
                 <h1>Example: REST</h1>
                 <p>Let's expand on the Basic example with a REST service. The code below describes a minimal implementation of the domain logic and infrastructure as code to implement a REST service.</p>
 
-                <h2><a href='https://www.npmjs.com/package/hive-io-rest-example' target='_blank' rel='noopener noreferrer'>Domain Logic</a> (<a href='https://github.com/fnalabs/hive-js-rest-example' target='_blank' rel='noopener noreferrer'>Source Code</a>)</h2>
+                <h2><a href='https://www.npmjs.com/package/hive-io-rest-example' target='_blank' rel='noopener noreferrer'>Domain Logic</a> (<a href='https://github.com/fnalabs/hive-io/tree/master/packages/hive-js-rest-example' target='_blank' rel='noopener noreferrer'>Source Code</a>)</h2>
                 <div className='notification'>
                   <span className='icon'><Info className='svg-inline' /></span>
                   <span>You should consider using a private NPM registry or implementing more creative solutions such as extending base Docker images with <code>ADD</code>|<code>COPY</code> statements for source code or <code>npm link</code> for your domain logic.</span>
                 </div>
 
-                <h2>Infrastructure</h2>
+                <h2><a href='https://github.com/fnalabs/hive-io/tree/master/dev/docker/rest/production' target='_blank' rel='noopener noreferrer'>Infrastructure</a></h2>
                 <dl>
                   <dt><code>Dockerfile</code></dt>
                   <dd>
@@ -74,31 +74,32 @@ export default class Rest extends Component {
 services:<br />
 &nbsp;&nbsp;hive-base-js:<br />
 &nbsp;&nbsp;&nbsp;&nbsp;build: .<br />
+&nbsp;&nbsp;&nbsp;&nbsp;image: hive-base-js:production<br />
+&nbsp;&nbsp;&nbsp;&nbsp;container_name: hive-base-js<br />
 &nbsp;&nbsp;&nbsp;&nbsp;environment:<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ACTOR: PostActor<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ACTOR_LIB: hive-io-rest-example<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CLUSTER_SIZE: 1<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HTTP_VERSION: 1<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SECURE: "false"<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SECURE: "true"<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MONGO_URL: 'mongodb://mongo:27017/post'<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FLUENTD_HOST: fluentd<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FLUENTD_PORT: 24224<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FLUENTD_TIMEOUT: 3.0<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FLUENTD_RECONNECT: 600000<br />
 &nbsp;&nbsp;&nbsp;&nbsp;depends_on:<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- mongo<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- fluentd<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- mongo<br />
 &nbsp;&nbsp;&nbsp;&nbsp;ports:<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- 80:3000<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- 443:3000<br />
 &nbsp;&nbsp;&nbsp;&nbsp;networks:<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- hive-io<br />
 &nbsp;&nbsp;fluentd:<br />
-&nbsp;&nbsp;&nbsp;&nbsp;image: fluent/fluentd:v1.7.4-1.0<br />
+&nbsp;&nbsp;&nbsp;&nbsp;image: fluent/fluentd:v1.11.4-2.0<br />
 &nbsp;&nbsp;&nbsp;&nbsp;networks:<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- hive-io<br />
 &nbsp;&nbsp;&nbsp;&nbsp;restart: on-failure<br />
 &nbsp;&nbsp;mongo:<br />
-&nbsp;&nbsp;&nbsp;&nbsp;image: mongo:4.2.1<br />
+&nbsp;&nbsp;&nbsp;&nbsp;image: mongo:4.4.1<br />
 &nbsp;&nbsp;&nbsp;&nbsp;networks:<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- hive-io<br />
 &nbsp;&nbsp;&nbsp;&nbsp;restart: on-failure<br />
