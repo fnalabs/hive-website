@@ -12,7 +12,7 @@ Array [
         className="columns"
       >
         <header
-          className="column is-narrow is-hidden-touch is-aside"
+          className="column is-narrow is-hidden-touch"
         >
           <aside
             className="menu"
@@ -20,7 +20,7 @@ Array [
             <p
               className="menu-label has-text-weight-bold"
             >
-              v2.0.0-rc.3
+              v2.0.0
             </p>
             <ul
               className="menu-list"
@@ -135,7 +135,7 @@ Array [
                   </li>
                   <li>
                     <a
-                      href="https://fnalabs.github.io/hive-js/"
+                      href="https://fnalabs.github.io/hive-io/"
                       rel="noopener noreferrer"
                       target="_blank"
                     >
@@ -167,7 +167,7 @@ Array [
             </a>
              (
             <a
-              href="https://github.com/fnalabs/hive-js-rest-example"
+              href="https://github.com/fnalabs/hive-io/tree/master/packages/hive-js-rest-example"
               rel="noopener noreferrer"
               target="_blank"
             >
@@ -209,7 +209,13 @@ Array [
             </span>
           </div>
           <h2>
-            Infrastructure
+            <a
+              href="https://github.com/fnalabs/hive-io/tree/master/dev/docker/rest/production"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              Infrastructure
+            </a>
           </h2>
           <dl>
             <dt>
@@ -239,6 +245,10 @@ Array [
                 <br />
                     build: .
                 <br />
+                    image: hive-base-js:production
+                <br />
+                    container_name: hive-base-js
+                <br />
                     environment:
                 <br />
                       ACTOR: PostActor
@@ -247,9 +257,7 @@ Array [
                 <br />
                       CLUSTER_SIZE: 1
                 <br />
-                      HTTP_VERSION: 1
-                <br />
-                      SECURE: "false"
+                      SECURE: "true"
                 <br />
                       MONGO_URL: 'mongodb://mongo:27017/post'
                 <br />
@@ -263,13 +271,13 @@ Array [
                 <br />
                     depends_on:
                 <br />
-                      - mongo
-                <br />
                       - fluentd
+                <br />
+                      - mongo
                 <br />
                     ports:
                 <br />
-                      - 80:3000
+                      - 443:3000
                 <br />
                     networks:
                 <br />
@@ -277,7 +285,7 @@ Array [
                 <br />
                   fluentd:
                 <br />
-                    image: fluent/fluentd:v1.7.4-1.0
+                    image: fluent/fluentd:v1.11.4-2.0
                 <br />
                     networks:
                 <br />
@@ -287,7 +295,7 @@ Array [
                 <br />
                   mongo:
                 <br />
-                    image: mongo:4.2.1
+                    image: mongo:4.4.1
                 <br />
                     networks:
                 <br />

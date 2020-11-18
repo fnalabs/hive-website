@@ -12,7 +12,7 @@ Array [
         className="columns"
       >
         <header
-          className="column is-narrow is-hidden-touch is-aside"
+          className="column is-narrow is-hidden-touch"
         >
           <aside
             className="menu"
@@ -20,7 +20,7 @@ Array [
             <p
               className="menu-label has-text-weight-bold"
             >
-              v2.0.0-rc.3
+              v2.0.0
             </p>
             <ul
               className="menu-list"
@@ -135,7 +135,7 @@ Array [
                   </li>
                   <li>
                     <a
-                      href="https://fnalabs.github.io/hive-js/"
+                      href="https://fnalabs.github.io/hive-io/"
                       rel="noopener noreferrer"
                       target="_blank"
                     >
@@ -222,13 +222,21 @@ Array [
             <sup>
               io
             </sup>
-             Framework.
+             framework.
           </p>
           <h2>
             Schema Registry
           </h2>
           <p>
-            A schema registry can easily be achieved by combining concepts in the JSON Schema specification and adding a static file server to serve the JSON schemas. Using the 
+            A 
+            <a
+              href="https://docs.confluent.io/current/schema-registry/index.html"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              schema registry
+            </a>
+             can easily be achieved by combining concepts in the JSON Schema specification and adding a static file server to serve the JSON schemas. Using the 
             <a
               href="https://json-schema.org/learn/getting-started-step-by-step.html#starting-the-schema"
               rel="noopener noreferrer"
@@ -239,11 +247,14 @@ Array [
               </code>
                keyword
             </a>
-            , you can specify a URI for the schema for hosting. You could use Node.js to host the files or even Nginx or Apache Web Server to serve the static JSON schemas. We have not decided to build and maintain a solution specific to the Hive
+            , you can specify a URI for the schema for hosting. You could use Node.js to host the files or even Nginx or Apache Web Server to serve the static JSON schemas.
+          </p>
+          <p>
+            We have not decided to build and maintain a solution specific to the Hive
             <sup>
               io
             </sup>
-             Framework at this time due to time constraints but either hosting solution should be straightforward. Furthermore, hosting Schemas may not be necessary for your solution depending on the size of the domain and/or team(s) involved in building and maintaining your solutions.
+             framework at this time due to time constraints but either hosting solution should be straightforward. Furthermore, hosting Schemas may not be necessary for your solution depending on the complexity of the domain and/or team(s) involved in building and maintaining your solutions.
           </p>
         </section>
       </div>

@@ -12,7 +12,7 @@ Array [
         className="columns"
       >
         <header
-          className="column is-narrow is-hidden-touch is-aside"
+          className="column is-narrow is-hidden-touch"
         >
           <aside
             className="menu"
@@ -20,7 +20,7 @@ Array [
             <p
               className="menu-label has-text-weight-bold"
             >
-              v2.0.0-rc.3
+              v2.0.0
             </p>
             <ul
               className="menu-list"
@@ -135,7 +135,7 @@ Array [
                   </li>
                   <li>
                     <a
-                      href="https://fnalabs.github.io/hive-js/"
+                      href="https://fnalabs.github.io/hive-io/"
                       rel="noopener noreferrer"
                       target="_blank"
                     >
@@ -260,6 +260,30 @@ Array [
                 </tr>
                 <tr>
                   <td>
+                    SSL_CERT
+                  </td>
+                  <td>
+                    String
+                  </td>
+                  <td />
+                  <td>
+                    default path for SSL certificate file or the full certificate
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    SSL_KEY
+                  </td>
+                  <td>
+                    String
+                  </td>
+                  <td />
+                  <td>
+                    default path for SSL key file or the full key
+                  </td>
+                </tr>
+                <tr>
+                  <td>
                     PING_URL
                   </td>
                   <td>
@@ -296,6 +320,18 @@ Array [
                     module where the ACTOR resides
                   </td>
                 </tr>
+                <tr>
+                  <td>
+                    ACTOR_URLS
+                  </td>
+                  <td>
+                    String
+                  </td>
+                  <td />
+                  <td>
+                    comma-separated URLs associated with the Actor
+                  </td>
+                </tr>
               </tbody>
             </table>
           </div>
@@ -309,48 +345,8 @@ Array [
             >
               Shared
             </a>
-             and the following:
+            .
           </p>
-          <div
-            className="table-container"
-          >
-            <table
-              className="table is-striped is-hoverable"
-            >
-              <thead>
-                <tr>
-                  <th>
-                    Name
-                  </th>
-                  <th>
-                    Type
-                  </th>
-                  <th>
-                    Default
-                  </th>
-                  <th>
-                    Description
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>
-                    CONTENT_TYPE
-                  </td>
-                  <td>
-                    String
-                  </td>
-                  <td>
-                    'application/json'
-                  </td>
-                  <td>
-                    HTTP Content-Type header to check
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
           <h2>
             Producer
           </h2>
@@ -386,20 +382,6 @@ Array [
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <td>
-                    CONTENT_TYPE
-                  </td>
-                  <td>
-                    String
-                  </td>
-                  <td>
-                    'application/json'
-                  </td>
-                  <td>
-                    HTTP Content-Type header to check
-                  </td>
-                </tr>
                 <tr>
                   <td>
                     EVENT_STORE_TOPIC
@@ -644,20 +626,6 @@ Array [
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <td>
-                    CONTENT_TYPE
-                  </td>
-                  <td>
-                    String
-                  </td>
-                  <td>
-                    'application/json'
-                  </td>
-                  <td>
-                    HTTP Content-Type header to check
-                  </td>
-                </tr>
                 <tr>
                   <td>
                     PROCESSOR_TYPE
@@ -914,7 +882,7 @@ Array [
         >
           <a
             aria-label="next page"
-            href="https://fnalabs.github.io/hive-js/"
+            href="https://fnalabs.github.io/hive-io/"
           >
             <span
               className="icon is-large"
