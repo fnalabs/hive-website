@@ -64,7 +64,7 @@ export const MidHero = () => (
 
           <Tile type='parent'>
             <Tile type='child' centeredMobile>
-              <HiveIO className='is-hive' height='72' />
+              <HiveIO className='m-6 is-hive' height='72' />
             </Tile>
           </Tile>
         </Tile>
