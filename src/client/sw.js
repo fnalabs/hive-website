@@ -8,7 +8,7 @@ import { CacheableResponsePlugin } from 'workbox-cacheable-response'
 import { ExpirationPlugin } from 'workbox-expiration'
 
 // event handlers
-self.addEventListener('install', (event) => self.skipWaiting())
+self.addEventListener('install', () => self.skipWaiting())
 
 // config
 setCacheNameDetails({
