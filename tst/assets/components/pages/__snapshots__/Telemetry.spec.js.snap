@@ -1,0 +1,469 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Telemetry /> should render Telemetry page static content 1`] = `
+Array [
+  <article
+    className="section is-medium"
+  >
+    <div
+      className="container"
+    >
+      <div
+        className="columns"
+      >
+        <header
+          className="column is-narrow is-hidden-touch"
+        >
+          <aside
+            className="menu"
+          >
+            <p
+              className="menu-label has-text-weight-bold"
+            >
+              v2.1.0
+            </p>
+            <ul
+              className="menu-list"
+            >
+              <li>
+                <a
+                  aria-current={null}
+                  href="/overview"
+                  onClick={[Function]}
+                >
+                  Overview
+                </a>
+                <ul>
+                  <li>
+                    <a
+                      aria-current={null}
+                      href="/model"
+                      onClick={[Function]}
+                    >
+                      Data Model
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      aria-current={null}
+                      href="/domain"
+                      onClick={[Function]}
+                    >
+                      Domain Logic
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      aria-current={null}
+                      href="/infrastructure"
+                      onClick={[Function]}
+                    >
+                      Infrastructure
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      aria-current={null}
+                      href="/telemetry"
+                      onClick={[Function]}
+                    >
+                      Telemetry
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a
+                  aria-current={null}
+                  href="/start"
+                  onClick={[Function]}
+                >
+                  Get Started
+                </a>
+                <ul>
+                  <li>
+                    <a
+                      aria-current={null}
+                      href="/setup"
+                      onClick={[Function]}
+                    >
+                      Setup
+                    </a>
+                  </li>
+                  <li
+                    className="menu-label has-text-weight-bold"
+                  >
+                    Examples:
+                  </li>
+                  <li>
+                    <a
+                      aria-current={null}
+                      href="/basic"
+                      onClick={[Function]}
+                    >
+                      Basic
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      aria-current={null}
+                      href="/rest"
+                      onClick={[Function]}
+                    >
+                      Rest
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      aria-current={null}
+                      href="/cqrs-es"
+                      onClick={[Function]}
+                    >
+                      CQRS/ES
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a
+                  aria-current={null}
+                  href="/documentation"
+                  onClick={[Function]}
+                >
+                  Documentation
+                </a>
+                <ul>
+                  <li>
+                    <a
+                      aria-current={null}
+                      href="/environments"
+                      onClick={[Function]}
+                    >
+                      Environments
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://fnalabs.github.io/hive-io/"
+                      rel="noopener noreferrer"
+                      target="_blank"
+                    >
+                      API
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </aside>
+        </header>
+        <section
+          className="column content"
+          role="document"
+        >
+          <h1>
+            Telemetry
+          </h1>
+          <p>
+            In order to stay aligned with Cloud Native efforts, Hive
+            <sup>
+              io
+            </sup>
+             has integrated with 
+            <a
+              href="https://opentelemetry.io"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              OpenTelemetry
+            </a>
+             to provide built-in logging, tracing, and metrcs if enabled. OpenTelemetry has stated that it is suitable for use in its current phase of development. We have followed their implementation guidelines to provide flexible integration with their API allowing you to extend that functionality in your code.
+          </p>
+          <h2>
+            About
+          </h2>
+          <p>
+            OpenTelemetry defines itself as an observability framework that provides the tools you need to capture information on how your services perform in the environments they are deployed. To use their own words:
+          </p>
+          <blockquote>
+            <p>
+              OpenTelemetry is composed of the following:
+            </p>
+            <ul>
+              <li>
+                One API and SDK per language, which include the interfaces and implementations that define and create distributed traces and metrics, manage sampling and context propagation, etc.
+              </li>
+              <li>
+                Language-specific integrations for popular web frameworks, storage clients, RPC libraries, etc. that (when enabled) automatically capture relevant traces and metrics and handle context propagation
+              </li>
+              <li>
+                Automatic instrumentation agents that can collect telemetry from some applications without requiring code changes
+              </li>
+              <li>
+                Language-specific exporters that allow SDKs to send captured traces and metrics to any supported backends
+              </li>
+              <li>
+                The OpenTelemetry Collector, which can collect data from OpenTelemetry SDKs and other sources, and then export this telemetry to any supported backend
+              </li>
+            </ul>
+            <p>
+              OpenTelemetry is a 
+              <a
+                href="https://www.cncf.io/sandbox-projects/"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                CNCF Sandbox
+              </a>
+               member, formed through a merger of the 
+              <a
+                href="https://www.opentracing.io/"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                OpenTracing
+              </a>
+               and 
+              <a
+                href="https://www.opencensus.io/"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                OpenCensus
+              </a>
+               projects.
+            </p>
+            <p>
+              - 
+              <a
+                href="https://opentelemetry.io/about/#what-is-an-observability-framework"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                OpenTelemetry
+              </a>
+            </p>
+          </blockquote>
+          <h2>
+            Concepts
+          </h2>
+          <p>
+            OpenTelemetry combines existing concepts and introduces some new ones to create the comprehensive solution they provide. They define these as such:
+          </p>
+          <blockquote>
+            <p>
+              In software, observability typically refers to telemetry produced by 
+              <strong>
+                services
+              </strong>
+               and is often divided into three major verticals:
+            </p>
+            <ul>
+              <li>
+                <a
+                  href="https://opentelemetry.io/docs/concepts/data-sources/#traces"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  <strong>
+                    Tracing
+                  </strong>
+                </a>
+                , aka 
+                <strong>
+                  distributed tracing
+                </strong>
+                , provides insight into the full lifecycles, aka 
+                <em>
+                  traces
+                </em>
+                , of requests to the system, allowing you to pinpoint failures and performance issues.
+              </li>
+              <li>
+                <a
+                  href="https://opentelemetry.io/docs/concepts/data-sources/#metrics"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  <strong>
+                    Metrics
+                  </strong>
+                </a>
+                 provide quantitative information about processes running inside the system, including counters, gauges, and histograms.
+              </li>
+              <li>
+                <a
+                  href="https://en.wikipedia.org/wiki/Log_file"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  <strong>
+                    Logging
+                  </strong>
+                </a>
+                 provides insight into application-specific messages emitted by processes.
+              </li>
+            </ul>
+            <p>
+              These verticals are tightly interconnected. 
+              <strong>
+                Metrics
+              </strong>
+               can be used to pinpoint, for example, a subset of misbehaving 
+              <strong>
+                traces
+              </strong>
+              . 
+              <strong>
+                Logs
+              </strong>
+               associated with those traces could help to find the root cause of this behavior. And then new 
+              <strong>
+                metrics
+              </strong>
+               can be configured, based on this discovery, to catch this issue earlier next time. Other verticals exist (continuous profiling, production debugging, etc.), however traces, metrics, and logs are the three most well adopted across the industry.
+            </p>
+            <p>
+              - 
+              <a
+                href="https://opentelemetry.io/about/#what-is-observability"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                OpenTelemetry
+              </a>
+            </p>
+          </blockquote>
+          <h2>
+            Architecture
+          </h2>
+          <p>
+            Apart from the previously mentioned components of the solution, which are built into Hive
+            <sup>
+              io
+            </sup>
+             specialized containers, OpenTelemetry provides a Collector that receives data from the traces and metrics generated and export to your choice of supporting services such as 
+            <a
+              href="https://zipkin.io/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              Zipkin
+            </a>
+            , 
+            <a
+              href="https://prometheus.io/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              Prometheus
+            </a>
+            , and 
+            <a
+              href="https://opentelemetry.io/registry/?s=exporter"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              more
+            </a>
+            .
+          </p>
+          <blockquote>
+            <p>
+              The Collector provides a single binary and two deployment methods:
+            </p>
+            <ul>
+              <li>
+                An agent running with the application or on the same host as the application (e.g. binary, sidecar, or daemonset).
+              </li>
+              <li>
+                A gateway running as a standalone service (e.g. container or deployment) typically per cluster, datacenter or region.
+              </li>
+            </ul>
+            <p>
+              - 
+              <a
+                href="https://opentelemetry.io/docs/collector/getting-started/"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                OpenTelemetry
+              </a>
+            </p>
+          </blockquote>
+          <p>
+            Once your deployment method is defined, the Collector needs to be 
+            <a
+              href="https://opentelemetry.io/docs/collector/configuration/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              configured
+            </a>
+             to integrate with the supporting services previously mentioned. Check out the examples in the next section to get an idea on basic configurations.
+          </p>
+        </section>
+      </div>
+    </div>
+  </article>,
+  <section
+    className="hero is-small is-hive"
+  >
+    <div
+      className="hero-body"
+    >
+      <nav
+        className="level is-mobile"
+      >
+        <div
+          className="level-item has-text-centered"
+        >
+          <a
+            aria-label="previous page"
+            href="/infrastructure"
+            onClick={[Function]}
+          >
+            <span
+              className="icon is-large"
+            >
+              <svg
+                height="48"
+                role="img"
+                viewBox="0 0 448 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M223.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L319.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L393.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34zm-192 34l136 136c9.4 9.4 24.6 9.4 33.9 0l22.6-22.6c9.4-9.4 9.4-24.6 0-33.9L127.9 256l96.4-96.4c9.4-9.4 9.4-24.6 0-33.9L201.7 103c-9.4-9.4-24.6-9.4-33.9 0l-136 136c-9.5 9.4-9.5 24.6-.1 34z"
+                />
+              </svg>
+            </span>
+          </a>
+        </div>
+        <div
+          className="level-item has-text-centered"
+        >
+          <a
+            aria-label="next page"
+            href="/start"
+            onClick={[Function]}
+          >
+            <span
+              className="icon is-large"
+            >
+              <svg
+                height="48"
+                role="img"
+                viewBox="0 0 448 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34zm192-34l-136-136c-9.4-9.4-24.6-9.4-33.9 0l-22.6 22.6c-9.4 9.4-9.4 24.6 0 33.9l96.4 96.4-96.4 96.4c-9.4 9.4-9.4 24.6 0 33.9l22.6 22.6c9.4 9.4 24.6 9.4 33.9 0l136-136c9.4-9.2 9.4-24.4 0-33.8z"
+                />
+              </svg>
+            </span>
+          </a>
+        </div>
+      </nav>
+    </div>
+  </section>,
+]
+`;
