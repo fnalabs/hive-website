@@ -20,7 +20,7 @@ Array [
             <p
               className="menu-label has-text-weight-bold"
             >
-              v2.0.0
+              v2.1.0
             </p>
             <ul
               className="menu-list"
@@ -59,6 +59,15 @@ Array [
                       onClick={[Function]}
                     >
                       Infrastructure
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      aria-current={null}
+                      href="/telemetry"
+                      onClick={[Function]}
+                    >
+                      Telemetry
                     </a>
                   </li>
                 </ul>
@@ -183,6 +192,7 @@ Array [
             >
               <svg
                 className="svg-inline"
+                role="img"
                 viewBox="0 0 512 512"
                 xmlns="http://www.w3.org/2000/svg"
               >
@@ -279,15 +289,13 @@ Array [
                 <br />
                   # proxy for layer 7 routing
                 <br />
-                  # NOTE: this is an example, you will need to define your own
+                  # NOTE: this is an example, you will need to define your own config
                 <br />
-                  #       ex. https://github.com/fnalabs/hive-io/blob/master/dev/proxy
+                  #       ex. https://github.com/fnalabs/hive-io/tree/master/dev/proxy
                 <br />
                   proxy:
                 <br />
-                    build: ../../../proxy
-                <br />
-                    image: hive-proxy:production
+                    image: haproxy:2.3.2-alpine
                 <br />
                     container_name: proxy
                 <br />
@@ -299,23 +307,7 @@ Array [
                 <br />
                     ports:
                 <br />
-                      - 443:443
-                <br />
-                    volumes:
-                <br />
-                      - ../../../proxy:/usr/local/etc/haproxy:rw
-                <br />
-                    networks:
-                <br />
-                      - hive-io
-                <br />
-                    restart: on-failure
-                <br />
-                  fluentd:
-                <br />
-                    image: fluent/fluentd:v1.11.4-2.0
-                <br />
-                    container_name: fluentd
+                      - 80:80
                 <br />
                     networks:
                 <br />
@@ -344,11 +336,19 @@ Array [
                 <br />
                       ACTOR_LIB: hive-io-domain-example
                 <br />
-                      ACTOR_URLS: "/posts/:id"
+                      ACTOR_URLS: "/contents/:id"
                 <br />
                       CLUSTER_SIZE: 1
                 <br />
-                      SECURE: "true"
+                      HTTP_VERSION: 1
+                <br />
+                      SECURE: "false"
+                <br />
+                      TELEMETRY: "true"
+                <br />
+                      TELEMETRY_URL_METRICS: "http://collector:55681/v1/metrics"
+                <br />
+                      TELEMETRY_URL_TRACES: "http://collector:55681/v1/trace"
                 <br />
                       EVENT_STORE_TOPIC: view
                 <br />
@@ -356,23 +356,11 @@ Array [
                 <br />
                       EVENT_STORE_ID: producer-client
                 <br />
-                      FLUENTD_HOST: fluentd
-                <br />
-                      FLUENTD_PORT: 24224
-                <br />
-                      FLUENTD_TIMEOUT: 3.0
-                <br />
-                      FLUENTD_RECONNECT: 600000
-                <br />
                     depends_on:
                 <br />
-                      - fluentd
+                      - collector
                 <br />
                       - kafka
-                <br />
-                    volumes:
-                <br />
-                      - ../../../proxy:/opt/app/cert:rw
                 <br />
                     networks:
                 <br />
@@ -395,15 +383,23 @@ Array [
                 <br />
                     environment:
                 <br />
-                      ACTOR: PostCommandActor
+                      ACTOR: ContentCommandActor
                 <br />
                       ACTOR_LIB: hive-io-domain-example
                 <br />
-                      ACTOR_URLS: "/posts,/posts/:id"
+                      ACTOR_URLS: "/contents,/contents/:id"
                 <br />
                       CLUSTER_SIZE: 1
                 <br />
-                      SECURE: "true"
+                      HTTP_VERSION: 1
+                <br />
+                      SECURE: "false"
+                <br />
+                      TELEMETRY: "true"
+                <br />
+                      TELEMETRY_URL_METRICS: "http://collector:55681/v1/metrics"
+                <br />
+                      TELEMETRY_URL_TRACES: "http://collector:55681/v1/trace"
                 <br />
                       CACHE_URL: "redis://redis:6379"
                 <br />
@@ -413,25 +409,13 @@ Array [
                 <br />
                       EVENT_STORE_ID: stream-processor-client
                 <br />
-                      FLUENTD_HOST: fluentd
-                <br />
-                      FLUENTD_PORT: 24224
-                <br />
-                      FLUENTD_TIMEOUT: 3.0
-                <br />
-                      FLUENTD_RECONNECT: 600000
-                <br />
                     depends_on:
                 <br />
-                      - fluentd
+                      - collector
                 <br />
                       - kafka
                 <br />
                       - redis
-                <br />
-                    volumes:
-                <br />
-                      - ../../../proxy:/opt/app/cert:rw
                 <br />
                     networks:
                 <br />
@@ -519,13 +503,21 @@ Array [
                 <br />
                     environment:
                 <br />
-                      ACTOR: PostEventActor
+                      ACTOR: ContentEventActor
                 <br />
                       ACTOR_LIB: hive-io-domain-example
                 <br />
                       CLUSTER_SIZE: 1
                 <br />
-                      SECURE: "true"
+                      HTTP_VERSION: 1
+                <br />
+                      SECURE: "false"
+                <br />
+                      TELEMETRY: "true"
+                <br />
+                      TELEMETRY_URL_METRICS: "http://collector:55681/v1/metrics"
+                <br />
+                      TELEMETRY_URL_TRACES: "http://collector:55681/v1/trace"
                 <br />
                       EVENT_STORE_TOPIC: "content|view"
                 <br />
@@ -537,27 +529,15 @@ Array [
                 <br />
                       EVENT_STORE_FROM_START: "true"
                 <br />
-                      MONGO_URL: "mongodb://mongo:27017/post"
-                <br />
-                      FLUENTD_HOST: fluentd
-                <br />
-                      FLUENTD_PORT: 24224
-                <br />
-                      FLUENTD_TIMEOUT: 3.0
-                <br />
-                      FLUENTD_RECONNECT: 600000
+                      MONGO_URL: "mongodb://mongo:27017/content"
                 <br />
                     depends_on:
                 <br />
-                      - fluentd
+                      - collector
                 <br />
                       - kafka
                 <br />
                       - mongo
-                <br />
-                    volumes:
-                <br />
-                      - ../../../proxy:/opt/app/cert:rw
                 <br />
                     networks:
                 <br />
@@ -565,7 +545,7 @@ Array [
                 <br />
                   mongo:
                 <br />
-                    image: mongo:4.4.1
+                    image: mongo:4.4.2
                 <br />
                     container_name: mongo
                 <br />
@@ -592,44 +572,81 @@ Array [
                 <br />
                     environment:
                 <br />
-                      ACTOR: PostQueryActor
+                      ACTOR: ContentQueryActor
                 <br />
                       ACTOR_LIB: hive-io-domain-example
                 <br />
-                      ACTOR_URLS: "/posts,/posts/:id"
+                      ACTOR_URLS: "/contents,/contents/:id"
                 <br />
                       CLUSTER_SIZE: 1
                 <br />
-                      SECURE: "true"
+                      HTTP_VERSION: 1
                 <br />
-                      MONGO_URL: "mongodb://mongo:27017/post"
+                      SECURE: "false"
                 <br />
-                      FLUENTD_HOST: fluentd
+                      TELEMETRY: "true"
                 <br />
-                      FLUENTD_PORT: 24224
+                      TELEMETRY_URL_METRICS: "http://collector:55681/v1/metrics"
                 <br />
-                      FLUENTD_TIMEOUT: 3.0
+                      TELEMETRY_URL_TRACES: "http://collector:55681/v1/trace"
                 <br />
-                      FLUENTD_RECONNECT: 600000
+                      MONGO_URL: "mongodb://mongo:27017/content"
                 <br />
                     depends_on:
                 <br />
-                      - fluentd
+                      - collector
                 <br />
                       - hive-producer-js
                 <br />
                       - mongo
-                <br />
-                    volumes:
-                <br />
-                      - ../../../proxy:/opt/app/cert:rw
                 <br />
                     networks:
                 <br />
                       - hive-io
                 <br />
                 <br />
-                # networking specifics
+                  # telemetry
+                <br />
+                  # NOTE: you will need to provide a configuration for the collector
+                <br />
+                  #       see https://github.com/fnalabs/hive-io/blob/master/dev/collector/collector-config.yml
+                <br />
+                  collector:
+                <br />
+                    image: otel/opentelemetry-collector:0.16.0
+                <br />
+                    container_name: collector
+                <br />
+                    command: ["--config=/conf/collector-config.yml", "--log-level=ERROR"]
+                <br />
+                    depends_on:
+                <br />
+                      - zipkin
+                <br />
+                    networks:
+                <br />
+                      - hive-io
+                <br />
+                    restart: on-failure
+                <br />
+                  zipkin:
+                <br />
+                    image: openzipkin/zipkin:2.23.1
+                <br />
+                    container_name: zipkin
+                <br />
+                    ports:
+                <br />
+                      - 9411:9411
+                <br />
+                    networks:
+                <br />
+                      - hive-io
+                <br />
+                    restart: on-failure
+                <br />
+                <br />
+                # networking
                 <br />
                 networks:
                 <br />
@@ -665,6 +682,7 @@ Array [
             >
               <svg
                 height="48"
+                role="img"
                 viewBox="0 0 448 512"
                 xmlns="http://www.w3.org/2000/svg"
               >
@@ -688,6 +706,7 @@ Array [
             >
               <svg
                 height="48"
+                role="img"
                 viewBox="0 0 448 512"
                 xmlns="http://www.w3.org/2000/svg"
               >

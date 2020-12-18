@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import Helmet from 'react-helmet'
 import ReactGA from 'react-ga'
 
 import Consent from 'contexts/Consent'
 
 import { Container } from 'common'
+import { Header } from 'layout'
 
 import AsideMenu from '../AsideMenu'
 import NextPageHero from '../NextPageHero'
@@ -27,21 +27,10 @@ export default class Basic extends Component {
 
   render () {
     const { title, description, url } = meta['/environments']
-    const siteName = meta.common.siteName
 
     return (
       <>
-        <Helmet>
-          <title>{siteName} | {title}</title>
-          <meta name='description' content={description} />
-          <link rel='canonical' href={url} />
-
-          <meta property='og:title' content={`${siteName} | ${title}`} />
-          <meta property='og:description' content={description} />
-          <meta property='og:site_name' content={siteName} />
-          <meta property='og:url' content={url} />
-          <meta property='og:type' content='website' />
-        </Helmet>
+        <Header title={`${meta.common.siteName} | ${title}`} description={description} url={url} />
 
         <article className='section is-medium'>
           <Container>
@@ -88,7 +77,7 @@ export default class Basic extends Component {
                         <td>SECURE</td>
                         <td>String</td>
                         <td>'false'</td>
-                        <td>whether to run microservice secure or not. defaults to 'false' since we cannot provide certifications</td>
+                        <td>whether to run microservice secure or not. defaults to 'false' since we cannot provide certificates</td>
                       </tr>
                       <tr>
                         <td>CLUSTER_SIZE</td>
@@ -131,6 +120,36 @@ export default class Basic extends Component {
                         <td>String</td>
                         <td />
                         <td>comma-separated URLs associated with the Actor</td>
+                      </tr>
+                      <tr>
+                        <td>TELEMETRY</td>
+                        <td>String</td>
+                        <td>'false'</td>
+                        <td>whether to run OpenTelemetry integration</td>
+                      </tr>
+                      <tr>
+                        <td>TELEMETRY_PLUGINS</td>
+                        <td>String</td>
+                        <td />
+                        <td>JSON string of OpenTelemetry plugins to enable</td>
+                      </tr>
+                      <tr>
+                        <td>TELEMETRY_SERVICE_NAME</td>
+                        <td>String</td>
+                        <td />
+                        <td>service name for OpenTelemetry</td>
+                      </tr>
+                      <tr>
+                        <td>TELEMETRY_URL_METRICS</td>
+                        <td>String</td>
+                        <td />
+                        <td>OpenTelemetry Collector URL for metrics</td>
+                      </tr>
+                      <tr>
+                        <td>TELEMETRY_URL_TRACES</td>
+                        <td>String</td>
+                        <td />
+                        <td>OpenTelemetry Collector URL for traces</td>
                       </tr>
                     </tbody>
                   </table>

@@ -1,13 +1,13 @@
 /* eslint-disable react/jsx-indent */
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import Helmet from 'react-helmet'
 import ReactGA from 'react-ga'
 
 import Consent from 'contexts/Consent'
 
 import { Container } from 'common'
 import { Info } from 'icons'
+import { Header } from 'layout'
 
 import AsideMenu from '../AsideMenu'
 import NextPageHero from '../NextPageHero'
@@ -29,21 +29,10 @@ export default class CqrsEs extends Component {
 
   render () {
     const { title, description, url } = meta['/cqrs-es']
-    const siteName = meta.common.siteName
 
     return (
       <>
-        <Helmet>
-          <title>{siteName} | {title}</title>
-          <meta name='description' content={description} />
-          <link rel='canonical' href={url} />
-
-          <meta property='og:title' content={`${siteName} | ${title}`} />
-          <meta property='og:description' content={description} />
-          <meta property='og:site_name' content={siteName} />
-          <meta property='og:url' content={url} />
-          <meta property='og:type' content='website' />
-        </Helmet>
+        <Header title={`${meta.common.siteName} | ${title}`} description={description} url={url} />
 
         <article className='section is-medium'>
           <Container>
@@ -88,25 +77,16 @@ export default class CqrsEs extends Component {
                     <pre>version: '3.5'<br />
 services:<br />
 &nbsp;&nbsp;# proxy for layer 7 routing<br />
-&nbsp;&nbsp;# NOTE: this is an example, you will need to define your own<br />
-&nbsp;&nbsp;#&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ex. https://github.com/fnalabs/hive-io/blob/master/dev/proxy<br />
+&nbsp;&nbsp;# NOTE: this is an example, you will need to define your own config<br />
+&nbsp;&nbsp;#&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ex. https://github.com/fnalabs/hive-io/tree/master/dev/proxy<br />
 &nbsp;&nbsp;proxy:<br />
-&nbsp;&nbsp;&nbsp;&nbsp;build: ../../../proxy<br />
-&nbsp;&nbsp;&nbsp;&nbsp;image: hive-proxy:production<br />
+&nbsp;&nbsp;&nbsp;&nbsp;image: haproxy:2.3.2-alpine<br />
 &nbsp;&nbsp;&nbsp;&nbsp;container_name: proxy<br />
 &nbsp;&nbsp;&nbsp;&nbsp;depends_on:<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- hive-base-js<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- hive-stream-processor-js<br />
 &nbsp;&nbsp;&nbsp;&nbsp;ports:<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- 443:443<br />
-&nbsp;&nbsp;&nbsp;&nbsp;volumes:<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- ../../../proxy:/usr/local/etc/haproxy:rw<br />
-&nbsp;&nbsp;&nbsp;&nbsp;networks:<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- hive-io<br />
-&nbsp;&nbsp;&nbsp;&nbsp;restart: on-failure<br />
-&nbsp;&nbsp;fluentd:<br />
-&nbsp;&nbsp;&nbsp;&nbsp;image: fluent/fluentd:v1.11.4-2.0<br />
-&nbsp;&nbsp;&nbsp;&nbsp;container_name: fluentd<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- 80:80<br />
 &nbsp;&nbsp;&nbsp;&nbsp;networks:<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- hive-io<br />
 &nbsp;&nbsp;&nbsp;&nbsp;restart: on-failure<br /><br />
@@ -120,21 +100,19 @@ services:<br />
 &nbsp;&nbsp;&nbsp;&nbsp;environment:<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ACTOR: ViewContentActor<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ACTOR_LIB: hive-io-domain-example<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ACTOR_URLS: "/posts/:id"<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ACTOR_URLS: "/contents/:id"<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CLUSTER_SIZE: 1<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SECURE: "true"<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HTTP_VERSION: 1<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SECURE: "false"<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TELEMETRY: "true"<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TELEMETRY_URL_METRICS: "http://collector:55681/v1/metrics"<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TELEMETRY_URL_TRACES: "http://collector:55681/v1/trace"<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;EVENT_STORE_TOPIC: view<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;EVENT_STORE_BROKERS: "kafka:29092"<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;EVENT_STORE_ID: producer-client<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FLUENTD_HOST: fluentd<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FLUENTD_PORT: 24224<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FLUENTD_TIMEOUT: 3.0<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FLUENTD_RECONNECT: 600000<br />
 &nbsp;&nbsp;&nbsp;&nbsp;depends_on:<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- fluentd<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- collector<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- kafka<br />
-&nbsp;&nbsp;&nbsp;&nbsp;volumes:<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- ../../../proxy:/opt/app/cert:rw<br />
 &nbsp;&nbsp;&nbsp;&nbsp;networks:<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- hive-io<br /><br />
 &nbsp;&nbsp;# stream processors<br />
@@ -145,25 +123,23 @@ services:<br />
 &nbsp;&nbsp;&nbsp;&nbsp;image: hive-stream-processor-js:production<br />
 &nbsp;&nbsp;&nbsp;&nbsp;container_name: hive-stream-processor-js<br />
 &nbsp;&nbsp;&nbsp;&nbsp;environment:<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ACTOR: PostCommandActor<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ACTOR: ContentCommandActor<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ACTOR_LIB: hive-io-domain-example<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ACTOR_URLS: "/posts,/posts/:id"<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ACTOR_URLS: "/contents,/contents/:id"<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CLUSTER_SIZE: 1<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SECURE: "true"<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HTTP_VERSION: 1<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SECURE: "false"<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TELEMETRY: "true"<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TELEMETRY_URL_METRICS: "http://collector:55681/v1/metrics"<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TELEMETRY_URL_TRACES: "http://collector:55681/v1/trace"<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CACHE_URL: "redis://redis:6379"<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;EVENT_STORE_PRODUCER_TOPIC: content<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;EVENT_STORE_BROKERS: "kafka:29092"<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;EVENT_STORE_ID: stream-processor-client<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FLUENTD_HOST: fluentd<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FLUENTD_PORT: 24224<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FLUENTD_TIMEOUT: 3.0<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FLUENTD_RECONNECT: 600000<br />
 &nbsp;&nbsp;&nbsp;&nbsp;depends_on:<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- fluentd<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- collector<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- kafka<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- redis<br />
-&nbsp;&nbsp;&nbsp;&nbsp;volumes:<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- ../../../proxy:/opt/app/cert:rw<br />
 &nbsp;&nbsp;&nbsp;&nbsp;networks:<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- hive-io<br />
 &nbsp;&nbsp;redis:<br />
@@ -206,30 +182,28 @@ services:<br />
 &nbsp;&nbsp;&nbsp;&nbsp;image: hive-consumer-js:production<br />
 &nbsp;&nbsp;&nbsp;&nbsp;container_name: hive-consumer-js<br />
 &nbsp;&nbsp;&nbsp;&nbsp;environment:<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ACTOR: PostEventActor<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ACTOR: ContentEventActor<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ACTOR_LIB: hive-io-domain-example<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CLUSTER_SIZE: 1<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SECURE: "true"<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HTTP_VERSION: 1<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SECURE: "false"<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TELEMETRY: "true"<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TELEMETRY_URL_METRICS: "http://collector:55681/v1/metrics"<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TELEMETRY_URL_TRACES: "http://collector:55681/v1/trace"<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;EVENT_STORE_TOPIC: "content|view"<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;EVENT_STORE_BROKERS: "kafka:29092"<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;EVENT_STORE_ID: consumer-client<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;EVENT_STORE_GROUP_ID: consumer-group<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;EVENT_STORE_FROM_START: "true"<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MONGO_URL: "mongodb://mongo:27017/post"<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FLUENTD_HOST: fluentd<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FLUENTD_PORT: 24224<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FLUENTD_TIMEOUT: 3.0<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FLUENTD_RECONNECT: 600000<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MONGO_URL: "mongodb://mongo:27017/content"<br />
 &nbsp;&nbsp;&nbsp;&nbsp;depends_on:<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- fluentd<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- collector<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- kafka<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- mongo<br />
-&nbsp;&nbsp;&nbsp;&nbsp;volumes:<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- ../../../proxy:/opt/app/cert:rw<br />
 &nbsp;&nbsp;&nbsp;&nbsp;networks:<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- hive-io<br />
 &nbsp;&nbsp;mongo:<br />
-&nbsp;&nbsp;&nbsp;&nbsp;image: mongo:4.4.1<br />
+&nbsp;&nbsp;&nbsp;&nbsp;image: mongo:4.4.2<br />
 &nbsp;&nbsp;&nbsp;&nbsp;container_name: mongo<br />
 &nbsp;&nbsp;&nbsp;&nbsp;networks:<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- hive-io<br />
@@ -242,25 +216,43 @@ services:<br />
 &nbsp;&nbsp;&nbsp;&nbsp;image: hive-base-js:production<br />
 &nbsp;&nbsp;&nbsp;&nbsp;container_name: hive-base-js<br />
 &nbsp;&nbsp;&nbsp;&nbsp;environment:<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ACTOR: PostQueryActor<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ACTOR: ContentQueryActor<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ACTOR_LIB: hive-io-domain-example<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ACTOR_URLS: "/posts,/posts/:id"<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ACTOR_URLS: "/contents,/contents/:id"<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CLUSTER_SIZE: 1<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SECURE: "true"<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MONGO_URL: "mongodb://mongo:27017/post"<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FLUENTD_HOST: fluentd<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FLUENTD_PORT: 24224<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FLUENTD_TIMEOUT: 3.0<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FLUENTD_RECONNECT: 600000<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HTTP_VERSION: 1<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SECURE: "false"<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TELEMETRY: "true"<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TELEMETRY_URL_METRICS: "http://collector:55681/v1/metrics"<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TELEMETRY_URL_TRACES: "http://collector:55681/v1/trace"<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MONGO_URL: "mongodb://mongo:27017/content"<br />
 &nbsp;&nbsp;&nbsp;&nbsp;depends_on:<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- fluentd<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- collector<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- hive-producer-js<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- mongo<br />
-&nbsp;&nbsp;&nbsp;&nbsp;volumes:<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- ../../../proxy:/opt/app/cert:rw<br />
 &nbsp;&nbsp;&nbsp;&nbsp;networks:<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- hive-io<br /><br />
-# networking specifics<br />
+&nbsp;&nbsp;# telemetry<br />
+&nbsp;&nbsp;# NOTE: you will need to provide a configuration for the collector<br />
+&nbsp;&nbsp;#       see https://github.com/fnalabs/hive-io/blob/master/dev/collector/collector-config.yml<br />
+&nbsp;&nbsp;collector:<br />
+&nbsp;&nbsp;&nbsp;&nbsp;image: otel/opentelemetry-collector:0.16.0<br />
+&nbsp;&nbsp;&nbsp;&nbsp;container_name: collector<br />
+&nbsp;&nbsp;&nbsp;&nbsp;command: ["--config=/conf/collector-config.yml", "--log-level=ERROR"]<br />
+&nbsp;&nbsp;&nbsp;&nbsp;depends_on:<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- zipkin<br />
+&nbsp;&nbsp;&nbsp;&nbsp;networks:<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- hive-io<br />
+&nbsp;&nbsp;&nbsp;&nbsp;restart: on-failure<br />
+&nbsp;&nbsp;zipkin:<br />
+&nbsp;&nbsp;&nbsp;&nbsp;image: openzipkin/zipkin:2.23.1<br />
+&nbsp;&nbsp;&nbsp;&nbsp;container_name: zipkin<br />
+&nbsp;&nbsp;&nbsp;&nbsp;ports:<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- 9411:9411<br />
+&nbsp;&nbsp;&nbsp;&nbsp;networks:<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- hive-io<br />
+&nbsp;&nbsp;&nbsp;&nbsp;restart: on-failure<br /><br />
+# networking<br />
 networks:<br />
 &nbsp;&nbsp;hive-io:<br />
 &nbsp;&nbsp;&nbsp;&nbsp;driver: bridge</pre>{/* eslint-disable-line react/jsx-closing-tag-location */}

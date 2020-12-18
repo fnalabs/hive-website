@@ -20,7 +20,7 @@ Array [
             <p
               className="menu-label has-text-weight-bold"
             >
-              v2.0.0
+              v2.1.0
             </p>
             <ul
               className="menu-list"
@@ -59,6 +59,15 @@ Array [
                       onClick={[Function]}
                     >
                       Infrastructure
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      aria-current={null}
+                      href="/telemetry"
+                      onClick={[Function]}
+                    >
+                      Telemetry
                     </a>
                   </li>
                 </ul>
@@ -241,7 +250,7 @@ Array [
                     'false'
                   </td>
                   <td>
-                    whether to run microservice secure or not. defaults to 'false' since we cannot provide certifications
+                    whether to run microservice secure or not. defaults to 'false' since we cannot provide certificates
                   </td>
                 </tr>
                 <tr>
@@ -330,6 +339,68 @@ Array [
                   <td />
                   <td>
                     comma-separated URLs associated with the Actor
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    TELEMETRY
+                  </td>
+                  <td>
+                    String
+                  </td>
+                  <td>
+                    'false'
+                  </td>
+                  <td>
+                    whether to run OpenTelemetry integration
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    TELEMETRY_PLUGINS
+                  </td>
+                  <td>
+                    String
+                  </td>
+                  <td />
+                  <td>
+                    JSON string of OpenTelemetry plugins to enable
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    TELEMETRY_SERVICE_NAME
+                  </td>
+                  <td>
+                    String
+                  </td>
+                  <td />
+                  <td>
+                    service name for OpenTelemetry
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    TELEMETRY_URL_METRICS
+                  </td>
+                  <td>
+                    String
+                  </td>
+                  <td />
+                  <td>
+                    OpenTelemetry Collector URL for metrics
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    TELEMETRY_URL_TRACES
+                  </td>
+                  <td>
+                    String
+                  </td>
+                  <td />
+                  <td>
+                    OpenTelemetry Collector URL for traces
                   </td>
                 </tr>
               </tbody>
@@ -867,6 +938,7 @@ Array [
             >
               <svg
                 height="48"
+                role="img"
                 viewBox="0 0 448 512"
                 xmlns="http://www.w3.org/2000/svg"
               >
@@ -889,6 +961,7 @@ Array [
             >
               <svg
                 height="48"
+                role="img"
                 viewBox="0 0 448 512"
                 xmlns="http://www.w3.org/2000/svg"
               >

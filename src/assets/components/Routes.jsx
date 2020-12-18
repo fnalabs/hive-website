@@ -7,6 +7,7 @@ import {
   Model,
   Domain,
   Infrastructure,
+  Telemetry,
   Start,
   Setup,
   Basic,
@@ -25,6 +26,7 @@ export const Routes = () => (
     <Route exact path='/model' component={Model} />
     <Route exact path='/domain' component={Domain} />
     <Route exact path='/infrastructure' component={Infrastructure} />
+    <Route exact path='/telemetry' component={Telemetry} />
     <Route exact path='/start' component={Start} />
     <Route exact path='/setup' component={Setup} />
     <Route exact path='/basic' component={Basic} />

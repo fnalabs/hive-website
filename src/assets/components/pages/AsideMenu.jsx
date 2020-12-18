@@ -5,13 +5,14 @@ import { AnalyticsLink } from 'common'
 
 const AsideMenu = () => (
   <aside className='menu'>
-    <p className='menu-label has-text-weight-bold'>v2.0.0</p>
+    <p className='menu-label has-text-weight-bold'>v2.1.0</p>
     <ul className='menu-list'>
       <li><NavLink to='/overview' activeClassName='is-active'>Overview</NavLink>
         <ul>
           <li><NavLink to='/model' activeClassName='is-active'>Data Model</NavLink></li>
           <li><NavLink to='/domain' activeClassName='is-active'>Domain Logic</NavLink></li>
           <li><NavLink to='/infrastructure' activeClassName='is-active'>Infrastructure</NavLink></li>
+          <li><NavLink to='/telemetry' activeClassName='is-active'>Telemetry</NavLink></li>
         </ul>
       </li>
 

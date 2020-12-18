@@ -33,9 +33,89 @@ describe('<Nav />', () => {
     expect(tree).toMatchSnapshot()
   })
 
+  it('should render Model page nav correctly', () => {
+    const tree = renderer
+      .create(<MemoryRouter initialEntries={['/model']}><Nav /></MemoryRouter>)
+      .toJSON()
+
+    expect(tree).toMatchSnapshot()
+  })
+
+  it('should render Domain page nav correctly', () => {
+    const tree = renderer
+      .create(<MemoryRouter initialEntries={['/domain']}><Nav /></MemoryRouter>)
+      .toJSON()
+
+    expect(tree).toMatchSnapshot()
+  })
+
+  it('should render Infrastructure page nav correctly', () => {
+    const tree = renderer
+      .create(<MemoryRouter initialEntries={['/infrastructure']}><Nav /></MemoryRouter>)
+      .toJSON()
+
+    expect(tree).toMatchSnapshot()
+  })
+
+  it('should render Telemetry page nav correctly', () => {
+    const tree = renderer
+      .create(<MemoryRouter initialEntries={['/telemetry']}><Nav /></MemoryRouter>)
+      .toJSON()
+
+    expect(tree).toMatchSnapshot()
+  })
+
   it('should render Get Started page nav correctly', () => {
     const tree = renderer
       .create(<MemoryRouter initialEntries={['/start']}><Nav /></MemoryRouter>)
+      .toJSON()
+
+    expect(tree).toMatchSnapshot()
+  })
+
+  it('should render Setup page nav correctly', () => {
+    const tree = renderer
+      .create(<MemoryRouter initialEntries={['/setup']}><Nav /></MemoryRouter>)
+      .toJSON()
+
+    expect(tree).toMatchSnapshot()
+  })
+
+  it('should render Basic page nav correctly', () => {
+    const tree = renderer
+      .create(<MemoryRouter initialEntries={['/basic']}><Nav /></MemoryRouter>)
+      .toJSON()
+
+    expect(tree).toMatchSnapshot()
+  })
+
+  it('should render Rest page nav correctly', () => {
+    const tree = renderer
+      .create(<MemoryRouter initialEntries={['/rest']}><Nav /></MemoryRouter>)
+      .toJSON()
+
+    expect(tree).toMatchSnapshot()
+  })
+
+  it('should render CqrsEs page nav correctly', () => {
+    const tree = renderer
+      .create(<MemoryRouter initialEntries={['/cqrs-es']}><Nav /></MemoryRouter>)
+      .toJSON()
+
+    expect(tree).toMatchSnapshot()
+  })
+
+  it('should render Documentation page nav correctly', () => {
+    const tree = renderer
+      .create(<MemoryRouter initialEntries={['/documentation']}><Nav /></MemoryRouter>)
+      .toJSON()
+
+    expect(tree).toMatchSnapshot()
+  })
+
+  it('should render Environments page nav correctly', () => {
+    const tree = renderer
+      .create(<MemoryRouter initialEntries={['/environments']}><Nav /></MemoryRouter>)
       .toJSON()
 
     expect(tree).toMatchSnapshot()

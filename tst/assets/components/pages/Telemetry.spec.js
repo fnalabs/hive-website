@@ -6,20 +6,20 @@ import { shallow } from 'enzyme'
 import { MemoryRouter } from 'react-router'
 import ReactGA from 'react-ga'
 
-import { Rest } from 'pages'
+import { Telemetry } from 'pages'
 
 jest.mock('react-ga')
 
-describe('<Rest />', () => {
-  it('should render Rest page static content', () => {
-    const tree = renderer.create(<MemoryRouter><Rest location={{ pathname: '/rest' }} /></MemoryRouter>).toJSON()
+describe('<Telemetry />', () => {
+  it('should render Telemetry page static content', () => {
+    const tree = renderer.create(<MemoryRouter><Telemetry location={{ pathname: '/telemetry' }} /></MemoryRouter>).toJSON()
 
     expect(tree).toMatchSnapshot()
     expect(ReactGA.pageview).not.toBeCalled()
   })
 
-  it('should render Rest page static content and report page view', () => {
-    shallow(<Rest location={{ pathname: '/rest' }} />, {
+  it('should render Telemetry page static content and report page view', () => {
+    shallow(<Telemetry location={{ pathname: '/telemetry' }} />, {
       context: { isConsent: true }
     })
 

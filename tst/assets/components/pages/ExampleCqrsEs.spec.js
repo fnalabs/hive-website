@@ -12,14 +12,14 @@ jest.mock('react-ga')
 
 describe('<CqrsEs />', () => {
   it('should render CqrsEs page static content', () => {
-    const tree = renderer.create(<MemoryRouter><CqrsEs location={{ pathname: '/domain' }} /></MemoryRouter>).toJSON()
+    const tree = renderer.create(<MemoryRouter><CqrsEs location={{ pathname: '/cqrs-es' }} /></MemoryRouter>).toJSON()
 
     expect(tree).toMatchSnapshot()
     expect(ReactGA.pageview).not.toBeCalled()
   })
 
   it('should render CqrsEs page static content and report page view', () => {
-    shallow(<CqrsEs location={{ pathname: '/domain' }} />, {
+    shallow(<CqrsEs location={{ pathname: '/cqrs-es' }} />, {
       context: { isConsent: true }
     })
 

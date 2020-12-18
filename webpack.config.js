@@ -6,7 +6,7 @@ const cssnano = require('cssnano')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const Dotenv = require('dotenv-webpack')
 const { InjectManifest } = require('workbox-webpack-plugin')
-const ManifestPlugin = require('webpack-manifest-plugin')
+const { WebpackManifestPlugin } = require('webpack-manifest-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const NodemonPlugin = require('nodemon-webpack-plugin')
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
@@ -28,7 +28,7 @@ const plugins = [
 ]
 if (isDev) {
   plugins.push(
-    new ManifestPlugin({
+    new WebpackManifestPlugin({
       fileName: '../server/manifest.json'
     }),
     new WebpackShellPluginNext({
@@ -89,6 +89,7 @@ if (isDev) {
           { url: '/model', revision: pkg.version },
           { url: '/domain', revision: pkg.version },
           { url: '/infrastructure', revision: pkg.version },
+          { url: '/telemetry', revision: pkg.version },
           { url: '/start', revision: pkg.version },
           { url: '/setup', revision: pkg.version },
           { url: '/basic', revision: pkg.version },
@@ -103,7 +104,7 @@ if (isDev) {
       }],
       swSrc: './src/client/sw.js'
     }),
-    new ManifestPlugin({
+    new WebpackManifestPlugin({
       fileName: '../server/manifest.json'
     }),
     new WebpackShellPluginNext({

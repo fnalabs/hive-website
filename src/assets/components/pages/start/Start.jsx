@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import Helmet from 'react-helmet'
 import ReactGA from 'react-ga'
 
 import Consent from 'contexts/Consent'
 
 import { Container } from 'common'
 import { Info } from 'icons'
+import { Header } from 'layout'
 
 import AsideMenu from '../AsideMenu'
 import NextPageHero from '../NextPageHero'
@@ -28,21 +28,10 @@ export default class Start extends Component {
 
   render () {
     const { title, description, url } = meta['/start']
-    const siteName = meta.common.siteName
 
     return (
       <>
-        <Helmet>
-          <title>{siteName} | {title}</title>
-          <meta name='description' content={description} />
-          <link rel='canonical' href={url} />
-
-          <meta property='og:title' content={`${siteName} | ${title}`} />
-          <meta property='og:description' content={description} />
-          <meta property='og:site_name' content={siteName} />
-          <meta property='og:url' content={url} />
-          <meta property='og:type' content='website' />
-        </Helmet>
+        <Header title={`${meta.common.siteName} | ${title}`} description={description} url={url} />
 
         <article className='section is-medium'>
           <Container>
@@ -78,7 +67,7 @@ export default class Start extends Component {
           </Container>
         </article>
 
-        <NextPageHero toLeft='/infrastructure' toRight='/setup' />
+        <NextPageHero toLeft='/telemetry' toRight='/setup' />
       </>
     )
   }

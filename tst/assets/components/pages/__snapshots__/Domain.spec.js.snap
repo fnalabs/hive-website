@@ -20,7 +20,7 @@ Array [
             <p
               className="menu-label has-text-weight-bold"
             >
-              v2.0.0
+              v2.1.0
             </p>
             <ul
               className="menu-list"
@@ -59,6 +59,15 @@ Array [
                       onClick={[Function]}
                     >
                       Infrastructure
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      aria-current={null}
+                      href="/telemetry"
+                      onClick={[Function]}
+                    >
+                      Telemetry
                     </a>
                   </li>
                 </ul>
@@ -310,6 +319,7 @@ Array [
             >
               <svg
                 height="48"
+                role="img"
                 viewBox="0 0 448 512"
                 xmlns="http://www.w3.org/2000/svg"
               >
@@ -333,6 +343,7 @@ Array [
             >
               <svg
                 height="48"
+                role="img"
                 viewBox="0 0 448 512"
                 xmlns="http://www.w3.org/2000/svg"
               >

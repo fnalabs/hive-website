@@ -20,7 +20,7 @@ Array [
             <p
               className="menu-label has-text-weight-bold"
             >
-              v2.0.0
+              v2.1.0
             </p>
             <ul
               className="menu-list"
@@ -59,6 +59,15 @@ Array [
                       onClick={[Function]}
                     >
                       Infrastructure
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      aria-current={null}
+                      href="/telemetry"
+                      onClick={[Function]}
+                    >
+                      Telemetry
                     </a>
                   </li>
                 </ul>
@@ -183,6 +192,7 @@ Array [
             >
               <svg
                 className="svg-inline"
+                role="img"
                 viewBox="0 0 512 512"
                 xmlns="http://www.w3.org/2000/svg"
               >
@@ -251,51 +261,45 @@ Array [
                 <br />
                     environment:
                 <br />
-                      ACTOR: PostActor
+                      ACTOR: ContentActor
                 <br />
                       ACTOR_LIB: hive-io-rest-example
                 <br />
+                      ACTOR_URLS: "/contents,/contents/:id"
+                <br />
                       CLUSTER_SIZE: 1
                 <br />
-                      SECURE: "true"
+                      HTTP_VERSION: 1
                 <br />
-                      MONGO_URL: 'mongodb://mongo:27017/post'
+                      SECURE: "false"
                 <br />
-                      FLUENTD_HOST: fluentd
+                      TELEMETRY: "true"
                 <br />
-                      FLUENTD_PORT: 24224
+                      TELEMETRY_URL_METRICS: "http://collector:55681/v1/metrics"
                 <br />
-                      FLUENTD_TIMEOUT: 3.0
+                      TELEMETRY_URL_TRACES: "http://collector:55681/v1/trace"
                 <br />
-                      FLUENTD_RECONNECT: 600000
+                      MONGO_URL: 'mongodb://mongo:27017/content'
                 <br />
                     depends_on:
                 <br />
-                      - fluentd
+                      - collector
                 <br />
                       - mongo
                 <br />
                     ports:
                 <br />
-                      - 443:3000
+                      - 80:3000
                 <br />
                     networks:
                 <br />
                       - hive-io
-                <br />
-                  fluentd:
-                <br />
-                    image: fluent/fluentd:v1.11.4-2.0
-                <br />
-                    networks:
-                <br />
-                      - hive-io
-                <br />
-                    restart: on-failure
                 <br />
                   mongo:
                 <br />
-                    image: mongo:4.4.1
+                    image: mongo:4.4.2
+                <br />
+                    container_name: mongo
                 <br />
                     networks:
                 <br />
@@ -303,7 +307,49 @@ Array [
                 <br />
                     restart: on-failure
                 <br />
-                # networking specifics
+                <br />
+                  # telemetry
+                <br />
+                  # NOTE: you will need to provide a configuration for the collector
+                <br />
+                  #       see https://github.com/fnalabs/hive-io/blob/master/dev/collector/collector-config.yml
+                <br />
+                  collector:
+                <br />
+                    image: otel/opentelemetry-collector:0.16.0
+                <br />
+                    container_name: collector
+                <br />
+                    command: ["--config=/conf/collector-config.yml", "--log-level=ERROR"]
+                <br />
+                    depends_on:
+                <br />
+                      - zipkin
+                <br />
+                    networks:
+                <br />
+                      - hive-io
+                <br />
+                    restart: on-failure
+                <br />
+                  zipkin:
+                <br />
+                    image: openzipkin/zipkin:2.23.1
+                <br />
+                    container_name: zipkin
+                <br />
+                    ports:
+                <br />
+                      - 9411:9411
+                <br />
+                    networks:
+                <br />
+                      - hive-io
+                <br />
+                    restart: on-failure
+                <br />
+                <br />
+                # networking
                 <br />
                 networks:
                 <br />
@@ -339,6 +385,7 @@ Array [
             >
               <svg
                 height="48"
+                role="img"
                 viewBox="0 0 448 512"
                 xmlns="http://www.w3.org/2000/svg"
               >
@@ -362,6 +409,7 @@ Array [
             >
               <svg
                 height="48"
+                role="img"
                 viewBox="0 0 448 512"
                 xmlns="http://www.w3.org/2000/svg"
               >
