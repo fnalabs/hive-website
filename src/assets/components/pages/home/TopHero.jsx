@@ -1,8 +1,9 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 
 import { Container, Tile } from 'common'
 import { Hero, HeroBody, HeroFooter } from 'common/hero'
-import { ArrowDown, HiveIO } from 'icons'
+import { ArrowDown, HiveIO, OpenTelemetry } from 'icons'
 
 export const TopHero = () => (
   <Hero size='fullheight' color='light' bold>
@@ -11,8 +12,12 @@ export const TopHero = () => (
         <Tile type='ancestor'>
           <Tile type='parent'>
             <Tile type='child' size={6} vertical centered>
-              <h1 className='title'><HiveIO className='svg-inline' height='72' />Hive<sup>io</sup></h1>
+              <h1 className='title'><HiveIO className='svg-inline' height='32' />Hive<sup>io</sup></h1>
               <h2 className='subtitle'>A reactive, cloud-native framework for building microservices.</h2>
+              <h2 className='subtitle'>
+                <OpenTelemetry className='svg-link' height='32' />
+                Now integrated with <NavLink to='/telemetry'>OpenTelemetry</NavLink>!
+              </h2>
             </Tile>
 
             <Tile type='child' size={6}>

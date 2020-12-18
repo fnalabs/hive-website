@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import Helmet from 'react-helmet'
 import ReactGA from 'react-ga'
 
 import Consent from 'contexts/Consent'
 
 import { AnalyticsLink, Container } from 'common'
+import { Header } from 'layout'
 
 import AsideMenu from '../AsideMenu'
 import NextPageHero from '../NextPageHero'
@@ -27,21 +27,10 @@ export default class Basic extends Component {
 
   render () {
     const { title, description, url } = meta['/documentation']
-    const siteName = meta.common.siteName
 
     return (
       <>
-        <Helmet>
-          <title>{siteName} | {title}</title>
-          <meta name='description' content={description} />
-          <link rel='canonical' href={url} />
-
-          <meta property='og:title' content={`${siteName} | ${title}`} />
-          <meta property='og:description' content={description} />
-          <meta property='og:site_name' content={siteName} />
-          <meta property='og:url' content={url} />
-          <meta property='og:type' content='website' />
-        </Helmet>
+        <Header title={`${meta.common.siteName} | ${title}`} description={description} url={url} />
 
         <article className='section is-medium'>
           <Container>
@@ -96,6 +85,13 @@ export default class Basic extends Component {
                           <ul>
                             <li><AnalyticsLink to='https://fnalabs.github.io/hive-io/System.html#emit' target='_blank' rel='noopener noreferrer'>emit</AnalyticsLink></li>
                             <li><AnalyticsLink to='https://fnalabs.github.io/hive-io/System.html#on' target='_blank' rel='noopener noreferrer'>on</AnalyticsLink></li>
+                          </ul>
+                        </li>
+
+                        <li><AnalyticsLink to='https://fnalabs.github.io/hive-io/Bus.html' target='_blank' rel='noopener noreferrer'>Bus</AnalyticsLink> (alias of System)
+                          <ul>
+                            <li><AnalyticsLink to='https://fnalabs.github.io/hive-io/Bus.html#emit' target='_blank' rel='noopener noreferrer'>emit</AnalyticsLink></li>
+                            <li><AnalyticsLink to='https://fnalabs.github.io/hive-io/Bus.html#on' target='_blank' rel='noopener noreferrer'>on</AnalyticsLink></li>
                           </ul>
                         </li>
                       </ul>

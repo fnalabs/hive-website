@@ -6,7 +6,7 @@ import NextPageHero from 'pages/NextPageHero'
 
 describe('<NextPageHero />', () => {
   it('should render the next site page hero link', () => {
-    const nextPageHero = shallow(<NextPageHero to='/' />)
+    const nextPageHero = shallow(<NextPageHero toRight='/' />)
 
     expect(nextPageHero.instance()).toBeInstanceOf(NextPageHero)
     expect(nextPageHero.is('Hero')).toBe(true)

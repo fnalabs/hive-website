@@ -12,14 +12,14 @@ jest.mock('react-ga')
 
 describe('<Setup />', () => {
   it('should render Setup page static content', () => {
-    const tree = renderer.create(<MemoryRouter><Setup location={{ pathname: '/domain' }} /></MemoryRouter>).toJSON()
+    const tree = renderer.create(<MemoryRouter><Setup location={{ pathname: '/setup' }} /></MemoryRouter>).toJSON()
 
     expect(tree).toMatchSnapshot()
     expect(ReactGA.pageview).not.toBeCalled()
   })
 
   it('should render Setup page static content and report page view', () => {
-    shallow(<Setup location={{ pathname: '/domain' }} />, {
+    shallow(<Setup location={{ pathname: '/setup' }} />, {
       context: { isConsent: true }
     })
 
