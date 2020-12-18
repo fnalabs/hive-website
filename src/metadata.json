@@ -2,6 +2,7 @@
   "common": {
     "siteName": "Hive^io",
     "baseUrl": "https://hiveframework.io",
+    "imageUrl": "https://hiveframework.io/icon_512x512.png",
     "cacheTime": 600000
   },
   "/": {
@@ -36,6 +37,13 @@
     "title": "Infrastructure",
     "description": "Infrastructure in Hive^io: a reactive, cloud-native framework. The following describes patterns chosen and other information on certain architectures with infrastructure as code.",
     "url": "https://hiveframework.io/infrastructure",
+    "priority": 1.0
+  },
+  "/telemetry": {
+    "name": "telemetry",
+    "title": "Telemetry",
+    "description": "Telemetry in Hive^io: a reactive, cloud-native framework. The following describes our integration with OpenTelemetry.",
+    "url": "https://hiveframework.io/telemetry",
     "priority": 1.0
   },
   "/start": {
@@ -83,19 +91,21 @@
   "/environments": {
     "name": "environments",
     "title": "Environments",
-    "description": "Reference environment configurations for each microservice image in Hive^io: a reactive, cloud-native framework.",
+    "description": "Reference environment configuration for Hive^io: a reactive, cloud-native framework. Reference environment configurations for each microservice image.",
     "url": "https://hiveframework.io/environments",
     "priority": 1.0
   },
   "/cookie": {
     "name": "cookie",
     "title": "Cookie Policy",
+    "description": "Cookie policy for the Hive^io framework website.",
     "url": "https://hiveframework.io/cookie",
     "priority": 0.0
   },
   "/privacy": {
     "name": "privacy",
     "title": "Privacy Policy",
+    "description": "Privacy policy for the Hive^io framework website.",
     "url": "https://hiveframework.io/privacy",
     "priority": 0.0
   }

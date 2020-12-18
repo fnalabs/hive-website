@@ -56,6 +56,7 @@ class Nav extends Component {
                   <NavLink to='/model' activeClassName='is-active' className='navbar-item' onClick={this.handleClickBlur}>Data Model</NavLink>
                   <NavLink to='/domain' activeClassName='is-active' className='navbar-item' onClick={this.handleClickBlur}>Domain Logic</NavLink>
                   <NavLink to='/infrastructure' activeClassName='is-active' className='navbar-item' onClick={this.handleClickBlur}>Infrastructure</NavLink>
+                  <NavLink to='/telemetry' activeClassName='is-active' className='navbar-item' onClick={this.handleClickBlur}>Telemetry</NavLink>
                 </div>
               </div>
 
@@ -77,7 +78,7 @@ class Nav extends Component {
                   <NavLink to='/environments' activeClassName='is-active' className='navbar-item' onClick={this.handleClickBlur}>Environments</NavLink>
                   <AnalyticsLink to='https://fnalabs.github.io/hive-io/' target='_blank' rel='noopener noreferrer' className='navbar-item' onClick={this.handleClickBlur}>API</AnalyticsLink>
                   <hr className='navbar-divider' />
-                  <span className='navbar-item has-text-weight-bold'>v2.0.0</span>
+                  <span className='navbar-item has-text-weight-bold'>v2.1.0</span>
                 </div>
               </div>
             </div>

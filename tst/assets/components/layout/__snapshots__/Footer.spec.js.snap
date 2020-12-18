@@ -153,6 +153,7 @@ exports[`<Footer /> should render static content correctly 1`] = `
               >
                 <svg
                   className="svg-link"
+                  role="img"
                   viewBox="0 0 496 512"
                   xmlns="http://www.w3.org/2000/svg"
                 >
@@ -177,6 +178,7 @@ exports[`<Footer /> should render static content correctly 1`] = `
               >
                 <svg
                   className="svg-link"
+                  role="img"
                   viewBox="0 0 576 512"
                   xmlns="http://www.w3.org/2000/svg"
                 >
@@ -201,6 +203,7 @@ exports[`<Footer /> should render static content correctly 1`] = `
               >
                 <svg
                   className="svg-link"
+                  role="img"
                   viewBox="0 0 512 512"
                   xmlns="http://www.w3.org/2000/svg"
                 >
@@ -223,6 +226,7 @@ exports[`<Footer /> should render static content correctly 1`] = `
               >
                 <svg
                   className="svg-link"
+                  role="img"
                   viewBox="0 0 512 512"
                   xmlns="http://www.w3.org/2000/svg"
                 >
@@ -250,6 +254,7 @@ exports[`<Footer /> should render static content correctly 1`] = `
                 target="_blank"
               >
                 <svg
+                  role="img"
                   viewBox="0 0 290 180"
                   width="144"
                   xmlns="http://www.w3.org/2000/svg"
