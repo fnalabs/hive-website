@@ -81,7 +81,7 @@ export default new Proxy(ExampleActor, &#123;<br />
                   </dd>
                 </dl>
 
-                <div className='notification'>
+                <div className='notification is-info is-light'>
                   <span className='icon'><Info className='svg-inline' /></span>
                   <span>Please note the use of <code>Proxy</code> in the <code>ExampleActor</code> definition above. Due to the asynchronous requirement of Schemas, specifically that they can be hosted in a Schema Registry, <code>Proxy</code> is used to give us the ability to define asynchronous constructors to satisfy that requirement.</span>
                 </div>

@@ -44,13 +44,13 @@ export default class Rest extends Component {
                 <h1>Example: REST</h1>
                 <p>Let's expand on the Basic example with a REST service. The code below describes a minimal implementation of the domain logic and infrastructure as code to implement a REST service.</p>
 
-                <h2><a href='https://www.npmjs.com/package/hive-io-rest-example' target='_blank' rel='noopener noreferrer'>Domain Logic</a> (<a href='https://github.com/fnalabs/hive-io/tree/master/packages/hive-js-rest-example' target='_blank' rel='noopener noreferrer'>Source Code</a>)</h2>
-                <div className='notification'>
+                <h2 id='source_code'><a href='https://www.npmjs.com/package/hive-io-rest-example' target='_blank' rel='noopener noreferrer'>Domain Logic</a> (<a href='https://github.com/fnalabs/hive-io/tree/master/packages/hive-js-rest-example' target='_blank' rel='noopener noreferrer'>Source Code</a>)</h2>
+                <div className='notification is-info is-light'>
                   <span className='icon'><Info className='svg-inline' /></span>
                   <span>You should consider using a private NPM registry or implementing more creative solutions such as extending base Docker images with <code>ADD</code>|<code>COPY</code> statements for source code or <code>npm link</code> for your domain logic.</span>
                 </div>
 
-                <h2><a href='https://github.com/fnalabs/hive-io/tree/master/dev/docker/rest/production' target='_blank' rel='noopener noreferrer'>Infrastructure</a></h2>
+                <h2 id='infrastructure'><a href='https://github.com/fnalabs/hive-io/tree/master/dev/docker/rest/production' target='_blank' rel='noopener noreferrer'>Infrastructure</a></h2>
                 <dl>
                   <dt><code>Dockerfile</code></dt>
                   <dd>

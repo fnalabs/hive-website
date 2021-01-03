@@ -14,7 +14,7 @@ import {
 } from './cards'
 
 export const MidHero = () => (
-  <Hero className='neon-tiles' size='medium' color='dark' bold>
+  <Hero className='neon-tiles' size='medium' color='dark'>
     <HeroBody>
       <Container>
         <Tile type='ancestor'>

@@ -42,7 +42,7 @@ export default class Domain extends Component {
                 <h1>Domain Logic</h1>
                 <p>Domain needs vary greatly for a variety of concerns such as storage, security, monitoring, and more. There are a plethora of options available in each of those categories and the list continues to grow. Hive<sup>io</sup> is the glue that binds them. Regardless of the desired patterns, the same atomic operations can be applied. The first opinion Hive<sup>io</sup> makes is with the <a href='https://en.wikipedia.org/wiki/Actor_model' target='_blank' rel='noopener noreferrer'>Actor Model</a>.</p>
 
-                <h2>Actor Model</h2>
+                <h2 id='actor_model'>Actor Model</h2>
                 <p>The Actor Model consists of 'actors' as universal primitives of concurrent computation. Hive<sup>io</sup> Actors perform actions on command by making local decisions, calling on other actors to perform various actions, or sending messages to other actors through various means. This is a relatively plain but powerful concept that provides the basic building blocks for your application logic. Most development time is spent within this construct. Actors have various channels with which they communicate:</p>
                 <dl>
                   <dt><em><strong>Immediate</strong></em></dt>
@@ -53,7 +53,7 @@ export default class Domain extends Component {
                 </dl>
                 <p>Hive<sup>io</sup> Actors are able to achieve highly concurrent operations by leveraging <a href='https://nodejs.org/' target='_blank' rel='noopener noreferrer'>Node.js</a>' non-blocking, asynchronous I/O. These actors can be arranged to perform tasks for a variety of architectures. Everything is asynchronous from the ground up, even validation via transport schemas.</p>
 
-                <h2>Types of Actors</h2>
+                <h2 id='actor_types'>Actor Types</h2>
                 <p>There are 2 different types of Actors defined in the Hive<sup>io</sup> framework. They are:</p>
                 <dl>
                   <dt><a href='https://fnalabs.github.io/hive-io/Actor.html' target='_blank' rel='noopener noreferrer'><strong>Actor</strong></a></dt>

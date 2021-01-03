@@ -42,7 +42,7 @@ export default class Basic extends Component {
                 <h1>Documentation</h1>
                 <p>Below you will find a sitemap for API documentation of the Hive<sup>io</sup> library. There are links to each of the Classes and links to their methods. Also, included on the next page is all of the environment variables for each microservice image.</p>
 
-                <h2>API</h2>
+                <h2 id='api'>API</h2>
                 <p><em><strong>NOTE:</strong></em> These pages are currently available online only.</p>
                 <nav>
                   <ul>

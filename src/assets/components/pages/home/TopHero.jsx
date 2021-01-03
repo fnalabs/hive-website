@@ -6,17 +6,17 @@ import { Hero, HeroBody, HeroFooter } from 'common/hero'
 import { ArrowDown, HiveIO, OpenTelemetry } from 'icons'
 
 export const TopHero = () => (
-  <Hero size='fullheight' color='light' bold>
+  <Hero size='fullheight' color='dark' bold>
     <HeroBody>
       <Container>
         <Tile type='ancestor'>
           <Tile type='parent'>
             <Tile type='child' size={6} vertical centered>
               <h1 className='title'><HiveIO className='svg-inline' height='32' />Hive<sup>io</sup></h1>
-              <h2 className='subtitle'>A reactive, cloud-native framework for building microservices.</h2>
+              <h2 className='subtitle'>A reactive, cloud-native framework for building microservices</h2>
               <h2 className='subtitle'>
                 <OpenTelemetry className='svg-link' height='32' />
-                Now integrated with <NavLink to='/telemetry'>OpenTelemetry</NavLink>!
+                Now integrated with <NavLink to='/telemetry'>OpenTelemetry</NavLink>
               </h2>
             </Tile>
 
@@ -45,6 +45,6 @@ export const TopHero = () => (
       </Container>
     </HeroBody>
 
-    <HeroFooter centered><span className='icon is-medium'><ArrowDown height='32' /></span></HeroFooter>
+    <HeroFooter centered><span className='icon is-medium'><ArrowDown height='32' fill='#fff' /></span></HeroFooter>
   </Hero>
 )
