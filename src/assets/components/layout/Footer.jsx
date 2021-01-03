@@ -9,7 +9,7 @@ export const Footer = () => (
     <Container>
       <div className='columns'>
         <div className='column is-narrow content'>
-          <p>Copyright &copy; 2020 <a href='https://fnalabs.com' target='_blank' rel='noopener noreferrer'>FnA Labs</a></p>
+          <p>Copyright &copy; <a href='https://fnalabs.com' target='_blank' rel='noopener noreferrer'>FnA Labs</a></p>
           <p className='is-size-7'>Icons from <a href='https://fontawesome.com/' target='_blank' rel='noopener noreferrer'>Font Awesome</a> (<a href='https://fontawesome.com/license' target='_blank' rel='noopener noreferrer'>License</a>)</p>
           <p><a href='https://bulma.io' target='_blank' rel='noopener noreferrer'><img src='https://fnalabs.github.io/fnalabs-assets/assets/made-with-bulma--dark.png' alt='Made with Bulma' width='128' height='24' /></a></p>
         </div>
@@ -35,7 +35,7 @@ export const Footer = () => (
         <div className='column is-narrow'>
           <nav className='level is-mobile'>
             <p className='level-item'>
-              <AnalyticsLink to='https://github.com/fnalabs?q=hive' target='_blank' rel='noopener noreferrer' aria-label='github'>
+              <AnalyticsLink to='https://github.com/fnalabs/hive-io' target='_blank' rel='noopener noreferrer' aria-label='github'>
                 <span className='icon'><Github className='svg-link' /></span>
               </AnalyticsLink>
             </p>
