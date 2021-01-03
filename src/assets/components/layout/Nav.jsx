@@ -29,7 +29,7 @@ class Nav extends Component {
   }
 
   render () {
-    let navClasses = 'navbar is-spaced is-transparent is-absolute'
+    let navClasses = 'navbar is-spaced is-dark is-absolute'
     if (this.state.location === '/') navClasses += ' is-home'
 
     return (
@@ -78,7 +78,7 @@ class Nav extends Component {
                   <NavLink to='/environments' activeClassName='is-active' className='navbar-item' onClick={this.handleClickBlur}>Environments</NavLink>
                   <AnalyticsLink to='https://fnalabs.github.io/hive-io/' target='_blank' rel='noopener noreferrer' className='navbar-item' onClick={this.handleClickBlur}>API</AnalyticsLink>
                   <hr className='navbar-divider' />
-                  <span className='navbar-item has-text-weight-bold'>v2.1.0</span>
+                  <span className='navbar-item has-text-weight-bold'>v2.1.1</span>
                 </div>
               </div>
             </div>
