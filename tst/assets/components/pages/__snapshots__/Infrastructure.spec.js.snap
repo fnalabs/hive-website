@@ -20,7 +20,7 @@ Array [
             <p
               className="menu-label has-text-weight-bold"
             >
-              v2.1.0
+              v2.1.1
             </p>
             <ul
               className="menu-list"
@@ -178,7 +178,9 @@ Array [
             </a>
              images defined. These images are meant to be extended to include your domain logic and additional code dependencies. Depending on the type of container, there are a few opinions made here too.
           </p>
-          <h2>
+          <h2
+            id="specialized_containers"
+          >
             Specialized Containers
           </h2>
           <p>
@@ -250,7 +252,9 @@ Array [
               ). CQRS/ES Process Managers and Sagas can be implemented here too.
             </dd>
           </dl>
-          <h2>
+          <h2
+            id="unified_transaction_log"
+          >
             Unified Transaction Log
           </h2>
           <p>

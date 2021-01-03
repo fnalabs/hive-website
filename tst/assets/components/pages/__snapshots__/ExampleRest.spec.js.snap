@@ -20,7 +20,7 @@ Array [
             <p
               className="menu-label has-text-weight-bold"
             >
-              v2.1.0
+              v2.1.1
             </p>
             <ul
               className="menu-list"
@@ -166,7 +166,9 @@ Array [
           <p>
             Let's expand on the Basic example with a REST service. The code below describes a minimal implementation of the domain logic and infrastructure as code to implement a REST service.
           </p>
-          <h2>
+          <h2
+            id="source_code"
+          >
             <a
               href="https://www.npmjs.com/package/hive-io-rest-example"
               rel="noopener noreferrer"
@@ -185,7 +187,7 @@ Array [
             )
           </h2>
           <div
-            className="notification"
+            className="notification is-info is-light"
           >
             <span
               className="icon"
@@ -218,7 +220,9 @@ Array [
                for your domain logic.
             </span>
           </div>
-          <h2>
+          <h2
+            id="infrastructure"
+          >
             <a
               href="https://github.com/fnalabs/hive-io/tree/master/dev/docker/rest/production"
               rel="noopener noreferrer"

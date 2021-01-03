@@ -14,7 +14,7 @@ exports[`<Footer /> should render static content correctly 1`] = `
         className="column is-narrow content"
       >
         <p>
-          Copyright © 2020 
+          Copyright © 
           <a
             href="https://fnalabs.com"
             rel="noopener noreferrer"
@@ -144,7 +144,7 @@ exports[`<Footer /> should render static content correctly 1`] = `
           >
             <a
               aria-label="github"
-              href="https://github.com/fnalabs?q=hive"
+              href="https://github.com/fnalabs/hive-io"
               rel="noopener noreferrer"
               target="_blank"
             >

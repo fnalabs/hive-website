@@ -20,7 +20,7 @@ Array [
             <p
               className="menu-label has-text-weight-bold"
             >
-              v2.1.0
+              v2.1.1
             </p>
             <ul
               className="menu-list"
@@ -170,7 +170,9 @@ Array [
             </sup>
              has minimal requirements for installation, allowing you to choose the solutions that suits your needs regarding storage, security, monitoring, and more. Once you have your cloud platform decided, you can start to code your domain logic that will eventually be deployed with one of the container types.
           </p>
-          <h2>
+          <h2
+            id="domain_logic"
+          >
             Domain Logic
           </h2>
           <p>
@@ -181,7 +183,9 @@ Array [
               $ npm install --save hive-io
             </pre>
           </p>
-          <h2>
+          <h2
+            id="infrastructure"
+          >
             Infrastructure
           </h2>
           <p>

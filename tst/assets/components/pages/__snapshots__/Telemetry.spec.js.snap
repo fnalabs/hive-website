@@ -20,7 +20,7 @@ Array [
             <p
               className="menu-label has-text-weight-bold"
             >
-              v2.1.0
+              v2.1.1
             </p>
             <ul
               className="menu-list"
@@ -178,7 +178,9 @@ Array [
             </a>
              to provide built-in logging, tracing, and metrcs if enabled. OpenTelemetry has stated that it is suitable for use in its current phase of development. We have followed their implementation guidelines to provide flexible integration with their API allowing you to extend that functionality in your code.
           </p>
-          <h2>
+          <h2
+            id="about"
+          >
             About
           </h2>
           <p>
@@ -243,7 +245,9 @@ Array [
               </a>
             </p>
           </blockquote>
-          <h2>
+          <h2
+            id="concepts"
+          >
             Concepts
           </h2>
           <p>
@@ -333,7 +337,9 @@ Array [
               </a>
             </p>
           </blockquote>
-          <h2>
+          <h2
+            id="architecture"
+          >
             Architecture
           </h2>
           <p>
