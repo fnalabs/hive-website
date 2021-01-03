@@ -1,17 +1,17 @@
 const path = require('path')
 
 const autoprefixer = require('autoprefixer')
-const cssnano = require('cssnano')
+const nodeExternals = require('webpack-node-externals')
 
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
 const Dotenv = require('dotenv-webpack')
 const { InjectManifest } = require('workbox-webpack-plugin')
-const { WebpackManifestPlugin } = require('webpack-manifest-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const NodemonPlugin = require('nodemon-webpack-plugin')
-const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 const PWAManifestPlugin = require('webpack-pwa-manifest')
 const TerserPlugin = require('terser-webpack-plugin')
+const { WebpackManifestPlugin } = require('webpack-manifest-plugin')
 const WebpackShellPluginNext = require('webpack-shell-plugin-next')
 
 const pkg = require('./package.json')
@@ -45,8 +45,8 @@ if (isDev) {
       short_name: 'Hive^io',
       description: 'A reactive, cloud-native framework for building microservices.',
       orientation: 'any',
-      background_color: '#f5f5f5',
-      theme_color: '#f5f5f5',
+      background_color: '#363636',
+      theme_color: '#363636',
       icons: [
         {
           src: './src/assets/icons/icon_32x32.png',
@@ -187,9 +187,8 @@ module.exports = [
             warnings: false
           }
         }),
-        new OptimizeCSSAssetsPlugin({
-          cssProcessor: cssnano,
-          cssProcessorPluginOptions: {
+        new CssMinimizerPlugin({
+          minimizerOptions: {
             preset: ['default', { discardComments: { removeAll: true } }]
           }
         })
@@ -214,6 +213,8 @@ module.exports = [
     bail: !isDev,
     mode: process.env.NODE_ENV,
     entry: './src/server/index.js',
+    externals: [nodeExternals()],
+    externalsPresets: { node: true },
     output: {
       filename: 'index.js',
       path: path.resolve(__dirname, 'dist/server'),
