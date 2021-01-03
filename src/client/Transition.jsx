@@ -45,9 +45,21 @@ class Transition extends Component {
     this.isConsent = false
   }
 
-  componentDidUpdate (prevProps) {
+  async componentDidMount () {
+    if ('serviceWorker' in navigator) {
+      this.serviceWorker = await navigator.serviceWorker.register('/sw.js')
+
+      navigator.serviceWorker.addEventListener('controllerchange', () => {
+        location.reload()
+      })
+    }
+  }
+
+  async componentDidUpdate (prevProps) {
     if (this.props.location.pathname !== prevProps.location.pathname) {
       scrollTo(0, 0)
+
+      if (this.serviceWorker) this.serviceWorker = await this.serviceWorker.update()
     }
   }
 
