@@ -20,7 +20,7 @@ Array [
             <p
               className="menu-label has-text-weight-bold"
             >
-              v2.1.0
+              v2.1.1
             </p>
             <ul
               className="menu-list"
@@ -170,7 +170,9 @@ Array [
             </sup>
              library. There are links to each of the Classes and links to their methods. Also, included on the next page is all of the environment variables for each microservice image.
           </p>
-          <h2>
+          <h2
+            id="api"
+          >
             API
           </h2>
           <p>

@@ -9,11 +9,30 @@
 @import "node_modules/bulma/sass/utilities/mixins.sass";
 @import "node_modules/bulma/sass/utilities/controls.sass";
 
-// custom overrides
+// color overrides for a dark theme
+$body-background-color: $dark;
+$body-color: $dark-invert;
+$content-blockquote-background-color: $black-ter;
+$content-heading-color: $dark-invert;
+$content-table-head-cell-color: $dark-invert;
 $footer-background-color: $dark;
-$footer-color: $white;
-$menu-label-color: $text;
-$navbar-dropdown-arrow: $dark;
+$footer-color: $dark-invert;
+$link: $cyan;
+$link-hover: $cyan;
+$menu-item-color: $dark-invert;
+$menu-item-active-background-color: $black-ter;
+$menu-item-hover-color: $dark-invert;
+$menu-item-hover-background-color: $blue;
+$menu-label-color: $dark-invert;
+$notification-background-color: $black-ter;
+$pre: $dark-invert;
+$pre-background: $black-bis;
+$strong-color: $dark-invert;
+$table-background-color: $black-bis;
+$table-color: $dark-invert;
+$table-row-hover-background-color: $dark;
+$table-striped-row-even-background-color: $black-ter;
+$table-striped-row-even-hover-background-color: $dark;
 
 // @import "node_modules/bulma/sass/base/_all";
 @import "node_modules/bulma/sass/base/minireset.sass";

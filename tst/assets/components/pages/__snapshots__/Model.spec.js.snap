@@ -20,7 +20,7 @@ Array [
             <p
               className="menu-label has-text-weight-bold"
             >
-              v2.1.0
+              v2.1.1
             </p>
             <ul
               className="menu-list"
@@ -174,8 +174,10 @@ Array [
             </sup>
              is able to provide a comparable serializing solution to the likes of Protobuf, Avro, or Thrift.
           </p>
-          <h2>
-            Model JSON Serialization
+          <h2
+            id="json_serialization"
+          >
+            JSON Serialization
           </h2>
           <p>
             Hive
@@ -233,7 +235,9 @@ Array [
             </sup>
              framework.
           </p>
-          <h2>
+          <h2
+            id="schema_registry"
+          >
             Schema Registry
           </h2>
           <p>

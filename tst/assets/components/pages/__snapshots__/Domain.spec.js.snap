@@ -20,7 +20,7 @@ Array [
             <p
               className="menu-label has-text-weight-bold"
             >
-              v2.1.0
+              v2.1.1
             </p>
             <ul
               className="menu-list"
@@ -182,7 +182,9 @@ Array [
             </a>
             .
           </p>
-          <h2>
+          <h2
+            id="actor_model"
+          >
             Actor Model
           </h2>
           <p>
@@ -245,8 +247,10 @@ Array [
             </a>
             ' non-blocking, asynchronous I/O. These actors can be arranged to perform tasks for a variety of architectures. Everything is asynchronous from the ground up, even validation via transport schemas.
           </p>
-          <h2>
-            Types of Actors
+          <h2
+            id="actor_types"
+          >
+            Actor Types
           </h2>
           <p>
             There are 2 different types of Actors defined in the Hive

@@ -42,11 +42,11 @@ export default class Setup extends Component {
                 <h1>Setup</h1>
                 <p>Hive<sup>io</sup> has minimal requirements for installation, allowing you to choose the solutions that suits your needs regarding storage, security, monitoring, and more. Once you have your cloud platform decided, you can start to code your domain logic that will eventually be deployed with one of the container types.</p>
 
-                <h2>Domain Logic</h2>
+                <h2 id='domain_logic'>Domain Logic</h2>
                 <p>To get started with implementing your domain logic, install the following NPM package to your domain module(s). Other dependencies of your domain logic for your microservices will need to be installed separately.</p>
                 <p><pre>$ npm install --save hive-io</pre></p>
 
-                <h2>Infrastructure</h2>
+                <h2 id='infrastructure'>Infrastructure</h2>
                 <p>There are currently 4 infrastructure images available to cover anything from basic to complex microservice needs.</p>
                 <dl>
                   <dt><a href='https://hub.docker.com/r/fnalabs/hive-base-js/' target='_blank' rel='noopener noreferrer'><em><strong>Base</strong></em></a></dt>

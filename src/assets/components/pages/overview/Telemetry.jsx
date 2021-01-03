@@ -41,7 +41,8 @@ export default class Overview extends Component {
               <section className='column content' role='document'>
                 <h1>Telemetry</h1>
                 <p>In order to stay aligned with Cloud Native efforts, Hive<sup>io</sup> has integrated with <a href='https://opentelemetry.io' target='_blank' rel='noopener noreferrer'>OpenTelemetry</a> to provide built-in logging, tracing, and metrcs if enabled. OpenTelemetry has stated that it is suitable for use in its current phase of development. We have followed their implementation guidelines to provide flexible integration with their API allowing you to extend that functionality in your code.</p>
-                <h2>About</h2>
+
+                <h2 id='about'>About</h2>
                 <p>OpenTelemetry defines itself as an observability framework that provides the tools you need to capture information on how your services perform in the environments they are deployed. To use their own words:</p>
                 <blockquote>
                   <p>OpenTelemetry is composed of the following:</p>
@@ -56,7 +57,7 @@ export default class Overview extends Component {
                   <p>- <a href='https://opentelemetry.io/about/#what-is-an-observability-framework' target='_blank' rel='noopener noreferrer'>OpenTelemetry</a></p>
                 </blockquote>
 
-                <h2>Concepts</h2>
+                <h2 id='concepts'>Concepts</h2>
                 <p>OpenTelemetry combines existing concepts and introduces some new ones to create the comprehensive solution they provide. They define these as such:</p>
                 <blockquote>
                   <p>In software, observability typically refers to telemetry produced by <strong>services</strong> and is often divided into three major verticals:</p>
@@ -69,7 +70,7 @@ export default class Overview extends Component {
                   <p>- <a href='https://opentelemetry.io/about/#what-is-observability' target='_blank' rel='noopener noreferrer'>OpenTelemetry</a></p>
                 </blockquote>
 
-                <h2>Architecture</h2>
+                <h2 id='architecture'>Architecture</h2>
                 <p>Apart from the previously mentioned components of the solution, which are built into Hive<sup>io</sup> specialized containers, OpenTelemetry provides a Collector that receives data from the traces and metrics generated and export to your choice of supporting services such as <a href='https://zipkin.io/' target='_blank' rel='noopener noreferrer'>Zipkin</a>, <a href='https://prometheus.io/' target='_blank' rel='noopener noreferrer'>Prometheus</a>, and <a href='https://opentelemetry.io/registry/?s=exporter' target='_blank' rel='noopener noreferrer'>more</a>.</p>
                 <blockquote>
                   <p>The Collector provides a single binary and two deployment methods:</p>

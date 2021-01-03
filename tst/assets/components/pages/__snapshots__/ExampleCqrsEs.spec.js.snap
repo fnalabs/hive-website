@@ -20,7 +20,7 @@ Array [
             <p
               className="menu-label has-text-weight-bold"
             >
-              v2.1.0
+              v2.1.1
             </p>
             <ul
               className="menu-list"
@@ -166,7 +166,9 @@ Array [
           <p>
             This example evolves the previous REST example into a highly distributed architecture in order to handle different magnitudes of network traffic.
           </p>
-          <h2>
+          <h2
+            id="source_code"
+          >
             <a
               href="https://www.npmjs.com/package/hive-io-domain-example"
               rel="noopener noreferrer"
@@ -185,7 +187,7 @@ Array [
             )
           </h2>
           <div
-            className="notification"
+            className="notification is-info is-light"
           >
             <span
               className="icon"
@@ -218,7 +220,9 @@ Array [
                for your domain logic.
             </span>
           </div>
-          <h2>
+          <h2
+            id="infrastructure"
+          >
             <a
               href="https://github.com/fnalabs/hive-io/tree/master/dev/docker/domain/production"
               rel="noopener noreferrer"
@@ -227,6 +231,44 @@ Array [
               Infrastructure
             </a>
           </h2>
+          <div
+            className="notification is-info is-light"
+          >
+            <span
+              className="icon"
+            >
+              <svg
+                className="svg-inline"
+                role="img"
+                viewBox="0 0 512 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z"
+                  fill="#209cee"
+                />
+              </svg>
+            </span>
+            <span>
+              There is a chicken or egg scenario when you run this example for the first time. In this example, the topics are not created until events are sent from 
+              <code>
+                hive-producer-js
+              </code>
+               and 
+              <code>
+                hive-stream-processor-js
+              </code>
+              . Therefore, you will need to 
+              <strong>
+                restart
+              </strong>
+               
+              <code>
+                hive-consumer-js
+              </code>
+               after the topics are created to finally see events flow through the system.
+            </span>
+          </div>
           <dl>
             <dt>
               <code>

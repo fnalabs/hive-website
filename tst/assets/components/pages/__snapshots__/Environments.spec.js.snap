@@ -20,7 +20,7 @@ Array [
             <p
               className="menu-label has-text-weight-bold"
             >
-              v2.1.0
+              v2.1.1
             </p>
             <ul
               className="menu-list"
@@ -406,7 +406,9 @@ Array [
               </tbody>
             </table>
           </div>
-          <h2>
+          <h2
+            id="base"
+          >
             Base
           </h2>
           <p>
@@ -418,7 +420,9 @@ Array [
             </a>
             .
           </p>
-          <h2>
+          <h2
+            id="producer"
+          >
             Producer
           </h2>
           <p>
@@ -520,7 +524,9 @@ Array [
               </tbody>
             </table>
           </div>
-          <h2>
+          <h2
+            id="consumer"
+          >
             Consumer
           </h2>
           <p>
@@ -662,7 +668,9 @@ Array [
               </tbody>
             </table>
           </div>
-          <h2>
+          <h2
+            id="stream_processor"
+          >
             Stream Processor
           </h2>
           <p>

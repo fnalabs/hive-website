@@ -20,7 +20,7 @@ Array [
             <p
               className="menu-label has-text-weight-bold"
             >
-              v2.1.0
+              v2.1.1
             </p>
             <ul
               className="menu-list"
@@ -171,7 +171,7 @@ Array [
             . The examples provided cover the basics of RESTful and CQRS/ES architectures. Descriptions are also provided on how to extend the concepts to future iterations to express the evolution of a project.
           </p>
           <div
-            className="notification"
+            className="notification is-info is-light"
           >
             <span
               className="icon"
@@ -192,13 +192,17 @@ Array [
               The Development process for domain logic only requires a Text Editor or IDE that supports JavaScript and Node.js/Docker. The rest of the instructions outlined here provide infrastructure details for installation and deployment.
             </span>
           </div>
-          <h2>
+          <h2
+            id="prerequisites"
+          >
             Prerequisites
           </h2>
           <p>
             The prerequisites vary depending on the architecture. All implementations require Docker of some form. Whether it is just pure Docker, Docker Swarm, or Kubernetes is up to you. It is also strongly recommended you use a load balancer of some sort since the whole purpose of the framework is horizontal scalability.
           </p>
-          <h3>
+          <h3
+            id="cloud_platforms"
+          >
             Cloud Platforms
           </h3>
           <dl>
@@ -251,7 +255,9 @@ Array [
               </a>
             </dd>
           </dl>
-          <h3>
+          <h3
+            id="more"
+          >
             More
           </h3>
           <p>

@@ -50,8 +50,26 @@ export default class Overview extends Component {
                 </ul>
                 <p>Hive<sup>io</sup> provides flexibility and simplicity to promote <strong>rapid development</strong> with a focus on domain logic. Each part has clearly defined responsibilities and interfaces with respect to their counterparts.</p>
 
-                <h2>Background</h2>
+                <h2 id='background'>Background</h2>
                 <p>This project is the culmination of my past experiences to improve upon existing technologies and techniques for enterprise architecture. The thought first came to me when I was exposed to distributed architecture in a production environment. The timing of this exposure was perfectly aligned with the release of Docker. While migrating my knowledge from VMs to containers, I started to deep dive into other technologies and techniques to bring the idea to life. Over the course of this journey, I've been able to implement a fully functional solution in this space. Once the concept was proven in v1, I immediately started planning for the version you see today. We are proud to present to you Hive<sup>io</sup>.</p>
+
+                <h2 id='roadmap'>Roadmap</h2>
+                <p>Below is a high level roadmap for the project that is roughly in priority order (but may be subject to change):</p>
+                <ul>
+                  <li>[2.0.0] Implement Model JSON serialization solution backed by the JSON Schema specification.</li>
+                  <li>[2.0.0] Implement in JavaScript with Docker, leveraging the containerd runtime.</li>
+                  <li>[2.1.0] Integrate with OpenTelemetry for observability infrastructure as code.</li>
+                  <li>Implement in Python for better cross-pollenation with PySpark and other related solutions.</li>
+                  <li>Create more standardized containers for different architectural needs:
+                    <ul>
+                      <li>other data serialization solutions, Protobuf and Thrift</li>
+                      <li>GraphQL</li>
+                      <li>more...</li>
+                    </ul>
+                  </li>
+                  <li>Add support for Kafka transactions.</li>
+                  <li>Add support for Kafka connections with SSL.</li>
+                </ul>
               </section>
             </div>
           </Container>

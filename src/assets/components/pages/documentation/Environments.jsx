@@ -155,10 +155,10 @@ export default class Basic extends Component {
                   </table>
                 </div>
 
-                <h2>Base</h2>
+                <h2 id='base'>Base</h2>
                 <p>All of the environment variables in <a href='#shared'>Shared</a>.</p>
 
-                <h2>Producer</h2>
+                <h2 id='producer'>Producer</h2>
                 <p>All of the environment variables in <a href='#shared'>Shared</a> and the following:</p>
                 <div className='table-container'>
                   <table className='table is-striped is-hoverable'>
@@ -205,7 +205,7 @@ export default class Basic extends Component {
                   </table>
                 </div>
 
-                <h2>Consumer</h2>
+                <h2 id='consumer'>Consumer</h2>
                 <p>All of the environment variables in <a href='#shared'>Shared</a> and the following:</p>
                 <div className='table-container'>
                   <table className='table is-striped is-hoverable'>
@@ -270,7 +270,7 @@ export default class Basic extends Component {
                   </table>
                 </div>
 
-                <h2>Stream Processor</h2>
+                <h2 id='stream_processor'>Stream Processor</h2>
                 <p>All of the environment variables in <a href='#shared'>Shared</a> and the following:</p>
                 <div className='table-container'>
                   <table className='table is-striped is-hoverable'>

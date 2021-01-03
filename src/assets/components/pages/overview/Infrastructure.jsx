@@ -42,7 +42,7 @@ export default class Infrastructure extends Component {
                 <h1>Infrastructure</h1>
                 <p>Here are the execution environments for the domain logic described previously. Hive<sup>io</sup> is designed to manage infrastructure as code through the base <a href='https://www.docker.com/' target='_blank' rel='noopener noreferrer'>Docker</a> images defined. These images are meant to be extended to include your domain logic and additional code dependencies. Depending on the type of container, there are a few opinions made here too.</p>
 
-                <h2>Specialized Containers</h2>
+                <h2 id='specialized_containers'>Specialized Containers</h2>
                 <p>Base images for specific service types have been defined to provide the basic boilerplate service definition for your application. It also ensures a common interface is maintained between the service and actor. For CQRS/ES architectures, some opinions on storage solutions have been made.</p>
                 <dl>
                   <dt><em><strong>Base</strong></em></dt>
@@ -58,7 +58,7 @@ export default class Infrastructure extends Component {
                   <dd>This supports a variety of needs in a CQRS/ES implementation. <a href='http://danielwhittaker.me/2016/04/20/how-to-validate-commands-in-a-cqrs-application/' target='_blank' rel='noopener noreferrer'>Domain validation</a> can be achieved through the use of the transaction cache dependency (<a href='https://redis.io/' target='_blank' rel='noopener noreferrer'>Redis</a>). CQRS/ES Process Managers and Sagas can be implemented here too.</dd>
                 </dl>
 
-                <h2>Unified Transaction Log</h2>
+                <h2 id='unified_transaction_log'>Unified Transaction Log</h2>
                 <p>The <a href='https://www.confluent.io/blog/event-sourcing-cqrs-stream-processing-apache-kafka-whats-connection/' target='_blank' rel='noopener noreferrer'>unified transaction log</a> is the centralized storage solution that is the foundation of the CQRS/ES pattern. Think of it as the backbone in your central nervous system. All of your body parts and organs that connect to this backbone are made up of the different microservice types described above. The transaction log's job is to handle multiple inputs/outputs to each of these microservice types while providing the persistence layer. Events are stored here once they have been validated by their producers and are read from here by their consumers.</p>
                 <p>Here is where our last opinions are made with Kafka and Redis as the unified transaction log and cache respectively. The Stream Processor has implemented a solution leveraging the <a href='https://en.wikipedia.org/wiki/X/Open_XA' target='_blank' rel='noopener noreferrer'>eXtended Architecture (XA)</a> distributed transaction model via <a href='https://en.wikipedia.org/wiki/Snapshot_isolation' target='_blank' rel='noopener noreferrer'>snapshot isolation</a> and <a href='https://en.wikipedia.org/wiki/Two-phase_commit_protocol' target='_blank' rel='noopener noreferrer'>two-phase commit</a> techniques to provide domain validation and event order guarantees. The Redis implementation leverages the <a href='https://redis.io/topics/distlock' target='_blank' rel='noopener noreferrer'>Redlock algorithm</a> as the <a href='https://en.wikipedia.org/wiki/Distributed_lock_manager' target='_blank' rel='noopener noreferrer'>distributed lock</a>ing mechanism to support these techniques.</p>
               </section>

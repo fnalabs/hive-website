@@ -44,13 +44,17 @@ export default class CqrsEs extends Component {
                 <h1>Example: CQRS/ES</h1>
                 <p>This example evolves the previous REST example into a highly distributed architecture in order to handle different magnitudes of network traffic.</p>
 
-                <h2><a href='https://www.npmjs.com/package/hive-io-domain-example' target='_blank' rel='noopener noreferrer'>Domain Logic</a> (<a href='https://github.com/fnalabs/hive-io/tree/master/packages/hive-js-domain-example' target='_blank' rel='noopener noreferrer'>Source Code</a>)</h2>
-                <div className='notification'>
+                <h2 id='source_code'><a href='https://www.npmjs.com/package/hive-io-domain-example' target='_blank' rel='noopener noreferrer'>Domain Logic</a> (<a href='https://github.com/fnalabs/hive-io/tree/master/packages/hive-js-domain-example' target='_blank' rel='noopener noreferrer'>Source Code</a>)</h2>
+                <div className='notification is-info is-light'>
                   <span className='icon'><Info className='svg-inline' /></span>
                   <span>You should consider using a private NPM registry or implementing more creative solutions such as extending base Docker images with <code>ADD</code>|<code>COPY</code> statements for source code or <code>npm link</code> for your domain logic.</span>
                 </div>
 
-                <h2><a href='https://github.com/fnalabs/hive-io/tree/master/dev/docker/domain/production' target='_blank' rel='noopener noreferrer'>Infrastructure</a></h2>
+                <h2 id='infrastructure'><a href='https://github.com/fnalabs/hive-io/tree/master/dev/docker/domain/production' target='_blank' rel='noopener noreferrer'>Infrastructure</a></h2>
+                <div className='notification is-info is-light'>
+                  <span className='icon'><Info className='svg-inline' /></span>
+                  <span>There is a chicken or egg scenario when you run this example for the first time. In this example, the topics are not created until events are sent from <code>hive-producer-js</code> and <code>hive-stream-processor-js</code>. Therefore, you will need to <strong>restart</strong> <code>hive-consumer-js</code> after the topics are created to finally see events flow through the system.</span>
+                </div>
                 <dl>
                   <dt><code>Producer.dockerfile</code></dt>
                   <dd>

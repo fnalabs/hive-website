@@ -3,7 +3,7 @@
 exports[`<Home /> should render homepage static content 1`] = `
 Array [
   <section
-    className="hero is-fullheight is-light is-bold"
+    className="hero is-fullheight is-dark is-bold"
   >
     <div
       className="hero-body"
@@ -45,7 +45,7 @@ Array [
               <h2
                 className="subtitle"
               >
-                A reactive, cloud-native framework for building microservices.
+                A reactive, cloud-native framework for building microservices
               </h2>
               <h2
                 className="subtitle"
@@ -74,7 +74,6 @@ Array [
                 >
                   OpenTelemetry
                 </a>
-                !
               </h2>
             </div>
             <div
@@ -138,6 +137,7 @@ Array [
         className="icon is-medium"
       >
         <svg
+          fill="#fff"
           height="32"
           role="img"
           viewBox="0 0 320 512"
@@ -151,7 +151,7 @@ Array [
     </div>
   </section>,
   <section
-    className="hero is-medium is-dark is-bold neon-tiles"
+    className="hero is-medium is-dark neon-tiles"
   >
     <div
       className="hero-body"
@@ -398,6 +398,9 @@ Array [
                   </p>
                   <p>
                     Each base image is highly extensible and configurable right out of the box. They make very few assumptions to support different architectures which allows it to pair well with other cloud native initiatives and patterns.
+                  </p>
+                  <p>
+                    We've even added embedded observability with the flip of a switch by integrating with OpenTelemetry. This gives immediate visibility into how your services perform with tracing and metrics support.
                   </p>
                 </div>
               </article>
