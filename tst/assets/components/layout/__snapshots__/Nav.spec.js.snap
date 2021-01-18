@@ -195,7 +195,7 @@ exports[`<Nav /> should render Basic page nav correctly 1`] = `
             <span
               className="navbar-item has-text-weight-bold"
             >
-              v2.1.1
+              v2.1.2
             </span>
           </div>
         </div>
@@ -400,7 +400,7 @@ exports[`<Nav /> should render CqrsEs page nav correctly 1`] = `
             <span
               className="navbar-item has-text-weight-bold"
             >
-              v2.1.1
+              v2.1.2
             </span>
           </div>
         </div>
@@ -605,7 +605,7 @@ exports[`<Nav /> should render Documentation page nav correctly 1`] = `
             <span
               className="navbar-item has-text-weight-bold"
             >
-              v2.1.1
+              v2.1.2
             </span>
           </div>
         </div>
@@ -810,7 +810,7 @@ exports[`<Nav /> should render Domain page nav correctly 1`] = `
             <span
               className="navbar-item has-text-weight-bold"
             >
-              v2.1.1
+              v2.1.2
             </span>
           </div>
         </div>
@@ -1015,7 +1015,7 @@ exports[`<Nav /> should render Environments page nav correctly 1`] = `
             <span
               className="navbar-item has-text-weight-bold"
             >
-              v2.1.1
+              v2.1.2
             </span>
           </div>
         </div>
@@ -1220,7 +1220,7 @@ exports[`<Nav /> should render Get Started page nav correctly 1`] = `
             <span
               className="navbar-item has-text-weight-bold"
             >
-              v2.1.1
+              v2.1.2
             </span>
           </div>
         </div>
@@ -1425,7 +1425,7 @@ exports[`<Nav /> should render Infrastructure page nav correctly 1`] = `
             <span
               className="navbar-item has-text-weight-bold"
             >
-              v2.1.1
+              v2.1.2
             </span>
           </div>
         </div>
@@ -1630,7 +1630,7 @@ exports[`<Nav /> should render Model page nav correctly 1`] = `
             <span
               className="navbar-item has-text-weight-bold"
             >
-              v2.1.1
+              v2.1.2
             </span>
           </div>
         </div>
@@ -1835,7 +1835,7 @@ exports[`<Nav /> should render Overview page nav correctly 1`] = `
             <span
               className="navbar-item has-text-weight-bold"
             >
-              v2.1.1
+              v2.1.2
             </span>
           </div>
         </div>
@@ -2040,7 +2040,7 @@ exports[`<Nav /> should render Rest page nav correctly 1`] = `
             <span
               className="navbar-item has-text-weight-bold"
             >
-              v2.1.1
+              v2.1.2
             </span>
           </div>
         </div>
@@ -2245,7 +2245,7 @@ exports[`<Nav /> should render Setup page nav correctly 1`] = `
             <span
               className="navbar-item has-text-weight-bold"
             >
-              v2.1.1
+              v2.1.2
             </span>
           </div>
         </div>
@@ -2450,7 +2450,7 @@ exports[`<Nav /> should render Telemetry page nav correctly 1`] = `
             <span
               className="navbar-item has-text-weight-bold"
             >
-              v2.1.1
+              v2.1.2
             </span>
           </div>
         </div>
@@ -2654,7 +2654,7 @@ exports[`<Nav /> should render homepage nav correctly 1`] = `
             <span
               className="navbar-item has-text-weight-bold"
             >
-              v2.1.1
+              v2.1.2
             </span>
           </div>
         </div>

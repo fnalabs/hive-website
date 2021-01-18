@@ -59,6 +59,8 @@ export default class Overview extends Component {
                   <li>[2.0.0] Implement Model JSON serialization solution backed by the JSON Schema specification.</li>
                   <li>[2.0.0] Implement in JavaScript with Docker, leveraging the containerd runtime.</li>
                   <li>[2.1.0] Integrate with OpenTelemetry for observability infrastructure as code.</li>
+                  <li>Refactor JavaScript containers to leverage a shared library for duplicate code.</li>
+                  <li>Expand support for recent drafts of the JSON Schema specification.</li>
                   <li>Implement in Python for better cross-pollenation with PySpark and other related solutions.</li>
                   <li>Create more standardized containers for different architectural needs:
                     <ul>
