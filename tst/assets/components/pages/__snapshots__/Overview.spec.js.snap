@@ -20,7 +20,7 @@ Array [
             <p
               className="menu-label has-text-weight-bold"
             >
-              v2.1.1
+              v2.1.2
             </p>
             <ul
               className="menu-list"
@@ -275,6 +275,12 @@ Array [
             </li>
             <li>
               [2.1.0] Integrate with OpenTelemetry for observability infrastructure as code.
+            </li>
+            <li>
+              Refactor JavaScript containers to leverage a shared library for duplicate code.
+            </li>
+            <li>
+              Expand support for recent drafts of the JSON Schema specification.
             </li>
             <li>
               Implement in Python for better cross-pollenation with PySpark and other related solutions.
