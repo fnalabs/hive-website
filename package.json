@@ -1,6 +1,6 @@
 {
   "name": "hive-website",
-  "version": "2.1.2",
+  "version": "2.1.3",
   "description": "Hive^io framework informational and documentation website.",
   "scripts": {
     "prebuild": "del dist",
