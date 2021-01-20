@@ -5,7 +5,7 @@ import { AnalyticsLink } from 'common'
 
 const AsideMenu = () => (
   <aside className='menu'>
-    <p className='menu-label has-text-weight-bold'>v2.1.2</p>
+    <p className='menu-label has-text-weight-bold'>v2.1.3</p>
     <ul className='menu-list'>
       <li><NavLink to='/overview' activeClassName='is-active'>Overview</NavLink>
         <ul>
