@@ -78,7 +78,7 @@ class Nav extends Component {
                   <NavLink to='/environments' activeClassName='is-active' className='navbar-item' onClick={this.handleClickBlur}>Environments</NavLink>
                   <AnalyticsLink to='https://fnalabs.github.io/hive-io/' target='_blank' rel='noopener noreferrer' className='navbar-item' onClick={this.handleClickBlur}>API</AnalyticsLink>
                   <hr className='navbar-divider' />
-                  <span className='navbar-item has-text-weight-bold'>v2.1.2</span>
+                  <span className='navbar-item has-text-weight-bold'>v2.1.3</span>
                 </div>
               </div>
             </div>
