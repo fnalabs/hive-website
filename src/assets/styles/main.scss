@@ -5,9 +5,9 @@
 @import "node_modules/bulma/sass/utilities/initial-variables.sass";
 @import "node_modules/bulma/sass/utilities/functions.sass";
 @import "node_modules/bulma/sass/utilities/derived-variables.sass";
-@import "node_modules/bulma/sass/utilities/animations.sass";
 @import "node_modules/bulma/sass/utilities/mixins.sass";
 @import "node_modules/bulma/sass/utilities/controls.sass";
+@import "node_modules/bulma/sass/utilities/extends.sass";
 
 // color overrides for a dark theme
 $body-background-color: $dark;
@@ -37,6 +37,7 @@ $table-striped-row-even-hover-background-color: $dark;
 // @import "node_modules/bulma/sass/base/_all";
 @import "node_modules/bulma/sass/base/minireset.sass";
 @import "node_modules/bulma/sass/base/generic.sass";
+@import "node_modules/bulma/sass/base/animations.sass";
 
 // @import "node_modules/bulma/sass/elements/_all";
 // @import "node_modules/bulma/sass/elements/box.sass";
