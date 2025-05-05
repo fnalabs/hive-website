@@ -1,0 +1,17 @@
+import { IntRange } from 'type-fest';
+export type Breakpoint = 'mobile' | 'tablet' | 'tablet-only' | 'desktop' | 'desktop-only' | 'widescreen' | 'widescreen-only' | 'fullhd' | 'touch' | 'until-widescreen' | 'until-fullhd';
+export type BreakpointColumn = Extract<Breakpoint, 'mobile' | 'tablet' | 'desktop' | 'widescreen' | 'fullhd'>;
+export type Color = 'light' | 'dark';
+export type FractionSize = 'one-fifth' | 'one-quarter' | 'one-third' | 'two-fifths' | 'half' | 'three-fifths' | 'two-thirds' | 'three-quarters' | 'four-fifths' | 'full';
+export type FractionSizes = `${FractionSize}-${BreakpointColumn}`;
+export type GapSize = IntRange<0, 9>;
+export type GapSizes = `${GapSize}-${BreakpointColumn}`;
+export type GenericSize = 'small' | 'medium' | 'large' | 'fullheight';
+export type MinimumSize = IntRange<0, 33>;
+export type NumericSize = IntRange<1, 13>;
+export type NumericSizes = `${NumericSize}-${BreakpointColumn}`;
+export type TextPosition = 'left' | 'right' | 'centered' | 'justified';
+export interface ILink {
+    label: string;
+    href: string;
+}
