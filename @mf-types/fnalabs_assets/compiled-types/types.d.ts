@@ -10,6 +10,8 @@ export type GenericSize = 'small' | 'medium' | 'large' | 'fullheight';
 export type MinimumSize = IntRange<0, 33>;
 export type NumericSize = IntRange<1, 13>;
 export type NumericSizes = `${NumericSize}-${BreakpointColumn}`;
+export type CellPosition = 'col-start' | 'col-from-end' | 'col-span' | 'row-start' | 'row-from-end' | 'row-span';
+export type CellPositions = `${CellPosition}-${NumericSize}`;
 export type TextPosition = 'left' | 'right' | 'centered' | 'justified';
 export interface ILink {
     label: string;
