@@ -1,3 +1,3 @@
 
-    export type RemoteKeys = 'fnalabs_assets/Card' | 'fnalabs_assets/Container' | 'fnalabs_assets/Hero' | 'fnalabs_assets/Media' | 'fnalabs_assets/Tile';
-    type PackageType<T> = T extends 'fnalabs_assets/Tile' ? typeof import('fnalabs_assets/Tile') :T extends 'fnalabs_assets/Media' ? typeof import('fnalabs_assets/Media') :T extends 'fnalabs_assets/Hero' ? typeof import('fnalabs_assets/Hero') :T extends 'fnalabs_assets/Container' ? typeof import('fnalabs_assets/Container') :T extends 'fnalabs_assets/Card' ? typeof import('fnalabs_assets/Card') :any;
+    export type RemoteKeys = 'fnalabs_assets/Card' | 'fnalabs_assets/Container' | 'fnalabs_assets/Hero' | 'fnalabs_assets/Media';
+    type PackageType<T> = T extends 'fnalabs_assets/Media' ? typeof import('fnalabs_assets/Media') :T extends 'fnalabs_assets/Hero' ? typeof import('fnalabs_assets/Hero') :T extends 'fnalabs_assets/Container' ? typeof import('fnalabs_assets/Container') :T extends 'fnalabs_assets/Card' ? typeof import('fnalabs_assets/Card') :any;

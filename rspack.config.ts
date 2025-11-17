@@ -8,7 +8,7 @@ const isDev = process.env.NODE_ENV === 'development'
 const defaultConfig = {
   entry: { main: join(__dirname, './src/index.tsx') },
   resolve: { extensions: ['...', '.ts', '.tsx', '.jsx'] },
-  output: { path: join(__dirname, './dist/hive'), publicPath: 'http://localhost:3001/hive' },
+  output: { path: join(__dirname, './dist/hive'), publicPath: 'http://localhost:3001/hive/' },
   module: {
     rules: [
       { test: /\.svg$/, type: 'asset' },
