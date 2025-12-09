@@ -1,3 +1,5 @@
 import { type FC } from 'react';
-declare const HiveIO: FC;
+export interface IHiveIO {
+}
+declare const HiveIO: FC<IHiveIO>;
 export default HiveIO;

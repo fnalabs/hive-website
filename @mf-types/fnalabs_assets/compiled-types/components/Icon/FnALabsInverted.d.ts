@@ -1,3 +1,5 @@
 import { type FC } from 'react';
-export declare const FnALabsInverted: FC;
+export interface IFnALabsInverted {
+}
+declare const FnALabsInverted: FC<IFnALabsInverted>;
 export default FnALabsInverted;

@@ -1,0 +1,23 @@
+import React, {type FC } from 'react'
+
+const AppGraphic: FC = () => (
+  <div className='svg-animation-container'>
+    <div className='svg-animation is-mongo-svg is-svg-1' />
+    <div className='svg-animation is-hive-svg is-svg-2' />
+    <div className='svg-animation is-envoy-svg is-svg-3' />
+
+    <div className='svg-animation is-elastic-svg is-svg-4' />
+    <div className='svg-animation is-hive-svg is-svg-5' />
+    <div className='svg-animation is-hive-svg is-svg-6' />
+    <div className='svg-animation is-envoy-svg is-svg-7' />
+
+    <div className='svg-animation is-redis-svg is-svg-8' />
+    <div className='svg-animation is-kafka-svg is-svg-9' />
+    <div className='svg-animation is-hive-svg is-svg-10' />
+    <div className='svg-animation is-hive-svg is-svg-11' />
+    <div className='svg-animation is-hive-svg is-svg-12' />
+    <div className='svg-animation is-envoy-svg is-svg-13' />
+    <div className='svg-animation is-envoy-svg is-svg-14' />
+  </div>
+)
+export default AppGraphic

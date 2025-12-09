@@ -1,3 +1,5 @@
 import { type FC } from 'react';
-export declare const FnALabs: FC;
+export interface IFnALabs {
+}
+declare const FnALabs: FC<IFnALabs>;
 export default FnALabs;

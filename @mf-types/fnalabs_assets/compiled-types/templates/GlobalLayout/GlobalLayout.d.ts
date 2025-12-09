@@ -1,6 +1,7 @@
 import type { ILink } from '../../types';
 import { FC } from 'react';
-export interface IGlobalLayout {
+import { type ISocialBrand } from '../SocialBrand/SocialBrand';
+export interface IGlobalLayout extends ISocialBrand {
     pageLinks: ILink[];
     policyLinks: ILink[];
 }

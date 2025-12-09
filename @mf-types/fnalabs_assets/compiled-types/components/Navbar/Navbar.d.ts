@@ -6,6 +6,8 @@ export interface INavLink extends ILink {
     button?: boolean;
     color?: Color;
     divider?: boolean;
+    beforeIcon?: string;
+    afterIcon?: string;
     style?: ButtonStyle;
 }
 export interface IBrandLink extends ILink {
@@ -14,7 +16,7 @@ export interface IBrandLink extends ILink {
 export declare const renderLink: (link: INavLink) => import("react/jsx-runtime").JSX.Element;
 export declare const mapLinks: (link: INavLink) => import("react/jsx-runtime").JSX.Element;
 export interface INavbar {
-    brandLink?: IBrandLink;
+    brandLink: IBrandLink[];
     startLinks?: INavLink[];
     endLinks?: INavLink[];
     color?: Color;

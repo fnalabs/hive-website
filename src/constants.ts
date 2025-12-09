@@ -1,7 +1,10 @@
 import { IBrandLink } from '@mf-types/fnalabs_assets/Navbar'
 
 export const VERSION_LABEL = 'v2.1.3'
-export const BRAND_LINK: IBrandLink = { href: '/hive', label: 'HiveIO', brandIcon: 'HiveIO' }
+
+export const BRAND_LINK: IBrandLink = { href: '/', label: 'FnA Labs', brandIcon: 'FnALabsInverted' }
+export const SUB_BRAND_LINK: IBrandLink = { href: '/hive', label: 'HiveIO', brandIcon: 'HiveIO' }
+
 export const HOME_LINK = { href: '/hive', label: 'Home' }
 export const OVERVIEW_LINK = { href: '/hive/overview', label: 'Overview' }
 export const MODEL_LINK = { href: '/hive/model', label: 'Data Model' }
@@ -17,6 +20,9 @@ export const DOCS_LINK = { href: '/hive/documentation', label: 'Documentation' }
 export const ENV_LINK = { href: '/hive/environments', label: 'Environments' }
 export const API_LINK = { href: 'https://fnalabs.github.io/hive-io/', label: 'API Reference' }
 
+export const BACK_LINK = { href:'/', label: 'Back', button: true, color: 'primary', beforeIcon: 'arrow-left' }
+
+export const BRAND_LINK_LIST = [BRAND_LINK, SUB_BRAND_LINK]
 export const NAV_LINK_LIST = [
   { ...OVERVIEW_LINK, list: [
     MODEL_LINK,
@@ -34,6 +40,7 @@ export const NAV_LINK_LIST = [
     ENV_LINK,
     API_LINK,
   ]},
+  BACK_LINK
 ]
 export const DIRECTED_LINK_MAP = {
   [HOME_LINK.href]: {
@@ -41,59 +48,62 @@ export const DIRECTED_LINK_MAP = {
   },
   [OVERVIEW_LINK.href]: {
     prev: HOME_LINK,
+    up: OVERVIEW_LINK,
     next: MODEL_LINK,
   },
   [MODEL_LINK.href]: {
     prev: OVERVIEW_LINK,
-    up: OVERVIEW_LINK,
+    up: MODEL_LINK,
     next: DOMAIN_LINK,
   },
   [DOMAIN_LINK.href]: {
     prev: MODEL_LINK,
-    up: OVERVIEW_LINK,
+    up: DOMAIN_LINK,
     next: INFRA_LINK,
   },
   [INFRA_LINK.href]: {
     prev: DOMAIN_LINK,
-    up: OVERVIEW_LINK,
+    up: INFRA_LINK,
     next: TELEMETRY_LINK,
   },
   [TELEMETRY_LINK.href]: {
     prev: INFRA_LINK,
-    up: OVERVIEW_LINK,
+    up: TELEMETRY_LINK,
     next: START_LINK,
   },
   [START_LINK.href]: {
     prev: TELEMETRY_LINK,
+    up: START_LINK,
     next: SETUP_LINK,
   },
   [SETUP_LINK.href]: {
     prev: START_LINK,
-    up: START_LINK,
+    up: SETUP_LINK,
     next: BASIC_LINK,
   },
   [BASIC_LINK.href]: {
     prev: SETUP_LINK,
-    up: START_LINK,
+    up: BASIC_LINK,
     next: REST_LINK,
   },
   [REST_LINK.href]: {
     prev: BASIC_LINK,
-    up: START_LINK,
+    up: REST_LINK,
     next: CQRS_LINK,
   },
   [CQRS_LINK.href]: {
     prev: REST_LINK,
-    up: START_LINK,
+    up: CQRS_LINK,
     next: DOCS_LINK,
   },
   [DOCS_LINK.href]: {
     prev: CQRS_LINK,
+    up: DOCS_LINK,
     next: ENV_LINK,
   },
   [ENV_LINK.href]: {
     prev: DOCS_LINK,
-    up: DOCS_LINK,
+    up: ENV_LINK,
     next: API_LINK,
   },
 }

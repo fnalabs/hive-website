@@ -1,3 +1,5 @@
 import { type FC } from 'react';
-export declare const OpenTelemetry: FC;
+export interface IOpenTelemetry {
+}
+declare const OpenTelemetry: FC<IOpenTelemetry>;
 export default OpenTelemetry;

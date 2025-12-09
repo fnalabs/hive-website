@@ -1,4 +1,4 @@
-import type { GapSize, MinimumSize, NumericSize, NumericSizes } from '../../types';
+import type { GapSize, MinimumSize, NumericSize, GridNumericSizes } from '../../types';
 import { FC, ReactNode } from 'react';
 export interface IGrid {
     /** Child Cells to render in the Grid container. */
@@ -6,7 +6,7 @@ export interface IGrid {
     /** Optional grid modifier for minimum column width. */
     minimumSize?: MinimumSize;
     /** Optional number of columns to set for the grid */
-    columnCount?: NumericSize | NumericSizes[];
+    columnCount?: NumericSize | GridNumericSizes[];
     /** Optional grid modifier for column gap size. */
     colGapSize?: GapSize;
     /** Optional grid modifier for row gap size. */

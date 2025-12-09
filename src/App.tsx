@@ -1,21 +1,17 @@
 import type { FC } from 'react'
 
 import { lazy } from 'react'
-import { init, preloadRemote } from '@module-federation/enhanced/runtime'
+import { getInstance, preloadRemote, registerRemotes } from '@module-federation/enhanced/runtime'
 import { remoteContainer } from './remotes'
 import cfg, { ASSETS } from './config'
 
-init({
-  name: cfg.name,
-  remotes: [
-    {
-      name: cfg.remotes[ASSETS].name,
-      entry: cfg.remotes[ASSETS].entry,
-      alias: cfg.remotes[ASSETS].alias,
-    },
-  ],
-})
-
+getInstance()
+registerRemotes([
+  {
+    name: cfg.remotes[ASSETS].name,
+    entry: cfg.remotes[ASSETS].entry,
+  },
+])
 preloadRemote([{ nameOrAlias: ASSETS }])
 
 const Container = lazy(remoteContainer)

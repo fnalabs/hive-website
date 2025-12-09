@@ -1,9 +1,9 @@
-import { FC, ReactNode } from 'react';
+import { type FC, type ReactNode } from 'react';
 export interface ICard {
     /** Main content for the Card. */
     children: ReactNode;
-    /** Optional className to add to the Card. */
-    className?: string;
+    /** Optional header content for the Card. */
+    header?: ReactNode;
     /** Optional Footer content for the Card. */
     footer?: ReactNode;
     /** Optional Image content for the Card. */

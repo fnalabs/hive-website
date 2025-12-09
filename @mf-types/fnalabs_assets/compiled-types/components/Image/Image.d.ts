@@ -5,7 +5,7 @@ export interface IImage {
     fixedSize?: FixedSize;
     ratioSize?: RatioSize;
     centered?: boolean;
-    rounded?: boolean;
+    hcentered?: boolean;
 }
 declare const Image: FC<IImage>;
 export default Image;
