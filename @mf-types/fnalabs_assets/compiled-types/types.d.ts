@@ -5,9 +5,10 @@ export type RemoteComponent<T> = Promise<{
 }>;
 export type Breakpoint = 'mobile' | 'tablet' | 'tablet-only' | 'desktop' | 'desktop-only' | 'widescreen' | 'widescreen-only' | 'fullhd' | 'touch' | 'until-widescreen' | 'until-fullhd';
 export type BreakpointColumn = Extract<Breakpoint, 'mobile' | 'tablet' | 'desktop' | 'widescreen' | 'fullhd'>;
-export type Color = 'primary' | 'link' | 'info' | 'success' | 'warning' | 'danger' | 'black' | 'light' | 'dark' | 'white' | 'transparent';
+export type Color = 'primary' | 'link' | 'info' | 'success' | 'warning' | 'danger' | 'black' | 'light' | 'dark' | 'white' | 'transparent' | 'text' | 'ghost';
 export type FixedPosition = 'top' | 'bottom';
 export type ButtonStyle = 'outlined' | 'inverted' | 'rounded' | 'loading' | 'static';
+export type ButtonType = 'submit' | 'reset' | 'button';
 export type FixedSize = '16x16' | '24x24' | '32x32' | '48x48' | '64x64' | '96x96' | '128x128';
 export type FractionSize = 'one-fifth' | 'one-quarter' | 'one-third' | 'two-fifths' | 'half' | 'three-fifths' | 'two-thirds' | 'three-quarters' | 'four-fifths' | 'full';
 export type FractionSizes = `${FractionSize}-${BreakpointColumn}`;
@@ -27,4 +28,5 @@ export type TextPositions = `${TextPosition}-${Breakpoint}`;
 export interface ILink {
     label: string;
     href: string;
+    external?: boolean;
 }

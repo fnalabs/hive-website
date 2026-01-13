@@ -1,7 +1,7 @@
 import type { Color, GenericSize } from '../../types';
 import { type FC } from 'react';
 export interface IProgressBar {
-    color?: Color;
+    color?: Exclude<Color, 'text' | 'ghost'>;
     size?: GenericSize;
     value?: number;
 }

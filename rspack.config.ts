@@ -1,17 +1,26 @@
 import { join } from 'path'
-import rspack from '@rspack/core'
+import {
+  DefinePlugin,
+  HotModuleReplacementPlugin,
+  HtmlRspackPlugin,
+  ProgressPlugin,
+} from '@rspack/core'
 import refreshPlugin from '@rspack/plugin-react-refresh'
+import { InjectManifest } from '@aaroon/workbox-rspack-plugin'
 import { ModuleFederationPlugin } from '@module-federation/enhanced/rspack'
 import federationConfig from './federationConfig'
 
-const isDev = process.env.NODE_ENV === 'development'
+const IS_DEV = process.env.NODE_ENV === 'development'
+const ROUTE = process.env.ROUTE ?? '/hive'
+const HOST = process.env.HOST ?? 'http://localhost:3001'
+
 const defaultConfig = {
   entry: { main: join(__dirname, './src/index.tsx') },
   resolve: { extensions: ['...', '.ts', '.tsx', '.jsx'] },
   output: {
     name: '[name].[contenthash].js',
-    path: join(__dirname, './dist/hive'),
-    publicPath: 'http://localhost:3001/hive/'
+    path: join(__dirname, `./dist${ROUTE}`),
+    publicPath: `${HOST}${ROUTE}/`
   },
   module: {
     rules: [
@@ -27,7 +36,7 @@ const defaultConfig = {
               jsc: {
                 externalHelpers: true,
                 parser: { syntax: 'typescript', tsx: true },
-                transform: { react: { runtime: 'automatic', development: isDev, refresh: isDev } },
+                transform: { react: { runtime: 'automatic', development: IS_DEV, refresh: IS_DEV } },
               },
               env: { targets: ['chrome >= 87', 'edge >= 88', 'firefox >= 78', 'safari >= 14'] },
             },
@@ -37,24 +46,29 @@ const defaultConfig = {
     ],
   },
   plugins: [
-    new rspack.ProgressPlugin({}),
-    new rspack.HtmlRspackPlugin({
+    new ProgressPlugin({}),
+    new DefinePlugin({
+      'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
+      'process.env.ROUTE': JSON.stringify(process.env.ROUTE),
+      'process.env.HOST': JSON.stringify(process.env.HOST),
+    }),
+    new HtmlRspackPlugin({
       template: './index.html',
       filename: 'index.html',
       inject: true,
-      publicPath: '/hive',
+      publicPath: ROUTE,
     }),
     new ModuleFederationPlugin(federationConfig),
   ],
 }
 
 const config = () => {
-  return isDev
+  return IS_DEV
     ? {
         ...defaultConfig,
         devServer: {
           port: 3001,
-          static: { directory: join(__dirname, './dist/hive') },
+          static: { directory: join(__dirname, `./dist${ROUTE}`) },
           liveReload: true,
           headers: {
             'Access-Control-Allow-Origin': '*',
@@ -63,7 +77,11 @@ const config = () => {
           },
         },
         devtool: 'eval',
-        plugins: [...defaultConfig.plugins, new rspack.HotModuleReplacementPlugin(), new refreshPlugin()],
+        plugins: [
+          ...defaultConfig.plugins,
+          new HotModuleReplacementPlugin(),
+          new refreshPlugin(),
+        ],
         watch: true,
       }
     : {
@@ -71,6 +89,24 @@ const config = () => {
         output: { ...defaultConfig.output, filename: '[name].[contenthash].js' },
         devtool: 'source-map',
         optimization: { minimize: true },
+        plugins: [
+          ...defaultConfig.plugins,
+          new InjectManifest({
+            dontCacheBustURLsMatching: /\.\w{8}\./,
+            manifestTransforms: [
+              async manifest => {
+                const newManifest = manifest.map(entry => ({
+                  ...entry,
+                  url: `${ROUTE}/${entry.url}`,
+                })
+                );
+                return { manifest: newManifest };
+              }
+            ],
+            swDest: 'sw.js',
+            swSrc: join(__dirname, './src/Worker.ts'),
+          }),
+        ],
       }
 }
 export default config

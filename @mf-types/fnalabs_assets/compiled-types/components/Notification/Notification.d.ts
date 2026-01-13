@@ -2,7 +2,7 @@ import type { Color } from '../../types';
 import { type FC, type ReactNode } from 'react';
 export interface INotification {
     children: ReactNode;
-    color?: Color;
+    color?: Exclude<Color, 'text' | 'ghost'>;
     light?: boolean;
     close?: boolean;
     onClose?: () => {};

@@ -19,7 +19,7 @@ export interface INavbar {
     brandLink: IBrandLink[];
     startLinks?: INavLink[];
     endLinks?: INavLink[];
-    color?: Color;
+    color?: Exclude<Color, 'text' | 'ghost'>;
     fixed?: FixedPosition;
     spaced?: boolean;
     shaded?: boolean;

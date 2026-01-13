@@ -7,24 +7,28 @@ const Block = lazy(remoteBlock)
 const Notification = lazy(remoteNotification)
 
 const Rest: FC = () => (
-  <Block article content>
-    <h1>Example: REST</h1>
-    <p>Let's expand on the Basic example with a REST service. The code below describes a minimal implementation of the domain logic and infrastructure as code to implement a REST service.</p>
+  <>
+    <title>FnA Labs | Hive^io - Example: REST</title>
+    <meta name="description" content="A REST example implementation with Hive^io: a reactive, cloud-native framework." />
 
-    <h2 id='source_code'><Link to='https://www.npmjs.com/package/hive-io-rest-example' target='_blank' rel='noopener noreferrer'>Domain Logic</Link> (<Link to='https://github.com/fnalabs/hive-io/tree/master/packages/hive-js-rest-example' target='_blank' rel='noopener noreferrer'>Source Code</Link>)</h2>
+    <Block article content>
+      <h1>Example: REST</h1>
+      <p>Let's expand on the Basic example with a REST service. The code below describes a minimal implementation of the domain logic and infrastructure as code to implement a REST service.</p>
 
-    <Notification color='info' light>You should consider using a private NPM registry or implementing more creative solutions such as extending base Docker images with <code>ADD</code>|<code>COPY</code> statements for source code or <code>npm link</code> for your domain logic.</Notification>
+      <h2 id='source_code'><Link to='https://www.npmjs.com/package/hive-io-rest-example' target='_blank' rel='noopener noreferrer'>Domain Logic</Link> (<Link to='https://github.com/fnalabs/hive-io/tree/master/packages/hive-js-rest-example' target='_blank' rel='noopener noreferrer'>Source Code</Link>)</h2>
 
-    <h2 id='infrastructure'><Link to='https://github.com/fnalabs/hive-io/tree/master/dev/docker/rest/production' target='_blank' rel='noopener noreferrer'>Infrastructure</Link></h2>
-    <dl>
-      <dt><code>Dockerfile</code></dt>
-      <dd>
-        <pre>FROM fnalabs/hive-base-js:latest<br />RUN npm install hive-io-rest-example</pre>
-      </dd>
+      <Notification color='info' light>You should consider using a private NPM registry or implementing more creative solutions such as extending base Docker images with <code>ADD</code>|<code>COPY</code> statements for source code or <code>npm link</code> for your domain logic.</Notification>
 
-      <dt><code>docker-compose.yml</code></dt>
-      <dd>
-        <pre>version: '3.5'<br />
+      <h2 id='infrastructure'><Link to='https://github.com/fnalabs/hive-io/tree/master/dev/docker/rest/production' target='_blank' rel='noopener noreferrer'>Infrastructure</Link></h2>
+      <dl>
+        <dt><code>Dockerfile</code></dt>
+        <dd>
+          <pre>FROM fnalabs/hive-base-js:latest<br />RUN npm install hive-io-rest-example</pre>
+        </dd>
+
+        <dt><code>docker-compose.yml</code></dt>
+        <dd>
+          <pre>version: '3.5'<br />
 services:<br />
 &nbsp;&nbsp;hive-base-js:<br />
 &nbsp;&nbsp;&nbsp;&nbsp;build: .<br />
@@ -78,8 +82,9 @@ services:<br />
 networks:<br />
 &nbsp;&nbsp;hive-io:<br />
 &nbsp;&nbsp;&nbsp;&nbsp;driver: bridge</pre>
-      </dd>
-    </dl>
-  </Block>
+        </dd>
+      </dl>
+    </Block>
+  </>
 )
 export default Rest

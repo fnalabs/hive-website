@@ -6,7 +6,7 @@ export interface IDirectionLayout {
         prev?: ILink;
         up?: ILink;
     };
-    color: Color;
+    color: Exclude<Color, 'text' | 'ghost'>;
 }
 declare const DirectionLayout: FC<IDirectionLayout>;
 export default DirectionLayout;

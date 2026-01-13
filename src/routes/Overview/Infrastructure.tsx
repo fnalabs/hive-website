@@ -6,29 +6,34 @@ import { remoteBlock } from '../../remotes'
 const Block = lazy(remoteBlock)
 
 const Infrastructure: FC = () => (
-  <Block article content>
-    <h1>Infrastructure</h1>
-    <p>Here are the execution environments for the domain logic described previously. Hive<sup>io</sup> is designed to manage infrastructure as code through the base <Link to='https://www.docker.com/' target='_blank' rel='noopener noreferrer'>Docker</Link> images defined. These images are meant to be extended to include your domain logic and additional code dependencies. Depending on the type of container, there are a few opinions made here too.</p>
+  <>
+    <title>FnA Labs | Hive^io - Infrastructure</title>
+    <meta name="description" content="Infrastructure in Hive^io: a reactive, cloud-native framework. The following describes patterns and infrastructure as code." />
 
-    <h2 id='specialized_containers'>Specialized Containers</h2>
-    <p>Base images for specific service types have been defined to provide the basic boilerplate service definition for your application. It also ensures a common interface is maintained between the service and actor. For CQRS/ES architectures, some opinions on storage solutions have been made.</p>
-    <dl>
-      <dt><em><strong>Base</strong></em></dt>
-      <dd>The least opinionated of them all. This wraps your actor(s) to provide a straightforward interface and standardizes the network payload before calling your actor to perform.</dd>
+    <Block article content>
+      <h1>Infrastructure</h1>
+      <p>Here are the execution environments for the domain logic described previously. Hive<sup>io</sup> is designed to manage infrastructure as code through the base <Link to='https://www.docker.com/' target='_blank' rel='noopener noreferrer'>Docker</Link> images defined. These images are meant to be extended to include your domain logic and additional code dependencies. Depending on the type of container, there are a few opinions made here too.</p>
 
-      <dt><em><strong>Producer</strong></em></dt>
-      <dd>This supports the creation of unordered messages in a CQRS/ES implementation. Validation here is only <Link to='http://danielwhittaker.me/2016/04/20/how-to-validate-commands-in-a-cqrs-application/' target='_blank' rel='noopener noreferrer'>superficial</Link> and defaults to using queues to batch messages for increased performance.</dd>
+      <h2 id='specialized_containers'>Specialized Containers</h2>
+      <p>Base images for specific service types have been defined to provide the basic boilerplate service definition for your application. It also ensures a common interface is maintained between the service and actor. For CQRS/ES architectures, some opinions on storage solutions have been made.</p>
+      <dl>
+        <dt><em><strong>Base</strong></em></dt>
+        <dd>The least opinionated of them all. This wraps your actor(s) to provide a straightforward interface and standardizes the network payload before calling your actor to perform.</dd>
 
-      <dt><em><strong>Consumer</strong></em></dt>
-      <dd>Message consumption is defined in this image for a CQRS/ES implementation. It is highly recommended that these services be isolated to only message consumption but can support queries against the data as well.</dd>
+        <dt><em><strong>Producer</strong></em></dt>
+        <dd>This supports the creation of unordered messages in a CQRS/ES implementation. Validation here is only <Link to='http://danielwhittaker.me/2016/04/20/how-to-validate-commands-in-a-cqrs-application/' target='_blank' rel='noopener noreferrer'>superficial</Link> and defaults to using queues to batch messages for increased performance.</dd>
 
-      <dt><em><strong>Stream Processor</strong></em></dt>
-      <dd>This supports a variety of needs in a CQRS/ES implementation. <Link to='http://danielwhittaker.me/2016/04/20/how-to-validate-commands-in-a-cqrs-application/' target='_blank' rel='noopener noreferrer'>Domain validation</Link> can be achieved through the use of the transaction cache dependency (<Link to='https://redis.io/' target='_blank' rel='noopener noreferrer'>Redis</Link>). CQRS/ES Process Managers and Sagas can be implemented here too.</dd>
-    </dl>
+        <dt><em><strong>Consumer</strong></em></dt>
+        <dd>Message consumption is defined in this image for a CQRS/ES implementation. It is highly recommended that these services be isolated to only message consumption but can support queries against the data as well.</dd>
 
-    <h2 id='unified_transaction_log'>Unified Transaction Log</h2>
-    <p>The <Link to='https://www.confluent.io/blog/event-sourcing-cqrs-stream-processing-apache-kafka-whats-connection/' target='_blank' rel='noopener noreferrer'>unified transaction log</Link> is the centralized storage solution that is the foundation of the CQRS/ES pattern. Think of it as the backbone in your central nervous system. All of your body parts and organs that connect to this backbone are made up of the different microservice types described above. The transaction log's job is to handle multiple inputs/outputs to each of these microservice types while providing the persistence layer. Events are stored here once they have been validated by their producers and are read from here by their consumers.</p>
-    <p>Here is where our last opinions are made with Kafka and Redis as the unified transaction log and cache respectively. The Stream Processor has implemented a solution leveraging the <Link to='https://en.wikipedia.org/wiki/X/Open_XA' target='_blank' rel='noopener noreferrer'>eXtended Architecture (XA)</Link> distributed transaction model via <Link to='https://en.wikipedia.org/wiki/Snapshot_isolation' target='_blank' rel='noopener noreferrer'>snapshot isolation</Link> and <Link to='https://en.wikipedia.org/wiki/Two-phase_commit_protocol' target='_blank' rel='noopener noreferrer'>two-phase commit</Link> techniques to provide domain validation and event order guarantees. The Redis implementation leverages the <Link to='https://redis.io/topics/distlock' target='_blank' rel='noopener noreferrer'>Redlock algorithm</Link> as the <Link to='https://en.wikipedia.org/wiki/Distributed_lock_manager' target='_blank' rel='noopener noreferrer'>distributed lock</Link>ing mechanism to support these techniques.</p>
-  </Block>
+        <dt><em><strong>Stream Processor</strong></em></dt>
+        <dd>This supports a variety of needs in a CQRS/ES implementation. <Link to='http://danielwhittaker.me/2016/04/20/how-to-validate-commands-in-a-cqrs-application/' target='_blank' rel='noopener noreferrer'>Domain validation</Link> can be achieved through the use of the transaction cache dependency (<Link to='https://redis.io/' target='_blank' rel='noopener noreferrer'>Redis</Link>). CQRS/ES Process Managers and Sagas can be implemented here too.</dd>
+      </dl>
+
+      <h2 id='unified_transaction_log'>Unified Transaction Log</h2>
+      <p>The <Link to='https://www.confluent.io/blog/event-sourcing-cqrs-stream-processing-apache-kafka-whats-connection/' target='_blank' rel='noopener noreferrer'>unified transaction log</Link> is the centralized storage solution that is the foundation of the CQRS/ES pattern. Think of it as the backbone in your central nervous system. All of your body parts and organs that connect to this backbone are made up of the different microservice types described above. The transaction log's job is to handle multiple inputs/outputs to each of these microservice types while providing the persistence layer. Events are stored here once they have been validated by their producers and are read from here by their consumers.</p>
+      <p>Here is where our last opinions are made with Kafka and Redis as the unified transaction log and cache respectively. The Stream Processor has implemented a solution leveraging the <Link to='https://en.wikipedia.org/wiki/X/Open_XA' target='_blank' rel='noopener noreferrer'>eXtended Architecture (XA)</Link> distributed transaction model via <Link to='https://en.wikipedia.org/wiki/Snapshot_isolation' target='_blank' rel='noopener noreferrer'>snapshot isolation</Link> and <Link to='https://en.wikipedia.org/wiki/Two-phase_commit_protocol' target='_blank' rel='noopener noreferrer'>two-phase commit</Link> techniques to provide domain validation and event order guarantees. The Redis implementation leverages the <Link to='https://redis.io/topics/distlock' target='_blank' rel='noopener noreferrer'>Redlock algorithm</Link> as the <Link to='https://en.wikipedia.org/wiki/Distributed_lock_manager' target='_blank' rel='noopener noreferrer'>distributed lock</Link>ing mechanism to support these techniques.</p>
+    </Block>
+  </>
 )
 export default Infrastructure

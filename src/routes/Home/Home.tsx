@@ -32,6 +32,9 @@ const Section = lazy(remoteSection)
 
 const Home: FC = () => (
   <>
+    <title>FnA Labs | Hive^io</title>
+    <meta name="description" content="Hive^io is a reactive, cloud-native framework for building microservices." />
+
     <Hero color='dark' size='medium' bold>
       <Container>
         <Columns vcentered>

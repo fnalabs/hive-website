@@ -2,7 +2,7 @@ const styles = `
 :root {
   --bulma-primary-h: 43deg;
   --bulma-primary-s: 74%;
-  --bulma-primary-l: 49%;
+  --bulma-primary-l: 49%
 }
 
 .svg-animation-container {

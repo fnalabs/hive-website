@@ -7,42 +7,46 @@ const Block = lazy(remoteBlock)
 const Notification = lazy(remoteNotification)
 
 const CqrsEs: FC = () => (
-  <Block article content>
-    <h1>Example: CQRS/ES</h1>
-    <p>This example evolves the previous REST example into a highly distributed architecture in order to handle different magnitudes of network traffic.</p>
+  <>
+    <title>FnA Labs | Hive^io - Example: CQRS/ES</title>
+    <meta name="description" content="A CQRS/ES example implementation with Hive^io: a reactive, cloud-native framework." />
 
-    <h2 id='source_code'><Link to='https://www.npmjs.com/package/hive-io-domain-example' target='_blank' rel='noopener noreferrer'>Domain Logic</Link> (<Link to='https://github.com/fnalabs/hive-io/tree/master/packages/hive-js-domain-example' target='_blank' rel='noopener noreferrer'>Source Code</Link>)</h2>
+    <Block article content>
+      <h1>Example: CQRS/ES</h1>
+      <p>This example evolves the previous REST example into a highly distributed architecture in order to handle different magnitudes of network traffic.</p>
 
-    <Notification color='info' light>You should consider using a private NPM registry or implementing more creative solutions such as extending base Docker images with <code>ADD</code>|<code>COPY</code> statements for source code or <code>npm link</code> for your domain logic.</Notification>
+      <h2 id='source_code'><Link to='https://www.npmjs.com/package/hive-io-domain-example' target='_blank' rel='noopener noreferrer'>Domain Logic</Link> (<Link to='https://github.com/fnalabs/hive-io/tree/master/packages/hive-js-domain-example' target='_blank' rel='noopener noreferrer'>Source Code</Link>)</h2>
 
-    <h2 id='infrastructure'><Link to='https://github.com/fnalabs/hive-io/tree/master/dev/docker/domain/production' target='_blank' rel='noopener noreferrer'>Infrastructure</Link></h2>
+      <Notification color='info' light>You should consider using a private NPM registry or implementing more creative solutions such as extending base Docker images with <code>ADD</code>|<code>COPY</code> statements for source code or <code>npm link</code> for your domain logic.</Notification>
 
-    <Notification color='warning' light>There is a chicken or egg scenario when you run this example for the first time. In this example, the topics are not created until events are sent from <code>hive-producer-js</code> and <code>hive-stream-processor-js</code>. Therefore, you will need to <strong>restart</strong> <code>hive-consumer-js</code> after the topics are created to finally see events flow through the system.</Notification>
+      <h2 id='infrastructure'><Link to='https://github.com/fnalabs/hive-io/tree/master/dev/docker/domain/production' target='_blank' rel='noopener noreferrer'>Infrastructure</Link></h2>
 
-    <dl>
-      <dt><code>Producer.dockerfile</code></dt>
-      <dd>
-        <pre>FROM fnalabs/hive-producer-js:latest<br />RUN npm install hive-io-domain-example</pre>
-      </dd>
+      <Notification color='warning' light>There is a chicken or egg scenario when you run this example for the first time. In this example, the topics are not created until events are sent from <code>hive-producer-js</code> and <code>hive-stream-processor-js</code>. Therefore, you will need to <strong>restart</strong> <code>hive-consumer-js</code> after the topics are created to finally see events flow through the system.</Notification>
 
-      <dt><code>Stream-Processor.dockerfile</code></dt>
-      <dd>
-        <pre>FROM fnalabs/hive-stream-processor-js:latest<br />RUN npm install hive-io-domain-example</pre>
-      </dd>
+      <dl>
+        <dt><code>Producer.dockerfile</code></dt>
+        <dd>
+          <pre>FROM fnalabs/hive-producer-js:latest<br />RUN npm install hive-io-domain-example</pre>
+        </dd>
 
-      <dt><code>Consumer.dockerfile</code></dt>
-      <dd>
-        <pre>FROM fnalabs/hive-consumer-js:latest<br />RUN npm install hive-io-domain-example</pre>
-      </dd>
+        <dt><code>Stream-Processor.dockerfile</code></dt>
+        <dd>
+          <pre>FROM fnalabs/hive-stream-processor-js:latest<br />RUN npm install hive-io-domain-example</pre>
+        </dd>
 
-      <dt><code>Rest.dockerfile</code></dt>
-      <dd>
-        <pre>FROM fnalabs/hive-base-js:latest<br />RUN npm install hive-io-domain-example</pre>
-      </dd>
+        <dt><code>Consumer.dockerfile</code></dt>
+        <dd>
+          <pre>FROM fnalabs/hive-consumer-js:latest<br />RUN npm install hive-io-domain-example</pre>
+        </dd>
 
-      <dt><code>docker-compose.yml</code></dt>
-      <dd>
-        <pre>version: '3.5'<br />
+        <dt><code>Rest.dockerfile</code></dt>
+        <dd>
+          <pre>FROM fnalabs/hive-base-js:latest<br />RUN npm install hive-io-domain-example</pre>
+        </dd>
+
+        <dt><code>docker-compose.yml</code></dt>
+        <dd>
+          <pre>version: '3.5'<br />
 services:<br />
 &nbsp;&nbsp;# proxy for layer 7 routing<br />
 &nbsp;&nbsp;# NOTE: this is an example, you will need to define your own config<br />
@@ -224,8 +228,9 @@ services:<br />
 networks:<br />
 &nbsp;&nbsp;hive-io:<br />
 &nbsp;&nbsp;&nbsp;&nbsp;driver: bridge</pre>
-      </dd>
-    </dl>
-  </Block>
+        </dd>
+      </dl>
+    </Block>
+  </>
 )
 export default CqrsEs
