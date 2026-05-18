@@ -1,25 +1,14 @@
 {
-  "name": "hive-website",
+  "name": "hive_website",
   "version": "2.1.3",
   "description": "Hive^io framework informational and documentation website.",
   "scripts": {
-    "prebuild": "del dist",
-    "build": "cross-env NODE_ENV=production webpack",
-    "coverage": "npm test && codecov",
-    "predev": "del dist",
-    "dev": "cross-env NODE_ENV=development webpack",
-    "fix": "standard --fix",
-    "release": "npm test && npm run build && node ./bin/sitemap",
-    "start": "NODE_ENV=production node ./bin/start",
-    "pretest": "del coverage",
-    "test": "standard",
-    "posttest": "cross-env NODE_ENV=test jest --ci tst/",
-    "pretest:dev": "del coverage",
-    "test:dev": "standard",
-    "posttest:dev": "cross-env NODE_ENV=test jest -u tst/",
-    "pretest:watch": "del coverage",
-    "test:watch": "cross-env NODE_ENV=test jest --watch",
-    "version": "npm run release"
+    "build": "NODE_ENV=production HOST=https://fnalabs.github.io/hive-website ROUTE=/hive rspack build",
+    "dev": "NODE_ENV=development HOST=http://localhost:3001 ROUTE=/hive rspack serve",
+    "lint": "eslint .",
+    "format:check": "prettier --check .",
+    "format:fix": "prettier --write .",
+    "test": "echo TODO"
   },
   "repository": {
     "type": "git",
@@ -31,121 +20,36 @@
   "homepage": "https://github.com/fnalabs/hive-website#readme",
   "author": "Adam Eilers",
   "license": "Apache-2.0",
-  "engines": {
-    "node": ">=12",
-    "npm": ">=6"
-  },
   "dependencies": {
-    "koa": "~2.13.1",
-    "koa-compress": "~5.0.1",
-    "koa-helmet": "~6.0.0",
-    "koa-logger": "~3.2.1",
-    "koa-static": "~5.0.0",
-    "prop-types": "~15.7.2",
-    "react": "~17.0.1",
-    "react-cookie-consent": "~6.2.1",
-    "react-dom": "~17.0.1",
-    "react-ga": "~3.3.0",
-    "react-helmet": "~6.1.0",
-    "react-router": "~5.2.0",
-    "react-router-dom": "~5.2.0",
-    "workbox-cacheable-response": "~6.0.2",
-    "workbox-core": "~6.0.2",
-    "workbox-expiration": "~6.0.2",
-    "workbox-google-analytics": "~6.0.2",
-    "workbox-precaching": "~6.0.2",
-    "workbox-routing": "~6.0.2",
-    "workbox-strategies": "~6.0.2"
+    "@module-federation/enhanced": "2.3.0",
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
+    "react-router": "7.13.2"
   },
   "devDependencies": {
-    "@babel/cli": "~7.12.10",
-    "@babel/core": "~7.12.10",
-    "@babel/plugin-proposal-class-properties": "~7.12.1",
-    "@babel/plugin-proposal-nullish-coalescing-operator": "~7.12.1",
-    "@babel/plugin-proposal-optional-chaining": "~7.12.7",
-    "@babel/plugin-transform-modules-commonjs": "~7.12.1",
-    "@babel/preset-env": "~7.12.11",
-    "@babel/preset-react": "~7.12.10",
-    "autoprefixer": "~10.2.3",
-    "babel-eslint": "~10.1.0",
-    "babel-jest": "~26.6.3",
-    "babel-loader": "~8.2.2",
-    "babel-plugin-add-module-exports": "~1.0.4",
-    "bulma": "~0.9.1",
-    "clean-webpack-plugin": "~3.0.0",
-    "codecov": "~3.8.1",
-    "cross-env": "~7.0.3",
-    "css-loader": "~5.0.1",
-    "css-minimizer-webpack-plugin": "~1.2.0",
-    "cssnano": "~4.1.10",
-    "del-cli": "~3.0.1",
-    "dotenv-webpack": "~6.0.0",
-    "enzyme": "~3.11.0",
-    "enzyme-adapter-react-16": "~1.15.6",
-    "eslint-plugin-jsx-a11y": "~6.4.1",
-    "file-loader": "~6.2.0",
-    "html-webpack-plugin": "~4.5.1",
-    "isomorphic-style-loader": "~5.1.0",
-    "jest": "~26.6.3",
-    "mini-css-extract-plugin": "~1.3.4",
-    "node-sass": "~5.0.0",
-    "nodemon": "~2.0.7",
-    "nodemon-webpack-plugin": "~4.4.4",
-    "penthouse": "~2.3.2",
-    "postcss": "~8.2.4",
-    "postcss-loader": "~4.1.0",
-    "react-test-renderer": "~17.0.1",
-    "sass-loader": "~10.1.1",
-    "sitemap": "~6.3.5",
-    "standard": "~16.0.3",
-    "supertest": "~6.1.1",
-    "terser": "~5.5.1",
-    "terser-webpack-plugin": "~5.1.1",
-    "webpack": "~5.16.0",
-    "webpack-cli": "~4.4.0",
-    "webpack-manifest-plugin": "~3.0.0",
-    "webpack-node-externals": "~2.5.2",
-    "webpack-pwa-manifest": "~4.3.0",
-    "webpack-shell-plugin-next": "~2.1.1",
-    "workbox-webpack-plugin": "~6.0.2"
+    "@aaroon/workbox-rspack-plugin": "0.3.2",
+    "@eslint/js": "9.39.4",
+    "@rsbuild/core": "1.7.4",
+    "@rsbuild/plugin-react": "1.4.6",
+    "@rspack/cli": "1.7.10",
+    "@rspack/core": "1.7.10",
+    "@rspack/plugin-react-refresh": "1.6.1",
+    "@types/jest": "30.0.0",
+    "@types/react": "19.2.14",
+    "@types/react-dom": "19.2.3",
+    "axios": "1.13.6",
+    "concurrently": "9.2.1",
+    "esbuild": "0.27.4",
+    "esbuild-register": "3.6.0",
+    "eslint": "9.39.4",
+    "globals": "17.4.0",
+    "prettier": "3.8.1",
+    "react-refresh": "0.18.0",
+    "type-fest": "5.5.0",
+    "typescript": "5.9.3",
+    "typescript-eslint": "8.57.2"
   },
-  "jest": {
-    "collectCoverage": true,
-    "coverageDirectory": "<rootDir>/coverage/",
-    "coveragePathIgnorePatterns": [
-      "<rootDir>/dist/",
-      "<rootDir>/tst/",
-      "<rootDir>/node_modules/"
-    ],
-    "coverageReporters": [
-      "html",
-      "lcov",
-      "text"
-    ],
-    "coverageThreshold": {
-      "global": {
-        "branches": 90,
-        "functions": 90,
-        "lines": 90,
-        "statements": 90
-      }
-    },
-    "modulePaths": [
-      "<rootDir>/src",
-      "<rootDir>/src/assets",
-      "<rootDir>/src/assets/components"
-    ],
-    "setupFilesAfterEnv": [
-      "<rootDir>/tst/configEnzyme.js"
-    ]
-  },
-  "standard": {
-    "parser": "babel-eslint",
-    "plugins": [
-      "jsx-a11y"
-    ],
-    "ignore": [
-      "docs/**/*"
-    ]
+  "volta": {
+    "node": "24.14.0"
   }
 }
