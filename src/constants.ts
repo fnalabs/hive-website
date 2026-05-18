@@ -1,4 +1,4 @@
-import { IBrandLink } from '@mf-types/fnalabs_assets/Navbar'
+import { type IBrandLink } from '@mf-types/fnalabs_assets/Navbar'
 
 export const VERSION_LABEL = 'v2.1.3'
 
