@@ -1,0 +1,106 @@
+{
+  "id": "hive_website",
+  "name": "hive_website",
+  "metaData": {
+    "name": "hive_website",
+    "globalName": "hive_website",
+    "buildInfo": {
+      "buildVersion": "2.1.3",
+      "buildName": "hive_website"
+    },
+    "publicPath": "https://fnalabs.github.io/hive-website/hive/",
+    "remoteEntry": {
+      "name": "hive_website.js",
+      "path": "",
+      "type": "global"
+    },
+    "types": {
+      "path": "",
+      "name": "",
+      "zip": "@mf-types.zip",
+      "api": "@mf-types.d.ts"
+    },
+    "pluginVersion": "2.3.0",
+    "prefetchInterface": false
+  },
+  "shared": [
+    {
+      "id": "hive_website:react-dom",
+      "name": "react-dom",
+      "version": "19.2.4",
+      "singleton": true,
+      "requiredVersion": "19.2.4",
+      "assets": {
+        "js": {
+          "sync": [
+            "717.js",
+            "98.js"
+          ],
+          "async": []
+        },
+        "css": {
+          "sync": [],
+          "async": []
+        }
+      }
+    },
+    {
+      "id": "hive_website:react-router",
+      "name": "react-router",
+      "version": "7.13.2",
+      "singleton": true,
+      "requiredVersion": "7.13.2",
+      "assets": {
+        "js": {
+          "sync": [
+            "725.js"
+          ],
+          "async": []
+        },
+        "css": {
+          "sync": [],
+          "async": []
+        }
+      }
+    },
+    {
+      "id": "hive_website:react",
+      "name": "react",
+      "version": "19.2.4",
+      "singleton": true,
+      "requiredVersion": "19.2.4",
+      "assets": {
+        "js": {
+          "sync": [
+            "237.js"
+          ],
+          "async": []
+        },
+        "css": {
+          "sync": [],
+          "async": []
+        }
+      }
+    }
+  ],
+  "remotes": [],
+  "exposes": [
+    {
+      "id": "hive_website:Routes",
+      "name": "Routes",
+      "assets": {
+        "js": {
+          "sync": [
+            "__federation_expose_Routes.js"
+          ],
+          "async": []
+        },
+        "css": {
+          "sync": [],
+          "async": []
+        }
+      },
+      "path": "./Routes"
+    }
+  ]
+}

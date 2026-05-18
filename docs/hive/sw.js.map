@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://hive_website/./src/Worker.ts"],"names":["self"],"mappings":"AACA,KAAK,sBAAsB,CAAG,4yCAAK,aAAa","file":"sw.js","sourcesContent":["// @ts-expect-error skipping this check\nself.__WB_HIVE_MFE_MANIFEST = self.__WB_MANIFEST\n"]}
