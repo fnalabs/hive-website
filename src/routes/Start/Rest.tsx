@@ -1,15 +1,24 @@
 import React, { type FC, lazy } from 'react'
 import { Link } from 'react-router'
-
-import { remoteBlock, remoteNotification } from '../../remotes'
+import {
+  remoteBlock,
+  remoteColumn,
+  remoteColumns,
+  remoteIcon,
+  remoteNotification,
+} from '../../remotes'
+import meta from '../../metadata.json'
 
 const Block = lazy(remoteBlock)
+const Column = lazy(remoteColumn)
+const Columns = lazy(remoteColumns)
+const Icon = lazy(remoteIcon)
 const Notification = lazy(remoteNotification)
 
 const Rest: FC = () => (
   <>
-    <title>FnA Labs | Hive^io - Example: REST</title>
-    <meta name="description" content="A REST example implementation with Hive^io: a reactive, cloud-native framework." />
+    <title>{meta['/hive/rest'].title}</title>
+    <meta name="description" content={meta['/hive/rest'].description} />
 
     <Block article content>
       <h1>Example: REST</h1>
@@ -17,7 +26,16 @@ const Rest: FC = () => (
 
       <h2 id='source_code'><Link to='https://www.npmjs.com/package/hive-io-rest-example' target='_blank' rel='noopener noreferrer'>Domain Logic</Link> (<Link to='https://github.com/fnalabs/hive-io/tree/master/packages/hive-js-rest-example' target='_blank' rel='noopener noreferrer'>Source Code</Link>)</h2>
 
-      <Notification color='info' light>You should consider using a private NPM registry or implementing more creative solutions such as extending base Docker images with <code>ADD</code>|<code>COPY</code> statements for source code or <code>npm link</code> for your domain logic.</Notification>
+      <Notification color='info' light>
+        <Columns gapless>
+          <Column narrow>
+            <Icon style='solid' name='info' size='medium' />
+          </Column>
+          <Column>
+            <p>You should consider using a private NPM registry or implementing more creative solutions such as extending base Docker images with <code>ADD</code>|<code>COPY</code> statements for source code or <code>npm link</code> for your domain logic.</p>
+          </Column>
+        </Columns>
+      </Notification>
 
       <h2 id='infrastructure'><Link to='https://github.com/fnalabs/hive-io/tree/master/dev/docker/rest/production' target='_blank' rel='noopener noreferrer'>Infrastructure</Link></h2>
       <dl>
@@ -59,8 +77,6 @@ services:<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- hive-io<br />
 &nbsp;&nbsp;&nbsp;&nbsp;restart: on-failure<br /><br />
 &nbsp;&nbsp;# telemetry<br />
-&nbsp;&nbsp;# NOTE: you will need to provide a configuration for the collector<br />
-&nbsp;&nbsp;#       see https://github.com/fnalabs/hive-io/blob/master/dev/collector/collector-config.yml<br />
 &nbsp;&nbsp;collector:<br />
 &nbsp;&nbsp;&nbsp;&nbsp;image: otel/opentelemetry-collector:0.16.0<br />
 &nbsp;&nbsp;&nbsp;&nbsp;container_name: collector<br />

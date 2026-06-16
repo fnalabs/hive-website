@@ -1,4 +1,4 @@
-import type { IDirectionLayout } from '@mf-types/fnalabs_assets/DirectionLayout'
+import type { IDirectionLayout } from '../../@mf-types/fnalabs_assets/DirectionLayout'
 import React, { type FC, lazy } from 'react'
 import { useLocation } from 'react-router'
 import { remoteDirectionLayout } from '../remotes'

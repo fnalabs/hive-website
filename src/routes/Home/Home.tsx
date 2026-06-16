@@ -15,6 +15,7 @@ import {
   remoteLevel,
   remoteSection,
 } from '../../remotes'
+import meta from '../../metadata.json'
 
 const Block = lazy(remoteBlock)
 const Box = lazy(remoteBox)
@@ -32,8 +33,8 @@ const Section = lazy(remoteSection)
 
 const Home: FC = () => (
   <>
-    <title>FnA Labs | Hive^io</title>
-    <meta name="description" content="Hive^io is a reactive, cloud-native framework for building microservices." />
+    <title>{meta['/hive'].title}</title>
+    <meta name="description" content={meta['/hive'].description} />
 
     <Hero color='dark' size='medium' bold>
       <Container>
@@ -63,7 +64,7 @@ const Home: FC = () => (
                 <Image fixedSize='96x96' centered hcentered>
                   <i className='fa-solid fa-bolt fa-5x has-text-primary' />
                 </Image>
-                <h3 className='has-text-centered'>Responsive</h3>
+                <h2 className='subtitle has-text-centered'>Responsive</h2>
                 <p>Hive<sup>io</sup> is able to give lightning fast response times by implementing and supporting microservices with Node.js and Fastify.</p>
               </Block>
             </Box>
@@ -75,7 +76,7 @@ const Home: FC = () => (
                 <Image fixedSize='96x96' centered hcentered>
                   <i className='fa-solid fa-lines-leaning fa-5x has-text-primary' />
                 </Image>
-                <h3 className='has-text-centered'>Resilient</h3>
+                <h2 className='subtitle has-text-centered'>Resilient</h2>
                 <p>Each microservice contains and isolates aggregates in your domain model to ensure that you are still capable of serving traffic, even during a catastrophic event or unexpected high volume.</p>
               </Block>
             </Box>
@@ -87,7 +88,7 @@ const Home: FC = () => (
                 <Image fixedSize='96x96' centered hcentered>
                   <i className='fa-solid fa-maximize fa-5x has-text-primary' />
                 </Image>
-                <h3 className='has-text-centered'>Elastic</h3>
+                <h2 className='subtitle has-text-centered'>Elastic</h2>
                 <p>Hive<sup>io</sup> enables auto scaling solutions to save you not only money but increased uptime when production workloads get unpredictable.</p>
               </Block>
             </Box>
@@ -99,7 +100,7 @@ const Home: FC = () => (
                 <Image fixedSize='96x96' centered hcentered>
                   <i className='fa-solid fa-message fa-5x has-text-primary' />
                 </Image>
-                <h3 className='has-text-centered'>Message Driven</h3>
+                <h2 className='subtitle has-text-centered'>Message Driven</h2>
                 <p>Hive<sup>io</sup> provides an asynchronous, message passing framework that ensures loose coupling, isolation, and location transparency with Node.js and Kafka.</p>
               </Block>
             </Box>
@@ -111,7 +112,7 @@ const Home: FC = () => (
                 <Image fixedSize='96x96' centered hcentered>
                   <i className='fa-solid fa-gears fa-5x has-text-primary' />
                 </Image>
-                <h3 className='has-text-centered'>Flexible &amp; Robust</h3>
+                <h2 className='subtitle has-text-centered'>Flexible &amp; Robust</h2>
                 <p>Hive<sup>io</sup> uses the JSON Schema and Flux Standard Action specifications to automatically serialize and validate your data Models for network transport. We call it Model JSON Serialization.</p>
               </Block>
             </Box>
@@ -123,7 +124,7 @@ const Home: FC = () => (
                 <Image fixedSize='96x96' centered hcentered>
                   <i className='fa-solid fa-cloud fa-5x has-text-primary' />
                 </Image>
-                <h3 className='has-text-centered'>Cloud Native</h3>
+                <h2 className='subtitle has-text-centered'>Cloud Native</h2>
                 <p>Hive<sup>io</sup> is implemented with standardized container-d images to wrap your domain logic with a lightweight, RESTful interface. This allows you to skip the boilerplate setup/maintenance and dive straight into adding immediate value to your application.</p>
               </Block>
             </Box>

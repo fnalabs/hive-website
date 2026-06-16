@@ -1,112 +1,67 @@
 {
-  "common": {
-    "siteName": "Hive^io",
-    "baseUrl": "https://hiveframework.io",
-    "imageUrl": "https://hiveframework.io/icon_512x512.png",
-    "cacheTime": 600000
-  },
-  "/": {
-    "name": "home",
+  "/hive": {
+    "title": "FnA Labs | Hive^io",
     "description": "Hive^io is a reactive, cloud-native framework for building microservices.",
-    "url": "https://hiveframework.io/",
     "priority": 1.0
   },
-  "/overview": {
-    "name": "overview",
-    "title": "Overview",
+  "/hive/overview": {
+    "title": "FnA Labs | Hive^io - Overview",
     "description": "Overview of Hive^io: a reactive, cloud-native framework. The following describes project tenets, background, and roadmap.",
-    "url": "https://hiveframework.io/overview",
     "priority": 1.0
   },
-  "/model": {
-    "name": "model",
-    "title": "Data Model",
+  "/hive/model": {
+    "title": "FnA Labs | Hive^io - Data Model",
     "description": "Data Modeling in Hive^io: a reactive, cloud-native framework. The following describes JSON Serialization.",
-    "url": "https://hiveframework.io/model",
     "priority": 1.0
   },
-  "/domain": {
-    "name": "domain",
-    "title": "Domain Logic",
+  "/hive/domain": {
+    "title": "FnA Labs | Hive^io - Domain Logic",
     "description": "Domain Logic in Hive^io: a reactive, cloud-native framework. The following describes the use of the Actor Model.",
-    "url": "https://hiveframework.io/domain",
     "priority": 1.0
   },
-  "/infrastructure": {
-    "name": "infrastructure",
-    "title": "Infrastructure",
+  "/hive/infrastructure": {
+    "title": "FnA Labs | Hive^io - Infrastructure",
     "description": "Infrastructure in Hive^io: a reactive, cloud-native framework. The following describes patterns and infrastructure as code.",
-    "url": "https://hiveframework.io/infrastructure",
     "priority": 1.0
   },
-  "/telemetry": {
-    "name": "telemetry",
-    "title": "Telemetry",
+  "/hive/telemetry": {
+    "title": "FnA Labs | Hive^io - Telemetry",
     "description": "Telemetry in Hive^io: a reactive, cloud-native framework. The following describes our integration with OpenTelemetry.",
-    "url": "https://hiveframework.io/telemetry",
     "priority": 1.0
   },
-  "/start": {
-    "name": "start",
-    "title": "Get Started",
+  "/hive/start": {
+    "title": "FnA Labs | Hive^io - Get Started",
     "description": "Get started with Hive^io: a reactive, cloud-native framework. Follow along with the setup instructions and multiple examples.",
-    "url": "https://hiveframework.io/start",
     "priority": 1.0
   },
-  "/setup": {
-    "name": "setup",
-    "title": "Setup",
+  "/hive/setup": {
+    "title": "FnA Labs | Hive^io - Setup",
     "description": "Setup Hive^io: a reactive, cloud-native framework. Follow the setup process for domain logic modules and infrastructure.",
-    "url": "https://hiveframework.io/setup",
     "priority": 1.0
   },
-  "/basic": {
-    "name": "basic",
-    "title": "Example: Basic",
+  "/hive/basic": {
+    "title": "FnA Labs | Hive^io - Basic Example",
     "description": "A straightforward example implementation of Actors and Models with Hive^io: a reactive, cloud-native framework.",
-    "url": "https://hiveframework.io/basic",
     "priority": 1.0
   },
-  "/rest": {
-    "name": "rest",
-    "title": "Example: REST",
+  "/hive/rest": {
+    "title": "FnA Labs | Hive^io - REST Example",
     "description": "A REST example implementation with Hive^io: a reactive, cloud-native framework.",
-    "url": "https://hiveframework.io/rest",
     "priority": 1.0
   },
-  "/cqrs-es": {
-    "name": "cqrs-es",
-    "title": "Example: CQRS/ES",
+  "/hive/cqrs-es": {
+    "title": "FnA Labs | Hive^io - CQRS/ES Example",
     "description": "A CQRS/ES example implementation with Hive^io: a reactive, cloud-native framework.",
-    "url": "https://hiveframework.io/cqrs-es",
     "priority": 1.0
   },
-  "/documentation": {
-    "name": "documentation",
-    "title": "Documentation",
+  "/hive/documentation": {
+    "title": "FnA Labs | Hive^io - Documentation",
     "description": "Documentation for Hive^io: a reactive, cloud-native framework. Reference details of the API for the domain logic library.",
-    "url": "https://hiveframework.io/documentation",
     "priority": 1.0
   },
-  "/environments": {
-    "name": "environments",
-    "title": "Environments",
+  "/hive/environments": {
+    "title": "FnA Labs | Hive^io - Environments",
     "description": "Environment configurations for Hive^io: a reactive, cloud-native framework. Reference details for each microservice image.",
-    "url": "https://hiveframework.io/environments",
     "priority": 1.0
-  },
-  "/cookie": {
-    "name": "cookie",
-    "title": "Cookie Policy",
-    "description": "Cookie policy for the Hive^io framework website.",
-    "url": "https://hiveframework.io/cookie",
-    "priority": 0.0
-  },
-  "/privacy": {
-    "name": "privacy",
-    "title": "Privacy Policy",
-    "description": "Privacy policy for the Hive^io framework website.",
-    "url": "https://hiveframework.io/privacy",
-    "priority": 0.0
   }
 }

@@ -1,14 +1,14 @@
 import React, { type FC, lazy } from 'react'
 import { Link } from 'react-router'
-
 import { remoteBlock } from '../../remotes'
+import meta from '../../metadata.json'
 
 const Block = lazy(remoteBlock)
 
 const Telemetry: FC = () => (
   <>
-    <title>FnA Labs | Hive^io - Telemetry</title>
-    <meta name="description" content="Telemetry in Hive^io: a reactive, cloud-native framework. The following describes our integration with OpenTelemetry." />
+    <title>{meta['/hive/telemetry'].title}</title>
+    <meta name="description" content={meta['/hive/telemetry'].description} />
 
     <Block article content>
       <h1>Telemetry</h1>
@@ -43,7 +43,7 @@ const Telemetry: FC = () => (
       </blockquote>
 
       <h2 id='architecture'>Architecture</h2>
-      <p>Apart from the previously mentioned components of the solution, which are built into Hive<sup>io</sup> specialized containers, OpenTelemetry provides a Collector that receives data from the traces and metrics generated and export to your choice of supporting services such as <Link to='https://zipkin.io/' target='_blank' rel='noopener noreferrer'>Zipkin</Link>, <Link to='https://prometheus.io/' target='_blank' rel='noopener noreferrer'>Prometheus</Link>, and <Link to='https://opentelemetry.io/registry/?s=exporter' target='_blank' rel='noopener noreferrer'>more</Link>.</p>
+      <p>Apart from the previously mentioned components of the solution, which are built into Hive<sup>io</sup> specialized containers, OpenTelemetry provides a Collector that receives data from the traces and metrics generated and export to your choice of supporting services such as <Link to='https://zipkin.io/' target='_blank' rel='noopener noreferrer'>Zipkin</Link>, <Link to='https://prometheus.io/' target='_blank' rel='noopener noreferrer'>Prometheus</Link>, and a <Link to='https://opentelemetry.io/registry/?s=exporter' target='_blank' rel='noopener noreferrer'>registry</Link> with much more.</p>
       <blockquote>
         <p>The Collector provides a single binary and two deployment methods:</p>
         <ul>

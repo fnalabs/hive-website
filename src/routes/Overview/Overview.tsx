@@ -1,14 +1,14 @@
 import React, { type FC, lazy } from 'react'
 import { Link } from 'react-router'
-
 import { remoteBlock } from '../../remotes'
+import meta from '../../metadata.json'
 
 const Block = lazy(remoteBlock)
 
 const Overview: FC = () => (
   <>
-    <title>FnA Labs | Hive^io - Overview</title>
-    <meta name="description" content="Overview of Hive^io: a reactive, cloud-native framework. The following describes project tenets, background, and roadmap." />
+    <title>{meta['/hive/overview'].title}</title>
+    <meta name="description" content={meta['/hive/overview'].description} />
 
     <Block article content>
       <h1>Overview</h1>
