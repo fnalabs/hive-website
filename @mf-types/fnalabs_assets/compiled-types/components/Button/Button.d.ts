@@ -4,6 +4,7 @@ export interface IButton {
     children: ReactNode;
     onClick?: () => void;
     href?: string;
+    label?: string;
     color?: Color;
     colorMode?: 'light' | 'dark';
     size?: Exclude<GenericSize, 'fullheight'>;

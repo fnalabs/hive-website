@@ -1,6 +1,7 @@
 import type { ILink } from '../../types';
 import { FC } from 'react';
 export interface IMenuLink extends ILink {
+    external?: boolean;
     list?: IMenuLink[];
 }
 export interface IMenuList {

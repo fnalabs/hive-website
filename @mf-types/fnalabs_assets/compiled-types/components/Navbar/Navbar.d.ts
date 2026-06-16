@@ -1,5 +1,5 @@
 import type { ButtonStyle, Color, FixedPosition, ILink } from '../../types';
-import { FC } from 'react';
+import React, { FC } from 'react';
 import * as Icons from '../Icon';
 export interface INavLink extends ILink {
     list?: INavLink[];
@@ -13,8 +13,8 @@ export interface INavLink extends ILink {
 export interface IBrandLink extends ILink {
     brandIcon: keyof typeof Icons;
 }
-export declare const renderLink: (link: INavLink) => import("react/jsx-runtime").JSX.Element;
-export declare const mapLinks: (link: INavLink) => import("react/jsx-runtime").JSX.Element;
+export declare const renderLink: (link: INavLink) => React.JSX.Element;
+export declare const mapLinks: (link: INavLink) => React.JSX.Element;
 export interface INavbar {
     brandLink: IBrandLink[];
     startLinks?: INavLink[];
