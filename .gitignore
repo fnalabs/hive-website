@@ -1,8 +1,8 @@
 # Project specific
 .env
+.mf
 diagnostics
 dist
-webapp.tar.gz
 
 # Logs
 logs
@@ -18,17 +18,13 @@ pids
 coverage
 coverage.lcov
 
-# nyc test coverage
-.nyc_output
+# production
+/build
+/public
 
-# Grunt intermediate storage (http://gruntjs.com/creating-plugins#storing-task-files)
-.grunt
-
-# node-waf configuration
-.lock-wscript
-
-# Compiled binary addons (http://nodejs.org/api/addons.html)
-build/Release
+# misc
+.DS_Store
+.vscode
 
 # Dependency directories
 node_modules
@@ -39,3 +35,6 @@ jspm_packages
 
 # Optional REPL history
 .node_repl_history
+
+# typescript
+*.tsbuildinfo

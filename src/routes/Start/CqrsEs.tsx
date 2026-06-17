@@ -1,15 +1,24 @@
 import React, { type FC, lazy } from 'react'
 import { Link } from 'react-router'
-
-import { remoteBlock, remoteNotification } from '../../remotes'
+import {
+  remoteBlock,
+  remoteColumn,
+  remoteColumns,
+  remoteIcon,
+  remoteNotification,
+} from '../../remotes'
+import meta from '../../metadata.json'
 
 const Block = lazy(remoteBlock)
+const Column = lazy(remoteColumn)
+const Columns = lazy(remoteColumns)
+const Icon = lazy(remoteIcon)
 const Notification = lazy(remoteNotification)
 
 const CqrsEs: FC = () => (
   <>
-    <title>FnA Labs | Hive^io - Example: CQRS/ES</title>
-    <meta name="description" content="A CQRS/ES example implementation with Hive^io: a reactive, cloud-native framework." />
+    <title>{meta['/hive/cqrs-es'].title}</title>
+    <meta name="description" content={meta['/hive/cqrs-es'].description} />
 
     <Block article content>
       <h1>Example: CQRS/ES</h1>
@@ -17,11 +26,29 @@ const CqrsEs: FC = () => (
 
       <h2 id='source_code'><Link to='https://www.npmjs.com/package/hive-io-domain-example' target='_blank' rel='noopener noreferrer'>Domain Logic</Link> (<Link to='https://github.com/fnalabs/hive-io/tree/master/packages/hive-js-domain-example' target='_blank' rel='noopener noreferrer'>Source Code</Link>)</h2>
 
-      <Notification color='info' light>You should consider using a private NPM registry or implementing more creative solutions such as extending base Docker images with <code>ADD</code>|<code>COPY</code> statements for source code or <code>npm link</code> for your domain logic.</Notification>
+      <Notification color='info' light>
+        <Columns gapless>
+          <Column narrow>
+            <Icon style='solid' name='info' size='medium' />
+          </Column>
+          <Column>
+            <p>You should consider using a private NPM registry or implementing more creative solutions such as extending base Docker images with <code>ADD</code>|<code>COPY</code> statements for source code or <code>npm link</code> for your domain logic.</p>
+          </Column>
+        </Columns>
+      </Notification>
 
       <h2 id='infrastructure'><Link to='https://github.com/fnalabs/hive-io/tree/master/dev/docker/domain/production' target='_blank' rel='noopener noreferrer'>Infrastructure</Link></h2>
 
-      <Notification color='warning' light>There is a chicken or egg scenario when you run this example for the first time. In this example, the topics are not created until events are sent from <code>hive-producer-js</code> and <code>hive-stream-processor-js</code>. Therefore, you will need to <strong>restart</strong> <code>hive-consumer-js</code> after the topics are created to finally see events flow through the system.</Notification>
+      <Notification color='warning' light>
+        <Columns gapless>
+          <Column narrow>
+            <Icon style='solid' name='exclamation' size='medium' />
+          </Column>
+          <Column>
+            <p>There is a chicken or egg scenario when you run this example for the first time. In this example, the topics are not created until events are sent from <code>hive-producer-js</code> and <code>hive-stream-processor-js</code>. Therefore, you will need to <strong>restart</strong> <code>hive-consumer-js</code> after the topics are created to finally see events flow through the system.</p>
+          </Column>
+        </Columns>
+      </Notification>
 
       <dl>
         <dt><code>Producer.dockerfile</code></dt>
@@ -205,8 +232,6 @@ services:<br />
 &nbsp;&nbsp;&nbsp;&nbsp;networks:<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- hive-io<br /><br />
 &nbsp;&nbsp;# telemetry<br />
-&nbsp;&nbsp;# NOTE: you will need to provide a configuration for the collector<br />
-&nbsp;&nbsp;#       see https://github.com/fnalabs/hive-io/blob/master/dev/collector/collector-config.yml<br />
 &nbsp;&nbsp;collector:<br />
 &nbsp;&nbsp;&nbsp;&nbsp;image: otel/opentelemetry-collector:0.16.0<br />
 &nbsp;&nbsp;&nbsp;&nbsp;container_name: collector<br />

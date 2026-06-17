@@ -1,15 +1,24 @@
 import React, { type FC, lazy } from 'react'
 import { Link } from 'react-router'
-
-import { remoteBlock, remoteNotification } from '../../remotes'
+import {
+  remoteBlock,
+  remoteColumn,
+  remoteColumns,
+  remoteIcon,
+  remoteNotification,
+} from '../../remotes'
+import meta from '../../metadata.json'
 
 const Block = lazy(remoteBlock)
+const Column = lazy(remoteColumn)
+const Columns = lazy(remoteColumns)
+const Icon = lazy(remoteIcon)
 const Notification = lazy(remoteNotification)
 
 const Basic: FC = () => (
   <>
-    <title>FnA Labs | Hive^io - Example: Basic</title>
-    <meta name="description" content="A straightforward example implementation of Actors and Models with Hive^io: a reactive, cloud-native framework." />
+    <title>{meta['/hive/basic'].title}</title>
+    <meta name="description" content={meta['/hive/basic'].description} />
 
     <Block article content>
       <h1>Example: Basic</h1>
@@ -52,7 +61,16 @@ export default new Proxy(ExampleActor, &#123;<br />
         </dd>
       </dl>
 
-      <Notification color='info' light>Please note the use of <code>Proxy</code> in the <code>ExampleActor</code> definition above. Due to the asynchronous requirement of Schemas, specifically that they can be hosted in a Schema Registry, <code>Proxy</code> is used to give us the ability to define asynchronous constructors to satisfy that requirement.</Notification>
+      <Notification color='info' light>
+        <Columns gapless>
+          <Column narrow>
+            <Icon style='solid' name='info' size='medium' />
+          </Column>
+          <Column>
+            <p>Please note the use of <code>Proxy</code> in the <code>ExampleActor</code> definition above. Due to the asynchronous requirement of Schemas, specifically that they can be hosted in a Schema Registry, <code>Proxy</code> is used to give us the ability to define asynchronous constructors to satisfy that requirement.</p>
+          </Column>
+        </Columns>
+      </Notification>
 
       <p>Now that we've taken a quick look at some straightforward domain logic with JSON Schemas and Actors, let's add to this with a fully functional REST service example.</p>
     </Block>

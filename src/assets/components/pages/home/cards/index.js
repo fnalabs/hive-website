@@ -1,6 +1,0 @@
-export { CloudNative } from './CloudNative'
-export { Elastic } from './Elastic'
-export { FlexibleRobust } from './FlexibleRobust'
-export { MessageDriven } from './MessageDriven'
-export { Resilient } from './Resilient'
-export { Responsive } from './Responsive'

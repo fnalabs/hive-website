@@ -5,7 +5,7 @@ export interface INotification {
     color?: Exclude<Color, 'text' | 'ghost'>;
     light?: boolean;
     close?: boolean;
-    onClose?: () => {};
+    onClose?: () => void;
 }
 declare const Notification: FC<INotification>;
 export default Notification;

@@ -1,26 +1,26 @@
-import { type IBrandLink } from '@mf-types/fnalabs_assets/Navbar'
+import type { IBrandLink, INavLink } from '../@mf-types/fnalabs_assets/Navbar'
 
 export const VERSION_LABEL = 'v2.1.3'
 
 export const BRAND_LINK: IBrandLink = { href: '/', label: 'FnA Labs', brandIcon: 'FnALabsInverted' }
 export const SUB_BRAND_LINK: IBrandLink = { href: '/hive', label: 'HiveIO', brandIcon: 'HiveIO' }
 
-export const HOME_LINK = { href: '/hive', label: 'Home' }
-export const OVERVIEW_LINK = { href: '/hive/overview', label: 'Overview' }
-export const MODEL_LINK = { href: '/hive/model', label: 'Data Model' }
-export const DOMAIN_LINK = { href: '/hive/domain', label: 'Domain Logic' }
-export const INFRA_LINK = { href: '/hive/infrastructure', label: 'Infrastructure' }
-export const TELEMETRY_LINK = { href: '/hive/telemetry', label: 'Telemetry' }
-export const START_LINK = { href: '/hive/start', label: 'Get Started' }
-export const SETUP_LINK = { href: '/hive/setup', label: 'Setup' }
-export const BASIC_LINK = { href: '/hive/basic', label: 'Basic Example' }
-export const REST_LINK = { href: '/hive/rest', label: 'REST Example' }
-export const CQRS_LINK = { href: '/hive/cqrs-es', label: 'CQRS/ES Example' }
-export const DOCS_LINK = { href: '/hive/documentation', label: 'Documentation' }
-export const ENV_LINK = { href: '/hive/environments', label: 'Environments' }
-export const API_LINK = { href: 'https://fnalabs.github.io/hive-io/', label: 'API Reference' }
+export const HOME_LINK: INavLink = { href: '/hive', label: 'Home' }
+export const OVERVIEW_LINK: INavLink = { href: '/hive/overview', label: 'Overview' }
+export const MODEL_LINK: INavLink = { href: '/hive/model', label: 'Data Model' }
+export const DOMAIN_LINK: INavLink = { href: '/hive/domain', label: 'Domain Logic' }
+export const INFRA_LINK: INavLink = { href: '/hive/infrastructure', label: 'Infrastructure' }
+export const TELEMETRY_LINK: INavLink = { href: '/hive/telemetry', label: 'Telemetry' }
+export const START_LINK: INavLink = { href: '/hive/start', label: 'Get Started' }
+export const SETUP_LINK: INavLink = { href: '/hive/setup', label: 'Setup' }
+export const BASIC_LINK: INavLink = { href: '/hive/basic', label: 'Basic Example' }
+export const REST_LINK: INavLink = { href: '/hive/rest', label: 'REST Example' }
+export const CQRS_LINK: INavLink = { href: '/hive/cqrs-es', label: 'CQRS/ES Example' }
+export const DOCS_LINK: INavLink = { href: '/hive/documentation', label: 'Documentation' }
+export const ENV_LINK: INavLink = { href: '/hive/environments', label: 'Environments' }
+export const API_LINK: INavLink = { href: 'https://fnalabs.github.io/hive-io/', label: 'API Reference', external: true }
 
-export const BACK_LINK = { href:'/', label: 'Back', button: true, color: 'primary', beforeIcon: 'arrow-left' }
+export const BACK_LINK: INavLink = { href:'/', label: 'Back', button: true, color: 'primary', beforeIcon: 'arrow-left' }
 
 export const BRAND_LINK_LIST = [BRAND_LINK, SUB_BRAND_LINK]
 export const NAV_LINK_LIST = [

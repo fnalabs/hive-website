@@ -1,14 +1,14 @@
 import React, { type FC, lazy } from 'react'
 import { Link } from 'react-router'
-
 import { remoteBlock } from '../../remotes'
+import meta from '../../metadata.json'
 
 const Block = lazy(remoteBlock)
 
 const Domain: FC = () => (
   <>
-    <title>FnA Labs | Hive^io - Domain Logic</title>
-    <meta name="description" content="Domain Logic in Hive^io: a reactive, cloud-native framework. The following describes the use of the Actor Model." />
+    <title>{meta['/hive/domain'].title}</title>
+    <meta name="description" content={meta['/hive/domain'].description} />
 
     <Block article content>
       <h1>Domain Logic</h1>
