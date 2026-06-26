@@ -20,19 +20,19 @@
       "zip": "@mf-types.zip",
       "api": "@mf-types.d.ts"
     },
-    "pluginVersion": "2.5.1"
+    "pluginVersion": "2.6.0"
   },
   "shared": [
     {
       "id": "hive_website:react-router",
       "name": "react-router",
-      "version": "7.17.0",
+      "version": "8.0.1",
       "singleton": true,
-      "requiredVersion": "7.17.0",
+      "requiredVersion": "8.0.1",
       "assets": {
         "js": {
           "sync": [
-            "431.js"
+            "947.js"
           ],
           "async": []
         },
