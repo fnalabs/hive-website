@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import type { FC } from 'react';
 import { INavbar } from '../../components/Navbar/Navbar';
 export interface IAppLayout extends INavbar {
 }

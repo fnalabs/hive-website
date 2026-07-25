@@ -1,5 +1,5 @@
+import type { FC, ReactNode } from 'react';
 import type { BreakpointColumn, FractionSize, FractionSizes, NumericSize, NumericSizes, TextPosition, TextPositions } from '../../types';
-import { FC, ReactNode } from 'react';
 export interface IColumn {
     children?: ReactNode;
     content?: boolean;

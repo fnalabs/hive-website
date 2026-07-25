@@ -5,8 +5,10 @@ export type RemoteComponent<T> = Promise<{
 }>;
 export type Breakpoint = 'mobile' | 'tablet' | 'tablet-only' | 'desktop' | 'desktop-only' | 'widescreen' | 'widescreen-only' | 'fullhd' | 'touch' | 'until-widescreen' | 'until-fullhd';
 export type BreakpointColumn = Extract<Breakpoint, 'mobile' | 'tablet' | 'desktop' | 'widescreen' | 'fullhd'>;
+export type BreakpointContainer = Extract<Breakpoint, 'widescreen' | 'fullhd'> | `max-${Extract<Breakpoint, 'tablet' | 'desktop' | 'widescreen'>}`;
 export type Color = 'primary' | 'link' | 'info' | 'success' | 'warning' | 'danger' | 'black' | 'light' | 'dark' | 'white' | 'transparent' | 'text' | 'ghost';
 export type FixedPosition = 'top' | 'bottom';
+export type States = 'hovered' | 'focused' | 'active' | 'loading';
 export type ButtonStyle = 'outlined' | 'inverted' | 'rounded' | 'loading' | 'static';
 export type ButtonType = 'submit' | 'reset' | 'button';
 export type FixedSize = '16x16' | '24x24' | '32x32' | '48x48' | '64x64' | '96x96' | '128x128';
