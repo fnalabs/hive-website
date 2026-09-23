@@ -1,9 +1,8 @@
 import type { ILink } from '../../types';
-import { type FC } from 'react';
+import { type FC, type MouseEvent } from 'react';
 export interface IAnalyticsLink extends ILink {
-    external?: boolean;
-    'aria-label'?: string;
-    onClick?: () => void;
+    /** A function to be called when the link is clicked. */
+    onClick?: (event: MouseEvent<HTMLAnchorElement>) => void;
 }
 declare const AnalyticsLink: FC<IAnalyticsLink>;
 export default AnalyticsLink;

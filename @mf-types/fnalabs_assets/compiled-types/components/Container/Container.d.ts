@@ -5,7 +5,9 @@ export interface IContainer {
     children: ReactNode;
     /** Optional content flag to apply typography styles. */
     content?: boolean;
+    /** Optional size for the Container. */
     size?: BreakpointContainer;
+    /** Optional fluid variant to make the Container full width. */
     fluid?: boolean;
 }
 declare const Container: FC<IContainer>;

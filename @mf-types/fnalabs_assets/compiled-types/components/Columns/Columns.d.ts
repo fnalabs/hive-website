@@ -1,7 +1,23 @@
 import type { FC, ReactNode } from 'react';
 import type { Breakpoint, GapSize, GapSizes } from '../../types';
 export interface IColumns {
-    /** Child Columns to render in the Columns container. */
+    /**
+     * Child Columns to render in the Columns container.<br />
+     * <code>IColumn</code>
+     * <pre>
+     * interface IColumn {
+     *   children?: ReactNode
+     *   content?: boolean
+     *   fractionSize?: FractionSize | FractionSizes | Array<FractionSize | FractionSizes>
+     *   fractionSizeOffset?: FractionSize | FractionSizes | Array<FractionSize | FractionSizes>
+     *   hiddenTouch?: boolean
+     *   numericSize?: NumericSize | NumericSizes | Array<NumericSize | NumericSizes>
+     *   numericSizeOffset?: NumericSize | NumericSizes | Array<NumericSize | NumericSizes>
+     *   narrow?: boolean | BreakpointColumn[]
+     *   textPosition?: TextPosition | TextPositions | Array<TextPosition | TextPositions>
+     * }
+     * </pre>
+     */
     children: ReactNode;
     /** Optional Breakpoint to force columns to render at. */
     breakpoint?: Extract<Breakpoint, 'mobile' | 'desktop'>;
@@ -19,7 +35,6 @@ export interface IColumns {
     vcentered?: boolean;
 }
 /**
- * To promote fully
  * <strong>NOTE:</strong> Columns should only contain Column children!
  */
 declare const Columns: FC<IColumns>;

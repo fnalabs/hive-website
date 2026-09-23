@@ -1,10 +1,10 @@
 import type { ButtonStyle, ButtonType, Color, GenericSize, States } from '../../types';
-import { type FC, type ReactNode } from 'react';
+import { type FC, type ReactNode, type MouseEvent } from 'react';
 export interface IButton {
     /** Child content to render in the Button. */
     children: ReactNode;
     /** Optional click handler for the Button. */
-    onClick?: () => void;
+    onClick?: (event: MouseEvent<HTMLAnchorElement | HTMLButtonElement>) => void;
     /** Optional href for the Button to render as a link. */
     href?: string;
     /** Optional label for the Button to provide additional context for screen readers. */
