@@ -1,5 +1,5 @@
 import type { Color, GenericSize } from '../../types';
-import { FC, ReactNode } from 'react';
+import type { FC, ReactNode } from 'react';
 export interface IHero {
     /** Child content to render in the Hero. */
     children: ReactNode;
@@ -15,6 +15,8 @@ export interface IHero {
     footer?: ReactNode;
     /** Optional size setting for the Hero. */
     size?: GenericSize;
+    /** Optional flag to accomodate for Navbar spacing. */
+    withNavbar?: boolean;
 }
 declare const Hero: FC<IHero>;
 export default Hero;

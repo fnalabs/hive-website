@@ -5,8 +5,10 @@ export type RemoteComponent<T> = Promise<{
 }>;
 export type Breakpoint = 'mobile' | 'tablet' | 'tablet-only' | 'desktop' | 'desktop-only' | 'widescreen' | 'widescreen-only' | 'fullhd' | 'touch' | 'until-widescreen' | 'until-fullhd';
 export type BreakpointColumn = Extract<Breakpoint, 'mobile' | 'tablet' | 'desktop' | 'widescreen' | 'fullhd'>;
+export type BreakpointContainer = Extract<Breakpoint, 'widescreen' | 'fullhd'> | `max-${Extract<Breakpoint, 'tablet' | 'desktop' | 'widescreen'>}`;
 export type Color = 'primary' | 'link' | 'info' | 'success' | 'warning' | 'danger' | 'black' | 'light' | 'dark' | 'white' | 'transparent' | 'text' | 'ghost';
 export type FixedPosition = 'top' | 'bottom';
+export type States = 'hovered' | 'focused' | 'active' | 'loading';
 export type ButtonStyle = 'outlined' | 'inverted' | 'rounded' | 'loading' | 'static';
 export type ButtonType = 'submit' | 'reset' | 'button';
 export type FixedSize = '16x16' | '24x24' | '32x32' | '48x48' | '64x64' | '96x96' | '128x128';
@@ -26,7 +28,12 @@ export type CellPositions = `${CellPosition}-${NumericSize}`;
 export type TextPosition = 'left' | 'right' | 'centered' | 'justified';
 export type TextPositions = `${TextPosition}-${Breakpoint}`;
 export interface ILink {
+    /** The text to display for the link. */
     label: string;
+    /** The URL to navigate to when the link is clicked. */
     href: string;
+    /** Whether the link is external (opens in a new tab) or internal (navigates within the app). */
     external?: boolean;
+    /** The accessible label for the link. */
+    'aria-label'?: string;
 }

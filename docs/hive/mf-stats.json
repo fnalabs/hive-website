@@ -10,7 +10,7 @@
     },
     "publicPath": "https://fnalabs.github.io/hive-website/hive/",
     "remoteEntry": {
-      "name": "hive_website.js",
+      "name": "hive_website.f22d7366631eee04.js",
       "path": "",
       "type": "global"
     },
@@ -20,41 +20,19 @@
       "zip": "@mf-types.zip",
       "api": "@mf-types.d.ts"
     },
-    "pluginVersion": "2.6.0"
+    "pluginVersion": "2.8.0"
   },
   "shared": [
     {
       "id": "hive_website:react-router",
       "name": "react-router",
-      "version": "8.0.1",
-      "requiredVersion": "8.0.1",
+      "version": "8.2.0",
+      "requiredVersion": "8.2.0",
       "singleton": true,
       "assets": {
         "js": {
           "sync": [
-            "947.js"
-          ],
-          "async": []
-        },
-        "css": {
-          "sync": [],
-          "async": []
-        }
-      },
-      "usedIn": [],
-      "usedExports": []
-    },
-    {
-      "id": "hive_website:react-dom",
-      "name": "react-dom",
-      "version": "19.2.7",
-      "requiredVersion": "19.2.7",
-      "singleton": true,
-      "assets": {
-        "js": {
-          "sync": [
-            "717.js",
-            "98.js"
+            "947.ae21c3b40a755042.js"
           ],
           "async": []
         },
@@ -69,13 +47,35 @@
     {
       "id": "hive_website:react",
       "name": "react",
-      "version": "19.2.7",
-      "requiredVersion": "19.2.7",
+      "version": "19.2.8",
+      "requiredVersion": "19.2.8",
       "singleton": true,
       "assets": {
         "js": {
           "sync": [
-            "237.js"
+            "237.0d9b996aba80415d.js"
+          ],
+          "async": []
+        },
+        "css": {
+          "sync": [],
+          "async": []
+        }
+      },
+      "usedIn": [],
+      "usedExports": []
+    },
+    {
+      "id": "hive_website:react-dom",
+      "name": "react-dom",
+      "version": "19.2.8",
+      "requiredVersion": "19.2.8",
+      "singleton": true,
+      "assets": {
+        "js": {
+          "sync": [
+            "717.bbfa26f9c44c20d7.js",
+            "98.4595472c0ba50602.js"
           ],
           "async": []
         },
@@ -99,7 +99,7 @@
       "assets": {
         "js": {
           "sync": [
-            "__federation_expose_Routes.js"
+            "__federation_expose_Routes.280c6f3dff715597.js"
           ],
           "async": []
         },

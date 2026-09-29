@@ -7,6 +7,7 @@ export interface ISection {
     size?: Extract<GenericSize, 'medium' | 'large'>;
     /** Optional flag to use article tag instead of section. */
     article?: boolean;
+    /** Optional flag to apply content styles. */
     content?: boolean;
 }
 declare const Section: FC<ISection>;
