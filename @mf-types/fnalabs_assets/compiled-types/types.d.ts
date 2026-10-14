@@ -11,6 +11,7 @@ export type FixedPosition = 'top' | 'bottom';
 export type States = 'hovered' | 'focused' | 'active' | 'loading';
 export type ButtonStyle = 'outlined' | 'inverted' | 'rounded' | 'loading' | 'static';
 export type ButtonType = 'submit' | 'reset' | 'button';
+export type TagType = 'normal' | 'link' | 'button';
 export type FixedSize = '16x16' | '24x24' | '32x32' | '48x48' | '64x64' | '96x96' | '128x128';
 export type FractionSize = 'one-fifth' | 'one-quarter' | 'one-third' | 'two-fifths' | 'half' | 'three-fifths' | 'two-thirds' | 'three-quarters' | 'four-fifths' | 'full';
 export type FractionSizes = `${FractionSize}-${BreakpointColumn}`;
